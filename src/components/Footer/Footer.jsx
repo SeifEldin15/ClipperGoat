@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Footer.css';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -52,11 +53,11 @@ const Footer = () => {
         </div>
 
         <ul className="footer-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
+        <NavLink exact to="/leaderboard" activeClassName="active" className="nav-item">Leaderboard</NavLink>
+          <NavLink exact to="/terms" activeClassName="active" className="nav-item">Terms of Conditions</NavLink>
+          <NavLink exact to="/privacy" activeClassName="active" className="nav-item">Privacy Policy</NavLink>
+          <NavLink exact to="/refund" activeClassName="active" className="nav-item"><li><a href="#">Refunds</a></li></NavLink>
+          </ul>
         <p className="footer-copyright">
           Copyright &copy; 2022. All rights reserved.
         </p>
