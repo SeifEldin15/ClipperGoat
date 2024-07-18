@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, BrowserRouter, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Pages/Home'; 
 import Privacy from './Pages/Privacy'; 
 import Terms from './Pages/Terms';
@@ -10,7 +10,6 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/privacy" element={<Privacy />} />
@@ -18,7 +17,6 @@ function App() {
               <Route path="/refund" element={<Refund />} />
               <Route path="/leaderboard" element={<Leaderboard />} />
             </Routes>
-     </BrowserRouter>
   );
 }
 
