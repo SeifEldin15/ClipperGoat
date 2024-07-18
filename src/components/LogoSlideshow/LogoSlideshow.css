@@ -1,0 +1,125 @@
+.LogoSlideshow-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: #fff;
+
+}
+.LogoSlideshow-container img{
+  object-fit: contain; 
+  margin-left:90px !important;  
+}
+
+.logo.netflix {
+  width: 100px;  
+}
+
+.logo.google {
+  width: 100px;  
+}
+
+.logo.meta {
+  max-width: 200px;
+  height:30px !important;
+}
+
+ .onlyfans {
+  width: 100px;  
+
+}
+.LogoSlideshow-container11{
+  height:500px !important;
+  display: flex;
+  align-items: center;
+}
+.LogoSlideshow-container::before,
+.LogoSlideshow-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width:25%;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .LogoSlideshow-container::before,
+  .LogoSlideshow-container::after {
+    width:15%;
+  }
+  .LogoSlideshow-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    padding-top:80px;
+    padding-bottom:240px;
+  }
+  .LogoSlideshow-container img{
+    object-fit: contain; 
+    margin-left:90px !important;  
+  }
+  
+  .logo.netflix {
+    width: 80px;  
+  }
+  
+  .logo.google {
+    width: 80px;  
+  }
+  
+  .logo.meta {
+    max-width: 170px;
+    height:30px !important;
+  }
+  
+   .onlyfans {
+    width: 80px;  
+  
+  }
+  .LogoSlideshow-container h2 {
+    font-size: 18px !important;
+  }
+  
+}
+/* .LogoSlideshow-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(17, 24, 39, 1), rgba(0, 0, 0, 0));
+}
+
+.LogoSlideshow-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(17, 24, 39, 1), rgba(0, 0, 0, 0));
+} */
+
+.LogoSlideshow-container .LogoSlideshowslideshow {
+  display: flex;
+  transition: transform 0.5s ease;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.element {
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  /* Additional styles */
+  width: 100%;
+  height: 300px; /* Adjust as needed */
+}
+
+.LogoSlideshow-container h2 {
+  text-align: center;
+  margin-bottom:80px;
+  color: white !important
+}
+.LogoSlideshow-container h2 span{
+  color:rgb(101, 160, 255) ;
+}
+
+.LogoSlideshow-container .logo {
+  height: 40px;
+  margin: 0 20px;
+  filter: grayscale(100%) brightness(70%);
+}

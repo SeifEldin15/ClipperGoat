@@ -1,0 +1,39 @@
+.counter-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  right: 30px;  
+  z-index: 3;
+}
+
+.counter-container h1 {
+  color: #9f9f9f !important;
+}
+
+.counter-container h2 {
+  color: #ffffff !important;
+}
+
+.time-container {
+  color: #ffffff !important;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 5px;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 768px) {
+  .counter-container {
+    position: absolute;
+    right: auto;
+    top: 800px;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 112121223;
+  }
+}

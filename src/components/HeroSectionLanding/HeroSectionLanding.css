@@ -1,0 +1,36 @@
+.HeroSectionLanding{
+    height:auto;
+    width:100%;
+    position: relative;
+    overflow-y: hidden;    height:600px;
+
+}
+.HeroSectionLanding img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    position: absolute;
+}
+.HeroSectionContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;  
+    height: 100%;  
+}
+ 
+.HeroSectionContent *{
+    z-index: 3;
+    margin-top:30px;
+}
+.HeroSectionContentP{
+ text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .HeroSectionLanding{
+        position:static;
+    }
+  }
