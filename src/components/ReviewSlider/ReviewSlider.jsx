@@ -1,49 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ReviewSlider.css';
 
 const testimonials = [
-  { id: 1, name: 'Cathy Lee', role: 'Product Manager', text: "I can't imagine going back to how things were before this AI. It has not only improved my work efficiency but also my daily life." },
-  { id: 2, name: 'David Wright', role: 'Research Scientist', text: "It's like having a superpower! This AI tool has given us the ability to do things we never thought were possible in our field." },
-  // Add more testimonials...
+  {
+    text: "I can't imagine going back to how things were before this AI. It has not only improved my work efficiency but also my daily life.",
+    name: "Cathy Lee",
+    title: "Product Manager"
+  },
+  {
+    text: "It's like having a superpower! This AI tool has given us the ability to do things we never thought were possible in our field.",
+    name: "David Wright",
+    title: "Research Scientist"
+  },
+  {
+    text: "The efficiency it brings is unmatched. It's a vital tool that has helped us cut costs and improve our end product significantly.",
+    name: "Eva Green",
+    title: "Operations Director"
+  },
+  // Add more testimonials as needed
 ];
 
 const ReviewSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [position, setPosition] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000); // Change slide every 5 seconds
-
-    return () => clearInterval(timer);
+    const interval = setInterval(() => {
+      setPosition((prevPosition) => (prevPosition - 1) % (testimonials.length * 320)); // 320px is the width of each card plus margin
+    }, 30);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="testimonials-container">
-      <h2>Used by entrepreneurs</h2>
-      <p>Proactiv is used by serial entrepreneurs and overachievers.</p>
-      <div className="testimonials-slider">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={testimonial.id}
-            className={`testimonial-card ${index === currentIndex ? 'active' : ''}`}
-            style={{
-              transform: `translateX(${(index - currentIndex) * 100}%)`,
-              transition: 'transform 0.5s ease-in-out',
-            }}
-          >
-            <p>{testimonial.text}</p>
+    <div className="review-slider-container Container-Spacing">
+      <div className="review-slider" style={{ transform: `translateX(${position}px)` }}>
+        {testimonials.concat(testimonials).map((testimonial, index) => (
+          <div key={index} className="testimonial-card">
+            <p className="testimonial-text">{testimonial.text}</p>
             <div className="testimonial-author">
-              <img src={`avatar-${testimonial.id}.jpg`} alt={testimonial.name} />
-              <div>
-                <h4>{testimonial.name}</h4>
-                <p>{testimonial.role}</p>
+              <div className="author-avatar"></div>
+              <div className="author-info">
+                <p className="author-name">{testimonial.name}</p>
+                <p className="author-title">{testimonial.title}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
+    
   );
 };
 

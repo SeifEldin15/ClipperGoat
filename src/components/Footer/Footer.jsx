@@ -52,7 +52,7 @@ const Footer = () => {
           )}
         </div>
 
-        <ul className="footer-links">
+        <ul className="footer-links hover-effect-links">
         <NavLink exact to="/leaderboard" activeClassName="active" className="nav-item">Leaderboard</NavLink>
           <NavLink exact to="/terms" activeClassName="active" className="nav-item">Terms of Conditions</NavLink>
           <NavLink exact to="/privacy" activeClassName="active" className="nav-item">Privacy Policy</NavLink>

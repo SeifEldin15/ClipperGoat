@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className={`hamburger ${isNavActive ? 'active' : ''}`} onClick={toggleNav}>
         ☰
       </div>
-      <ul className={`nav-links ${isNavActive ? 'active' : ''}`}>
+      <ul className={`nav-links hover-effect-links ${isNavActive ? 'active' : ''}`}>
         <li><a href="#features">About</a></li>
         <li><a href="#features">Programs</a></li>
         <li><a href="#pricing">Pricing</a></li>

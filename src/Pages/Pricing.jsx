@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer'
 import PricingSection from '../components/PricingSection/PricingSection'
 import ReviewSlider from '../components/ReviewSlider/ReviewSlider'
 import LogoSlideshow from '../components/LogoSlideshow/LogoSlideshow'
+import ReviewSliderRight from '../components/ReviewSlider/ReviewSliderRight'
 
 const Pricing = () => {
   return (
@@ -15,6 +16,8 @@ const Pricing = () => {
          </div>
          <LogoSlideshow />
          <ReviewSlider />
+         <ReviewSliderRight />
+
           <Footer />
 
     </div>

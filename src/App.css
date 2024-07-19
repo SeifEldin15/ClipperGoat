@@ -59,7 +59,15 @@ h1, h2{
   color: white !important;
   margin: 0;
 }
+.hover-effect-links a:hover {
 
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.4),
+    0 0 30px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.2);
+  color: #1467db;
+}
 .custom-header-title span{
   color: #65a0ff ;
 }
