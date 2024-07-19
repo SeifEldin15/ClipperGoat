@@ -1,5 +1,152 @@
 @media (max-width: 768px) {
-    .LeaderFooter{
-        margin-top:500px;
+    .LeaderContainer{
+        margin-top:100px;
     }
 }
+.LeaderContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+ 
+
+  
+  .LeaderBoard-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .LeaderBoardCard {
+    border-radius: 10px;
+    padding: 20px;    box-shadow: 0 0 125px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
+    margin-top:50px;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
+    background-color: rgba(20, 110, 255, 0.01);
+    border: 1px solid rgba(52, 130, 255, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .LeaderBoardCard-container {
+    border: 1px solid rgba(52, 130, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 410px;
+  }
+
+  
+  .LeaderBoardCard-header {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+  }
+  
+ 
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 1200px) {
+    .LeaderBoard-container {
+      gap: 20px;
+    }
+  
+    .LeaderBoardCard-container {
+      max-width: 350px;
+    }
+  
+    .LeaderBoardCard {
+      max-width: 330px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .LeaderBoard-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .LeaderBoardCard-container {
+      max-width: 400px;
+    }
+  
+    .LeaderBoardCard {
+      max-width: 380px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .LeaderContainer h1 {
+      font-size: 2em;
+    }
+  
+    .LeaderBoardCard-container {
+      max-width: 100%;
+    }
+  
+    .LeaderBoardCard {
+      max-width: 100%;
+    }
+  
+    .LeaderBoardCard-header {
+      font-size: 2em;
+    }
+  
+    .price {
+      font-size: 2em;
+    }
+  
+    .LeaderContainer ul {
+      font-size: 16px;
+    }
+  }
+ .profile-container {
+    display: flex;
+    justify-content: space-between; width: 100%;
+    align-items: center; position: relative;
+  border-bottom: 1px solid rgba(52, 130, 255, 0.5);
+    padding-bottom: 20px;
+    margin-top:20px;
+ }
+  .user-content{
+    display: flex;
+    align-items: center;
+  }  .user-content img{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    margin-right:20px;
+  }
+  .username-info{
+    font-size: 20px;
+    color:white;
+  }
+  .user-tag{
+    color: rgb(186, 186, 186);
+    font-size:11px;
+    margin-top:10px;
+    margin-left:-18px;
+
+  }
+  .user-rank{
+    position: absolute;
+    right:10px;
+    color: white;
+  }
+  .user-rank .fa-caret-up{
+    color:#00D95F;
+    font-size:  16px;
+    margin-top:10px;
+    margin-right:-8px;
+  }
+  .user-rank .fa-caret-down{
+    color:red;
+    font-size:  16px;
+    margin-top:10px;
+    margin-right:-8px;
+  }

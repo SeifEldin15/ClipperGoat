@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer Container-Spacing">
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-info">
@@ -56,6 +56,7 @@ const Footer = () => {
         <NavLink exact to="/leaderboard" activeClassName="active" className="nav-item">Leaderboard</NavLink>
           <NavLink exact to="/terms" activeClassName="active" className="nav-item">Terms of Conditions</NavLink>
           <NavLink exact to="/privacy" activeClassName="active" className="nav-item">Privacy Policy</NavLink>
+          <NavLink exact to="/pricing" activeClassName="active" className="nav-item"><li><a href="#">Pricing</a></li></NavLink>
           <NavLink exact to="/refund" activeClassName="active" className="nav-item"><li><a href="#">Refunds</a></li></NavLink>
           </ul>
         <p className="footer-copyright">

@@ -64,7 +64,7 @@ function PricingSection() {
   ];
 
   return (
-    <div className="PricingSection Container-Spacing">
+    <div className="PricingSection ">
       <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text">Income Path</span></h1>
      <div className="pricing-container">
         {plans.map((plan, index) => (

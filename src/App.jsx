@@ -5,7 +5,7 @@ import Privacy from './Pages/Privacy';
 import Terms from './Pages/Terms';
 import Refund from './Pages/Refund'; 
 import Leaderboard from './Pages/Leaderboard'; 
-
+import Pricing from './Pages/Pricing'
 import './App.css';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/Pricing" element={<Pricing />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/refund" element={<Refund />} />
               <Route path="/leaderboard" element={<Leaderboard />} />

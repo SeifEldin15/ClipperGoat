@@ -71,8 +71,7 @@ const AnimatedCounter = ({ targetValue }) => {
 
   return (
     <animated.div style={slideInStyles} className='counter-container'>
-      <h1>CLIPPERGOAT</h1>
-      <h2>$10 million dollar challenge</h2>
+
       <CounterWrapper>
         <DigitBoxContainer>
           {counterString.split('').map((digit, index) => (

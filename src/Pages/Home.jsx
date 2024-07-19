@@ -37,7 +37,6 @@ const Home = () => {
       description: "With our best in class email automation, you can automate your entire emailing process.",
       image: homeimg
     },
-    // Add more items here
   ];
   return (
       <>
@@ -57,8 +56,8 @@ const Home = () => {
   <ScrollProgressBar targetRef={targetRef} />
   <div>
     <div>
-      <p className="custom-header-subtitle glow-text">Exactly what you can find inside Active Income</p>
       <h1 className="information-container-header custom-header-title">Unlock Your <span className="glow-text">Full Potential</span></h1>
+      <p className="custom-header-subtitle glow-text">Exactly what you can find inside Active Income</p>
     </div>
     {homeItems.map((item, index) => (
       <div className='HomeImgContainer' key={index}>
@@ -77,11 +76,11 @@ const Home = () => {
       </div>
     ))}
   </div>
-</div>
+</div>        <LogoSlideshow /> 
+<PricingSection />
+
           <Slider items={items} />
         </div>
-        <PricingSection />
-        <LogoSlideshow /> 
         <Footer />
       </>
     );
