@@ -43,15 +43,10 @@ const Home = () => {
         <Navbar />
         <div>
           <HeroSectionLanding />
-          <header className="home-header ">
-            <div className="feature-bar highlight glow-text">
-              <span><i className="fa-regular fa-clock"></i> IMMEDIATE ACCESS</span>
-              <span><i className="fa-solid fa-right-from-bracket"></i> ALWAYS UP-TO-DATE</span>
-              <span><i className="fa-regular fa-badge-check"></i> 14-DAY GUARANTEE</span>
-              <span><i className="fa-regular fa-lock"></i> SECURE PURCHASE</span>
-            </div>
-          </header>
-          <SliderTop />
+<div className="spacing-counter">
+<SliderTop />
+</div>
+          
           <div className="information-container Container-Spacing-Lg" ref={targetRef}>
   <ScrollProgressBar targetRef={targetRef} />
   <div>
