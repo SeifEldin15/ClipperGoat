@@ -49,62 +49,79 @@
   }
   
  
-  
-  /* Media Queries for Responsiveness */
   @media screen and (max-width: 1200px) {
-    .LeaderBoard-container {
-      gap: 20px;
+    .leaderboard-rank-info-container {
+      padding: 15px;
     }
   
-    .LeaderBoardCard-container {
-      max-width: 350px;
-    }
-  
-    .LeaderBoardCard {
-      max-width: 330px;
-    }
-  }
-  
-  @media screen and (max-width: 992px) {
-    .LeaderBoard-container {
+    .leaderboard-rank-info-container .leaderboard-container {
       flex-direction: column;
-      align-items: center;
     }
   
-    .LeaderBoardCard-container {
-      max-width: 400px;
-    }
-  
-    .LeaderBoardCard {
-      max-width: 380px;
+    .leaderboard-rank-info-container .leader-card {
+      margin: 10px 0;
     }
   }
   
-  @media screen and (max-width: 576px) {
-    .LeaderContainer h1 {
-      font-size: 2em;
+  @media screen and (max-width: 768px) {
+    .LeaderContainer {
+      margin-top: 80px;
     }
   
-    .LeaderBoardCard-container {
-      max-width: 100%;
+    .custom-header-title {
+      font-size: 1.8em;
     }
   
     .LeaderBoardCard {
-      max-width: 100%;
+      padding: 15px;
     }
   
-    .LeaderBoardCard-header {
-      font-size: 2em;
+    .profile-container {
+      flex-direction: column;
+      align-items: flex-start;
     }
   
-    .price {
-      font-size: 2em;
+    .user-rank {
+      position: static;
+      margin-top: 10px;
     }
   
-    .LeaderContainer ul {
+    .username-info {
+      font-size: 18px;
+    }
+  
+    .user-tag {
+      margin-left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .LeaderContainer {
+      margin-top: 60px;
+    }
+  
+    .custom-header-title {
+      font-size: 1.5em;
+    }
+  
+    .LeaderBoardCard {
+      padding: 10px;
+    }
+  
+    .user-content img {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .username-info {
       font-size: 16px;
     }
+  
+    .user-tag {
+      font-size: 10px;
+    }
   }
+  
  .profile-container {
     display: flex;
     justify-content: space-between; width: 100%;
@@ -159,15 +176,12 @@
 
   /* Container styles */
 .leaderboard-rank-info-container {
-  background-color: #1e2128;
   max-width: 1200px;
   border-radius: 10px;
   padding: 20px;margin: 110px auto;
-  box-shadow: 0 0 125px rgba(20, 110, 255, 0.5);
-  background-color: rgba(20, 110, 255, 0.01);
+  /* box-shadow: 0 0 125px rgba(20, 110, 255, 0.5); */
 
   color: white;
-  font-family: Arial, sans-serif;
 }
 
 /* TabContainer styles */
@@ -197,8 +211,11 @@
 /* LeaderCard styles */
 .leaderboard-rank-info-container .leader-card {
   text-align: center;
-  flex: 1;
-  padding: 10px;
+  flex: 1;     border: 1px solid rgba(52, 130, 255, 0.5);
+  height:300px; display: flex; flex-direction: column; justify-content: center;
+  margin:15px;    box-shadow: 0 0 101px rgba(20, 110, 255, 0.5);
+
+  padding:25px; border-radius: 12px;
 }
 
 /* Avatar styles */

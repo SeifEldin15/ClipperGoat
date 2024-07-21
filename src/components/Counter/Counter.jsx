@@ -4,7 +4,11 @@ import { useSpring, animated } from '@react-spring/web';
 import './Counter.css'
 
 const shake = keyframes`
-  /* Define your shake animation here */
+  // 0% { transform: translateX(0); }
+  // 25% { transform: translateX(-5px); }
+  // 50% { transform: translateX(5px); }
+  // 75% { transform: translateX(-5px); }
+  // 100% { transform: translateX(0); }
 `;
 
 const CounterWrapper = styled.div`
@@ -19,7 +23,6 @@ const CounterWrapper = styled.div`
   position: fixed;
   animation: ${shake} 0.5s ease-in-out infinite;
   z-index: 1000;
-
   @media screen and (max-width: 768px) {
     position: static;
     margin-top: 20px;
@@ -40,48 +43,60 @@ const DigitBox = styled.div`
   padding: 8px;
   margin: 0 5px;
   border-radius: 5px;
-  min-width: 40px;
+  min-width: 60px;
   text-align: center;
   transition: all 0.3s ease;
 `;
 
-const AnimatedCounter = ({ targetValue }) => {
-  const [counter, setCounter] = useState(0);
+const AnimatedCounter = ({ targetDate }) => {
+  const [timeLeft, setTimeLeft] = useState({});
+
+  const calculateTimeLeft = () => {
+    const difference = +new Date(targetDate) - +new Date();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+      };
+    }
+
+    return timeLeft;
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
   const slideInStyles = useSpring({
     from: { transform: 'translateY(-900%)' },
     to: { transform: 'translateY(10%)' },
     config: { tension: 170, friction: 36 }
   });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCounter(prevCounter => {
-        if (prevCounter < targetValue) {
-          return prevCounter + 1;
-        }
-        clearInterval(interval);
-        return prevCounter;
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [targetValue]);
-
-  const counterString = counter.toString().padStart(6, '0');
+  const formatNumber = (num) => num.toString().padStart(2, '0');
 
   return (
     <animated.div style={slideInStyles} className='counter-container'>
-
       <CounterWrapper>
         <DigitBoxContainer>
-          {counterString.split('').map((digit, index) => (
-            <DigitBox key={index}>{digit}</DigitBox>
-          ))}
+          <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
+          <DigitBox>{formatNumber(timeLeft.hours || 0)}</DigitBox>
+          <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
+          <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
         </DigitBoxContainer>
         <div className="time-container">
-          <p className="time">week</p>
-          <p className="time">day</p>
+          <p className="time">days</p>
           <p className="time">hours</p>
+          <p className="time">minutes</p>
+          <p className="time">seconds</p>
         </div>
       </CounterWrapper>
     </animated.div>

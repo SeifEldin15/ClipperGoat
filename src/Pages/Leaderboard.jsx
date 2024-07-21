@@ -2,6 +2,8 @@ import React from 'react';
 import HeroSectionLanding2 from '../components/HeroSectionLanding2/HeroSectionLanding';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import InfoCard from '../components/InfoCard/InfoCard';
+
 import './Leaderboard.css';
 import pfpimg from '../assets/500x500.jpg';
 
@@ -41,13 +43,7 @@ const Leaderboard = () => {
       <div className='LeaderContainer'>
         <div className="LeaderBoardSection Container-Spacing">
           <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text">Income Path</span></h1>
-         
           <div className="leaderboard-rank-info-container">
-      <div className="tab-container">
-        <div className="tab active">Region</div>
-        <div className="tab">National</div>
-        <div className="tab">Global</div>
-      </div>
       <div className="leaderboard-container">
         <div className="leader-card">
           <div className="avatar">
@@ -89,6 +85,7 @@ const Leaderboard = () => {
           </div>
         </div>
       </div>
+      <InfoCard />
       <Footer />
     </div>
   );

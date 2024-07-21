@@ -1,0 +1,106 @@
+.financial-freedom {
+    background-color:rgba(20, 110, 255, 0.05);
+    color: white;
+     padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 70px auto;
+  }
+  
+  .financial-freedom .content {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .financial-freedom h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .financial-freedom p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+  }
+  
+  .get-started {
+    background-color:var(--main-color-lighter);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    margin-bottom: 10px;;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .get-started:hover {
+    background-color: rgb(149, 117, 205);
+  }
+  
+  .lock-in {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .financial-freedom .icon {
+    margin-right: 0.5rem;
+  }
+  
+  .financial-freedom .images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .video-call, .mobile-apps, .chat {
+    background-color: #2e2e3e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-call {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .mobile-apps {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 220px;
+  }
+  
+  .financial-freedom .chat {
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .financial-freedom {
+      flex-direction: column;
+    }
+    
+    .financial-freedom .content {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+    
+    .financial-freedom .images {
+      width: 100%;
+    }
+  }

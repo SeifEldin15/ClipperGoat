@@ -28,9 +28,10 @@
 
 }
 .LogoSlideshow-container11{
-  height:500px !important;
+  height:300px !important;
   display: flex;
   align-items: center;
+  margin-bottom: 120px;
 }
 .LogoSlideshow-container::before,
 .LogoSlideshow-container::after {
