@@ -2,7 +2,7 @@
 .clippergoat-app {
     color: white;
     position: relative;
-    height:600px;
+    height:700px;
   }
   
   .clippergoat-header {
@@ -60,6 +60,11 @@
     font-size: 18px;
     margin-bottom: 30px;
   }
+  .landing-counter-container{
+    position: absolute;
+    top:-80px;
+    right:20px;
+  }
   
   .clippergoat-pricing {
     background-color: #2a2a2a;
@@ -67,8 +72,8 @@
     border-radius: 10px;
     position: absolute;
     right: 50px;
-    top: 150px;
-    width: 300px;
+    top: 250px;
+    width: 300px; 
   }
   
   .clippergoat-price {

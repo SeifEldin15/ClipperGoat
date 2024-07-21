@@ -2,6 +2,8 @@
 import React from 'react';
 import radiengoat from "../../assets/raiden goat.png"
 import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
+import AnimateCounter from '../Counter/Counter';
+
 import './HeroSectionLanding.css';
 
 function HeroSectionLanding() {
@@ -31,6 +33,9 @@ function HeroSectionLandingHero() {
       </h1>
       <p className="clippergoat-hero-subtitle">Great for any INDUSTRY!!! Use the AI powered Short Form Editor. Edit 100s of videos in minutes with ClipperGoat AI</p>
 <GetOfferBtn />
+<div>
+  <div className="landing-counter-container"><AnimateCounter />
+  </div>
     <div className="clippergoat-pricing">
       <h2 className="clippergoat-price">$120<span className="clippergoat-price-period">/month</span></h2>
       <p className="clippergoat-price-description">With ClipperGoat you can repurpose your most viral content 1000 times a month! Now that's a lot of content!</p>
@@ -41,7 +46,7 @@ function HeroSectionLandingHero() {
         <li className="clippergoat-feature-item">Use for Reels, Shorts, and Toks</li>
         <li className="clippergoat-feature-item">Use on EVERY PLATFORM</li>
       </ul>
-    </div>    </section>
+    </div> </div>   </section>
 
 </>
   );

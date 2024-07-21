@@ -7,7 +7,7 @@
   
   .faq-item {
     margin-bottom: 15px;
-    transition: 0.3s;
+    transition: 0.3s;    border-radius: 11px;
   }
     
   .faq-item:hover {

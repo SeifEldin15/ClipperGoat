@@ -33,13 +33,15 @@
     padding: 0.75rem 2rem;
     font-size: 1rem;
     margin-bottom: 10px;;
-    border-radius: 25px;
+    border-radius: 25px;     box-shadow: 0 0 115px rgba(20, 110, 255, 1) ;
+
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
   .get-started:hover {
-    background-color: rgb(149, 117, 205);
+    box-shadow: 0 0 215px rgba(20, 110, 255, 0.5);
+
   }
   
   .lock-in {

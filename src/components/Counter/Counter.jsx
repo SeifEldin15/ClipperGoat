@@ -20,7 +20,6 @@ const CounterWrapper = styled.div`
   padding: 20px;
   margin-top: 80px;
   border-radius: 10px;
-  position: fixed;
   animation: ${shake} 0.5s ease-in-out infinite;
   z-index: 1000;
   @media screen and (max-width: 768px) {

@@ -31,7 +31,7 @@
   height:300px !important;
   display: flex;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
 }
 .LogoSlideshow-container::before,
 .LogoSlideshow-container::after {

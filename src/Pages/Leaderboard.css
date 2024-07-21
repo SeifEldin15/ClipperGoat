@@ -1,263 +1,346 @@
 @media (max-width: 768px) {
-    .LeaderContainer{
-        margin-top:100px;
-    }
+  .LeaderContainer{
+      margin-top:100px;
+  }
 }
 .LeaderContainer {
-  text-align: center;
-  padding: 20px;
+text-align: center;
+padding: 20px;
 }
 
- 
+.LeaderBoard-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 40px;
+flex-wrap: wrap;
+}
 
-  
-  .LeaderBoard-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  
-  .LeaderBoardCard {
-    border-radius: 10px;
-    padding: 20px;    box-shadow: 0 0 125px rgba(20, 110, 255, 0.5);
-    margin-top:50px;
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    position: relative;
-    background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
-    background-color: rgba(20, 110, 255, 0.01);
-    border: 1px solid rgba(52, 130, 255, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .LeaderBoardCard-container {
-    border: 1px solid rgba(52, 130, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 410px;
-  }
+.LeaderBoardCard {
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 125px rgba(20, 110, 255, 0.5);
+margin-top:50px;
+width: 100%;
+max-width: 1200px;
+height: auto;
+position: relative;
+background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
+background-color: rgba(20, 110, 255, 0.01);
+border: 1px solid rgba(52, 130, 255, 0.1);
+margin-bottom: 20px;
+}
 
-  
-  .LeaderBoardCard-header {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: rgb(255, 255, 255);
-  }
-  
- 
-  @media screen and (max-width: 1200px) {
-    .leaderboard-rank-info-container {
-      padding: 15px;
-    }
-  
-    .leaderboard-rank-info-container .leaderboard-container {
-      flex-direction: column;
-    }
-  
-    .leaderboard-rank-info-container .leader-card {
-      margin: 10px 0;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .LeaderContainer {
-      margin-top: 80px;
-    }
-  
-    .custom-header-title {
-      font-size: 1.8em;
-    }
-  
-    .LeaderBoardCard {
-      padding: 15px;
-    }
-  
-    .profile-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .user-rank {
-      position: static;
-      margin-top: 10px;
-    }
-  
-    .username-info {
-      font-size: 18px;
-    }
-  
-    .user-tag {
-      margin-left: 0;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .LeaderContainer {
-      margin-top: 60px;
-    }
-  
-    .custom-header-title {
-      font-size: 1.5em;
-    }
-  
-    .LeaderBoardCard {
-      padding: 10px;
-    }
-  
-    .user-content img {
-      width: 35px;
-      height: 35px;
-    }
-  
-    .username-info {
-      font-size: 16px;
-    }
-  
-    .user-tag {
-      font-size: 10px;
-    }
-  }
-  
- .profile-container {
-    display: flex;
-    justify-content: space-between; width: 100%;
-    align-items: center; position: relative;
-  border-bottom: 1px solid rgba(52, 130, 255, 0.5);
-    padding-bottom: 20px;
-    margin-top:20px;
- }
-  .user-content{
-    display: flex;
-    align-items: center;
-  }  .user-content img{
-    width:45px;
-    height:45px;
-    border-radius: 50%;
-    margin-right:20px;
-  }
-  .username-info{
-    font-size: 20px;
-    color:white;
-  }
-  .user-tag{
-    color: rgb(186, 186, 186);
-    font-size:11px;
-    margin-top:10px;
-    margin-left:-18px;
+.LeaderBoardCard-container {
+border: 1px solid rgba(52, 130, 255, 0.1);
+padding: 10px;
+border-radius: 10px;
+width: 100%;
+max-width: 410px;
+}
 
-  }
-  .user-rank{
-    position: absolute;
-    right:10px;
-    color: white;
-  }
-  .user-rank .fa-caret-up{
-    color:#00D95F;
-    font-size:  16px;
-    margin-top:10px;
-    margin-right:-8px;
-  }
-  .user-rank .fa-caret-down{
-    color:red;
-    font-size:  16px;
-    margin-top:10px;
-    margin-right:-8px;
-  }
+.LeaderBoardCard-header {
+font-size: 2.5em;
+margin-bottom: 10px;
+color: rgb(255, 255, 255);
+}
 
-
-
-
-
-
-
-  /* Container styles */
+@media screen and (max-width: 1200px) {
 .leaderboard-rank-info-container {
-  max-width: 1200px;
-  border-radius: 10px;
-  padding: 20px;margin: 110px auto;
-  /* box-shadow: 0 0 125px rgba(20, 110, 255, 0.5); */
+  padding: 15px;
+}
 
-  color: white;
+.leaderboard-rank-info-container .leaderboard-container {
+  flex-direction: column;
+}
+
+.leaderboard-rank-info-container .leader-card {
+  margin: 10px 0;
+}
+}
+
+@media screen and (max-width: 768px) {
+.LeaderContainer {
+  margin-top: 80px;
+}
+
+.custom-header-title {
+  font-size: 1.8em;
+}
+
+.LeaderBoardCard {
+  padding: 15px;
+}
+
+.profile-container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-rank {
+  position: static;
+  margin-top: 10px;
+}
+
+.username-info {
+  font-size: 18px;
+}
+
+.user-tag {
+  margin-left: 0;
+}
+}
+
+@media screen and (max-width: 480px) {
+.LeaderContainer {
+  margin-top: 60px;
+}
+
+.custom-header-title {
+  font-size: 1.5em;
+}
+
+.LeaderBoardCard {
+  padding: 10px;
+}
+
+.user-content img {
+  width: 35px;
+  height: 35px;
+}
+
+.username-info {
+  font-size: 16px;
+}
+
+.user-tag {
+  font-size: 10px;
+}
+}
+
+.profile-container {
+display: flex;
+justify-content: space-between;
+width: 100%;
+align-items: center;
+position: relative;
+border-bottom: 1px solid rgba(52, 130, 255, 0.5);
+padding-bottom: 20px;
+margin-top:20px;
+padding-left: 40px;
+}
+
+.user-content{
+display: flex;
+align-items: center;
+}
+
+.user-content img{
+width:45px;
+height:45px;
+border-radius: 50%;
+margin-right:20px;
+}
+
+.username-info{
+font-size: 20px;
+color:white;
+}
+
+.user-tag{
+color: rgb(186, 186, 186);
+font-size:11px;
+margin-top:10px;
+margin-left:-18px;
+}
+
+.user-rank{
+position: absolute;
+right:10px;
+color: white;
+}
+
+.user-rank .fa-caret-up{
+color:#00D95F;
+font-size:  16px;
+margin-top:10px;
+margin-right:-8px;
+}
+
+.user-rank .fa-caret-down{
+color:red;
+font-size:  16px;
+margin-top:10px;
+margin-right:-8px;
+}
+
+/* Container styles */
+.leaderboard-rank-info-container {
+max-width: 950px;
+border-radius: 10px;
+padding: 20px;
+margin: 110px auto;
+color: white;
 }
 
 /* TabContainer styles */
 .leaderboard-rank-info-container .tab-container {
-  display: flex;
-  margin-bottom: 20px;
+display: flex;
+margin-bottom: 20px;
 }
 
 /* Tab styles */
 .leaderboard-rank-info-container .tab {
-  padding: 10px 20px;
-  background-color: transparent;
-  border-radius: 20px;
-  cursor: pointer;
+padding: 10px 20px;
+background-color: transparent;
+border-radius: 20px;
+cursor: pointer;
 }
 
 .leaderboard-rank-info-container .tab.active {
-  background-color: #3a3f4b;
+background-color: #3a3f4b;
 }
 
 /* LeaderboardContainer styles */
 .leaderboard-rank-info-container .leaderboard-container {
-  display: flex;
-  justify-content: space-between;
+display: flex;
+}
+
+.goat{
+height:400px !important;
+box-shadow: rgba(20, 110, 255, 0.5) 0px 0px 25px 0px, rgba(20, 110, 255, 0.5) 0px 0px 65px 0px inset;
+margin-top:-40px !important;
 }
 
 /* LeaderCard styles */
 .leaderboard-rank-info-container .leader-card {
-  text-align: center;
-  flex: 1;     border: 1px solid rgba(52, 130, 255, 0.5);
-  height:300px; display: flex; flex-direction: column; justify-content: center;
-  margin:15px;    box-shadow: 0 0 101px rgba(20, 110, 255, 0.5);
-
-  padding:25px; border-radius: 12px;
+text-align: center;
+background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
+flex: 1;
+border: 1px solid rgba(52, 130, 255, 0.5);
+height:300px; 
+display: flex; 
+position: relative;
+flex-direction: column; 
+justify-content: center;
+margin:15px;   
+border-radius: 12px;   
 }
 
 /* Avatar styles */
 .leaderboard-rank-info-container .avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 0 auto 10px;
-  overflow: hidden;
-  position: relative;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+margin: 20px auto ;
+overflow: hidden; 
+}
+
+.goat-avatar{
+border: 2px solid rgb(255, 221, 2);
+transform: scale(1.5);
+margin-bottom:30px !important;
+}
+
+.goat-number{
+  position: absolute;
+  top: 190px;
+  left: 45%; z-index: 2;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size:17px;
+  background-color: rgb(255, 221, 2); width:22px;
+  height:22px; display: flex; align-items: center; justify-content: center;
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+.goat-number p {
+  transform: rotate(-45deg);
+  margin-top:-1px;
+  margin-left:-1px;
 }
 
 /* AvatarImage styles */
 .leaderboard-rank-info-container .avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 /* Crown styles */
 .leaderboard-rank-info-container .crown {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
+position: absolute;
+top: 70px;
+left: 50%;
+z-index: 2;
+transform: translateX(-50%);
+font-size: 43px;
 }
 
 /* Name styles */
 .leaderboard-rank-info-container .name {
-  font-weight: bold;
-  margin-bottom: 5px;
+font-weight: bold;
+margin-bottom: 5px;
 }
 
 /* Score styles */
 .leaderboard-rank-info-container .score {
-  font-size: 24px;
-  font-weight: bold;
+font-size: 24px;
+font-weight: bold;
 }
 
 /* Username styles */
 .leaderboard-rank-info-container .username {
-  color: #6c727f;
-  font-size: 12px;
+color: #6c727f;
+font-size: 12px;
+}
+
+/* Responsive styles for leader cards */
+@media screen and (max-width: 768px) {
+.leaderboard-rank-info-container .leaderboard-container {
+  flex-direction: column;
+}
+
+.leaderboard-rank-info-container .leader-card {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.goat {
+  height: auto !important;
+  margin-top: 0 !important;
+}
+}
+
+/* Rank number styles */
+.rank-number {
+  position: absolute;
+  top: 135px;
+  left:47%; z-index: 2;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size:12px;
+  background-color: rgb(33, 98, 172); width:18px;
+  height:18px; display: flex; align-items: center; justify-content: center;
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+ 
+
+.rank-number p {
+  transform: rotate(-45deg);
+  margin-top:1px;
+  margin-left:1px;}
+
+/* Responsive styles for profile container */
+@media screen and (max-width: 480px) {
+.profile-container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-rank {
+  position: static;
+  margin-top: 10px;
+}
 }

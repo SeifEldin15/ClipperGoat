@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-
+import logoimg from '../../assets/logo.png'
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
 
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar Container-Width Container">
-      <div className="logo">ClipperGoat</div>
+      <img className="logo" src={logoimg} />
       <div className={`hamburger ${isNavActive ? 'active' : ''}`} onClick={toggleNav}>
         ☰
       </div>

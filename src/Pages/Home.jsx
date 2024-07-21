@@ -11,6 +11,8 @@ import styled from 'styled-components';
 // numbers for ranking 
 //counter similar to pricing section
 // nft goat edit
+// bullet points for infocard
+// glow for button on hover
 import Slider from '../components/Slider/Slider';
 import Footer from '../components/Footer/Footer';
 import ScrollProgressBar from './ScrollProgress'; 
@@ -80,9 +82,17 @@ const Home = () => {
   </div>
 </div>        <LogoSlideshow /> 
 <PricingSection />
-<FAQ />
           <Slider items={items} />
         </div>
+        <div>
+        <div>
+      <h1 className="information-container-header custom-header-title Container-Spacing">Unlock Your <span className="glow-text">Full Potential</span></h1>
+      <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
+    </div>
+    <FAQ />
+
+        </div>
+
         <Footer />
       </>
     );
