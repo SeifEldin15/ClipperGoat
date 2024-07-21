@@ -81,15 +81,7 @@
   }
   
 }
-/* .LogoSlideshow-container::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(17, 24, 39, 1), rgba(0, 0, 0, 0));
-}
 
-.LogoSlideshow-container::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(17, 24, 39, 1), rgba(0, 0, 0, 0));
-} */
 
 .LogoSlideshow-container .LogoSlideshowslideshow {
   display: flex;
@@ -106,12 +98,12 @@
   );
   /* Additional styles */
   width: 100%;
-  height: 300px; /* Adjust as needed */
+  height: 300px;  
 }
 
 .LogoSlideshow-container h2 {
   text-align: center;
-  margin-bottom:80px;
+  margin-bottom:40px;
   color: white !important
 }
 .LogoSlideshow-container h2 span{

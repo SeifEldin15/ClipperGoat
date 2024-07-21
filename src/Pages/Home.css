@@ -47,6 +47,7 @@
 }
 
 .information-container {
+  padding:50px;
   margin-top: 30px;
   display: grid;
   grid-template-columns: 5% 95%;
@@ -121,8 +122,8 @@
     margin-top:400px;
   }
   .information-container {
-    margin-top: 30px;
     display: grid;
+    padding:0px;
     grid-template-columns: 10% 90%;
   }.HomeImgContainer {
     display: flex;
@@ -159,12 +160,12 @@
 
   .information-container {
     grid-template-columns: 3% 97%;
-  }
+   }
 
   .HomeImgContainer {
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 100px;
+    margin-top: 0px;
   }
 
   .image-box-container {

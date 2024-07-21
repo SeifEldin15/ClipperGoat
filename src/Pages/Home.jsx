@@ -3,8 +3,14 @@ import Navbar from '../components/Navbar/Navbar';
 import HeroSectionLanding from '../components/HeroSectionLanding/HeroSectionLanding';
 import PricingSection from '../components/PricingSection/PricingSection';
 import LogoSlideshow from '../components/LogoSlideshow/LogoSlideshow';
-import SliderTop from '../components/SliderTop/SliderTop';
+import GetOfferBtn from '../components/GetOfferBtn/GetOfferBtn';
+import FAQ from '../components/FAQ/FAQ';
+import styled from 'styled-components';
 
+ import SliderTop from '../components/SliderTop/SliderTop';
+// numbers for ranking 
+//counter similar to pricing section
+// nft goat edit
 import Slider from '../components/Slider/Slider';
 import Footer from '../components/Footer/Footer';
 import ScrollProgressBar from './ScrollProgress'; 
@@ -52,7 +58,7 @@ const Home = () => {
   <div>
     <div>
       <h1 className="information-container-header custom-header-title">Unlock Your <span className="glow-text">Full Potential</span></h1>
-      <p className="custom-header-subtitle glow-text">Exactly what you can find inside Active Income</p>
+      <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
     </div>
     {homeItems.map((item, index) => (
       <div className='HomeImgContainer' key={index}>
@@ -61,7 +67,8 @@ const Home = () => {
           <div>
             <p className='HomeImgContainerHeaderFirst'>{item.title}</p>
             <p className='HomeImgContainerHeaderSecond'>{item.description}</p>
-          </div>
+          </div><GetOfferBtn />
+
         </div>
         <div className="image-box-container">
           <div className="image-box">
@@ -73,7 +80,7 @@ const Home = () => {
   </div>
 </div>        <LogoSlideshow /> 
 <PricingSection />
-
+<FAQ />
           <Slider items={items} />
         </div>
         <Footer />

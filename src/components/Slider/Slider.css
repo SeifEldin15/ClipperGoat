@@ -14,8 +14,8 @@
 }
 
 .slideshow-track img {
-  width: 330px;
-  height: 411.65px;
+  width: 260px;
+  height: 360.65px;
   object-fit: cover;
   border-radius: 15px;
   margin: 0 auto; /* Center the image horizontally */

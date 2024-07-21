@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './SliderTop.css';
 import imgs12 from '../../assets/659224b5340d258123959c9f_IMG_9932-p-500 (1).png';
 import imgs122 from '../../assets/659226b6a055423e4e0e59ca_Testimonials 5 (1)-p-500.png';
+import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
 
 const SliderTop = () => {
   const [position1, setPosition1] = useState(0);
@@ -57,16 +58,17 @@ const SliderTop = () => {
     <>
       <div className="slidetopshow-container Container-Spacing-Lg ">
         <h1 className="custom-header-title">Unlock Your <span className="highlight glow-text">Full Potential</span></h1>
-        
+        <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
+
         <div
-          className="slidetopshow-track Container-Spacing"
+          className="slidetopshow-track "
           ref={trackRef1}
           style={{ transform: `translateX(${position1}px)` }}
         >
           {doubledImages.map((image, index) => (
             <div key={index} className="slidetop ">
               <div className="slidetop-content ">
-                <img src={image.src} alt={`slidetop ${index + 1}`} />
+                <img src={image.src} alt={`slidetop ${index + 1}`} className='testingsfs-2' />
                 <div className="slidetopoverlay ">
                   <p className="slidetopshow-container-title ">{image.title}</p>
                   <p className="slidetopshow-container-extra">{image.description}</p>
@@ -79,14 +81,14 @@ const SliderTop = () => {
 
       <div className="slidetopshow-container ">
         <div
-          className="slidetopshow-track Container-Spacing"
+          className="slidetopshow-track "
           ref={trackRef2}
           style={{ transform: `translateX(${position2}px)` }}
         >
           {doubledImages.map((image, index) => (
             <div key={index} className="slidetop ">
               <div className="slidetop-content ">
-                <img src={image.src} alt={`slidetop ${index + 1}`} />
+                <img src={image.src} alt={`slidetop ${index + 1}`} className='testingsfs-1'/>
                 <div className="slidetopoverlay ">
                   <p className="slidetopshow-container-title ">{image.title}</p>
                   <p className="slidetopshow-container-extra">{image.description}</p>
@@ -94,6 +96,8 @@ const SliderTop = () => {
               </div>
             </div>
           ))}
+        </div>        <div className="Slider-Top-Get-Btn">
+        <GetOfferBtn />
         </div>
       </div>
     </>

@@ -45,6 +45,7 @@ const Slider = () => {
   return (
     <div className="slideshow-container Container-Spacing-Lg">
       <h1 className="custom-header-title">Unlock Your <span className="highlight glow-text">Full Potential</span></h1>
+      <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
       <div
         className="slideshow-track Container-Spacing"
         ref={trackRef}

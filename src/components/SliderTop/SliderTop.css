@@ -11,17 +11,20 @@
     display: flex;
     transition: transform 0.5s ease;
   }
-  
+  .Slider-Top-Get-Btn{
+    width: 25%;
+    margin: 40px auto;
+  }
   .slidetopshow-track img {
-    width: 330px;
-    height: 411.65px;
+    width: 260px;
+    height: 360.65px;
     object-fit: cover;
     border-radius: 15px;
     margin: 0 auto;
     display: block;     opacity: 0.5; /* 50% transparent */
 
   }
-  
+ 
   .slidetopshow-container-title {
    margin: 0 auto;
    width:80%;

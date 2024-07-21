@@ -72,10 +72,11 @@ h1, h2{
   color: #65a0ff ;
 }
 .custom-header-subtitle{
-  font-size: 1.1rem;    color: #65a0ff;
-
+  font-size: 1.1rem;    color: #ffffff;
+  
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom:20px ;
 }
 .custom-header-subtitle-no-centner{
   font-size: 1.1rem;    color: #65a0ff;
@@ -90,7 +91,7 @@ h1, h2{
   margin-top:100px;
 }
 .Container-Spacing-Lg{
-  margin-top:180px;
+  margin-top:80px;
 
 }
 .box-custom-shadow{

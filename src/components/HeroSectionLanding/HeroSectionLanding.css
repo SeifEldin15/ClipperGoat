@@ -1,36 +1,100 @@
-.HeroSectionLanding{
-    height:auto;
-    width:100%;
+/* App.css */
+.clippergoat-app {
+    color: white;
     position: relative;
-    overflow-y: hidden;    height:600px;
-
-}
-.HeroSectionLanding img{
-    object-fit: cover;
-    width:100%;
-    height:100%;
-    z-index: -1;
-    position: absolute;
-}
-.HeroSectionContent{
+    height:600px;
+  }
+  
+  .clippergoat-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;  
-    height: 100%;  
-}
- 
-.HeroSectionContent *{
-    z-index: 3;
-    margin-top:30px;
-}
-.HeroSectionContentP{
- text-align: center;
-}
+    padding: 20px;
+  }
+  .imghero{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    object-fit: cover; z-index: -1;
+  }
+  .clippergoat-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .clippergoat-nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .clippergoat-nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  
 
-@media screen and (max-width: 768px) {
-    .HeroSectionLanding{
-        position:static;
-    }
+  .clippergoat-hero {
+    display: flex;    height:600px;
+    padding:50px;
+    max-width: 600px;;
+    flex-direction: column;
+    justify-content: center; 
+    background-size: cover;
+    background-position: center;
+  }
+  .clippergoat-hero *{
+    z-index: 3 ;
+  }
+  
+  .clippergoat-hero-title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  
+  .clippergoat-highlight {
+    color: #00ffff; 
+  }
+  
+  .clippergoat-hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .clippergoat-pricing {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 50px;
+    top: 150px;
+    width: 300px;
+  }
+  
+  .clippergoat-price {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .clippergoat-price-period {
+    font-size: 18px;
+  }
+  
+  .clippergoat-price-description {
+    margin-bottom: 20px;
+  }
+  
+  .clippergoat-features {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .clippergoat-feature-item {
+    margin-bottom: 10px;
+  }
+  
+  .clippergoat-feature-item::before {
+    content: '✓';
+    color: #00ffff;
+    margin-right: 10px;
   }

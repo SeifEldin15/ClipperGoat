@@ -14,6 +14,7 @@
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  margin-top:80px;
 }
 
 .pricing-card {
@@ -96,7 +97,9 @@
   width: 90%;
   font-size: 16px;
 }
-
+.PricingSection button:hover {
+  box-shadow: 0 0 35px rgba(20, 110, 255, 0.5);
+}
 .PricingSection ul {
   list-style-type: none;
   padding: 20px;
