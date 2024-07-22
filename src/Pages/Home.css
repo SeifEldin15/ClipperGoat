@@ -142,8 +142,6 @@
   color:white !important;
 }
 .AnimateCounterHomePhone section{
-  width:80% !important;
-  max-width: 450px;;    margin-left:-80px;
 
 
 }  .HomeImgContainer {
@@ -179,7 +177,7 @@
     display: none;
   }
   .spacing-counter{
-    margin-top:900px;
+    margin-top:1050px;
   }
 
 }
