@@ -95,7 +95,9 @@
   font-weight: 700;
   margin-bottom: 10px;
 }
-
+.information-container-header-div{
+  margin-left:-130px;
+}
 .HomeImgContainerHeaderSecond {
   color: rgb(115, 115, 115);
   font-size: 18px;
@@ -159,6 +161,9 @@
 }
 
 @media (max-width: 1000px) {
+  .information-container-header-div{
+    margin-left:-0px;
+  }
   .getoffersmall{
     display: block;
     width:90%;

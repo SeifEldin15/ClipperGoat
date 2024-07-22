@@ -56,7 +56,8 @@ const Home = () => {
     },
   ];
   return (
-      <>
+      <>              <div className="starry-background"></div>;
+
         <Navbar />
         <div>
           <HeroSectionLanding />
@@ -88,7 +89,7 @@ const Home = () => {
           <div className="information-container " ref={targetRef}>
   <ScrollProgressBar targetRef={targetRef} />
   <div>
-    <div>
+    <div className='information-container-header-div'>
       <h1 className="information-container-header custom-header-title">Unlock Your <span className="glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
     </div>

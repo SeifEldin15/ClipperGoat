@@ -8,7 +8,7 @@
   .faq-item {
     margin-bottom: 15px;
     transition: 0.3s;    border-radius: 11px;
-  }
+   }
     
   .faq-item:hover {
     box-shadow: 0 0 65px rgba(20, 110, 255, 0.5);
@@ -20,7 +20,12 @@
          margin: 20px auto;
   
     }
-    
+    .faq-item {
+      margin-bottom: 15px;
+      transition: 0.3s;    border-radius: 11px;
+      font-size: 14px;
+    }
+      
   }
   .faq-question {
     background-color: #16213e;

@@ -28,21 +28,25 @@
   margin-top: 5px;
   font-size: 17px;
 }
+@media screen and (max-width: 1308px) {
 
-@media screen and (max-width: 768px) {
-  .landing-counter-container-header{
-    text-align: center;
-    margin-right:0px;
-  }
-.counter-content-header img {
-  width:150px;
-  height:150px;
-}
   .counter-content-header{
     display: flex;
     flex-direction: column;
     align-items: center;
+  }  .landing-counter-container-header{
+    text-align: center;
+    margin-right:0px;
   }
+}
+
+@media screen and (max-width: 768px) {
+
+.counter-content-header img {
+  width:150px;
+  height:150px;
+}
+
   .counter-container {
     padding: 10px;
   }

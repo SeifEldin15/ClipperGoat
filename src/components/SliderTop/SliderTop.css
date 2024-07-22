@@ -58,7 +58,9 @@
   .slidetop-content {
     position: relative;
   }
-  
+  .slidetop-content video{
+    border-radius: 11px;
+  }
   .slidetopoverlay {
     position: absolute;
     bottom: 0;

@@ -7,7 +7,8 @@ import Refund from './Pages/Refund';
 import Leaderboard from './Pages/Leaderboard'; 
 import Pricing from './Pages/Pricing'
 import './App.css';
-
+//icons 
+//numbers on counter neon
 function App() {
   return (
             <Routes>
