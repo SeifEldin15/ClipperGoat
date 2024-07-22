@@ -16,7 +16,8 @@
   transition: none;
 }
 .Slider-Top-Get-Btn {
-  width: 25%;
+  width: 80%;
+  max-width: 400px;
   margin: 40px auto;
 }
 

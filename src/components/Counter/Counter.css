@@ -36,7 +36,8 @@
     align-items: center;
   }  .landing-counter-container-header{
     text-align: center;
-    margin-right:0px;
+    margin-right:0px;  color:     #3a78ff !important;
+
   }
 }
 

@@ -8,6 +8,7 @@ import FAQ from '../components/FAQ/FAQ';
 import Slider2 from '../components/Slider2/Slider2';
 import AnimateCounter from '../components/Counter/Counter';
 import SliderOpposite from '../components/SliderTop/SliderOpposite';
+// import VideoBackground from '../components/VideoBackground/VideoBackground';
 
 import styled from 'styled-components';
 
@@ -57,7 +58,9 @@ const Home = () => {
     },
   ];
   return (
-      <>              <div className="starry-background"></div>;
+      <>  
+      
+                  <div className="starry-background"></div>;
 
         <Navbar />
         <div>
@@ -88,9 +91,9 @@ const Home = () => {
 <SliderOpposite />
 </div>
           
-          <div className="information-container " ref={targetRef}>
+          <div className="information-container Container-Spacing-LG" ref={targetRef}>
   <ScrollProgressBar targetRef={targetRef} />
-  <div>
+  <div className=''>
     <div className='information-container-header-div'>
       <h1 className="information-container-header custom-header-title">Unlock Your <span className="glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>

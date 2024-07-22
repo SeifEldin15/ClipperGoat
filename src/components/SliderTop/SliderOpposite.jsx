@@ -58,7 +58,7 @@ const SliderOpposite = () => {
 
   const tripleImages = [...images, ...images, ...images];
 
-  return (
+  return ( <>
     <div className="slidetopshow-container ">
 
       <div className="slidetopshow-track-container">
@@ -85,10 +85,12 @@ const SliderOpposite = () => {
         </div>
       </div>
       
-      <div className="Slider-Top-Get-Btn">
-        <GetOfferBtn />
-      </div>
+ 
     </div>
+         <div className="Slider-Top-Get-Btn">
+         <GetOfferBtn />
+       </div>
+      </>
   );
 };
 

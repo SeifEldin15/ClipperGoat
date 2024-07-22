@@ -7,10 +7,12 @@
   text-align: center;
 
 }
-
+.slideshow-track-container {
+  overflow: hidden;
+}
 .slideshow-track212 {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: none;
 }
 
 .slideshow-track212 img {
@@ -34,14 +36,10 @@
 }
 
 .slide212 {
-  border: 1px solid #092243;
-  height: auto;
-  margin: 10px;
+  flex: 0 0 auto;
+  width: 260px;
+  margin-right: 20px;
   position: relative;
-  padding: 10px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
 }
 
 .slide-content212 {

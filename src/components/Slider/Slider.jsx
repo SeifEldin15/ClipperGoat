@@ -57,42 +57,52 @@ const Slider = () => {
     { src: imgs68, title: 'Ella', description: 'Crypto Enthusiast' },
   ];
   
-  const doubledImages = [...images, ...images];
+  const tripleImages = [...images, ...images, ...images];
 
   useEffect(() => {
     const track = trackRef.current;
-    const slideWidth = track.firstChild.offsetWidth;
-   
-    const interval = setInterval(() => {
+    const slideWidth = track.children[0].offsetWidth;
+    const totalWidth = slideWidth * images.length;
+
+    const animate = () => {
       setPosition((prevPosition) => {
-        if (prevPosition <= -slideWidth * images.length) {
+        const newPosition = prevPosition - 0.7; // Adjust speed here
+        if (newPosition <= -totalWidth) {
           return 0;
         }
-        return prevPosition - 1;
+        return newPosition;
       });
-    }, 7);
-    return () => clearInterval(interval);
+    };
+
+    const animationId = requestAnimationFrame(function animation() {
+      animate();
+      requestAnimationFrame(animation);
+    });
+
+    return () => cancelAnimationFrame(animationId);
   }, [images.length]);
 
   return (
     <div className="slideshow-container212 Container-Spacing-Lg">
       <h1 className="custom-header-title">Unlock Your <span className="highlight glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
-      <div
-        className="slideshow-track212 Container-Spacing"
-        ref={trackRef}
-        style={{ transform: `translateX(${position}px)` }}
-      >
-        {doubledImages.map((image, index) => (
-          <div key={index} className="slide212 ">
-            <p className="slideshow-container-title">{image.title}</p>
-            <p className="slideshow-container-desc">{image.description}</p>
-            <div className="slide-content212">
-              <div className="slideoverlay"></div>
-              <img src={image.src} alt={`Slide212 ${index + 1}`} />
+      <div className="slideshow-track-container">
+        <div
+          className="slideshow-track212 Container-Spacing"
+          ref={trackRef}
+          style={{ transform: `translateX(${position}px)` }}
+        >
+          {tripleImages.map((image, index) => (
+            <div key={index} className="slide212">
+              <p className="slideshow-container-title">{image.title}</p>
+              <p className="slideshow-container-desc">{image.description}</p>
+              <div className="slide-content212">
+                <div className="slideoverlay"></div>
+                <img src={image.src} alt={`Slide212 ${index + 1}`} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

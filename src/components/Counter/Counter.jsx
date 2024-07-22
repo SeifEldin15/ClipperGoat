@@ -5,11 +5,29 @@ import goatcounter from '../../assets/goatcounter.png'
 import './Counter.css'
 
 const shake = keyframes`
-  // 0% { transform: translateX(0); }
-  // 25% { transform: translateX(-5px); }
-  // 50% { transform: translateX(5px); }
-  // 75% { transform: translateX(-5px); }
-  // 100% { transform: translateX(0); }
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+`;
+const neonPulse = keyframes`
+  0%, 50% {
+    text-shadow: 0 0 5px #3a78ff, 0 0 10px #3a78ff, 0 0 15px #3a78ff, 0 0 20px #3a78ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #3a78ff, 0 0 20px #3a78ff, 0 0 30px #3a78ff, 0 0 40px #3a78ff;
+  }
+`;
+
+
+
+
+
+const DigitBoxContainer = styled.div`
+  display: flex;
+  justify-content: center;  
+
 `;
 
 const CounterWrapper = styled.div`
@@ -21,25 +39,22 @@ const CounterWrapper = styled.div`
   padding: 15px;
   border-radius: 10px;
   z-index: 1000;
+    border: 1px solid rgba(52, 130, 255, 1);
   ${props => props.shake && css`
     animation: ${shake} 0.5s ease-in-out;
   `}
   @media screen and (max-width: 768px) {
     position: static;
-    margin-top: 20px; 
+    margin-top: 20px;
   }
 `;
 
-const DigitBoxContainer = styled.div`
-  display: flex;
-  justify-content: center;  
 
-`;
+
 
 const DigitBox = styled.div`
   box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
-    background-color: rgba(17, 24, 39, 0.329);
-  color: white;
+  color: transparent;
   font-size: 27px;
   font-weight: bold;
   padding: 8px;
@@ -48,7 +63,11 @@ const DigitBox = styled.div`
   min-width: 60px;
   text-align: center;
   transition: all 0.3s ease;
+  border: 1px solid rgba(52, 130, 255, 1);
+  -webkit-text-stroke: 1px #3a78ff;
+  animation: ${neonPulse} 1.5s infinite;
 `;
+
 
 const AnimatedCounter = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState({});
