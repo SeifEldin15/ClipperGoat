@@ -4,7 +4,7 @@
    border-radius: 9px; width: 100%;
   margin-bottom: 40px;  border: 1px solid rgb(144, 187, 255);
   opacity:0.9;
-  margin-top:40px;
+  margin-top:10px;
   padding: 15px 20px;
   font-size: 18px;
   font-weight: 700;
@@ -18,5 +18,5 @@
  
   box-shadow: 
   rgb(49, 128, 255) 0px 0px 17.3px 11px inset, 
-  0 0 25px rgb(35, 119, 255);
+  0 0 35px rgb(35, 119, 255);
  }

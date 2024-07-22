@@ -4,7 +4,6 @@
 }
 
 .PricingSection h1 {
-  font-size: 2.5em;
   margin-bottom: 40px;
 }
 
@@ -169,7 +168,7 @@
 
 @media screen and (max-width: 576px) {
   .PricingSection h1 {
-    font-size: 2em;
+    font-size: 2em !important;
   }
 
   .pricing-card-container {
@@ -181,7 +180,7 @@
   }
 
   .pricing-card-header {
-    font-size: 2em;
+    font-size: 1.1em;
   }
 
   .price {
@@ -189,6 +188,31 @@
   }
 
   .PricingSection ul {
-    font-size: 16px;
+    font-size: 12px;
   }
+  
+.PricingSection button {
+  color: white;
+  border: none;
+  padding: 12px 17px;
+  border-radius: 12px;
+  border: 1px solid rgba(52, 130, 255, 0.5);
+  cursor: pointer;
+  margin: 20px 0;
+  width: 80%;
+  font-size: 12px;
+}
+
+.popular-tag i {
+  margin-bottom: -1px;
+  color: rgb(199, 199, 199);
+  font-size: 14px;
+}
+.popular-tag {
+
+  
+  padding: 5px 12px;
+  width: 140px;
+  font-size: 12px;
+}
 }

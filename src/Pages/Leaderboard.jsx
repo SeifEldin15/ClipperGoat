@@ -58,8 +58,10 @@ const Leaderboard = () => {
       <Navbar />
       <HeroSectionLanding2 />
       <div className='LeaderContainer'>
-        <div className="LeaderBoardSection Container-Spacing">
+        <div className="LeaderBoardSection ">
           <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text">Income Path</span></h1>
+               <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
+
           <div className="leaderboard-rank-info-container">
       <div className="leaderboard-container">
         <div className="leader-card">

@@ -18,7 +18,7 @@ const CounterWrapper = styled.div`
   align-items: center;
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
   background: #1F2937;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   z-index: 1000;
   ${props => props.shake && css`

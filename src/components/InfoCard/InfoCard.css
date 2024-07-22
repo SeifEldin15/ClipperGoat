@@ -1,33 +1,34 @@
 .financial-freedom {
   background-image: linear-gradient(to right, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.05));
   color: white;  border: 1px solid rgba(52, 130, 255, 0.3);
-  box-shadow: 0 0 55px rgba(20, 110, 255, 0.5), inset    0 0 35px rgba(20, 110, 255, 0.5);
-
-  padding-left: 2rem;
+  box-shadow: 0 0 35px rgba(20, 110, 255, 0.5), inset    0 0 25px rgba(20, 110, 255, 0.5);
+  padding: 2rem; 
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+width: 90%;
   max-width: 1200px;
   margin: 70px auto;
 }
-
+ 
 .financial-freedom .content {
   flex: 1;
   padding-right: 2rem;
 }
 
 .financial-freedom h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;   
+  font-size: 2.5rem !important;
 }
 
 .financial-freedom p {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom:1.5rem;
   opacity: 0.8;
   display: flex;
   align-items: center;
+
 }
 
 .check-circle {
@@ -47,10 +48,11 @@
   background-color: var(--main-color-lighter);
   color: white;
   border: none;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 4rem;
+
   font-size: 1rem;
   margin-bottom: 10px;
-  border-radius: 25px;
+  border-radius: 15px;
   box-shadow: 
   rgb(69, 141, 255) 0px 0px 17.3px 11px inset, 
   0 0 15px rgb(94, 156, 255);
@@ -115,8 +117,27 @@
 }
 
 @media (max-width: 768px) {
+  
   .financial-freedom {
     flex-direction: column;
+    text-align: center;
+
+  }
+  
+
+  .financial-freedom h1 {
+    margin-bottom: 2.5rem;   
+  
+  }
+  
+  .financial-freedom p {
+    font-size: 0.8rem;
+    margin-bottom:2.5rem;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  
   }
   .financial-freedom .content {
     padding-right: 0;
@@ -124,5 +145,29 @@
   }
   .financial-freedom .images {
     width: 100%;
+  }
+}
+
+@media (max-width: 508px) {
+
+  .financial-freedom h1 {
+    margin-bottom: 2.5rem;   
+    font-size: 1.5rem !important;
+
+  }
+  .get-started {
+
+    padding: 0.75rem 4rem;
+  
+    font-size: 0.8rem;
+  }
+  .financial-freedom p {
+    font-size: 0.8rem;
+    margin-bottom:2.5rem;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  
   }
 }

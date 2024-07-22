@@ -22,7 +22,6 @@ const InfoCard = () => {
         <button className="get-started">Get started</button>
       </div>
       <div className="images">
-        <img src={WhatsApp1} alt="" />
   
       </div>
     </div>
@@ -41,7 +40,6 @@ const InfoCard = () => {
         <button className="get-started">Get started</button>
       </div>
       <div className="images">
-        <img src={WhatsApp2} alt="" />
   
       </div>
     </div>
@@ -60,7 +58,6 @@ const InfoCard = () => {
         <button className="get-started">Get started</button>
       </div>
       <div className="images">
-        <img src={WhatsApp3} alt="" />
   
       </div>
     </div>

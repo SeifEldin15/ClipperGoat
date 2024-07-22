@@ -62,7 +62,8 @@ const Home = () => {
           <HeroSectionLanding />
           <div className="AnimateCounterHomePhone">
 
-       <section> <AnimateCounter /></section>
+       <section><AnimateCounter targetDate="2024-08-31T23:59:59" />  
+       </section>
       </div>
           <div className="challenge-container-phone">
           <div className='challenge-card '>
