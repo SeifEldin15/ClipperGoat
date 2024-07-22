@@ -23,7 +23,7 @@
 .slidetopshow-track img,
 .slidetopshow-track video {
   width: 260px;
-  height: 360.65px;
+  height: 360.65px !important;
   object-fit: cover;
   border-radius: 15px;
   margin: 0 auto;
@@ -90,14 +90,14 @@
    min-width: 300px;;
   }
   
- 
+/*  
 @media screen and (max-width: 768px) {
   .slidetopshow-track img {
     width: 260px;
     height: 350.65px;
     object-fit: cover;
     border-radius: 15px;
-    margin: 0 auto; /* Center the image horizontally */
-    display: block; /* Ensure the image is a block element */
+    margin: 0 auto;  
+    display: block; 
   }
-}
+} */
