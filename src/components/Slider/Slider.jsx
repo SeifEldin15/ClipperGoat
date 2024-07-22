@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Slider.css';
 import imgs44 from '../../assets/New folder/clippergoat reviews/44.png';
 import imgs45 from '../../assets/New folder/clippergoat reviews/45.png';
@@ -62,43 +62,40 @@ const Slider = () => {
   useEffect(() => {
     const track = trackRef.current;
     const slideWidth = track.firstChild.offsetWidth;
-    track.style.setProperty('--slide-width', `${slideWidth}px`);
-    track.style.setProperty('--num-slides', images.length.toString());
+   
+    const interval = setInterval(() => {
+      setPosition((prevPosition) => {
+        if (prevPosition <= -slideWidth * images.length) {
+          return 0;
+        }
+        return prevPosition - 1;
+      });
+    }, 7);
+    return () => clearInterval(interval);
   }, [images.length]);
-
-  const handleTouchStart = () => {
-    const track = trackRef.current;
-    track.style.animationPlayState = 'paused';
-  };
-
-  const handleTouchEnd = () => {
-    const track = trackRef.current;
-    track.style.animationPlayState = 'running';
-  };
 
   return (
     <div className="slideshow-container Container-Spacing-Lg">
       <h1 className="custom-header-title">Unlock Your <span className="highlight glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
-      <div className="slideshow-track-container">
-        <div 
-          className="slideshow-track Container-Spacing" 
-          ref={trackRef}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
-          {doubledImages.map((image, index) => (
-            <div key={index} className="slide">
-              <p className="slideshow-container-title">{image.title}</p>
-              <p className="slideshow-container-desc">{image.description}</p>
-              <div className="slide-content">
-                <div className="slideoverlay"></div>
-                <img src={image.src} alt={`Slide ${index + 1}`} />
-              </div>
+      <div
+        className="slideshow-track Container-Spacing"
+        ref={trackRef}
+        style={{ transform: `translateX(${position}px)` }}
+      >
+        {doubledImages.map((image, index) => (
+          <div key={index} className="slide ">
+            <p className="slideshow-container-title">{image.title}</p>
+            <p className="slideshow-container-desc">{image.description}</p>
+            <div className="slide-content">
+              <div className="slideoverlay"></div>
+              <img src={image.src} alt={`Slide ${index + 1}`} />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
+
+export default Slider;

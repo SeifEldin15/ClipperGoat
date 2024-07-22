@@ -142,33 +142,41 @@ const Slider2 = () => {
   const [maxSlide, setMaxSlide] = useState(0);
   const sliderRef = useRef(null);
 
-  const updateMaxSlide = useCallback(() => {
-    if (sliderRef.current) {
-      const containerWidth = sliderRef.current.clientWidth;
-      const slideWidth = 320; // 300px slide width + 20px gap
-      const visibleSlides = Math.floor(containerWidth / slideWidth);
-      setMaxSlide(slides.length - visibleSlides);
-    }
-  }, []);
-
   useEffect(() => {
+    const updateMaxSlide = () => {
+      if (sliderRef.current) {
+        const containerWidth = sliderRef.current.clientWidth;
+        const slideWidth = 320; // 300px slide width + 20px gap
+        const visibleSlides = Math.floor(containerWidth / slideWidth);
+        setMaxSlide(slides.length - visibleSlides);
+      }
+    };
+
     updateMaxSlide();
-    const debouncedUpdateMaxSlide = debounce(updateMaxSlide, 250);
-    window.addEventListener('resize', debouncedUpdateMaxSlide);
-    return () => window.removeEventListener('resize', debouncedUpdateMaxSlide);
-  }, [updateMaxSlide]);
+    window.addEventListener('resize', updateMaxSlide);
+
+    return () => window.removeEventListener('resize', updateMaxSlide);
+  }, []);
 
   const scrollToSlide = (index) => {
     const newIndex = Math.max(0, Math.min(index, maxSlide));
     setCurrentSlide(newIndex);
     if (sliderRef.current) {
-      const slideWidth = 320;
-      sliderRef.current.style.transform = `translateX(-${newIndex * slideWidth}px)`;
+      const slideWidth = 320; // 300px slide width + 20px gap
+      sliderRef.current.scrollTo({
+        left: newIndex * slideWidth,
+        behavior: 'smooth'
+      });
     }
   };
 
-  const handlePrev = () => scrollToSlide(currentSlide - 1);
-  const handleNext = () => scrollToSlide(currentSlide + 1);
+  const handlePrev = () => {
+    scrollToSlide(currentSlide - 1);
+  };
+
+  const handleNext = () => {
+    scrollToSlide(currentSlide + 1);
+  };
 
   return (
     <div className="slider-wrapper2">
@@ -188,7 +196,8 @@ const Slider2 = () => {
             style={{ backgroundColor: slide.color }}
           >
             <div className='slider2imgcontainer'>
-              <img src={slide.image} alt={slide.title} className='slider2img' loading="lazy" />
+                          <img src={slide.image} alt={slide.title} className='slider2img'/>
+
             </div>
             <div className="slidetopoverlay12">
               <div className="slide-content2">
@@ -202,18 +211,5 @@ const Slider2 = () => {
     </div>
   );
 };
-
-// Debounce function
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
 
 export default Slider2;

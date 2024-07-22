@@ -1,8 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-
 import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
 import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.png';
 import imgs2 from '../../assets/New folder/Influncers Top row/Donald Trump .png';
@@ -32,38 +29,9 @@ import imgs211 from '../../assets/New folder/influncers bottom rown/Neon.mp4';
 import imgs212 from '../../assets/New folder/influncers bottom rown/Mr Beast.png';
 import imgs213 from '../../assets/New folder/influncers bottom rown/Russel Brunson.png';
 
-const LazyVideo = ({ src, ...props }) => {
-  const [shouldLoad, setShouldLoad] = useState(false);
-  const placeholderRef = useRef();
-
-  useEffect(() => {
-    if (!shouldLoad && placeholderRef.current) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setShouldLoad(true);
-            observer.disconnect();
-          }
-        },
-        { rootMargin: "100px" }
-      );
-      observer.observe(placeholderRef.current);
-      return () => observer.disconnect();
-    }
-  }, [shouldLoad]);
-
-  if (!shouldLoad) {
-    return <div ref={placeholderRef} style={{height: '360.65px', background: '#000'}} />;
-  }
-
-  return <video src={src} {...props} />;
-};
-
 const SliderTop = () => {
   const [positionRight1, setPositionRight1] = useState(0);
   const [positionRight2, setPositionRight2] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
   const trackRef1 = useRef(null);
   const trackRef2 = useRef(null);
 
@@ -106,52 +74,29 @@ const SliderTop = () => {
     const slideWidth1 = track1.firstChild.offsetWidth;
     const slideWidth2 = track2.firstChild.offsetWidth;
 
-    let animationFrameId;
-    let lastTimestamp = 0;
+    const interval1 = setInterval(() => {
+      setPositionRight1((prevPosition) => {
+        if (prevPosition <= -slideWidth1 * images1.length) {
+          return 0;
+        }
+        return prevPosition - 1;
+      });
+    }, 7);
 
-    const animate = (timestamp) => {
-      if (timestamp - lastTimestamp > 16) {  // ~60fps
-        setPositionRight1((prevPosition) => {
-          if (prevPosition <= -slideWidth1 * images1.length) {
-            return 0;
-          }
-          return prevPosition - 1;
-        });
-        setPositionRight2((prevPosition) => {
-          if (prevPosition >= 0) {
-            return -slideWidth2 * images2.length;
-          }
-          return prevPosition + 1;
-        });
-        lastTimestamp = timestamp;
-      }
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    animationFrameId = requestAnimationFrame(animate);
+    const interval2 = setInterval(() => {
+      setPositionRight2((prevPosition) => {
+        if (prevPosition >= 0) {
+          return -slideWidth2 * images2.length;
+        }
+        return prevPosition + 1;
+      });
+    }, 7);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      clearInterval(interval1);
+      clearInterval(interval2);
     };
   }, [images1.length, images2.length]);
-
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].clientX;
-    const walk = (x - startX) * 3;
-    setPositionRight1(prevPosition => prevPosition + walk);
-    setPositionRight2(prevPosition => prevPosition - walk);
-    setStartX(x);
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
 
   return (
     <>
@@ -165,22 +110,15 @@ const SliderTop = () => {
           className="slidetopshow-track Container-Spacing"
           ref={trackRef1}
           style={{ transform: `translateX(${positionRight1}px)` }}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
         >
           {doubledImages1.map((image, index) => (
             <div key={index} className="slidetop">
               <div className="slidetop-content">
               {image.src.endsWith('.mp4') ? (
-                <LazyVideo src={image.src} autoPlay loop muted playsInline />
-              ) : (
-                <LazyLoadImage
-                  src={image.src}
-                  alt={`slidetop ${index + 1}`}
-                  effect="blur"
-                />
-              )}
+                <video src={image.src} autoPlay loop muted playsInline />
+                    ) : (
+                <img src={image.src} alt={`slidetop ${index + 1}`} />
+                    )}
                 <div className="slidetopoverlay">
                   <p className="slidetopshow-container-title">{image.title}</p>
                   <p className="slidetopshow-container-extra">{image.description}</p>
@@ -196,22 +134,15 @@ const SliderTop = () => {
           className="slidetopshow-track"
           ref={trackRef2}
           style={{ transform: `translateX(${positionRight2}px)` }}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
         >
           {doubledImages2.map((image, index) => (
             <div key={index} className="slidetop">
               <div className="slidetop-content">
               {image.src.endsWith('.mp4') ? (
-                <LazyVideo src={image.src} autoPlay loop muted playsInline />
-              ) : (
-                <LazyLoadImage
-                  src={image.src}
-                  alt={`slidetop ${index + 1}`}
-                  effect="blur"
-                />
-              )}
+  <video src={image.src} autoPlay loop muted playsInline />
+) : (
+  <img src={image.src} alt={`slidetop ${index + 1}`} />
+)}
                 <div className="slidetopoverlay">
                   <p className="slidetopshow-container-title">{image.title}</p>
                   <p className="slidetopshow-container-extra">{image.description}</p>
