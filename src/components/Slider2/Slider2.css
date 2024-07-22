@@ -9,13 +9,14 @@
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 20px;
+    gap: 20px;    transition: transform 0.3s ease;
+
     padding: 0 20px;
     scroll-behavior: smooth;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
-  
+
   .slider-container2::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
   }
