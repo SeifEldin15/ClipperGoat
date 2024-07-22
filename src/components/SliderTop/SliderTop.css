@@ -1,29 +1,35 @@
 .slidetopshow-container {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .slidetopshow-container h1 {
-    text-align: center;
-  }
-  
-  .slidetopshow-track {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  .Slider-Top-Get-Btn{
-    width: 25%;
-    margin: 40px auto;
-  }
-  .slidetopshow-track img {
-    width: 260px;
-    height: 360.65px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin: 0 auto;
-    display: block;     opacity: 0.5; /* 50% transparent */
+  width: 100%;
+  overflow: hidden;
+}
 
-  }
+.slidetopshow-container h1 {
+  text-align: center;
+}
+
+.slidetopshow-track-container {
+  overflow: hidden;
+}
+
+.slidetopshow-track {
+  display: flex;
+  transition: none;
+}
+.Slider-Top-Get-Btn {
+  width: 25%;
+  margin: 40px auto;
+}
+
+.slidetopshow-track img,
+.slidetopshow-track video {
+  width: 260px;
+  height: 360.65px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.5;
+}
  
   .slidetopshow-container-title {
    margin: 0 auto;
@@ -47,13 +53,11 @@
   }
   
   .slidetop {
-    border: 1px solid #092243;
-    height: auto;
-    margin: 10px;
-    position: relative;
-    padding: 10px;
-    border-radius: 15px;
+    flex: 0 0 auto;
+    width: 260px; /* Adjust this to match your slide width */
+    margin-right: 20px; /* Adjust this to match your slide gap */
   }
+  
   
   .slidetop-content {
     position: relative;

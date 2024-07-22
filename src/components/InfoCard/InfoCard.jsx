@@ -1,8 +1,6 @@
 import React from 'react';
 import './InfoCard.css';
-import WhatsApp1 from '../../assets/WhatsApp1.png'
-import WhatsApp2 from '../../assets/WhatsApp2.png'
-import WhatsApp3 from '../../assets/WhatsApp3.png'
+
 
 const InfoCard = () => {
   return (
