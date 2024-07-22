@@ -2,7 +2,7 @@
 .clippergoat-app {
     color: white;
     position: relative;
-    height:700px;
+    height:750px;
   }
   
   .clippergoat-header {
@@ -31,10 +31,8 @@
     color: white;
     text-decoration: none;
   }
-  
-
   .clippergoat-hero {
-    display: flex;    height:600px;
+    display: flex;    height:750px;
     padding:50px;
     max-width: 600px;;
     flex-direction: column;
@@ -62,20 +60,20 @@
   }
   .landing-counter-container{
     position: absolute;
-    top:-80px;
+    top:10px;
     right:20px;
   }
-  
+ 
   .clippergoat-pricing {
     background-color: #2a2a2a;
     padding: 20px;
     border-radius: 10px;
     position: absolute;
-    right: 50px;
-    top: 250px;
+    right: 30px;
     width: 300px; 
+    top:280px;
   }
-  
+
   .clippergoat-price {
     font-size: 36px;
     margin-bottom: 10px;
@@ -103,3 +101,13 @@
     color: #00ffff;
     margin-right: 10px;
   }
+.challenge-container-phone{
+  display: none;
+}
+.challenge-container-phone{
+  position: absolute;
+  top:800px;
+}
+.landing-counter-container-header h1{
+  font-size: 30px !important;
+}

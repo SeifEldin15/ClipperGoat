@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSectionLanding2 from '../components/HeroSectionLanding2/HeroSectionLanding';
+import HeroSectionLanding2 from '../components/HeroSectionLanding/HeroSectionLanding';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import InfoCard from '../components/InfoCard/InfoCard';

@@ -34,7 +34,9 @@ function HeroSectionLandingHero() {
       <p className="clippergoat-hero-subtitle">Great for any INDUSTRY!!! Use the AI powered Short Form Editor. Edit 100s of videos in minutes with ClipperGoat AI</p>
 <GetOfferBtn />
 <div>
-  <div className="landing-counter-container"><AnimateCounter />
+  <div className="landing-counter-container">
+
+<AnimateCounter targetDate="2024-08-31T23:59:59" />  
   </div>
     <div className="clippergoat-pricing">
       <h2 className="clippergoat-price">$120<span className="clippergoat-price-period">/month</span></h2>

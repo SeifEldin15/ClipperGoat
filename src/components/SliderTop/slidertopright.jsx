@@ -1,14 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './SliderTop.css';
-import imgs12 from '../../assets/659226b6a055423e4e0e59ca_Testimonials 5 (1)-p-500.png';
+import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.png';
+import imgs2 from '../../assets/New folder/Donald Trump .png';
+import imgs3 from '../../assets/New folder/joe Rogan.mp4';
+
 
 const sliderTop = () => {
   const [positionright, setPositionright] = useState(0);
   const trackRef = useRef(null);
   const images = [
-    { src: imgs12, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs12, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs12, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs1, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs2, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs3, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs12, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs12, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs12, title: '@Bendict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
