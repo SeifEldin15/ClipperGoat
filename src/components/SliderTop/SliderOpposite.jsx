@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
- import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.png';
+import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
+import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.png';
 import imgs2 from '../../assets/New folder/Influncers Top row/Donald Trump .png';
 import imgs3 from '../../assets/New folder/Influncers Top row/joe Rogan.mp4';
 import imgs4 from '../../assets/New folder/Influncers Top row/Jack Doherty .png';
@@ -13,7 +14,7 @@ import imgs10 from '../../assets/New folder/Influncers Top row/Suga Sean Omalley
 import imgs11 from '../../assets/New folder/Influncers Top row/XQC.mp4';
 import imgs12 from '../../assets/New folder/Influncers Top row/Yodit Yemane .png';
 
-const SliderTop = () => {
+const SliderOpposite = () => {
   const [position, setPosition] = useState(0);
   const trackRef = useRef(null);
 
@@ -31,6 +32,7 @@ const SliderTop = () => {
     { src: imgs11, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs12, title: '@21rfew', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
   ];
+
   useEffect(() => {
     const track = trackRef.current;
     const slideWidth = track.children[0].offsetWidth;
@@ -38,9 +40,9 @@ const SliderTop = () => {
 
     const animate = () => {
       setPosition((prevPosition) => {
-        const newPosition = prevPosition - 0.7; // Adjust speed here
-        if (newPosition <= -totalWidth) {
-          return 0;
+        const newPosition = prevPosition + 0.7; // Changed to + for opposite direction
+        if (newPosition >= 0) {
+          return -totalWidth;
         }
         return newPosition;
       });
@@ -57,12 +59,8 @@ const SliderTop = () => {
   const tripleImages = [...images, ...images, ...images];
 
   return (
-    <div className="slidetopshow-container Container-Spacing-Lg">
-      <h1 className="custom-header-title">
-        Unlock Your <span className="highlight glow-text">Full Potential</span>
-        <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
-      </h1>
-      
+    <div className="slidetopshow-container ">
+
       <div className="slidetopshow-track-container">
         <div
           className="slidetopshow-track Container-Spacing"
@@ -86,9 +84,12 @@ const SliderTop = () => {
           ))}
         </div>
       </div>
-
+      
+      <div className="Slider-Top-Get-Btn">
+        <GetOfferBtn />
+      </div>
     </div>
   );
 };
 
-export default SliderTop;
+export default SliderOpposite;

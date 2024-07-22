@@ -7,6 +7,7 @@ import GetOfferBtn from '../components/GetOfferBtn/GetOfferBtn';
 import FAQ from '../components/FAQ/FAQ';
 import Slider2 from '../components/Slider2/Slider2';
 import AnimateCounter from '../components/Counter/Counter';
+import SliderOpposite from '../components/SliderTop/SliderOpposite';
 
 import styled from 'styled-components';
 
@@ -84,6 +85,7 @@ const Home = () => {
 
 <div className="spacing-counter">
 <SliderTop />
+<SliderOpposite />
 </div>
           
           <div className="information-container " ref={targetRef}>
