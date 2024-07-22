@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Slider2.css';
 import img1 from '../../assets/New folder/Industries/Affiliate Marketing.png';
 import img2 from '../../assets/New folder/Industries/Agency & Course Owners.png';
@@ -18,7 +18,6 @@ import img15 from '../../assets/New folder/Industries/Podcast.png';
 import img16 from '../../assets/New folder/Industries/Real Estate.png';
 import img17 from '../../assets/New folder/Industries/Tech Review .png';
 import img18 from '../../assets/New folder/Industries/Traval Vlogs.png';
-
 
 const slides = [
   {
@@ -138,44 +137,35 @@ const slides = [
 
 ];
 
-// Debounce function
-const debounce = (func, delay) => {
-  let timeoutId;
-  return (...args) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func(...args), delay);
-  };
-};
-
 const Slider2 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [maxSlide, setMaxSlide] = useState(0);
   const sliderRef = useRef(null);
 
-  const updateMaxSlide = useCallback(() => {
-    if (sliderRef.current) {
-      const containerWidth = sliderRef.current.clientWidth;
-      const slideWidth = 320; // 300px slide width + 20px gap
-      const visibleSlides = Math.floor(containerWidth / slideWidth);
-      setMaxSlide(slides.length - visibleSlides);
-    }
-  }, []);
-
   useEffect(() => {
-    updateMaxSlide();
-    const debouncedUpdateMaxSlide = debounce(updateMaxSlide, 250);
-    window.addEventListener('resize', debouncedUpdateMaxSlide);
+    const updateMaxSlide = () => {
+      if (sliderRef.current) {
+        const containerWidth = sliderRef.current.clientWidth;
+        const slideWidth = 320; // 300px slide width + 20px gap
+        const visibleSlides = Math.floor(containerWidth / slideWidth);
+        setMaxSlide(slides.length - visibleSlides);
+      }
+    };
 
-    return () => window.removeEventListener('resize', debouncedUpdateMaxSlide);
-  }, [updateMaxSlide]);
+    updateMaxSlide();
+    window.addEventListener('resize', updateMaxSlide);
+
+    return () => window.removeEventListener('resize', updateMaxSlide);
+  }, []);
 
   const scrollToSlide = (index) => {
     const newIndex = Math.max(0, Math.min(index, maxSlide));
     setCurrentSlide(newIndex);
     if (sliderRef.current) {
       const slideWidth = 320; // 300px slide width + 20px gap
-      requestAnimationFrame(() => {
-        sliderRef.current.style.transform = `translateX(-${newIndex * slideWidth}px)`;
+      sliderRef.current.scrollTo({
+        left: newIndex * slideWidth,
+        behavior: 'smooth'
       });
     }
   };
@@ -206,7 +196,8 @@ const Slider2 = () => {
             style={{ backgroundColor: slide.color }}
           >
             <div className='slider2imgcontainer'>
-              <img src={slide.image} alt={slide.title} className='slider2img' loading="lazy" />
+                          <img src={slide.image} alt={slide.title} className='slider2img'/>
+
             </div>
             <div className="slidetopoverlay12">
               <div className="slide-content2">
