@@ -75,21 +75,21 @@ const Slider = () => {
   }, [images.length]);
 
   return (
-    <div className="slideshow-container Container-Spacing-Lg">
+    <div className="slideshow-container212 Container-Spacing-Lg">
       <h1 className="custom-header-title">Unlock Your <span className="highlight glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
       <div
-        className="slideshow-track Container-Spacing"
+        className="slideshow-track212 Container-Spacing"
         ref={trackRef}
         style={{ transform: `translateX(${position}px)` }}
       >
         {doubledImages.map((image, index) => (
-          <div key={index} className="slide ">
+          <div key={index} className="slide212 ">
             <p className="slideshow-container-title">{image.title}</p>
             <p className="slideshow-container-desc">{image.description}</p>
-            <div className="slide-content">
+            <div className="slide-content212">
               <div className="slideoverlay"></div>
-              <img src={image.src} alt={`Slide ${index + 1}`} />
+              <img src={image.src} alt={`Slide212 ${index + 1}`} />
             </div>
           </div>
         ))}
