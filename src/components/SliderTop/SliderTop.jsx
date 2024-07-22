@@ -23,12 +23,11 @@ import imgs24 from '../../assets/New folder/influncers bottom rown/bradly Martin
 import imgs241 from '../../assets/New folder/influncers bottom rown/Fresh.png';
 import imgs27 from '../../assets/New folder/influncers bottom rown/HUAK THUA.mp4';
 import imgs28 from '../../assets/New folder/influncers bottom rown/Ishowspeed.mp4';
-import imgs29 from '../../assets/New folder/influncers bottom rown/Kai Cent.png';
+import imgs239 from '../../assets/New folder/influncers bottom rown/KaiCent.png';
 import imgs210 from '../../assets/New folder/influncers bottom rown/Miami Swim week.mp4';
 import imgs211 from '../../assets/New folder/influncers bottom rown/Neon.mp4';
 import imgs212 from '../../assets/New folder/influncers bottom rown/Mr Beast.png';
 import imgs213 from '../../assets/New folder/influncers bottom rown/Russel Brunson.png';
-import imgs214 from '../../assets/New folder/influncers bottom rown/Untitled design (3).png';
 
 const SliderTop = () => {
   const [positionRight1, setPositionRight1] = useState(0);
@@ -61,10 +60,9 @@ const SliderTop = () => {
     { src: imgs22, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs21, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs27, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs29, title: '@21412', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs239, title: '@21412', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs211, title: '@41241', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs213, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs214, title: '@21412', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
   ];
 
   const doubledImages1 = [...images1, ...images1];
