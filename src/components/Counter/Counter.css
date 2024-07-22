@@ -15,6 +15,7 @@
 }
 .landing-counter-container-header{
   text-align: center;
+  margin-right:-100px;
 }
 .counter-content-header{
   display: flex;
@@ -29,6 +30,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .landing-counter-container-header{
+    text-align: center;
+    margin-right:0px;
+  }
 .counter-content-header img {
   width:150px;
   height:150px;
