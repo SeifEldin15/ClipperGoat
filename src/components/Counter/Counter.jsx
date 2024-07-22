@@ -16,8 +16,8 @@ const CounterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-  background: #1F2937;
+    box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
+    background-color: rgba(17, 24, 39, 0.729);
   padding: 15px;
   border-radius: 10px;
   z-index: 1000;
@@ -26,18 +26,19 @@ const CounterWrapper = styled.div`
   `}
   @media screen and (max-width: 768px) {
     position: static;
-    margin-top: 20px;
+    margin-top: 20px; 
   }
 `;
 
 const DigitBoxContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: center;  
+
 `;
 
 const DigitBox = styled.div`
   box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
-  background: #111827;
+    background-color: rgba(17, 24, 39, 0.329);
   color: white;
   font-size: 27px;
   font-weight: bold;
