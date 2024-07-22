@@ -9,9 +9,12 @@ const InfoCard = () => {
   <>
     <div className="financial-freedom">
       <div className="content">
-        <h1>Financial Freedom Awaits</h1>
+        <h1 className=' custom-header-title'>Financial Freedom <span className="glow-text">Awaits</span></h1>
         <p>
           <span className="check-circle">✓</span> Once you're inside Active Income, you get instant access to everything
+        </p>
+        <p>
+          <span className="check-circle">✓</span> that finally puts you on the path to financial freedom.
         </p>
         <p>
           <span className="check-circle">✓</span> that finally puts you on the path to financial freedom.
@@ -25,9 +28,12 @@ const InfoCard = () => {
     </div>
     <div className="financial-freedom">
       <div className="content">
-        <h1>Financial Freedom Awaits</h1>
+        <h1 className=' custom-header-title'>Financial Freedom <span className="glow-text">Awaits</span></h1>
         <p>
           <span className="check-circle">✓</span> Once you're inside Active Income, you get instant access to everything
+        </p>
+        <p>
+          <span className="check-circle">✓</span> that finally puts you on the path to financial freedom.
         </p>
         <p>
           <span className="check-circle">✓</span> that finally puts you on the path to financial freedom.
@@ -41,9 +47,12 @@ const InfoCard = () => {
     </div>
     <div className="financial-freedom">
       <div className="content">
-        <h1>Financial Freedom Awaits</h1>
+        <h1 className=' custom-header-title'> Financial Freedom <span className="glow-text">Awaits</span> </h1>
         <p>
           <span className="check-circle">✓</span> Once you're inside Active Income, you get instant access to everything
+        </p>
+        <p>
+          <span className="check-circle">✓</span> that finally puts you on the path to financial freedom.
         </p>
         <p>
           <span className="check-circle">✓</span> that finally puts you on the path to financial freedom.

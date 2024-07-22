@@ -103,6 +103,7 @@ const SliderTop = () => {
       <div className="slidetopshow-container Container-Spacing-Lg">
         <h1 className="custom-header-title">
           Unlock Your <span className="highlight glow-text">Full Potential</span>
+          <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
         </h1>
         
         <div

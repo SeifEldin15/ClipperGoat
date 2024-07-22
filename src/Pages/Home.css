@@ -134,37 +134,45 @@
 }
 .AnimateCounterHomePhone{
   display: none;
-  top:1350px;
+  top:850px;
   flex-direction: column;
   position: absolute;     width:100%;
   align-items: center; 
   margin-top:30px;
   color:white !important;
 }
-.AnimateCounterHomePhone section{
-
-
-}  .HomeImgContainer {
+ .HomeImgContainer {
   flex-direction: row;
   justify-content: space-around;
   margin-top: 0px;
   
 }
-
+.getoffersmall{
+  display: none;
+}
 @media (max-width: 700px) {
   .AnimateCounterHomePhone section{
      margin-left:0px;
   } 
 
 }
+
 @media (max-width: 1000px) {
+  .getoffersmall{
+    display: block;
+    width:90%;
+  }
+  .getofferlarge{
+    display: none;
+  }
   .AnimateCounterHomePhone{
     display: flex;
   }
   .challenge-container-phone{
     display: flex; 
     width:100%;
-    justify-content: center;  
+    justify-content: center;
+    margin-top:450px  
   }
   .landing-counter-container{
     display: none;
@@ -189,7 +197,7 @@
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    margin-top:100px !important;
+    margin-top:10px !important;
 
   }  .information-container {
     display: grid;

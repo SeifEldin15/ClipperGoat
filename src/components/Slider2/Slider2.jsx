@@ -195,7 +195,10 @@ const Slider2 = () => {
             className={`slide2 ${index === currentSlide ? 'active2' : ''}`}
             style={{ backgroundColor: slide.color }}
           >
-            <img src={slide.image} alt={slide.title} className='slider2img'/>
+            <div className='slider2imgcontainer'>
+                          <img src={slide.image} alt={slide.title} className='slider2img'/>
+
+            </div>
             <div className="slidetopoverlay12">
               <div className="slide-content2">
                 <h2>{slide.title}</h2>

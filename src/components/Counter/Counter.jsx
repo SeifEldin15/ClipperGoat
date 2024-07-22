@@ -83,16 +83,11 @@ const AnimatedCounter = ({ targetDate }) => {
     };
   }, [targetDate]);
 
-  const slideInStyles = useSpring({
-    from: { transform: 'translateY(-900%)' },
-    to: { transform: 'translateY(10%)' },
-    config: { tension: 170, friction: 36 }
-  });
 
   const formatNumber = (num) => num.toString().padStart(2, '0');
 
   return (
-    <animated.div style={slideInStyles} className='counter-container'>
+    <animated.div  className='counter-container'>
 
       <div className='counter-content'>
       <div className="landing-counter-container-header">

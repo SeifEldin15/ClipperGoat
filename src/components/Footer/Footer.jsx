@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Footer.css';
 import { NavLink, useLocation } from 'react-router-dom';
-
+import Logo from '../../assets/logo.png'
 const Footer = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-info">
             <div className="footer-logo">
-              <h1>ClipperGoat</h1>
+              <img src={Logo} />
             </div>
             <p className="footer-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa

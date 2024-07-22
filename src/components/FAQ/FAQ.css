@@ -12,8 +12,15 @@
     
   .faq-item:hover {
     box-shadow: 0 0 65px rgba(20, 110, 255, 0.5);
-    transform: scale(1.03);     margin: 25px;
+    transform: scale(1.06);     margin: 25px;
 
+  }
+  @media screen and (max-width: 768px) {
+    .faq-item:hover {
+         margin: 20px auto;
+  
+    }
+    
   }
   .faq-question {
     background-color: #16213e;

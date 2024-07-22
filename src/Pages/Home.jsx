@@ -60,6 +60,10 @@ const Home = () => {
         <Navbar />
         <div>
           <HeroSectionLanding />
+          <div className="AnimateCounterHomePhone">
+
+       <section> <AnimateCounter /></section>
+      </div>
           <div className="challenge-container-phone">
           <div className='challenge-card '>
           <h2 className="clippergoat-price">$120<span className="clippergoat-challenge-period">/month</span></h2>
@@ -75,10 +79,7 @@ const Home = () => {
   </div>
   
 </div>
-<div className="AnimateCounterHomePhone">
 
-       <section> <AnimateCounter /></section>
-      </div>
 <div className="spacing-counter">
 <SliderTop />
 </div>
@@ -97,14 +98,23 @@ const Home = () => {
           <div>
             <p className='HomeImgContainerHeaderFirst'>{item.title}</p>
             <p className='HomeImgContainerHeaderSecond'>{item.description}</p>
-          </div><GetOfferBtn />
+          </div>
+          <div className="getofferlarge">
+          <GetOfferBtn />
+          </div>
 
         </div>
         <div className="image-box-container">
           <div className="image-box">
             <img src={item.image} alt="" />
+            
           </div>
+          
         </div>
+        <div className="getoffersmall">
+          <GetOfferBtn />
+          </div>
+
       </div>
     ))}
   </div>
@@ -118,7 +128,7 @@ const Home = () => {
           <Slider items={items} />
         </div>
         <div>
-        <div>
+        <div className='Container-Spacing'>
       <h1 className="information-container-header custom-header-title Container-Spacing">Unlock Your <span className="glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
     </div>
