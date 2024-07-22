@@ -1,7 +1,7 @@
 .financial-freedom {
   background-color: rgba(20, 110, 255, 0.05);
   color: white;
-  padding: 2rem;
+  padding-left: 2rem;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -69,11 +69,9 @@
   margin-right: 0.5rem;
 }
 
-.financial-freedom .images {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
+.financial-freedom .images img {
+  width:400px;
+  object-fit: cover;
 }
 
 .video-call, .mobile-apps, .chat {

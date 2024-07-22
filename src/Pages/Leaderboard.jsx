@@ -104,8 +104,6 @@ const Leaderboard = () => {
         </div>
       </div>
       <InfoCard />
-      <InfoCard />  
-      <InfoCard />
       <Footer />
     </div>
   );
