@@ -113,7 +113,7 @@ const Home = () => {
         </div>
         <div className="image-box-container">
           <div className="image-box">
-            <img src={item.image} alt="" />
+            <img loading="lazy" src={item.image} alt="" />
             
           </div>
           

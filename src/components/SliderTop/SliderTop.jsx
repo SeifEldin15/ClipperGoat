@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
- import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.png';
-import imgs2 from '../../assets/New folder/Influncers Top row/Donald Trump .png';
+ import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.webp';
+import imgs2 from '../../assets/New folder/Influncers Top row/Donald Trump .webp';
 import imgs3 from '../../assets/New folder/Influncers Top row/joe Rogan.mp4';
-import imgs4 from '../../assets/New folder/Influncers Top row/Jack Doherty .png';
-import imgs5 from '../../assets/New folder/Influncers Top row/Elon Musk.png';
+import imgs4 from '../../assets/New folder/Influncers Top row/Jack Doherty .webp';
+import imgs5 from '../../assets/New folder/Influncers Top row/Elon Musk.webp';
 import imgs6 from '../../assets/New folder/Influncers Top row/myron Gains.mp4';
-import imgs7 from '../../assets/New folder/Influncers Top row/Nija.png';
+import imgs7 from '../../assets/New folder/Influncers Top row/Nija.webp';
 import imgs8 from '../../assets/New folder/Influncers Top row/Sophie Rain.mp4';
 import imgs9 from '../../assets/New folder/Influncers Top row/Stevewilldoit.mp4';
-import imgs10 from '../../assets/New folder/Influncers Top row/Suga Sean Omalley.png';
+import imgs10 from '../../assets/New folder/Influncers Top row/Suga Sean Omalley.webp';
 import imgs11 from '../../assets/New folder/Influncers Top row/XQC.mp4';
-import imgs12 from '../../assets/New folder/Influncers Top row/Yodit Yemane .png';
+import imgs12 from '../../assets/New folder/Influncers Top row/Yodit Yemane .webp';
 
 const SliderTop = () => {
   const [position, setPosition] = useState(0);

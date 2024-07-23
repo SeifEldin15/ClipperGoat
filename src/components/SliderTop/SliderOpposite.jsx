@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
 import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
-import imgs21 from '../../assets/New folder/influncers bottom rown/Adin Ross.png';
-import imgs22 from '../../assets/New folder/influncers bottom rown/Andrew Tate.png';
+import imgs21 from '../../assets/New folder/influncers bottom rown/Adin Ross.webp';
+import imgs22 from '../../assets/New folder/influncers bottom rown/Andrew Tate.webp';
 import imgs4 from '../../assets/New folder/influncers bottom rown/drake .mp4';
-import imgs24 from '../../assets/New folder/influncers bottom rown/bradly Martin .png';
-import imgs241 from '../../assets/New folder/influncers bottom rown/Fresh.png';
+import imgs24 from '../../assets/New folder/influncers bottom rown/bradly Martin .webp';
+import imgs241 from '../../assets/New folder/influncers bottom rown/Fresh.webp';
 import imgs27 from '../../assets/New folder/influncers bottom rown/HUAK THUA.mp4';
 import imgs28 from '../../assets/New folder/influncers bottom rown/Ishowspeed.mp4';
-import imgs239 from '../../assets/New folder/influncers bottom rown/KaiCent.png';
+import imgs239 from '../../assets/New folder/influncers bottom rown/KaiCent.webp';
 import imgs210 from '../../assets/New folder/influncers bottom rown/Miami Swim week.mp4';
 import imgs211 from '../../assets/New folder/influncers bottom rown/Neon.mp4';
-import imgs212 from '../../assets/New folder/influncers bottom rown/Mr Beast.png';
-import imgs213 from '../../assets/New folder/influncers bottom rown/Russel Brunson.png';
+import imgs212 from '../../assets/New folder/influncers bottom rown/Mr Beast.webp';
+import imgs213 from '../../assets/New folder/influncers bottom rown/Russel Brunson.webp';
 
 
 const SliderOpposite = () => {

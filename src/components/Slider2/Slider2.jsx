@@ -1,23 +1,23 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Slider2.css';
-import img1 from '../../assets/New folder/Industries/Affiliate Marketing.png';
-import img2 from '../../assets/New folder/Industries/Agency & Course Owners.png';
-import img3 from '../../assets/New folder/Industries/Automotive .png';
-import img4 from '../../assets/New folder/Industries/Comedy.png';
-import img5 from '../../assets/New folder/Industries/Cooking & Food Review.png';
-import img6 from '../../assets/New folder/Industries/Crypto.png';
-import img7 from '../../assets/New folder/Industries/DIY, Remodeling, Landscaping.png';
-import img8 from '../../assets/New folder/Industries/E-commerce.png';
-import img9 from '../../assets/New folder/Industries/Finance & Investment.png';
-import img10 from '../../assets/New folder/Industries/Fitness & Wellness,.png';
-import img11 from '../../assets/New folder/Industries/Gambling.png';
-import img12 from '../../assets/New folder/Industries/Influencers.png';
-import img13 from '../../assets/New folder/Industries/No Face Channels.png';
-import img14 from '../../assets/New folder/Industries/OnlyFans Management.png';
-import img15 from '../../assets/New folder/Industries/Podcast.png';
-import img16 from '../../assets/New folder/Industries/Real Estate.png';
-import img17 from '../../assets/New folder/Industries/Tech Review .png';
-import img18 from '../../assets/New folder/Industries/Traval Vlogs.png';
+import img1 from '../../assets/New folder/Industries/Affiliate Marketing.webp';
+import img2 from '../../assets/New folder/Industries/Agency & Course Owners.webp';
+import img3 from '../../assets/New folder/Industries/Automotive .webp';
+import img4 from '../../assets/New folder/Industries/Comedy.webp';
+import img5 from '../../assets/New folder/Industries/Cooking & Food Review.webp';
+import img6 from '../../assets/New folder/Industries/Crypto.webp';
+import img7 from '../../assets/New folder/Industries/DIY, Remodeling, Landscaping.webp';
+import img8 from '../../assets/New folder/Industries/E-commerce.webp';
+import img9 from '../../assets/New folder/Industries/Finance & Investment.webp';
+import img10 from '../../assets/New folder/Industries/Fitness & Wellness,.webp';
+import img11 from '../../assets/New folder/Industries/Gambling.webp';
+import img12 from '../../assets/New folder/Industries/Influencers.webp';
+import img13 from '../../assets/New folder/Industries/No Face Channels.webp';
+import img14 from '../../assets/New folder/Industries/OnlyFans Management.webp';
+import img15 from '../../assets/New folder/Industries/Podcast.webp';
+import img16 from '../../assets/New folder/Industries/Real Estate.webp';
+import img17 from '../../assets/New folder/Industries/Tech Review .webp';
+import img18 from '../../assets/New folder/Industries/Traval Vlogs.webp';
 
 const slides = [
   {
