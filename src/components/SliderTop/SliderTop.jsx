@@ -78,7 +78,7 @@ const SliderTop = () => {
                   src={image.src} autoPlay loop muted playsInline />
                 ) : (
                   <img 
-                  loading="lazy"
+                  // loading="lazy"
                   src={image.src} alt={`slidetop ${index + 1}`} />
                 )}
                 <div className="slidetopoverlay">
