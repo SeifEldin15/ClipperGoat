@@ -88,6 +88,7 @@ const Home = () => {
 
 <div className="spacing-counter">
 <SliderTop />
+
 {/* <SliderOpposite /> */}
 </div>
           

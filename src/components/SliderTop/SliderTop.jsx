@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { memo } from 'react';
 import './SliderTop.css';
 
 import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.webp';
@@ -29,7 +29,7 @@ const IMAGES = [
   { src: imgs12, title: '@Yodit Yemane', description: "Model and Instagram influencer." },
 ];
 
-const DURATION = 31000;
+const DURATION = 61000;
 
 const InfiniteLoopSlider = ({ children, duration }) => {
   return (
@@ -42,68 +42,40 @@ const InfiniteLoopSlider = ({ children, duration }) => {
   );
 };
 
-const ImageSlide = React.memo(({ src, title, description }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const slideRef = useRef(null);
-
-  const handleIntersection = useCallback((entries) => {
-    const [entry] = entries;
-    if (entry.isIntersecting) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
-    });
-
-    if (slideRef.current) {
-      observer.observe(slideRef.current);
-    }
-
-    return () => {
-      if (slideRef.current) {
-        observer.unobserve(slideRef.current);
-      }
-    };
-  }, [handleIntersection]);
-
-  return (
-    <div className='slide' ref={slideRef}>
-      {isVisible && (
-        <>
-          {src.endsWith('.mp4') ? (
-            <video src={src} autoPlay loop muted playsInline />
-          ) : (
-            <img loading="lazy" src={src} alt={`slidetop ${title}`} />
-          )}
-          <div className="slidetopoverlay">
-            <p className="slidetopshow-container-title">{title}</p>
-            <p className="slidetopshow-container-extra">{description}</p>
-          </div>
-        </>
-      )}
+const ImageSlide = memo(({ src, title, description }) => (
+  <div className='slide'>
+    {src.endsWith('.mp4') ? (
+      <video src={src} autoPlay loop muted playsInline aria-label={`Video of ${title}`} />
+    ) : (
+      <img 
+        loading="lazy" 
+        src={src} 
+        alt={`Slide featuring ${title}`} 
+        onError={(e) => e.target.src = 'fallback-image-url'}
+      />
+    )}
+    <div className="slidetopoverlay">
+      <p className="slidetopshow-container-title">{title}</p>
+      <p className="slidetopshow-container-extra">{description}</p>
     </div>
-  );
-});
+  </div>
+));
 
-const SliderTop = () => {
-  return (
-    <div className='SliderTop'>
-      <div className='slider-container'>
-        <InfiniteLoopSlider duration={DURATION}>
-          {IMAGES.map((img, index) => (
-            <ImageSlide src={img.src} title={img.title} description={img.description} key={index} />
-          ))}
-        </InfiniteLoopSlider>
-      </div>
+const SliderTop = () => (
+  <div className='SliderTop'>
+    <div className='slider-container'>
+      <InfiniteLoopSlider duration={DURATION}>
+        {IMAGES.map((img, index) => (
+          <ImageSlide 
+            src={img.src} 
+            title={img.title} 
+            description={img.description} 
+            key={index} 
+          />
+        ))}
+      </InfiniteLoopSlider>
     </div>
-  );
-};
+  </div>
+);
 
 export default SliderTop;
