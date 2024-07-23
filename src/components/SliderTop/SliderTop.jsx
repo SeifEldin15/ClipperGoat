@@ -39,7 +39,7 @@ const ImageSlide = ({ src, title, description }) => {
         }
       },
       {
-        rootMargin: '600px', 
+        rootMargin: '0px', 
       }
     );
 
