@@ -1,36 +1,38 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
 import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
-import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.png';
-import imgs2 from '../../assets/New folder/Influncers Top row/Donald Trump .png';
-import imgs3 from '../../assets/New folder/Influncers Top row/joe Rogan.mp4';
-import imgs4 from '../../assets/New folder/Influncers Top row/Jack Doherty .png';
-import imgs5 from '../../assets/New folder/Influncers Top row/Elon Musk.png';
-import imgs6 from '../../assets/New folder/Influncers Top row/myron Gains.mp4';
-import imgs7 from '../../assets/New folder/Influncers Top row/Nija.png';
-import imgs8 from '../../assets/New folder/Influncers Top row/Sophie Rain.mp4';
-import imgs9 from '../../assets/New folder/Influncers Top row/Stevewilldoit.mp4';
-import imgs10 from '../../assets/New folder/Influncers Top row/Suga Sean Omalley.png';
-import imgs11 from '../../assets/New folder/Influncers Top row/XQC.mp4';
-import imgs12 from '../../assets/New folder/Influncers Top row/Yodit Yemane .png';
+import imgs21 from '../../assets/New folder/influncers bottom rown/Adin Ross.png';
+import imgs22 from '../../assets/New folder/influncers bottom rown/Andrew Tate.png';
+import imgs4 from '../../assets/New folder/influncers bottom rown/drake .mp4';
+import imgs24 from '../../assets/New folder/influncers bottom rown/bradly Martin .png';
+import imgs241 from '../../assets/New folder/influncers bottom rown/Fresh.png';
+import imgs27 from '../../assets/New folder/influncers bottom rown/HUAK THUA.mp4';
+import imgs28 from '../../assets/New folder/influncers bottom rown/Ishowspeed.mp4';
+import imgs239 from '../../assets/New folder/influncers bottom rown/KaiCent.png';
+import imgs210 from '../../assets/New folder/influncers bottom rown/Miami Swim week.mp4';
+import imgs211 from '../../assets/New folder/influncers bottom rown/Neon.mp4';
+import imgs212 from '../../assets/New folder/influncers bottom rown/Mr Beast.png';
+import imgs213 from '../../assets/New folder/influncers bottom rown/Russel Brunson.png';
+
 
 const SliderOpposite = () => {
   const [position, setPosition] = useState(0);
   const trackRef = useRef(null);
 
   const images = [
-    { src: imgs1, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs2, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs3, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+
+    { src: imgs212, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs210, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs28, title: '@124124', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs241, title: '@124124', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs24, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
     { src: imgs4, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs5, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs6, title: '@dsgsdgdsgdsg', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs7, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs8, title: '@sdgdsgdsg', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs9, title: '@dsgdsg', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs10, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs11, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
-    { src: imgs12, title: '@21rfew', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs22, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs21, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs27, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs239, title: '@21412', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs211, title: '@41241', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs213, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
   ];
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const SliderOpposite = () => {
 
     const animate = () => {
       setPosition((prevPosition) => {
-        const newPosition = prevPosition + 0.7; // Changed to + for opposite direction
+        const newPosition = prevPosition + 0.7;  
         if (newPosition >= 0) {
           return -totalWidth;
         }

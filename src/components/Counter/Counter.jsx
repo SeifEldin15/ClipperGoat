@@ -12,7 +12,7 @@ const shake = keyframes`
   100% { transform: translateX(0); }
 `;
 const neonPulse = keyframes`
-  0%, 50% {
+  0%, 100% {
     text-shadow: 0 0 5px #3a78ff, 0 0 10px #3a78ff, 0 0 15px #3a78ff, 0 0 20px #3a78ff;
   }
   50% {
