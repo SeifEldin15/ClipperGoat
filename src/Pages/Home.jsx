@@ -88,7 +88,7 @@ const Home = () => {
 
 <div className="spacing-counter">
 <SliderTop />
-<SliderOpposite />
+{/* <SliderOpposite /> */}
 </div>
           
           <div className="information-container Container-Spacing-LG" ref={targetRef}>
