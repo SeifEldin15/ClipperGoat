@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
 
+
+
 const DURATION = 50000;
 
 const InfiniteLoopSlider = ({ children, duration, direction }) => {
@@ -35,13 +37,11 @@ const ImageSlide = ({ src, title, description }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Stop observing once the image is in view
-        } else {
-          setIsVisible(false); // Unload the image if it's not in view
+          observer.disconnect(); 
         }
       },
       {
-        rootMargin: '100px', // Load image before it appears in the viewport
+        rootMargin: '100px', 
       }
     );
 
@@ -57,7 +57,7 @@ const ImageSlide = ({ src, title, description }) => {
   }, []);
 
   return (
-    <div className={`slide ${isVisible ? 'visible' : 'hidden'}`}>
+    <div className='slide'>
       {isVisible ? (
         src.endsWith('.mp4') ? (
           <video
@@ -68,6 +68,7 @@ const ImageSlide = ({ src, title, description }) => {
             muted
             playsInline
             ref={imageRef}
+            className="slide-media"
           />
         ) : (
           <img
@@ -75,6 +76,7 @@ const ImageSlide = ({ src, title, description }) => {
             src={src}
             alt={`slidetop ${title}`}
             ref={imageRef}
+            className="slide-media"
           />
         )
       ) : (
@@ -88,6 +90,8 @@ const ImageSlide = ({ src, title, description }) => {
   );
 };
 
+
+ 
 const SliderTop = ({ images, direction }) => (
   <div className='SliderTop'>
     <div className='slider-container'>
