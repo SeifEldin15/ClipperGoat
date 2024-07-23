@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
 
 import imgs1 from '../../assets/New folder/Influncers Top row/Alex Hormozi.webp';
@@ -15,6 +15,7 @@ import imgs11 from '../../assets/New folder/Influncers Top row/XQC.mp4';
 import imgs12 from '../../assets/New folder/Influncers Top row/Yodit Yemane .webp';
 
 const IMAGES = [
+  { src: imgs8, title: '@Sophie Rain', description: "Social media influencer." },
   { src: imgs1, title: '@Alex Hormozi', description: "Business growth strategist and entrepreneur." },
   { src: imgs2, title: '@Donald Trump', description: "45th President of the United States." },
   { src: imgs3, title: '@Joe Rogan', description: "Comedian, podcast host, and UFC commentator." },
@@ -22,14 +23,13 @@ const IMAGES = [
   { src: imgs5, title: '@Elon Musk', description: "CEO of SpaceX and Tesla." },
   { src: imgs6, title: '@Myron Gains', description: "Fitness coach and podcast host." },
   { src: imgs7, title: '@Ninja', description: "Professional gamer and streamer." },
-  { src: imgs8, title: '@Sophie Rain', description: "Social media influencer." },
   { src: imgs9, title: '@Stevewilldoit', description: "YouTuber known for extreme challenges." },
   { src: imgs10, title: '@Suga Sean OMalley', description: "UFC fighter and athlete." },
-  { src: imgs11, title: '@XQC', description: "Popular Twitch streamer and former Overwatch pro." },
   { src: imgs12, title: '@Yodit Yemane', description: "Model and Instagram influencer." },
+  { src: imgs11, title: '@XQC', description: "Popular Twitch streamer and former Overwatch pro." },
 ];
 
-const DURATION = 61000;
+const DURATION = 31000;
 
 const InfiniteLoopSlider = ({ children, duration }) => {
   return (
@@ -37,42 +37,82 @@ const InfiniteLoopSlider = ({ children, duration }) => {
       <div className='inner'>
         {children}
         {children}
+        {children}
+        {children}
       </div>
     </div>
   );
 };
 
-const ImageSlide = memo(({ src, title, description }) => (
-  <div className='slide'>
-    {src.endsWith('.mp4') ? (
-      <video src={src} autoPlay loop muted playsInline aria-label={`Video of ${title}`} />
-    ) : (
-      <img 
-        loading="lazy" 
-        src={src} 
-        alt={`Slide featuring ${title}`} 
-        onError={(e) => e.target.src = 'fallback-image-url'}
-      />
-    )}
-    <div className="slidetopoverlay">
-      <p className="slidetopshow-container-title">{title}</p>
-      <p className="slidetopshow-container-extra">{description}</p>
+const ImageSlide = ({ src, title, description }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing once the image is in view
+        }
+      },
+      {
+        rootMargin: '100px', // Load image before it appears in the viewport
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div className='slide'>
+      {isVisible ? (
+        src.endsWith('.mp4') ? (
+          <video
+            loading="lazy"
+            src={src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            ref={imageRef}
+          />
+        ) : (
+          <img
+            loading="lazy"
+            src={src}
+            alt={`slidetop ${title}`}
+            ref={imageRef}
+          />
+        )
+      ) : (
+        <div className='slide-placeholder' ref={imageRef}></div>
+      )}
+      <div className="slidetopoverlay">
+        <p className="slidetopshow-container-title">{title}</p>
+        <p className="slidetopshow-container-extra">{description}</p>
+      </div>
     </div>
-  </div>
-));
+  );
+};
+
 
 const SliderTop = () => (
   <div className='SliderTop'>
     <div className='slider-container'>
       <InfiniteLoopSlider duration={DURATION}>
-        {IMAGES.map((img, index) => (
-          <ImageSlide 
-            src={img.src} 
-            title={img.title} 
-            description={img.description} 
-            key={index} 
-          />
-        ))}
+        {IMAGES.map((img, index) => {
+          console.log(`Rendering image at index ${index}:`, img);
+          return <ImageSlide src={img.src} title={img.title} description={img.description} key={index} />;
+        })}
       </InfiniteLoopSlider>
     </div>
   </div>

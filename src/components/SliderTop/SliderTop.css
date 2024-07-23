@@ -1,19 +1,22 @@
+
 .SliderTop {
   min-width: 100vw;
-  min-height: 20vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
+
+
 .slider-container {
   width: 100vw;
-  height: 400px;
+  height: 400px;;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-
+ 
 .loop-slider {
   height: 100%;
 }
@@ -28,45 +31,56 @@
   animation-duration: var(--duration);
 }
 
-.slide {
-  margin-right: 1rem;
-  width: 260px;
-  height: 360.65px;
-  position: relative;
-  text-align: center;
-}
 
+.slide  {  margin-right: 1rem;
+  width: 260px;
+  height: 360.65px ;
+  position: relative;   text-align: center;
+
+}
 .slidetopshow-container-title {
   margin: 0 auto;
-  width: 80%;
-  font-size: 17px;
-  color: white;
-  margin-bottom: 10px;
-  padding: 5px 12px;
-  border-radius: 50px;
+  width:80%;
+   font-size: 17px;
+   color: white;
+   margin-bottom: 10px;
+   padding: 5px 12px;
+   border-radius: 50px;   display: flex;
+   align-items: center;
+   justify-content: center;     
+   box-shadow: inset 0 0 15px rgba(20, 110, 255, 0.5);
+
+ }
+ /* SliderTop.css */
+.slide-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0; /* Placeholder color */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 15px rgba(20, 110, 255, 0.5);
 }
 
-.slidetopshow-container-extra {
-  font-size: 14px;
-  color: rgb(229, 229, 229);
-}
-
+ 
+ 
+ .slidetopshow-container-extra {
+   font-size: 14px;
+   color: rgb(229, 229, 229);
+ }
+ 
 .slide img, .slide video {
+
   object-fit: cover;
-  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2),
-              0 0.1rem 0.5rem rgba(0, 0, 0, 0.3),
-              0 0.2rem 1.5rem rgba(0, 0, 0, 0.4);
-  width: 260px;
-  height: 360.65px;
+  box-shadow:
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+    width: 260px;
+  height: 360.65px ;
   border-radius: 15px;
   display: block;
   opacity: 0.5;
 }
-
 .slidetopoverlay {
   position: absolute;
   bottom: 0;
@@ -74,18 +88,21 @@
   right: 0;
   padding: 30px;
   background: linear-gradient(rgba(0, 0, 0, 0), rgb(51, 90, 153));
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border:0px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end;        
+
 }
+
 
 @keyframes loop {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-25%);
   }
 }
