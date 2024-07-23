@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { useSpring, animated } from '@react-spring/web';
-import goatcounter from '../../assets/goatcounter.png'
-import './Counter.css'
+import goatcounter from '../../assets/goatcounter.png';
+import './Counter.css';
 
 const shake = keyframes`
   0% { transform: translateX(0); }
@@ -20,23 +20,21 @@ const neonPulse = keyframes`
   }
 `;
 
-
 const DigitBoxContainer = styled.div`
   display: flex;
-  justify-content: center;  
-
+  justify-content: center;
 `;
 
 const CounterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-    box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
-    background-color: rgba(17, 24, 39, 0.729);
+  box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
+  background-color: rgba(17, 24, 39, 0.729);
   padding: 15px;
   border-radius: 10px;
   z-index: 1000;
-    border: 1px solid rgba(52, 130, 255, 1);
+  border: 1px solid rgba(52, 130, 255, 1);
   ${props => props.shake && css`
     animation: ${shake} 0.5s ease-in-out;
   `}
@@ -46,12 +44,9 @@ const CounterWrapper = styled.div`
   }
 `;
 
-
-
-
 const DigitBox = styled.div`
   box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
-  color: transparent;
+  color: white;
   font-size: 27px;
   font-weight: bold;
   padding: 8px;
@@ -64,7 +59,6 @@ const DigitBox = styled.div`
   -webkit-text-stroke: 1px #3a78ff;
   animation: ${neonPulse} 1.5s infinite;
 `;
-
 
 const AnimatedCounter = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState({});
@@ -92,7 +86,7 @@ const AnimatedCounter = ({ targetDate }) => {
     const shakeTimer = setInterval(() => {
       setShakeCounter(true);
       setTimeout(() => setShakeCounter(false), 500);
-    }, 3000); // Shake every 5 seconds
+    }, 3000); // Shake every 3 seconds
 
     return () => {
       clearInterval(timer);
@@ -100,38 +94,33 @@ const AnimatedCounter = ({ targetDate }) => {
     };
   }, [targetDate]);
 
-
   const formatNumber = (num) => num.toString().padStart(2, '0');
 
   return (
-    <animated.div  className='counter-container'>
-
+    <animated.div className='counter-container'>
       <div className='counter-content'>
-      <div className="landing-counter-container-header">
-  <h1>CLIPPERGOAT</h1>
-  <h1>$10 million challenege</h1>
-  </div>
-<div className="counter-content-header">
-          <img src={goatcounter} alt="" />
-
-      <CounterWrapper shake={shakeCounter}>
-        
-        <DigitBoxContainer>
-          <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
-          <DigitBox>{formatNumber(timeLeft.hours || 0)}</DigitBox>
-          <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
-          <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
-        </DigitBoxContainer>
-        
-        <div className="time-container">
-          <p className="time">days</p>
-          <p className="time">hours</p>
-          <p className="time">minutes</p>
-          <p className="time">seconds</p>
+        <div className="landing-counter-container-header">
+          <h1>CLIPPERGOAT</h1>
+          <h1>$10 million challenge</h1>
         </div>
-      </CounterWrapper>      </div></div>
-
-
+        <div className="counter-content-header">
+          <img src={goatcounter} alt="" />
+          <CounterWrapper shake={shakeCounter}>
+            <DigitBoxContainer>
+              <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
+              <DigitBox>{formatNumber(timeLeft.hours || 0)}</DigitBox>
+              <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
+              <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
+            </DigitBoxContainer>
+            <div className="time-container">
+              <p className="time">days</p>
+              <p className="time">hours</p>
+              <p className="time">minutes</p>
+              <p className="time">seconds</p>
+            </div>
+          </CounterWrapper>
+        </div>
+      </div>
     </animated.div>
   );
 };

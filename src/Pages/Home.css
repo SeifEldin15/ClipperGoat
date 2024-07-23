@@ -4,7 +4,7 @@
   padding: 20px;
   text-align: center;
 }
- 
+/*  
 .feature-bar {
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +25,7 @@
 
 .feature-bar i {
   margin-right: 5px;
-}
+} */
 
 .home-header .subtitle {
   font-size: 1rem;
@@ -92,7 +92,6 @@
   font-size: 24px;
   color: white;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 .information-container-header-div{
   margin-left:-130px;
@@ -112,13 +111,13 @@
 .HomeImgContainerHeader svg {
   color: var(--main-color-lightest);
   font-size: 30px;
-  margin-bottom: 10px;
 }
 .HomeImgContainer i{
   font-size: 30px;
-  margin-bottom: 10px;
-  color: var(--main-color-lightest);
-
+  color: #65a0ff ;
+}
+.HomeImgContainerHeaderContent *{
+  margin-bottom: 20px;
 }
 .challenge-card{
   border-radius: 10px;
@@ -127,7 +126,6 @@
   box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
   width: 90%;
   max-width: 390px;
-  margin-top:100px;
   height: auto;
   position: relative;
   background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
@@ -169,6 +167,8 @@
 }
 
 @media (max-width: 1000px) {
+  .HomeImgContainerHeaderContent span{
+  }
   .information-container-header-div{
     margin-left:-0px;
   }
@@ -186,7 +186,7 @@
     display: flex; 
     width:100%;
     justify-content: center;
-    margin-top:470px  
+    margin-top:580px  
   }
   .landing-counter-container{
     display: none;

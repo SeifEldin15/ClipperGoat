@@ -146,7 +146,7 @@ const Slider2 = () => {
     const updateMaxSlide = () => {
       if (sliderRef.current) {
         const containerWidth = sliderRef.current.clientWidth;
-        const slideWidth = 320; // 300px slide width + 20px gap
+        const slideWidth = 320; 
         const visibleSlides = Math.floor(containerWidth / slideWidth);
         setMaxSlide(slides.length - visibleSlides);
       }
@@ -162,7 +162,7 @@ const Slider2 = () => {
     const newIndex = Math.max(0, Math.min(index, maxSlide));
     setCurrentSlide(newIndex);
     if (sliderRef.current) {
-      const slideWidth = 320; // 300px slide width + 20px gap
+      const slideWidth = 320; 
       sliderRef.current.scrollTo({
         left: newIndex * slideWidth,
         behavior: 'smooth'

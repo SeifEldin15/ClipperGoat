@@ -70,7 +70,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="faq-container">
+    <div className="faq-container Container-Spacing">
       {faqData.map((item, index) => (
         <FAQItem key={index} question={item.question} answer={item.answer} />
       ))}
