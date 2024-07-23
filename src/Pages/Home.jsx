@@ -5,9 +5,9 @@ import PricingSection from '../components/PricingSection/PricingSection';
 import LogoSlideshow from '../components/LogoSlideshow/LogoSlideshow';
 import GetOfferBtn from '../components/GetOfferBtn/GetOfferBtn';
 import FAQ from '../components/FAQ/FAQ';
-import Slider2 from '../components/Slider2/Slider2';
+// import Slider2 from '../components/Slider2/Slider2';
 import AnimateCounter from '../components/Counter/Counter';
-import SliderOpposite from '../components/SliderTop/SliderOpposite';
+// import SliderOpposite from '../components/SliderTop/SliderOpposite';
 // import VideoBackground from '../components/VideoBackground/VideoBackground';
 
 import styled from 'styled-components';
@@ -18,7 +18,7 @@ import styled from 'styled-components';
 // nft goat edit
 // bullet points for infocard
 // glow for button on hover
-import Slider from '../components/Slider/Slider';
+// import Slider from '../components/Slider/Slider';
 import Footer from '../components/Footer/Footer';
 import ScrollProgressBar from './ScrollProgress'; 
 import './Home.css';
@@ -129,10 +129,10 @@ const Home = () => {
       <h1 className="information-container-header custom-header-title">Unlock Your <span className="glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
     </div>
-<Slider2/>
+{/* <Slider2/> */}
 <div className='Container-Spacing'></div>
 <PricingSection />
-          <Slider items={items} />
+          {/* <Slider items={items} /> */}
         </div>
         <div>
         <div className='Container-Spacing'>

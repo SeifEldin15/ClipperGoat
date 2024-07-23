@@ -90,8 +90,6 @@ const SliderOpposite = () => {
           ))}
         </div>
       </div>
-      
- 
     </div>
          <div className="Slider-Top-Get-Btn">
          <GetOfferBtn />
