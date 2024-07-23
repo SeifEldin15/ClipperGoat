@@ -145,7 +145,7 @@ const IMAGES = [
 </div>
 
 <div className="Container-Spacing">
-<div>
+<div className='spacing-counter'>
       <h1 className="information-container-header custom-header-title">Unlock Your <span className="glow-text">Full Potential</span></h1>
       <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
     </div>
