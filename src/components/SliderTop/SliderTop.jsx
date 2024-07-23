@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
 
-
-
 const DURATION = 50000;
 
 const InfiniteLoopSlider = ({ children, duration, direction }) => {
@@ -61,7 +59,6 @@ const ImageSlide = ({ src, title, description }) => {
       {isVisible ? (
         src.endsWith('.mp4') ? (
           <video
-            loading="lazy"
             src={src}
             autoPlay
             loop
@@ -90,8 +87,6 @@ const ImageSlide = ({ src, title, description }) => {
   );
 };
 
-
- 
 const SliderTop = ({ images, direction }) => (
   <div className='SliderTop'>
     <div className='slider-container'>
