@@ -45,13 +45,13 @@ const Home = () => {
       image: homeimg
     },
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-mail-forward h-8 w-8 text-secondary"><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"></path><path d="M3 6l9 6l9 -6"></path><path d="M15 18h6"></path><path d="M18 15l3 3l-3 3"></path></svg>,
+      icon: <i class="fa-regular fa-paper-plane"></i>,
       title: "Repost",
       description: "With our best in class email automation, you can automate your entire emailing process.",
       image: homeimg
     },
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-mail-forward h-8 w-8 text-secondary"><path d="M12 18h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7.5"></path><path d="M3 6l9 6l9 -6"></path><path d="M15 18h6"></path><path d="M18 15l3 3l-3 3"></path></svg>,
+      icon: <i class="fa-solid fa-repeat"></i>,
       title: "Repeat",
       description: "With our best in class email automation, you can automate your entire emailing process.",
       image: homeimg

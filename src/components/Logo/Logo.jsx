@@ -5,7 +5,7 @@ import logoimg from '../../assets/logo.png'
 const Logo = () => {
   return (
              <>
-             <img className="logo" src={logoimg} />
+             <img className="websitelogo" src={logoimg} />
              </>
  
   )

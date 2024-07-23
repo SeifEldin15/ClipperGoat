@@ -42,7 +42,7 @@ const SliderOpposite = () => {
 
     const animate = () => {
       setPosition((prevPosition) => {
-        const newPosition = prevPosition + 0.7;  
+        const newPosition = prevPosition + 0.9;  
         if (newPosition >= 0) {
           return -totalWidth;
         }
@@ -65,7 +65,7 @@ const SliderOpposite = () => {
 
       <div className="slidetopshow-track-container">
         <div
-          className="slidetopshow-track Container-Spacing"
+          className="slidetopshow-track opposite"
           ref={trackRef}
           style={{ transform: `translateX(${position}px)` }}
         >

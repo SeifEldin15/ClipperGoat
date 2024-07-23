@@ -3,17 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   color: #fff;
-  padding-top:0rem !important;
-  height: 90px;
+  height: 90px !important;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  height:60px;
-}
+
 
 .nav-links {
   display: flex;
@@ -71,9 +66,11 @@ color: #1467db;
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
-  }
 
+
+  }
+ 
+  
   .nav-links {
     display: none;
     flex-direction: column;

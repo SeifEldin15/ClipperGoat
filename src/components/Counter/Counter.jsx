@@ -13,15 +13,12 @@ const shake = keyframes`
 `;
 const neonPulse = keyframes`
   0%, 100% {
-    text-shadow: 0 0 5px #3a78ff, 0 0 10px #3a78ff, 0 0 15px #3a78ff, 0 0 20px #3a78ff;
+    text-shadow: 0 0 2px #3a78ff, 0 0 4px #3a78ff, 0 0 6px #3a78ff;
   }
   50% {
-    text-shadow: 0 0 10px #3a78ff, 0 0 20px #3a78ff, 0 0 30px #3a78ff, 0 0 40px #3a78ff;
+    text-shadow: 0 0 3px #3a78ff, 0 0 6px #3a78ff, 0 0 9px #3a78ff;
   }
 `;
-
-
-
 
 
 const DigitBoxContainer = styled.div`

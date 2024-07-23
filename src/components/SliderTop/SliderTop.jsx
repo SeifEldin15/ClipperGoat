@@ -38,7 +38,7 @@ const SliderTop = () => {
 
     const animate = () => {
       setPosition((prevPosition) => {
-        const newPosition = prevPosition - 0.7; // Adjust speed here
+        const newPosition = prevPosition - 0.9; // Adjust speed here
         if (newPosition <= -totalWidth) {
           return 0;
         }
@@ -57,7 +57,7 @@ const SliderTop = () => {
   const tripleImages = [...images, ...images, ...images];
 
   return (
-    <div className="slidetopshow-container Container-Spacing-Lg">
+    <div className="slidetopshow-container Container-Spacing">
       <h1 className="custom-header-title">
         Unlock Your <span className="highlight glow-text">Full Potential</span>
         <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
@@ -65,7 +65,7 @@ const SliderTop = () => {
       
       <div className="slidetopshow-track-container">
         <div
-          className="slidetopshow-track Container-Spacing"
+          className="slidetopshow-track "
           ref={trackRef}
           style={{ transform: `translateX(${position}px)` }}
         >

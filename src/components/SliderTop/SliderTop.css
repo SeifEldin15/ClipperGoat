@@ -1,6 +1,7 @@
 .slidetopshow-container {
   width: 100%;
-  overflow: hidden;
+  overflow: hidden;  margin-top:40px;
+
 }
 
 .slidetopshow-container h1 {
