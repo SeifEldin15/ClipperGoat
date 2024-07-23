@@ -73,9 +73,13 @@ const SliderTop = () => {
             <div key={index} className="slidetop">
               <div className="slidetop-content">
                 {image.src.endsWith('.mp4') ? (
-                  <video src={image.src} autoPlay loop muted playsInline />
+                  <video 
+                  loading="lazy"
+                  src={image.src} autoPlay loop muted playsInline />
                 ) : (
-                  <img src={image.src} alt={`slidetop ${index + 1}`} />
+                  <img 
+                  loading="lazy"
+                  src={image.src} alt={`slidetop ${index + 1}`} />
                 )}
                 <div className="slidetopoverlay">
                   <p className="slidetopshow-container-title">{image.title}</p>

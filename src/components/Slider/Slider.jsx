@@ -98,7 +98,9 @@ const Slider = () => {
               <p className="slideshow-container-desc">{image.description}</p>
               <div className="slide-content212">
                 <div className="slideoverlay"></div>
-                <img src={image.src} alt={`Slide212 ${index + 1}`} />
+                <img 
+                loading="lazy"                
+                src={image.src} alt={`Slide212 ${index + 1}`} />
               </div>
             </div>
           ))}

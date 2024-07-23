@@ -196,8 +196,9 @@ const Slider2 = () => {
             style={{ backgroundColor: slide.color }}
           >
             <div className='slider2imgcontainer'>
-                          <img src={slide.image} alt={slide.title} className='slider2img'/>
-
+              <img 
+                loading="lazy"
+                src={slide.image} alt={slide.title} className='slider2img'/>
             </div>
             <div className="slidetopoverlay12">
               <div className="slide-content2">
