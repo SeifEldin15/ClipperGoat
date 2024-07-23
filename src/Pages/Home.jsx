@@ -10,7 +10,33 @@ import AnimateCounter from '../components/Counter/Counter';
 // import SliderOpposite from '../components/SliderTop/SliderOpposite';
 // import VideoBackground from '../components/VideoBackground/VideoBackground';
 
-import styled from 'styled-components';
+
+import imgs21 from '../assets/New folder/influncers bottom rown/Adin Ross.webp';
+import imgs22 from '../assets/New folder/influncers bottom rown/Andrew Tate.webp';
+import imgs4 from '../assets/New folder/influncers bottom rown/drake .mp4';
+import imgs24 from '../assets/New folder/influncers bottom rown/bradly Martin .webp';
+import imgs241 from '../assets/New folder/influncers bottom rown/Fresh.webp';
+import imgs27 from '../assets/New folder/influncers bottom rown/HUAK THUA.mp4';
+import imgs28 from '../assets/New folder/influncers bottom rown/Ishowspeed.mp4';
+import imgs239 from '../assets/New folder/influncers bottom rown/KaiCent.webp';
+import imgs210 from '../assets/New folder/influncers bottom rown/Miami Swim week.mp4';
+import imgs211 from '../assets/New folder/influncers bottom rown/Neon.mp4';
+import imgs212 from '../assets/New folder/influncers bottom rown/Mr Beast.webp';
+import imgs213 from '../assets/New folder/influncers bottom rown/Russel Brunson.webp';
+
+
+import imgs1 from '../assets/New folder/Influncers Top row/Alex Hormozi.webp';
+import imgs2 from '../assets/New folder/Influncers Top row/Donald Trump .webp';
+import imgs3 from '../assets/New folder/Influncers Top row/joe Rogan.mp4';
+import imgs3224 from '../assets/New folder/Influncers Top row/Jack Doherty .webp';
+import imgs5 from '../assets/New folder/Influncers Top row/Elon Musk.webp';
+import imgs6 from '../assets/New folder/Influncers Top row/myron Gains.mp4';
+import imgs7 from '../assets/New folder/Influncers Top row/Nija.webp';
+import imgs8 from '../assets/New folder/Influncers Top row/Sophie Rain.mp4';
+import imgs9 from '../assets/New folder/Influncers Top row/Stevewilldoit.mp4';
+import imgs10 from '../assets/New folder/Influncers Top row/Suga Sean Omalley.webp';
+import imgs11 from '../assets/New folder/Influncers Top row/XQC.mp4';
+import imgs12 from '../assets/New folder/Influncers Top row/Yodit Yemane .webp';
 
  import SliderTop from '../components/SliderTop/SliderTop';
 // numbers for ranking 
@@ -24,6 +50,38 @@ import ScrollProgressBar from './ScrollProgress';
 import './Home.css';
 import homeimg from '../assets/first.png'
 const Home = () => {
+
+  const INFLUENCERS = [
+
+    { src: imgs212, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs210, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs28, title: '@124124', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs241, title: '@124124', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs24, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs4, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs22, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs21, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs27, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs239, title: '@21412', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs211, title: '@41241', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+    { src: imgs213, title: '@Benedict Ang', description: "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance." },
+  ];
+const IMAGES = [
+  { src: imgs8, title: '@Sophie Rain', description: "Social media influencer." },
+  { src: imgs1, title: '@Alex Hormozi', description: "Business growth strategist and entrepreneur." },
+  { src: imgs2, title: '@Donald Trump', description: "45th President of the United States." },
+  { src: imgs3, title: '@Joe Rogan', description: "Comedian, podcast host, and UFC commentator." },
+  { src: imgs3224, title: '@Jack Doherty', description: "YouTuber and social media personality." },
+  { src: imgs5, title: '@Elon Musk', description: "CEO of SpaceX and Tesla." },
+  { src: imgs6, title: '@Myron Gains', description: "Fitness coach and podcast host." },
+  { src: imgs7, title: '@Ninja', description: "Professional gamer and streamer." },
+  { src: imgs9, title: '@Stevewilldoit', description: "YouTuber known for extreme challenges." },
+  { src: imgs10, title: '@Suga Sean OMalley', description: "UFC fighter and athlete." },
+  { src: imgs12, title: '@Yodit Yemane', description: "Model and Instagram influencer." },
+  { src: imgs11, title: '@XQC', description: "Popular Twitch streamer and former Overwatch pro." },
+];
+
+
   const targetRef = useRef(null);
   const items = [
     { name: 'Chloe', description: 'Crypto Investing', content: 'asgdasgs' },
@@ -86,11 +144,14 @@ const Home = () => {
   
 </div>
 
-<div className="spacing-counter">
-<SliderTop />
-<SliderTop />
+<div className="Container-Spacing">
+<div>
+      <h1 className="information-container-header custom-header-title">Unlock Your <span className="glow-text">Full Potential</span></h1>
+      <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
+    </div>
+<SliderTop images={IMAGES} direction = 'left' />
+<SliderTop images={INFLUENCERS} direction = 'right' />
 
-{/* <SliderOpposite /> */}
 </div>
           
           <div className="information-container Container-Spacing-LG" ref={targetRef}>

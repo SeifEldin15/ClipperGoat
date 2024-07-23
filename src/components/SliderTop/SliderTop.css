@@ -1,7 +1,6 @@
 
 .SliderTop {
   min-width: 100vw;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,9 +99,9 @@
 
 @keyframes loop {
   0% {
-    transform: translateX(0);
+    transform: translateX(var(--translate-start));
   }
   100% {
-    transform: translateX(-25%);
+    transform: translateX(var(--translate-end));
   }
 }
