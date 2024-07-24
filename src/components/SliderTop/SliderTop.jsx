@@ -26,21 +26,28 @@ const InfiniteLoopSlider = ({ children, duration, direction }) => {
   );
 };
 
-const preloadImage = src => {
+const preloadMedia = (src) => {
   return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.src = src;
-    img.onload = resolve;
-    img.onerror = reject;
+    if (src.endsWith('.mp4')) {
+      const video = document.createElement('video');
+      video.src = src;
+      video.onloadeddata = resolve;
+      video.onerror = reject;
+    } else {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve;
+      img.onerror = reject;
+    }
   });
 };
 
 const ImageSlide = ({ src, title, description }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const imageRef = useRef(null);
+  const mediaRef = useRef(null);
 
   useEffect(() => {
-    preloadImage(src).then(() => setIsVisible(true));
+    preloadMedia(src).then(() => setIsVisible(true));
   }, [src]);
 
   return (
@@ -53,19 +60,19 @@ const ImageSlide = ({ src, title, description }) => {
             loop
             muted
             playsInline
-            ref={imageRef}
+            ref={mediaRef}
             className="slide-media"
           />
         ) : (
           <img
             src={src}
             alt={`slidetop ${title}`}
-            ref={imageRef}
+            ref={mediaRef}
             className="slide-media"
           />
         )
       ) : (
-        <div className='slide-placeholder' ref={imageRef}></div>
+        <div className='slide-placeholder' ref={mediaRef}></div>
       )}
       <div className="slidetopoverlay">
         <p className="slidetopshow-container-title">{title}</p>
