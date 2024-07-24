@@ -58,6 +58,7 @@ const ImageSlide = React.memo(({ src, title, description }) => {
             src={src}
             autoPlay
             loop
+            loading='lazy'
             muted
             playsInline
             ref={mediaRef}
@@ -67,7 +68,8 @@ const ImageSlide = React.memo(({ src, title, description }) => {
           <img
             src={src}
             alt={`slidetop ${title}`}
-            ref={mediaRef}
+            ref={mediaRef}              loading='lazy'
+
             className="slide-media"
           />
         )
