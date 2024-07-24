@@ -312,7 +312,8 @@ const Home = () => {
           <p className="custom-header-subtitle ">
             Exactly what you can find inside Active Income
           </p>
-        </div>
+        </div>        <div className="Container-Spacing"></div>
+
         <Slider2 />
         <div className="Container-Spacing"></div>
         <PricingSection />
