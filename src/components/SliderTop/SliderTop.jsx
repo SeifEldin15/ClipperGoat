@@ -69,7 +69,7 @@ const ImageSlide = ({ src, title, description }) => {
           />
         ) : (
           <img
-            loading="lazy"
+            // loading="lazy"
             src={src}
             alt={`slidetop ${title}`}
             ref={imageRef}
