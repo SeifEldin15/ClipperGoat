@@ -37,7 +37,7 @@ const ImageSlide = ({ src, title, description }) => {
         }
       },
       {
-        rootMargin: '200px', // Increased the rootMargin to ensure the slides load earlier
+        rootMargin: '600px', // Increased the rootMargin to ensure the slides load earlier
       }
     );
 
