@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
 
-const DURATION = 30000;
+const DURATION = 50000;
 
 const InfiniteLoopSlider = ({ children, duration, direction }) => {
   const translateStart = direction === 'right' ? '-25%' : '0';
@@ -19,9 +19,20 @@ const InfiniteLoopSlider = ({ children, duration, direction }) => {
       <div className='inner'>
         {children}
         {children}
+        {children}
+        {children}
       </div>
     </div>
   );
+};
+
+const preloadImage = src => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = resolve;
+    img.onerror = reject;
+  });
 };
 
 const ImageSlide = ({ src, title, description }) => {
@@ -29,28 +40,8 @@ const ImageSlide = ({ src, title, description }) => {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: '600px', // Increased the rootMargin to ensure the slides load earlier
-      }
-    );
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
-
-    return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
-      }
-    };
-  }, []);
+    preloadImage(src).then(() => setIsVisible(true));
+  }, [src]);
 
   return (
     <div className='slide'>
