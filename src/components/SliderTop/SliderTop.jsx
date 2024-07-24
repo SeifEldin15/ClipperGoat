@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './SliderTop.css';
 
 const DURATION = 50000;
 
-const InfiniteLoopSlider = ({ children, duration, direction }) => {
+const InfiniteLoopSlider = React.memo(({ children, duration, direction }) => {
   const translateStart = direction === 'right' ? '-25%' : '0';
   const translateEnd = direction === 'right' ? '0' : '-25%';
 
@@ -24,7 +24,7 @@ const InfiniteLoopSlider = ({ children, duration, direction }) => {
       </div>
     </div>
   );
-};
+});
 
 const preloadMedia = (src) => {
   return new Promise((resolve, reject) => {
@@ -42,7 +42,7 @@ const preloadMedia = (src) => {
   });
 };
 
-const ImageSlide = ({ src, title, description }) => {
+const ImageSlide = React.memo(({ src, title, description }) => {
   const [isVisible, setIsVisible] = useState(false);
   const mediaRef = useRef(null);
 
@@ -80,7 +80,7 @@ const ImageSlide = ({ src, title, description }) => {
       </div>
     </div>
   );
-};
+});
 
 const SliderTop = ({ images, direction }) => (
   <div className='SliderTop'>
