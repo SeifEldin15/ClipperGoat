@@ -1,24 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './SliderTop.css';
 
-const DURATION = 50000;
+const DURATION = 30000;
 
 const InfiniteLoopSlider = ({ children, duration, direction }) => {
   const translateStart = direction === 'right' ? '-25%' : '0';
   const translateEnd = direction === 'right' ? '0' : '-25%';
 
   return (
-    <div 
-      className='loop-slider' 
-      style={{ 
+    <div
+      className='loop-slider'
+      style={{
         '--duration': `${duration}ms`,
         '--translate-start': translateStart,
         '--translate-end': translateEnd
       }}
     >
       <div className='inner'>
-        {children}
-        {children}
         {children}
         {children}
       </div>
@@ -35,11 +33,11 @@ const ImageSlide = ({ src, title, description }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); 
+          observer.disconnect();
         }
       },
       {
-        rootMargin: '100px', 
+        rootMargin: '200px', // Increased the rootMargin to ensure the slides load earlier
       }
     );
 
@@ -69,7 +67,6 @@ const ImageSlide = ({ src, title, description }) => {
           />
         ) : (
           <img
-            // loading="lazy"
             src={src}
             alt={`slidetop ${title}`}
             ref={imageRef}
