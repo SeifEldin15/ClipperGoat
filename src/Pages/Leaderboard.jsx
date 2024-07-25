@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer';
 import InfoCard from '../components/InfoCard/InfoCard';
 import './Leaderboard.css';
 import pfpimg from '../assets/500x500.jpg';
+import radiengoat from "../assets/raiden goat.webp"
 
 const LeaderboardItem = ({ username, userTag, rank, isUp, number }) => (
   <div className="profile-container">
@@ -54,9 +55,15 @@ const Leaderboard = () => {
   ];
 
   return (
-    <div>
-      <Navbar />
-      <HeroSectionLandingLeader />
+<>
+    <div className="clippergoat-app-header">
+    <img src={radiengoat} alt="" className='imghero'/> 
+    <div className="overlay"></div>   
+        <Navbar />               <HeroSectionLandingLeader />
+
+        </div>
+        <div>
+
       <div className='LeaderContainer'>
         <div className="LeaderBoardSection ">
           <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text">Income Path</span></h1>
@@ -107,7 +114,7 @@ const Leaderboard = () => {
       </div>
       <InfoCard />
       <Footer />
-    </div>
+    </div></>
   );
 };
 export default Leaderboard;

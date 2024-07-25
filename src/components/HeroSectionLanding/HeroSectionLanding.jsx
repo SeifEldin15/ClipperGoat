@@ -8,9 +8,7 @@ import './HeroSectionLanding.css';
 
 function HeroSectionLanding() {
   return (
-    <div className="clippergoat-app">
-        <div className="overlay"></div>
-      <img src={radiengoat} alt="" className='imghero'/>
+    <div className=" ">
       <HeroSectionLandingHero />
     </div>
   );

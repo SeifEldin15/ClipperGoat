@@ -36,6 +36,8 @@ import SliderTop from "../components/SliderTop/SliderTop";
 import Footer from "../components/Footer/Footer";
 import ScrollProgressBar from "./ScrollProgress";
 import "./Home.css";
+import radiengoat from "../assets/raiden goat.webp"
+
 import homeimg from "../assets/first.webp";
 const Home = () => {
   const INFLUENCERS = [
@@ -219,11 +221,12 @@ const Home = () => {
   ];
   return (
     <>
-  
-
-      <Navbar />
+  <div className="homeheroimg">
+  <img src={radiengoat} alt="" className='imghero'/> 
+  <div className="overlay"></div>   
+      <Navbar />         <HeroSectionLanding />
+      </div>
       <div>
-        <HeroSectionLanding />
         <div className="AnimateCounterHomePhone">
           <section>
             <AnimateCounter targetDate="2024-08-31T23:59:59" />

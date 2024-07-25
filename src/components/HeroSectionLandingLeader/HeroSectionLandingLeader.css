@@ -5,7 +5,7 @@
   }.clippergoat-app-header {
     color: white;
     position: relative;
-    height:650px;
+    height:750px;
   }
   .clippergoat-header {
     display: flex;
@@ -80,16 +80,16 @@
 
 @media screen and (max-width: 768px) {  
   .clippergoat-hero-leader {
-   height:450px !important;    padding-top:50px;
+   height:550px !important;    padding-top:50px;
 
 }  
 .imghero-leader{
-  height:450px !important;
+  height:550px !important;
 }
 .clippergoat-app-header {
   color: white;
   position: relative;
-  height:450px }
+  height:550px }
 .leader-getoffer-btn{
   width:270px;
 }.overlay-leader {

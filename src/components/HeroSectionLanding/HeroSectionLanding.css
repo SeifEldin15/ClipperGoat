@@ -10,13 +10,7 @@
     align-items: center;
     padding: 20px;
   }
-  .imghero{
-    position: absolute;
-    height:100%;
-    width: 100%;
-    opacity: 0.5;
-    object-fit: cover; z-index: -1;
-  }
+
   .clippergoat-logo {
     font-size: 24px;
     font-weight: bold;
@@ -60,7 +54,7 @@
   }
   .landing-counter-container{
     position: absolute;
-    top:40px;
+    top:90px;
     right:20px;
   }
  
@@ -73,7 +67,7 @@
     background-color: rgba(17, 24, 39, 0.729);
     border: 1px solid rgba(52, 130, 255, 1);
     width: 300px; 
-    top:280px;
+    top:340px;
   }
 
   .clippergoat-price {

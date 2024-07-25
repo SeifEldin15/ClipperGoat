@@ -1,6 +1,5 @@
 // App.js
 import React from 'react';
-import radiengoat from "../../assets/raiden goat.webp"
 import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
 import AnimateCounterLeader from '../Counter/AnimateCounterLeader';
 
@@ -9,8 +8,6 @@ import './HeroSectionLandingLeader.css';
 function HeroSectionLanding() {
   return (
     <div className="clippergoat-app-header">
-      <div className="overlay-leader"></div>
-      <img src={radiengoat} alt="" className='imghero-leader'/>
       <HeroSectionLandingHero />
     </div>
   );
