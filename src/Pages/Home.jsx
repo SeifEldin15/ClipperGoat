@@ -265,8 +265,8 @@ const Home = () => {
             </p>
           </div>
           <div className="Container-Spacing">
-          {/* <SliderTop images={IMAGES} direction="left" />
-          <SliderTop images={INFLUENCERS} direction="right" /> */}
+          <SliderTop images={IMAGES} direction="left" />
+          <SliderTop images={INFLUENCERS} direction="right" />
           </div>
         </div>
         <div
