@@ -96,3 +96,22 @@
     transform: translateX(var(--translate-end));
   }
 }
+@media screen and (max-width: 768px) {
+  .slide {
+    width: 210px;
+    height: 290.65px;
+
+  }
+  .slide img, .slide video {
+ 
+    width: 210px;
+    height: 290.65px;
+
+  }
+  .slider-container {
+    height: 320px;
+   
+  }
+  
+}
+  
