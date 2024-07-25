@@ -26,10 +26,10 @@ function HeroSectionLandingHero() {
 <>
 <section className="clippergoat-hero">
       <h1 className="clippergoat-hero-title">
-        <span className="clippergoat-highlight">ReUse</span><br />
+        <span className="clippergoat-highlight glow-text">ReUse</span><br />
         Your Most Viral Clip<br />
         1000x a month with<br />
-        <span className="clippergoat-highlight">ClipperGoat!</span>
+        <span className="clippergoat-highlight glow-text">ClipperGoat!</span>
       </h1>
       <p className="clippergoat-hero-subtitle">Great for any INDUSTRY!!! Use the AI powered Short Form Editor. Edit 100s of videos in minutes with ClipperGoat AI</p>
 <GetOfferBtn />

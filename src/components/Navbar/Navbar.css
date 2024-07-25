@@ -1,14 +1,25 @@
-/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem; 
   color: #fff;
-  height: 90px !important;
+  height: 90px ;
+  padding: 1rem 1rem;
 }
 
-
+.nav-links-phone {
+  display: none;
+  align-items: center;
+  list-style-type: none;
+  gap:40px; 
+  margin-top:16px;
+  width:700px; 
+  top:70px;
+  padding:15px;
+  position: absolute;
+  margin-left:-20px;
+  background-color: var(--main-color); z-index: 1244444444444444444444444444444444444444444444444;
+}
 
 .nav-links {
   display: flex;
@@ -66,8 +77,6 @@ color: #1467db;
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-
-
   }
  
   
@@ -75,7 +84,7 @@ color: #1467db;
     display: none;
     flex-direction: column;
     width: 100%;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 
   .nav-links.active {
@@ -103,13 +112,18 @@ color: #1467db;
 
   .register-btn, .demo-btn {
     width: 100%;
-    margin: 0.5rem 0;
+    /* margin: 0.5rem 0; */
   }
-
+.navbar-phone-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height:100%;
+}
   .hamburger {
     display: block;
-    position: absolute;
-    top: 2.1rem;
+     /* top: 2.1rem; */
     right: 2rem;
     font-size:25px;
   }

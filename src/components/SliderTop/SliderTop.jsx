@@ -32,6 +32,8 @@ const ImageSlide = memo(({ src, title, description }) => {
   const imageRef = useRef(null);
 
   useEffect(() => {
+    const rootMarginValue = window.innerWidth < 768 ? '100px' : '400px';
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -40,7 +42,7 @@ const ImageSlide = memo(({ src, title, description }) => {
         }
       },
       {
-        rootMargin: '400px', 
+        rootMargin: rootMarginValue, 
       }
     );
 
