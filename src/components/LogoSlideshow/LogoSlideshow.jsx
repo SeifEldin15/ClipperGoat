@@ -35,7 +35,7 @@ const LogoSlideshow = () => {
 
     const animate = () => {
       setPosition((prevPosition) => {
-        const newPosition = prevPosition - 0.5; // Adjust speed here
+        const newPosition = prevPosition - 0.7; 
         if (newPosition <= -totalWidth) {
           return 0;
         }

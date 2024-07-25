@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSectionLanding2 from '../components/HeroSectionLanding/HeroSectionLanding';
+import HeroSectionLandingLeader from '../components/HeroSectionLandingLeader/HeroSectionLandingLeader';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import InfoCard from '../components/InfoCard/InfoCard';
@@ -56,7 +56,7 @@ const Leaderboard = () => {
   return (
     <div>
       <Navbar />
-      <HeroSectionLanding2 />
+      <HeroSectionLandingLeader />
       <div className='LeaderContainer'>
         <div className="LeaderBoardSection ">
           <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text">Income Path</span></h1>
