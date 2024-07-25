@@ -1,16 +1,16 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, memo } from 'react';
 import './SliderTop.css';
 
-const DURATION = 50000;
+const DURATION = 40000;
 
-const InfiniteLoopSlider = React.memo(({ children, duration, direction }) => {
+const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
   const translateStart = direction === 'right' ? '-25%' : '0';
   const translateEnd = direction === 'right' ? '0' : '-25%';
 
   return (
-    <div
-      className='loop-slider'
-      style={{
+    <div 
+      className='loop-slider' 
+      style={{ 
         '--duration': `${duration}ms`,
         '--translate-start': translateStart,
         '--translate-end': translateEnd
@@ -19,36 +19,39 @@ const InfiniteLoopSlider = React.memo(({ children, duration, direction }) => {
       <div className='inner'>
         {children}
         {children}
-        {children}
-        {children}
+ 
       </div>
     </div>
   );
 });
 
-const preloadMedia = (src) => {
-  return new Promise((resolve, reject) => {
-    if (src.endsWith('.mp4')) {
-      const video = document.createElement('video');
-      video.src = src;
-      video.onloadeddata = resolve;
-      video.onerror = reject;
-    } else {
-      const img = new Image();
-      img.src = src;
-      img.onload = resolve;
-      img.onerror = reject;
-    }
-  });
-};
-
-const ImageSlide = React.memo(({ src, title, description }) => {
+const ImageSlide = memo(({ src, title, description }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const mediaRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
-    preloadMedia(src).then(() => setIsVisible(true));
-  }, [src]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); 
+        }
+      },
+      {
+        rootMargin: '400px', 
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className='slide'>
@@ -58,23 +61,22 @@ const ImageSlide = React.memo(({ src, title, description }) => {
             src={src}
             autoPlay
             loop
-            loading='lazy'
             muted
             playsInline
-            ref={mediaRef}
+            ref={imageRef}
             className="slide-media"
           />
         ) : (
           <img
+            loading="lazy"
             src={src}
             alt={`slidetop ${title}`}
-            ref={mediaRef}              loading='lazy'
-
+            ref={imageRef}
             className="slide-media"
           />
         )
       ) : (
-        <div className='slide-placeholder' ref={mediaRef}></div>
+        <div className='slide-placeholder' ref={imageRef}></div>
       )}
       <div className="slidetopoverlay">
         <p className="slidetopshow-container-title">{title}</p>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { useSpring, animated } from '@react-spring/web';
-import goatcounter from '../../assets/goatcounter.png';
+// import goatcounter from '../../assets/goatcounter.png';
 import './Counter.css';
 
 const shake = keyframes`
@@ -104,7 +104,7 @@ const AnimatedCounter = ({ targetDate }) => {
           <h1>$10 million challenge</h1>
         </div>
         <div className="counter-content-header">
-          <img src={goatcounter} alt="" />
+          {/* <img src={goatcounter} alt="" /> */}
           <CounterWrapper shake={shakeCounter}>
             <DigitBoxContainer>
               <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
