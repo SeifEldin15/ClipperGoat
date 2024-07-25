@@ -29,34 +29,35 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
 
 const ImageSlide = memo(({ src, title, description }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const intersectionObserver = useRef(null);
   const imageRef = useRef(null);
 
   useEffect(() => {
-    const rootMarginValue = window.innerWidth < 768 ? '100px' : '200px';
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); 
+    if (!intersectionObserver.current) {
+      intersectionObserver.current = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            intersectionObserver.current.unobserve(imageRef.current);
+          }
+        },
+        {
+          rootMargin: window.innerWidth < 768 ? '100px' : '200px',
         }
-      },
-      {
-        rootMargin: rootMarginValue, 
-      }
-    );
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
+      );
     }
-
+  
+    if (imageRef.current) {
+      intersectionObserver.current.observe(imageRef.current);
+    }
+  
     return () => {
       if (imageRef.current) {
-        observer.unobserve(imageRef.current);
+        intersectionObserver.current.unobserve(imageRef.current);
       }
     };
   }, []);
-
+  
   return (
     <div className='slide'>
       {isVisible ? (
