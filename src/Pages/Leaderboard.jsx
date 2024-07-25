@@ -5,8 +5,9 @@ import Footer from '../components/Footer/Footer';
 import InfoCard from '../components/InfoCard/InfoCard';
 import './Leaderboard.css';
 import pfpimg from '../assets/500x500.jpg';
-import radiengoat from "../assets/raiden goat.webp"
-
+import imageSmall from './radiengoat-small.webp';
+import imageMedium from './radiengoat-medium.webp';
+import imageLarge from './radiengoat-large.webp';
 const LeaderboardItem = ({ username, userTag, rank, isUp, number }) => (
   <div className="profile-container">
     <div className="user-content">
@@ -57,8 +58,13 @@ const Leaderboard = () => {
   return (
 <>
     <div className="clippergoat-app-header">
-    <img src={radiengoat} alt="" className='imghero'/> 
-    <div className="overlay"></div>   
+    <img
+      alt="A captivating image of a radiant goat"
+      className="imghero"
+      src={imageMedium} // Default image
+      srcset={`${imageSmall} 320w, ${imageMedium} 640w, ${imageLarge} 1024w`}
+    />
+     <div className="overlay"></div>   
         <Navbar />               <HeroSectionLandingLeader />
 
         </div>

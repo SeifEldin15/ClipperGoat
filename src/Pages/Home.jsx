@@ -36,8 +36,9 @@ import SliderTop from "../components/SliderTop/SliderTop";
 import Footer from "../components/Footer/Footer";
 import ScrollProgressBar from "./ScrollProgress";
 import "./Home.css";
-import radiengoat from "../assets/raiden goat.webp"
-
+import imageSmall from './radiengoat-small.webp';
+import imageMedium from './radiengoat-medium.webp';
+import imageLarge from './radiengoat-large.webp';
 import homeimg from "../assets/first.webp";
 const Home = () => {
   const INFLUENCERS = [
@@ -222,7 +223,14 @@ const Home = () => {
   return (
     <>
   <div className="homeheroimg">
-  <img src={radiengoat} alt="" className='imghero'/> 
+  <img
+      alt="A captivating image of a radiant goat"
+      className="imghero"
+      src={imageMedium} // Default image
+      srcset={`${imageSmall} 320w, ${imageMedium} 640w, ${imageLarge} 1024w`}
+    />
+ 
+
   <div className="overlay"></div>   
       <Navbar />         <HeroSectionLanding />
       </div>

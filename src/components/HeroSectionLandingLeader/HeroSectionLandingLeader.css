@@ -98,15 +98,22 @@
   background-color: rgba(0, 0, 0, 0.55);
   position: absolute;
   z-index: 2;
-}
-  .clippergoat-hero-title {
-    font-size: 38px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
+}   
 .clippergoat-hero-leader{
     text-align: center;
 
 }
+
+}
+@media screen and (max-width: 518px) {  
+  .clippergoat-hero-subtitle {
+    font-size: 13px;
+    /* margin-bottom: 120px; */
+  }  
+    .clippergoat-hero-title {
+      font-size: 21px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
 
 }

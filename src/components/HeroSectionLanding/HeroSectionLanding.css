@@ -102,7 +102,7 @@
 }
 .challenge-container-phone{
   position: absolute;
-  top:800px;
+  top:500px;
 }
 .landing-counter-container-header h1{
   font-size: 30px !important;
@@ -112,13 +112,15 @@
   .clippergoat-hero-title {
     font-size: 38px;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 20px;     height:450px !important;
   }
 .clippergoat-hero{
     text-align: center;
+    height:450px !important;
 
 }
 .clippergoat-hero-subtitle{
   margin-top: 30px;;
 }
+ 
 }

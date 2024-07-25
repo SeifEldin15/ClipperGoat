@@ -140,7 +140,7 @@
 }
 .AnimateCounterHomePhone{
   display: none;
-  top:850px;
+  top:550px;
   flex-direction: column;
   position: absolute;     width:100%;
   align-items: center; 
@@ -167,13 +167,17 @@
 .homeheroimg {
   color: white;
   position: relative;
-  height:800px;
+  height: 100%;
 }
 
 @media (max-width: 700px) {
   .AnimateCounterHomePhone section{
      margin-left:0px;
   } 
+  /* .homeheroimg {
+   
+    height:590px !important;
+ } */
 
 }
 
@@ -196,7 +200,7 @@
     display: flex; 
     width:100%;
     justify-content: center;
-    margin-top:480px  
+    margin-top:440px  
   }
   .landing-counter-container{
     display: none;
@@ -209,12 +213,11 @@
     display: none;
   }
   .spacing-counter{
-    margin-top:1050px;
+    margin-top:950px;
   }
 
 }
 @media (max-width: 1300px) {
-
 
   .HomeImgContainer {
     display: flex;
@@ -286,3 +289,4 @@
     font-size: 21px;
   }
 }
+ 
