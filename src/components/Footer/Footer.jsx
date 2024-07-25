@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Footer.css';
 import { NavLink, useLocation } from 'react-router-dom';
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo.webp'
 const Footer = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 

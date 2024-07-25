@@ -36,7 +36,7 @@ import SliderTop from "../components/SliderTop/SliderTop";
 import Footer from "../components/Footer/Footer";
 import ScrollProgressBar from "./ScrollProgress";
 import "./Home.css";
-import homeimg from "../assets/first.png";
+import homeimg from "../assets/first.webp";
 const Home = () => {
   const INFLUENCERS = [
     {
