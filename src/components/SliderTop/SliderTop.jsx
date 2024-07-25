@@ -17,11 +17,11 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
       }}
     >
       <div className='inner'>
-        {children}
-        {children}
-        {children}
-        {children}
-
+        {Array.from({ length: 4 }, (_, index) => (
+          <React.Fragment key={index}>
+            {children}
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );
