@@ -4,7 +4,7 @@
   align-items: center;
   color: #fff;
   height: 80px ; 
-  background-color: rgba(0, 0, 0, 0.203);
+  /* background-color: rgba(0, 0, 0, 0.203); */
   padding: 1rem 1rem;
 }
 .navbar *{
