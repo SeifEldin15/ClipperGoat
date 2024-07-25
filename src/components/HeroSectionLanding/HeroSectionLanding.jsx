@@ -1,6 +1,6 @@
 // App.js
 import React from 'react';
-import radiengoat from "../../assets/raiden goat.png"
+import radiengoat from "../../assets/raiden goat.webp"
 import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
 import AnimateCounter from '../Counter/Counter';
 
