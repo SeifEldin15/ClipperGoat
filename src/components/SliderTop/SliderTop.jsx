@@ -32,7 +32,7 @@ const ImageSlide = memo(({ src, title, description }) => {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    const rootMarginValue = window.innerWidth < 768 ? '100px' : '400px';
+    const rootMarginValue = window.innerWidth < 768 ? '100px' : '200px';
 
     const observer = new IntersectionObserver(
       ([entry]) => {
