@@ -20,6 +20,7 @@
 .loop-slider .inner {
   display: flex;
   width: fit-content;
+  will-change: transform;
   animation-name: loop;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -70,7 +71,8 @@
   height: 360.65px;
   border-radius: 15px;
   display: block;
-  opacity: 0.5;
+  opacity: 0.5;  will-change: opacity;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .slidetopoverlay {

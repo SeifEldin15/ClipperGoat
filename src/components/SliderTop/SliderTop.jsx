@@ -4,30 +4,43 @@ import './SliderTop.css';
 const DURATION = 50000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
-  const translateStart = direction === 'right' ? '-25%' : '0';
-  const translateEnd = direction === 'right' ? '0' : '-25%';
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    let animationFrameId;
+
+    const animate = () => {
+      const progress = (performance.now() % duration) / duration;
+      const translateX = direction === 'right' 
+        ? -25 + progress * 25 
+        : -progress * 25;
+      
+      slider.style.transform = `translateX(${translateX}%)`;
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [duration, direction]);
 
   return (
-    <div
-      className='loop-slider'
-      style={{
-        '--duration': `${duration}ms`,
-        '--translate-start': translateStart,
-        '--translate-end': translateEnd,
-        // Add will-change for potential performance improvement
-        'will-change': 'transform'
-      }}
-    >
-      <div className='inner'>
+    <div className='loop-slider'>
+      <div className='inner' ref={sliderRef}>
         {children}
-        {children}  {/* Render only two children for performance */}
+        {children}
       </div>
     </div>
   );
 });
 
 const ImageSlide = memo(({ src, title, description }) => {
-  // Remove Intersection Observer for simplicity
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleLoad = () => setIsLoaded(true);
+
   return (
     <div className='slide'>
       {src.endsWith('.mp4') ? (
@@ -38,6 +51,8 @@ const ImageSlide = memo(({ src, title, description }) => {
           muted
           playsInline
           className="slide-media"
+          onLoadedData={handleLoad}
+          style={{ opacity: isLoaded ? 0.5 : 0 }}
         />
       ) : (
         <img
@@ -45,28 +60,46 @@ const ImageSlide = memo(({ src, title, description }) => {
           src={src}
           alt={`slidetop ${title}`}
           className="slide-media"
+          onLoad={handleLoad}
+          style={{ opacity: isLoaded ? 0.5 : 0 }}
         />
       )}
-      <div className="slidetopoverlay">
-        <p className="slidetopshow-container-title">{title}</p>
-        <p className="slidetopshow-container-extra">{description}</p>
-      </div>
+      {isLoaded && (
+        <div className="slidetopoverlay">
+          <p className="slidetopshow-container-title">{title}</p>
+          <p className="slidetopshow-container-extra">{description}</p>
+        </div>
+      )}
     </div>
   );
 });
 
 const SliderTop = ({ images, direction }) => {
+  const [visibleImages, setVisibleImages] = useState([]);
+
   useEffect(() => {
-    // Preload the first slide's image or video
-    const preloadImage = new Image();
-    preloadImage.src = images[0].src;
+    const loadImages = async () => {
+      const loadedImages = await Promise.all(
+        images.slice(0, 10).map(async (img) => {
+          if (img.src.endsWith('.mp4')) return img;
+          return new Promise((resolve) => {
+            const image = new Image();
+            image.onload = () => resolve(img);
+            image.src = img.src;
+          });
+        })
+      );
+      setVisibleImages(loadedImages);
+    };
+
+    loadImages();
   }, [images]);
 
   return (
     <div className='SliderTop'>
       <div className='slider-container'>
         <InfiniteLoopSlider duration={DURATION} direction={direction}>
-          {images.map((img, index) => (
+          {visibleImages.map((img, index) => (
             <ImageSlide
               src={img.src}
               title={img.title}
