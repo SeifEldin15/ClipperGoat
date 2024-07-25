@@ -64,7 +64,17 @@ h1, h2 {
   color: white !important;
   margin: 0;
 }
-
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 5px #3a78ff, 0 0 10px #3a78ff, 0 0 20px #3a78ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #3a78ff, 0 0 20px #3a78ff, 0 0 40px #3a78ff;
+  }
+}
+.glow-text-test {
+  animation: glow 1.5s infinite;
+}
 .video-container {
   position: fixed;
   top: 0;
@@ -88,9 +98,12 @@ h1, h2 {
   text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.4), 0 0 30px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.2);
   color: #1467db;
 }
-
+/* 
 .custom-header-title span {
   color: #65a0ff;
+} */
+.custom-header-title span {
+  color: #ffffff;
 }
 
 .custom-header-subtitle {

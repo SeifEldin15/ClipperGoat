@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem;
+  padding: 2rem 2rem; 
   color: #fff;
   height: 90px !important;
 }
@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   list-style-type: none;
-  gap:40px;
+  gap:40px; 
 }
 
 .nav-links li a {
@@ -79,7 +79,7 @@ color: #1467db;
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex; 
   }
 
   .nav-links li {

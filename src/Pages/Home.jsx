@@ -8,18 +8,18 @@ import FAQ from "../components/FAQ/FAQ";
 import Slider2 from "../components/Slider2/Slider2";
 import AnimateCounter from "../components/Counter/Counter";
 import Slider from "../components/Slider/Slider";
-import imgs21 from "../assets/New folder/influncers bottom rown/Adin Ross.webp";
-import imgs22 from "../assets/New folder/influncers bottom rown/Andrew Tate.webp";
-import imgs4 from "../assets/New folder/influncers bottom rown/drake .mp4";
-import imgs24 from "../assets/New folder/influncers bottom rown/bradly Martin .webp";
-import imgs241 from "../assets/New folder/influncers bottom rown/Fresh.webp";
-import imgs27 from "../assets/New folder/influncers bottom rown/HUAK THUA.mp4";
-import imgs28 from "../assets/New folder/influncers bottom rown/Ishowspeed.mp4";
-import imgs239 from "../assets/New folder/influncers bottom rown/KaiCent.webp";
-import imgs210 from "../assets/New folder/influncers bottom rown/Miami Swim week.mp4";
-import imgs211 from "../assets/New folder/influncers bottom rown/Neon.mp4";
-import imgs212 from "../assets/New folder/influncers bottom rown/Mr Beast.webp";
-import imgs213 from "../assets/New folder/influncers bottom rown/Russel Brunson.webp";
+import Adin from "../assets/New folder/influncers bottom rown/Adin Ross.webp";
+import Andrew from "../assets/New folder/influncers bottom rown/Andrew Tate.webp";
+import drake from "../assets/New folder/influncers bottom rown/drake .mp4";
+import bradly from "../assets/New folder/influncers bottom rown/bradly Martin .webp";
+import Fresh from "../assets/New folder/influncers bottom rown/Fresh.webp";
+import HUAK from "../assets/New folder/influncers bottom rown/HUAK THUA.mp4";
+import Ishowspeed from "../assets/New folder/influncers bottom rown/Ishowspeed.mp4";
+import KaiCent from "../assets/New folder/influncers bottom rown/KaiCent.webp";
+import Miami from "../assets/New folder/influncers bottom rown/Miami Swim week.mp4";
+import Neon from "../assets/New folder/influncers bottom rown/Neon.mp4";
+import Beast from "../assets/New folder/influncers bottom rown/Mr Beast.webp";
+import Brunson from "../assets/New folder/influncers bottom rown/Russel Brunson.webp";
 import imgs1 from "../assets/New folder/Influncers Top row/Alex Hormozi.webp";
 import imgs2 from "../assets/New folder/Influncers Top row/Donald Trump .webp";
 import imgs3 from "../assets/New folder/Influncers Top row/joe Rogan.mp4";
@@ -40,140 +40,145 @@ import homeimg from "../assets/first.png";
 const Home = () => {
   const INFLUENCERS = [
     {
-      src: imgs212,
-      title: "@Benedict Ang",
+      src: Beast,
+      title: "@MrBeast",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        "Gained popularity through high-budget, philanthropic, and viral YouTube videos.",
+    }, 
+
+    {
+      src: Brunson,  
+
+      title: "@Russell Brunson",
+      description:
+        "Used social media to share marketing strategies, building a large online community.",
     },
     {
-      src: imgs210,
-      title: "@Benedict Ang",
+      src: Ishowspeed,  
+
+      title: "@IShowSpeed",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        "Built influence through energetic and humorous gaming content on YouTube and Twitch.",
     },
     {
-      src: imgs28,
-      title: "@124124",
+      src: Fresh,  
+      title: "@FreshPrinceCeo",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        "Built influence sharing dating and self-improvement content on social media.",
     },
     {
-      src: imgs241,
-      title: "@124124",
+      src: bradly,  
+
+      title: "@Bradley Martin",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        " Shared workout routines and fitness tips on social media, promoting his gym business.",
     },
     {
-      src: imgs24,
-      title: "@Benedict Ang",
+      src: drake, 
+      title: "@Drake",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        "Used Instagram, Twitter, and Kick to promote music, connect with fans, and gambling.",
+    },
+    {  
+
+      src: Adin,
+      title: "@Adin Ross",
+      description:
+        "Built following by streaming games and live chats with celebrities on Twitch.",
     },
     {
-      src: imgs4,
-      title: "@Benedict Ang",
+      src: Miami,
+      title: "@Miami Swim Week",
+      description:  
+        "Promoted shows and designers on Instagram and YouTube, creating global buzz.",
+    },
+    {  
+      src: Neon,
+      title: "@Neon",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        "Gained popularity with entertaining gaming content on YouTube and Twitch.",
     },
     {
-      src: imgs22,
-      title: "@Benedict Ang",
+      src: KaiCent,
+      title: "@Kai Cenat",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        "Grew influence with engaging Twitch and YouTube streams, often collaborating.",
+    },
+    {  
+      src: HUAK,
+      title: "@Hauk Thua Girl",
+      description:
+        "Grew influence with relatable beauty and lifestyle content on Instagram and TikTok..",
     },
     {
-      src: imgs21,
-      title: "@Benedict Ang",
+      src: Andrew,
+      title: "@Andrew Tate",
       description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
-    },
-    {
-      src: imgs27,
-      title: "@Benedict Ang",
-      description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
-    },
-    {
-      src: imgs239,
-      title: "@21412",
-      description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
-    },
-    {
-      src: imgs211,
-      title: "@41241",
-      description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
-    },
-    {
-      src: imgs213,
-      title: "@Benedict Ang",
-      description:
-        "No point in making money if you're fat, ugly and repulsive. Get jacked and high energy with the best routines and habits for maximum performance.",
+        "Used controversial content on Instagram and YouTube to build a large following.",
     },
   ];
   const IMAGES = [
     {
-      src: imgs8,
-      title: "@Sophie Rain",
-      description: "Social media influencer.",
+        src: imgs8,
+        title: "@Sophie Rain",
+        description: "Grew presence by sharing lifestyle, beauty, and travel content on Instagram and TikTok.",
     },
     {
-      src: imgs1,
-      title: "@Alex Hormozi",
-      description: "Business growth strategist and entrepreneur.",
+        src: imgs1,
+        title: "@Alex Hormozi",
+        description: "Business growth strategist and entrepreneur.",
     },
     {
-      src: imgs2,
-      title: "@Donald Trump",
-      description: "45th President of the United States.",
+        src: imgs2,
+        title: "@Donald Trump",
+        description: "45th President of the United States.",
     },
     {
-      src: imgs3,
-      title: "@Joe Rogan",
-      description: "Comedian, podcast host, and UFC commentator.",
+        src: imgs3,
+        title: "@Joe Rogan",
+        description: "Comedian, podcast host, and UFC commentator.",
     },
     {
-      src: imgs3224,
-      title: "@Jack Doherty",
-      description: "YouTuber and social media personality.",
+        src: imgs3224,
+        title: "@Jack Doherty",
+        description: "Built influence with daring challenge videos, pranks, and vlogs on YouTube.",
     },
     {
-      src: imgs5,
-      title: "@Elon Musk",
-      description: "CEO of SpaceX and Tesla.",
+        src: imgs5,
+        title: "@Elon Musk",
+        description: "CEO of SpaceX and Tesla.",
     },
     {
-      src: imgs6,
-      title: "@Myron Gains",
-      description: "Fitness coach and podcast host.",
+        src: imgs6,
+        title: "@Myron Gaines",
+        description: "Grew following with dating advice and lifestyle content on social media.",
     },
     {
-      src: imgs7,
-      title: "@Ninja",
-      description: "Professional gamer and streamer.",
+        src: imgs7,
+        title: "@Ninja",
+        description: "Gained massive fame through Fortnite streams on Twitch and YouTube.",
     },
     {
-      src: imgs9,
-      title: "@Stevewilldoit",
-      description: "YouTuber known for extreme challenges.",
+        src: imgs9,
+        title: "@SteveWillDoIt",
+        description: "Gained popularity through outrageous challenges and stunts on YouTube and Instagram.",
     },
     {
-      src: imgs10,
-      title: "@Suga Sean OMalley",
-      description: "UFC fighter and athlete.",
+        src: imgs10,
+        title: "@Sean O'Malley",
+        description: "Used social media to share training routines and fight highlights, connecting with fans.",
     },
     {
-      src: imgs12,
-      title: "@Yodit Yemane",
-      description: "Model and Instagram influencer.",
+        src: imgs12,
+        title: "@Yodit Yemane",
+        description: "Model and Instagram influencer.",
     },
     {
-      src: imgs11,
-      title: "@XQC",
-      description: "Popular Twitch streamer and former Overwatch pro.",
+        src: imgs11,
+        title: "@XQC",
+        description: "Became one of the most-watched streamers by engaging Twitch audiences with various games.",
     },
-  ];
+];
 
   const targetRef = useRef(null);
   const items = [
@@ -253,7 +258,7 @@ const Home = () => {
         <div className="Container-Spacing">
           <div className="spacing-counter">
             <h1 className="information-container-header custom-header-title">
-              Unlock Your <span className="glow-text">Full Potential</span>
+              Unlock Your <span className="glow-text-test">Full Potential</span>
             </h1>
             <p className="custom-header-subtitle ">
               Exactly what you can find inside Active Income
@@ -272,7 +277,7 @@ const Home = () => {
           <div className="">
             <div className="information-container-header-div">
               <h1 className="information-container-header custom-header-title">
-                Unlock Your <span className="glow-text">Full Potential</span>
+                Unlock Your <span className="glow-text-test">Full Potential</span>
               </h1>
               <p className="custom-header-subtitle ">
                 Exactly what you can find inside Active Income
@@ -306,29 +311,40 @@ const Home = () => {
         </div>{" "}
         <LogoSlideshow />{" "}
         <div>
+
           <h1 className="information-container-header custom-header-title">
-            Unlock Your <span className="glow-text">Full Potential</span>
+          Industries that  <span className="glow-text-test">NEED THIS!</span>
           </h1>
           <p className="custom-header-subtitle ">
-            Exactly what you can find inside Active Income
+          ClipperGoat is ideal for short form marketing, addressing the high demand for online attention and traffic in today's era of short attention spans and constant phone usage across social media, sales funnels, video games, influencers, online education, explicit sites, and subscription services.
           </p>
         </div>        <div className="Container-Spacing"></div>
 
         <Slider2 />
         <div className="Container-Spacing"></div>
         <PricingSection />
-        <Slider items={items} />
-      </div>
-      <div>
         <div className="Container-Spacing">
-          <h1 className="information-container-header custom-header-title Container-Spacing">
-            Unlock Your <span className="glow-text">Full Potential</span>
+          <h1 className="information-container-header custom-header-title">
+            Unlock Your <span className="glow-text-test">Full Potential</span>
           </h1>
           <p className="custom-header-subtitle ">
             Exactly what you can find inside Active Income
           </p>
+        </div>  
+        <Slider items={items} />
+      </div>
+      <div>
+        <div className="Container-Spacing"> 
+
+          <h1 className="information-container-header custom-header-title Container-Spacing">
+          Frequently Asked <span className="glow-text-test">Questions</span>
+          </h1> 
+
+          <p className="custom-header-subtitle ">
+          You have questions, we have answers
+          </p>        <FAQ />
+
         </div>
-        <FAQ />
       </div>
       <Footer />
     </>

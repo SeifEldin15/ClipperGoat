@@ -65,7 +65,7 @@ function PricingSection() {
 
   return (
     <div className="PricingSection ">
-      <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text">Income Path</span></h1>
+      <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text-test">Income Path</span></h1>
       <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
      <div className="pricing-container">
         {plans.map((plan, index) => (

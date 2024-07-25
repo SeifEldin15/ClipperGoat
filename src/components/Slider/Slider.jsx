@@ -83,9 +83,8 @@ const Slider = () => {
   }, [images.length]);
 
   return (
-    <div className="slideshow-container212 Container-Spacing-Lg">
-      <h1 className="custom-header-title">Unlock Your <span className="highlight glow-text">Full Potential</span></h1>
-      <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
+    <div className="slideshow-container212 Container-Spacing">
+     
       <div className="slideshow-track-container">
         <div
           className="slideshow-track212 Container-Spacing"

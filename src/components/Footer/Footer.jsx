@@ -18,7 +18,7 @@ const Footer = () => {
     return () => window.removeEventListener('scroll', checkScroll);
   }, [showBackToTop]);
 
-  const handleBackToTop = () => {
+  const handleBackToTop21 = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -44,12 +44,10 @@ const Footer = () => {
               <i className="fa-brands fa-tiktok"></i>
             </div>
           </div>
-          {showBackToTop && (
-            <button onClick={handleBackToTop} className="back-to-top">
+            <button onClick={handleBackToTop21} className="back-to-top">
               <span className="sr-only">Back to top</span>
               <i className="fa-solid fa-chevron-up"></i>
             </button>
-          )}
         </div>
 
         <ul className="footer-links hover-effect-links">

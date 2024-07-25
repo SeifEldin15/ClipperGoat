@@ -102,9 +102,8 @@ const slides = [
     image: img13
   },
   {
-    author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'OnlyFans Management',
+    content: 'Reposting snippets of exclusive content boosts subscriptions by showcasing premium offerings.',
     image: img14
   },
   {

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, memo } from 'react';
 import './SliderTop.css';
 
-const DURATION = 40000;
+const DURATION = 50000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
   const translateStart = direction === 'right' ? '-25%' : '0';
@@ -19,7 +19,9 @@ const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
       <div className='inner'>
         {children}
         {children}
- 
+        {children}
+        {children}
+
       </div>
     </div>
   );
