@@ -73,7 +73,7 @@ h1, h2 {
   }
 }
 .glow-text-test {
-  animation: glow 1.5s infinite;
+  animation: glow 1.5s infinite !important;
 }
 .video-container {
   position: fixed;

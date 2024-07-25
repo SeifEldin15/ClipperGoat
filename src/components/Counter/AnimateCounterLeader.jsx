@@ -116,9 +116,9 @@ const AnimatedCounter = ({ targetDate }) => {
   return (
     <animated.div className='counter-container'>
       <div className='counter-content'>
-        <div className="landing-leader-counter-container-header">
-          <h2>CLIPPERGOAT</h2>
-          <h1>$10 million challenge</h1>
+        <div className="landing-leader-counter-container-header ">
+          <h2 className='glow-text-test'>CLIPPERGOAT</h2>
+          <h1 className='glow-text-test'>$10 million challenge</h1>
         </div>
         <div className="counter-content-header">
           <CounterWrapper shake={shakeCounter}>

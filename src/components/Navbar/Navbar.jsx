@@ -32,7 +32,7 @@ const Navbar = () => {
         <li className={'login-phone'}><a onClick={() => scrollToSection(2500)}>Login</a></li>
       </ul>
       <div className={`nav-buttons ${isNavActive ? '' : ''}`}>
-        <button className="register-btn">Login</button>
+        <button className="register-btn glow-text-test">Login</button>
       </div>
     </nav>
   );

@@ -46,7 +46,6 @@ const CounterWrapper = styled.div`
 
 const DigitBox = styled.div`
   box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
-  color: white;
   font-size: 27px;
   font-weight: bold;
   padding: 8px;
@@ -100,8 +99,8 @@ const AnimatedCounter = ({ targetDate }) => {
     <animated.div className='counter-container'>
       <div className='counter-content'>
         <div className="landing-counter-container-header">
-          <h1>CLIPPERGOAT</h1>
-          <h1>$10 million challenge</h1>
+          <h1 className='glow-text-test'>CLIPPERGOAT</h1>
+          <h1 className='glow-text-test'>$10 million challenge</h1>
         </div>
         <div className="counter-content-header">
           {/* <img src={goatcounter} alt="" /> */}

@@ -39,6 +39,7 @@ import "./Home.css";
 import imageSmall from './radiengoat-small.webp';
 import imageMedium from './radiengoat-medium.webp';
 import imageLarge from './radiengoat-large.webp';
+import radiengoat from "../assets/raiden goat.webp"
 import homeimg from "../assets/first.webp";
 const Home = () => {
   const INFLUENCERS = [
@@ -227,7 +228,7 @@ const Home = () => {
       alt="A captivating image of a radiant goat"
       className="imghero"
       src={imageMedium} // Default image
-      srcset={`${imageSmall} 320w, ${imageMedium} 640w, ${imageLarge} 1024w`}
+      srcset={`${imageSmall} 320w, ${imageMedium} 640w, ${radiengoat} 1024w`}
     />
  
 
