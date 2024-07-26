@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, memo } from 'react';
 import './SliderTop.css';
 
-const DURATION = 30000;
+const DURATION = 20000;
 
 const InfiniteLoopSlider = memo(({ children, duration, direction }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
