@@ -5,6 +5,8 @@ import Privacy from './Pages/Privacy';
 import Terms from './Pages/Terms';
 import Refund from './Pages/Refund'; 
 import Leaderboard from './Pages/Leaderboard'; 
+import ContactUs from './Pages/ContactUs/ContactUs'; 
+
 import Pricing from './Pages/Pricing'
 import './App.css';
 import StarBackground from './assets/star.mp4'
@@ -23,6 +25,7 @@ function App() {
   </div>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/contactus" element={<ContactUs />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/Pricing" element={<Pricing />} />
               <Route path="/terms" element={<Terms />} />

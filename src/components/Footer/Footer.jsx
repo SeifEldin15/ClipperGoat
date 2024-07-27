@@ -56,6 +56,7 @@ const Footer = () => {
           <NavLink exact to="/privacy" activeClassName="active" className="nav-item">Privacy Policy</NavLink>
           <NavLink exact to="/pricing" activeClassName="active" className="nav-item"><li><a href="#">Pricing</a></li></NavLink>
           <NavLink exact to="/refund" activeClassName="active" className="nav-item"><li><a href="#">Refunds</a></li></NavLink>
+          <NavLink exact to="/contactus" activeClassName="active" className="nav-item"><li><a href="#">Contact Us</a></li></NavLink>
           </ul>
         <p className="footer-copyright">
           Copyright &copy; 2022. All rights reserved.
