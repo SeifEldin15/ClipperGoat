@@ -29,7 +29,7 @@ const Navbar = () => {
         <li><a onClick={() => scrollToSection(5100)}>Pricing</a></li>
         <li><a onClick={() => scrollToSection(6200)}>FAQ</a></li>
         <li><a onClick={() => scrollToSection(2500)}>Affiliates</a></li>
-        <li><a href="contactus">Contact Us</a></li>
+        <li><a href="/contactus">Contact Us</a></li>
         <li className={'login-phone'}><a onClick={() => scrollToSection(2500)}>Login</a></li>
       </ul>
       <div className={`nav-buttons ${isNavActive ? '' : ''}`}>
