@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import Logo from '../Logo/Logo'
+import { NavLink, useLocation } from 'react-router-dom';
+
 const Navbar = () => {
   const [isNavActive, setIsNavActive] = useState(false);
 
@@ -29,7 +31,9 @@ const Navbar = () => {
         <li><a onClick={() => scrollToSection(5100)}>Pricing</a></li>
         <li><a onClick={() => scrollToSection(6200)}>FAQ</a></li>
         <li><a onClick={() => scrollToSection(2500)}>Affiliates</a></li>
-        <li><a href="/contactus">Contact Us</a></li>
+        <NavLink exact to="/contactus"> <li><a href="/contactus">Contact Us</a></li></NavLink>
+
+       
         <li className={'login-phone'}><a onClick={() => scrollToSection(2500)}>Login</a></li>
       </ul>
       <div className={`nav-buttons ${isNavActive ? '' : ''}`}>
