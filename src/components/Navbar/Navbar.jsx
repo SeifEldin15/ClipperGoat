@@ -28,10 +28,10 @@ const Navbar = () => {
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
-        slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
+        slowScrollTo(pixelY, 1000); // 1.5 seconds duration for scrolling
       }, 1000);
     } else {
-      slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
+      slowScrollTo(pixelY, 1000); // 1.5 seconds duration for scrolling
     }
 
     if (isSmallScreen) {
