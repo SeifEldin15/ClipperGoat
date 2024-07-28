@@ -1,6 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
-
+import React, { useRef } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import HeroSectionLanding from "../components/HeroSectionLanding/HeroSectionLanding";
 import PricingSection from "../components/PricingSection/PricingSection";
@@ -44,20 +42,6 @@ import imageLarge from './radiengoat-large.webp';
 import radiengoat from "../assets/raiden goat.webp"
 import homeimg from "../assets/first.webp";
 const Home = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.state && location.state.scrollTo) {
-      const element = document.getElementById(location.state.scrollTo);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-      // Clear the state to prevent scrolling on refresh
-      window.history.replaceState({}, document.title)
-    }
-  }, [location]);
-
-
   const INFLUENCERS = [
     {
       src: Beast,
@@ -304,7 +288,7 @@ const Home = () => {
           ref={targetRef}
         >
           <ScrollProgressBar targetRef={targetRef} />
-          <div className="" id="programs">
+          <div className="">
             <div className="information-container-header-div">
               <h1 className="information-container-header custom-header-title">
               Revitalize Your Content with <span className="glow-text-test"> ClipperGoat:<br/> Rip, Rinse, Repost, Repeat!</span>
@@ -342,7 +326,7 @@ const Home = () => {
         </div>{" "}
         <LogoSlideshow />{" "}
         <div>
-          <h1 className="information-container-header custom-header-title" id="about">
+          <h1 className="information-container-header custom-header-title">
           Industries that  <span className="glow-text-test">NEED THIS!</span>
           </h1>
           <p className="custom-header-subtitle ">
@@ -352,7 +336,7 @@ const Home = () => {
         <div className="Container-Spacing"></div>
 
         <Slider2 />
-        <div className="Container-Spacing" id="pricing">
+        <div className="Container-Spacing" >
         <PricingSection /></div>
         <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title">
@@ -365,7 +349,7 @@ const Home = () => {
         <Slider items={items} />
       </div>
       <div>
-        <div className="Container-Spacing" id="faq"> 
+        <div className="Container-Spacing"> 
           <h1 className="information-container-header custom-header-title Container-Spacing">
           Frequently Asked <span className="glow-text-test">Questions</span>
           </h1> 

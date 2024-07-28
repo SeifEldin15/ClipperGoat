@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import Logo from '../Logo/Logo'
+import Logo from '../Logo/Logo';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
@@ -20,48 +20,60 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  useEffect(() => {
-    // Check if we've just navigated to the home page with a hash
-    if (location.pathname === '/' && location.hash) {
-      const id = location.hash.replace('#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (pixelY) => {
     if (location.pathname !== '/') {
-      // If not on home page, navigate to home page first
-      navigate('/', { state: { scrollTo: sectionId } });
+      navigate('/');
+      setTimeout(() => {
+        slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
+      }, 1000);
     } else {
-      // If already on home page, scroll directly
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
     }
+
     if (isSmallScreen) {
       setIsSidebarOpen(false);
     }
   };
 
+  const slowScrollTo = (targetY, duration) => {
+    const startY = window.scrollY;
+    const diffY = targetY - startY;
+    let startTime;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, startY + diffY * easeInOutCubic(progress));
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const easeInOutCubic = (t) => {
+    return t < 0.5
+      ? 4 * t * t * t
+      : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  };
+
   const navItems = [
-    { name: 'About', sectionId: 'about' },
-    { name: 'Programs', sectionId: 'programs' },
-    { name: 'Pricing', sectionId: 'pricing' },
-    { name: 'FAQ', sectionId: 'faq' },
+    { name: 'About', scrollTo: 500 },
+    { name: 'Programs', scrollTo: 1000 },
+    { name: 'Pricing', scrollTo: 1500 },
+    { name: 'FAQ', scrollTo: 2000 },
     { name: 'Affiliates', link: '/leaderboard' },
     { name: 'Contact Us', link: '/contactus' },
   ];
 
   return (
-    <nav id="navbar" className={`navbar Container-Width Container ${isSmallScreen ? 'small-screen' : ''}`}>
+    <nav className={`navbar Container-Width Container ${isSmallScreen ? 'small-screen' : ''}`}>
       <div className='navbar-header'>
         <Logo />
         {isSmallScreen && (
@@ -71,18 +83,13 @@ const Navbar = () => {
         )}
       </div>
       <div className={`nav-content ${isSidebarOpen ? 'open' : ''}`}>
-        {isSmallScreen && (
-          <button className="close-sidebar" onClick={toggleSidebar}>
-            ×
-          </button>
-        )}
         <ul className="nav-links hover-effect-links">
           {navItems.map((item, index) => (
             <li key={index}>
               {item.link ? (
-                <NavLink to={item.link}>{item.name}</NavLink>
+                <NavLink exact to={item.link}>{item.name}</NavLink>
               ) : (
-                <a onClick={() => scrollToSection(item.sectionId)}>{item.name}</a>
+                <a onClick={() => scrollToSection(item.scrollTo)}>{item.name}</a>
               )}
             </li>
           ))}
