@@ -1,44 +1,101 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import Logo from '../Logo/Logo'
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isNavActive, setIsNavActive] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const toggleNav = () => {
-    setIsNavActive(!isNavActive);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    // Check if we've just navigated to the home page with a hash
+    if (location.pathname === '/' && location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const scrollToSection = (pixelY) => {
-    window.scrollTo({
-      top: pixelY,
-      behavior: 'smooth'
-    });
+  const scrollToSection = (sectionId) => {
+    if (location.pathname !== '/') {
+      // If not on home page, navigate to home page first
+      navigate('/', { state: { scrollTo: sectionId } });
+    } else {
+      // If already on home page, scroll directly
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    if (isSmallScreen) {
+      setIsSidebarOpen(false);
+    }
   };
+
+  const navItems = [
+    { name: 'About', sectionId: 'about' },
+    { name: 'Programs', sectionId: 'programs' },
+    { name: 'Pricing', sectionId: 'pricing' },
+    { name: 'FAQ', sectionId: 'faq' },
+    { name: 'Affiliates', link: '/leaderboard' },
+    { name: 'Contact Us', link: '/contactus' },
+  ];
 
   return (
-    <nav className="navbar Container-Width Container">
-      <div className='navbar-phone-header'>
-      <Logo />
-      <div className={`hamburger ${isNavActive ? 'active' : ''}`} onClick={toggleNav}>
-        ☰
+    <nav id="navbar" className={`navbar Container-Width Container ${isSmallScreen ? 'small-screen' : ''}`}>
+      <div className='navbar-header'>
+        <Logo />
+        {isSmallScreen && (
+          <div className={`hamburger ${isSidebarOpen ? 'active' : ''}`} onClick={toggleSidebar}>
+            ☰
+          </div>
+        )}
       </div>
+      <div className={`nav-content ${isSidebarOpen ? 'open' : ''}`}>
+        {isSmallScreen && (
+          <button className="close-sidebar" onClick={toggleSidebar}>
+            ×
+          </button>
+        )}
+        <ul className="nav-links hover-effect-links">
+          {navItems.map((item, index) => (
+            <li key={index}>
+              {item.link ? (
+                <NavLink to={item.link}>{item.name}</NavLink>
+              ) : (
+                <a onClick={() => scrollToSection(item.sectionId)}>{item.name}</a>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className={`nav-links hover-effect-links ${isNavActive ? 'nav-links-phone active' : ''}`}>
-        <li><a onClick={() => scrollToSection(500)}>About</a></li>
-        <li><a onClick={() => scrollToSection(1000)}>Programs</a></li>
-        <li><a onClick={() => scrollToSection(5100)}>Pricing</a></li>
-        <li><a onClick={() => scrollToSection(6200)}>FAQ</a></li>
-        <li><a onClick={() => scrollToSection(2500)}>Affiliates</a></li>
-        <NavLink exact to="/contactus"> <li><a href="/contactus">Contact Us</a></li></NavLink>
-
-       
-        <li className={'login-phone'}><a onClick={() => scrollToSection(2500)}>Login</a></li>
-      </ul>
-      <div className={`nav-buttons ${isNavActive ? '' : ''}`}>
-        <button className="register-btn glow-text-test">Login</button>
-      </div>
+      {!isSmallScreen && (
+        <div className="nav-buttons">
+          <button className="register-btn glow-text-test">Login</button>
+        </div>
+      )}
+      {isSmallScreen && isSidebarOpen && (
+        <div className="sidebar-overlay" onClick={toggleSidebar}></div>
+      )}
     </nav>
   );
 };

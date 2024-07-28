@@ -166,17 +166,25 @@ height:45px;
 border-radius: 50%;
 margin-right:20px;
 }
-
+.user-info{
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  color:white;
+}
 .username-info{
 font-size: 20px;
-color:white;
 }
-
-.user-tag{
+.user-content *{
+  margin-bottom: 5px;
+  }
+  .user-earnings{
+    font-size: 14px;
+    }
+    
+    .user-tag{
 color: rgb(186, 186, 186);
 font-size:11px;
-margin-top:10px;
-margin-left:-18px;
 }
 
 .user-rank{
@@ -184,18 +192,20 @@ position: absolute;
 right:10px;
 color: white;
 }
-
+.user-rank p{
+  margin-top: 10px;
+}
 .user-rank .fa-caret-up{
 color:#00D95F;
 font-size:  16px;
-margin-top:10px;
+margin-top:21px;
 margin-right:-8px;
 }
 
 .user-rank .fa-caret-down{
 color:red;
 font-size:  16px;
-margin-top:10px;
+margin-top:25px;
 margin-right:-8px;
 }
 

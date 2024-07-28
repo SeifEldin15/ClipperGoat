@@ -8,12 +8,14 @@ import pfpimg from '../assets/500x500.jpg';
 import imageSmall from './radiengoat-small.webp';
 import imageMedium from './radiengoat-medium.webp';
 import imageLarge from './radiengoat-large.webp';
-const LeaderboardItem = ({ username, userTag, rank, isUp, number }) => (
+
+const LeaderboardItem = ({ username, userTag, rank, isUp, earnings }) => (
   <div className="profile-container">
     <div className="user-content">
       <img src={pfpimg} alt={username} />
       <div className="user-info">
         <p className="username-info">{username}</p>
+        <p className='user-earnings'>{earnings}</p>
         <p className="user-tag">{userTag}</p>
       </div>
     </div>
@@ -24,103 +26,84 @@ const LeaderboardItem = ({ username, userTag, rank, isUp, number }) => (
   </div>
 );
 
-const LeaderCard = ({ rank, name, score, username, isGoat }) => (
+const LeaderboardCard = ({ rank, name, score, username, isGoat }) => (
   <div className={`leader-card ${isGoat ? 'goat' : ''}`}>
     {isGoat && <div className="crown">👑</div>}
-    <div className={`rank-number ${isGoat ? 'goat-number' : ''}`}><p>{rank}</p></div>
+    {isGoat ? (
+      <div className='goat-number'><p>{rank}</p></div>
+    ) : (
+      <div className="rank-number"><p>{rank}</p></div>
+    )}
     <div className={`avatar ${isGoat ? 'goat-avatar' : ''}`}>
       <img src={pfpimg} alt={name} />
     </div>
     <div className="name">{name}</div>
-    <div className="score" style={{ color: isGoat ? '#f1c40f' : (rank === 2 ? '#3498db' : '#2ecc71') }}>{score}</div>
+    <div className="score" style={{ color: rank === 1 ? '#f1c40f' : rank === 2 ? '#3498db' : '#2ecc71' }}>{score}</div>
     <div className="username">{username}</div>
   </div>
 );
 
 const Leaderboard = () => {
   const topLeaders = [
-    { rank: 2, name: "Jackson", score: 1847, username: "@jackson" },
-    { rank: 1, name: "Eiden", score: 2430, username: "@eiden", isGoat: true },
-    { rank: 3, name: "Emma Aria", score: 1674, username: "@emmaaria" }
+    { rank: 2, name: "Gold Goats", score: "$539,946", username: "@jackson" },
+    { rank: 1, name: "Diamond TRUE GOAT", score: "$5,999,940", username: "@eiden", isGoat: true },
+    { rank: 3, name: "Silver Goats", score: "$240,000", username: "@emmaaria" }
   ];
 
   const leaderboardData = [
-    { username: 'Sebastien', userTag: '@Sebastien', rank: 357, isUp: true, number: 4 },
-    { username: 'Alice', userTag: '@Alice', rank: 286, isUp: false, number: 5 },
-    { username: 'Bob', userTag: '@Bob', rank: 224, isUp: true, number: 6 },
-    { username: 'Charlie', userTag: '@Charlie', rank: 198, isUp: true, number: 7 },
-    { username: 'David', userTag: '@David', rank: 176, isUp: false, number: 8 },
-    { username: 'Eva', userTag: '@Eva', rank: 165, isUp: true, number: 9 },
-    { username: 'Frank', userTag: '@Frank', rank: 152, isUp: false, number: 10 },
-    { username: 'Grace', userTag: '@Grace', rank: 143, isUp: true, number: 11 },
+    { username: 'Diamond TRUE GOAT', userTag: '@Sebastien', rank: 357, isUp: true, number: 4, earnings: "$5,999,940" },
+    { username: 'Gold Goat', userTag: '@Alice', rank: 286, isUp: false, number: 5, earnings: "$2,699,94" },
+    { username: 'Silver Goat', userTag: '@Bob', rank: 224, isUp: true, number: 6, earnings: "$3,999,9" },
+    { username: 'Bronze Goat', userTag: '@Charlie', rank: 198, isUp: true, number: 7, earnings: "$9,999" },
+    { username: 'Billy Goat', userTag: '@David', rank: 176, isUp: false, number: 8, earnings: "$5,999" },
+    { username: 'Lambs', userTag: '@Eva', rank: 165, isUp: true, number: 9, earnings: "$2,399" },
+    { username: 'Sheep', userTag: '@Frank', rank: 152, isUp: false, number: 10, earnings: "$1,3990" },
   ];
 
   return (
-<>
-    <div className="clippergoat-app-header">
-    <img
-      alt="A captivating image of a radiant goat"
-      className="imghero"
-      src={imageMedium} // Default image
-      srcset={`${imageSmall} 320w, ${imageMedium} 640w, ${imageLarge} 1024w`}
-    />
-     <div className="overlay"></div>   
-        <Navbar />               <HeroSectionLandingLeader />
-
-        </div>
-        <div>
-
-      <div className='LeaderContainer'>
-        <div className="LeaderBoardSection ">
-          <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text">Income Path</span></h1>
-               <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
-
-          <div className="leaderboard-rank-info-container">
-      <div className="leaderboard-container">
-        <div className="leader-card">
-          <div className="avatar">
-            <img src={pfpimg} alt="Jackson" />
-          </div>
-          <div className="name">Jackson</div>
-          <div className="score" style={{ color: '#3498db' }}>1847</div>
-          <div className="username">@username</div>
-        </div>
-        <div className="leader-card goat">
-        <div className="crown">👑</div>
-        <div className='goat-number'><p>1</p></div>
-          <div className="avatar goat-avatar">
-            <img src={pfpimg} alt="Eiden" />
-          </div>
-          <div className="name">Eiden</div>
-          <div className="score" style={{ color: '#f1c40f' }}>2430</div>
-          <div className="username">@username</div>
-        </div>
-        <div className="leader-card">
-          <div className="avatar">
-            <img src={pfpimg} alt="Emma Aria" />
-          </div>
-          <div className="name">Emma Aria</div>
-          <div className="score" style={{ color: '#2ecc71' }}>1674</div>
-          <div className="username">@username</div>
-        </div>
+    <>
+      <div className="clippergoat-app-header">
+        <img
+          alt="A captivating image of a radiant goat"
+          className="imghero"
+          src={imageMedium}
+          srcSet={`${imageSmall} 320w, ${imageMedium} 640w, ${imageLarge} 1024w`}
+        />
+        <div className="overlay"></div>   
+        <Navbar />               
+        <HeroSectionLandingLeader />
       </div>
-    </div>
-         
-          <div className="LeaderBoard-container">
-            <div className='LeaderBoardCard popular'>
-              <p className='pricing-card-header'></p>
-              <div className="profile-content">
-                {leaderboardData.map((user, index) => (
-                  <LeaderboardItem key={index} {...user} />
+      <div>
+        <div className='LeaderContainer'>
+          <div className="LeaderBoardSection Container-Spacing">
+            <h1 className="custom-header-title">Clipper Goat 10 Million Dollar <span className="information-container-header-span glow-text">Affiliate Program</span></h1>
+            <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
+
+            <div className="leaderboard-rank-info-container">
+              <div className="leaderboard-container">
+                {topLeaders.map((leader) => (
+                  <LeaderboardCard key={leader.rank} {...leader} />
                 ))}
+              </div>
+            </div>
+         
+            <div className="LeaderBoard-container">
+              <div className='LeaderBoardCard popular'>
+                <p className='pricing-card-header'></p>
+                <div className="profile-content">
+                  {leaderboardData.map((user, index) => (
+                    <LeaderboardItem key={index} {...user} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <InfoCard />
+        <Footer />
       </div>
-      <InfoCard />
-      <Footer />
-    </div></>
+    </>
   );
 };
+
 export default Leaderboard;

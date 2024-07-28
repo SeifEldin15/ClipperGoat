@@ -13,7 +13,7 @@
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin-top:80px;
+  margin-top: 80px;
 }
 
 .pricing-card {
@@ -85,7 +85,13 @@
   margin-top: 10px;
 }
 
-.PricingSection button {
+.description {
+  font-size: 1em;
+  color: rgb(200, 200, 200);
+  margin-bottom: 20px;
+}
+
+.get-started-btn {
   color: white;
   border: none;
   padding: 15px 20px;
@@ -95,11 +101,16 @@
   margin: 20px 0;
   width: 90%;
   font-size: 16px;
+  background-color: var(--main-color-lighter);
+  box-shadow: 0 0 15px rgba(20, 110, 255, 0.5);
 }
-.PricingSection button:hover {
+
+.get-started-btn:hover {
   box-shadow: 0 0 35px rgba(20, 110, 255, 0.5);
 }
-.PricingSection ul {
+
+.features-list,
+.soon-to-come-list {
   list-style-type: none;
   padding: 20px;
   color: white;
@@ -107,18 +118,20 @@
   text-align: left;
   border-radius: 9px;
   font-size: 18px;
-}
-
-.PricingSection li {
   margin-bottom: 20px;
 }
 
-.PricingSection li::before {
+.features-list li,
+.soon-to-come-list li, .soon-to-come-list div {
+  margin-bottom: 10px;
+}
+
+.features-list li::before,
+.soon-to-come-list li::before {
   content: "✓";
   margin-right: 10px;
   color: var(--main-color-lightest);
 }
-
 .custom-pricing-height button {
   background-color: transparent;
 }
@@ -187,32 +200,32 @@
     font-size: 2em;
   }
 
-  .PricingSection ul {
+  .features-list,
+  .soon-to-come-list {
     font-size: 12px;
   }
   
-.PricingSection button {
-  color: white;
-  border: none;
-  padding: 12px 17px;
-  border-radius: 12px;
-  border: 1px solid rgba(52, 130, 255, 0.5);
-  cursor: pointer;
-  margin: 20px 0;
-  width: 80%;
-  font-size: 12px;
-}
+  .get-started-btn {
+    color: white;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 12px;
+    border: 1px solid rgba(52, 130, 255, 0.5);
+    cursor: pointer;
+    margin: 20px 0;
+    width: 80%;
+    font-size: 12px;
+  }
 
-.popular-tag i {
-  margin-bottom: -1px;
-  color: rgb(199, 199, 199);
-  font-size: 14px;
-}
-.popular-tag {
+  .popular-tag i {
+    margin-bottom: -1px;
+    color: rgb(199, 199, 199);
+    font-size: 14px;
+  }
 
-  
-  padding: 5px 12px;
-  width: 140px;
-  font-size: 12px;
-}
+  .popular-tag {
+    padding: 5px 12px;
+    width: 140px;
+    font-size: 12px;
+  }
 }

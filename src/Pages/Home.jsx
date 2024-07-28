@@ -1,4 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
+
 import Navbar from "../components/Navbar/Navbar";
 import HeroSectionLanding from "../components/HeroSectionLanding/HeroSectionLanding";
 import PricingSection from "../components/PricingSection/PricingSection";
@@ -42,6 +44,20 @@ import imageLarge from './radiengoat-large.webp';
 import radiengoat from "../assets/raiden goat.webp"
 import homeimg from "../assets/first.webp";
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state && location.state.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      // Clear the state to prevent scrolling on refresh
+      window.history.replaceState({}, document.title)
+    }
+  }, [location]);
+
+
   const INFLUENCERS = [
     {
       src: Beast,
@@ -196,28 +212,28 @@ const Home = () => {
       icon: <i class="fa-regular fa-video-arrow-down-left text-xl"></i>,
       title: "Rip",
       description:
-        "With our best in class email automation, you can automate your entire emailing process.",
+        "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
       image: homeimg,
     },
     {
       icon: <i class="fa-regular fa-hand-sparkles text-xl"></i>,
       title: "Rinse",
       description:
-        "With our best in class email automation, you can automate your entire emailing process.",
+        "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
       image: homeimg,
     },
     {
       icon: <i class="fa-regular fa-paper-plane"></i>,
       title: "Repost",
       description:
-        "With our best in class email automation, you can automate your entire emailing process.",
+        "WiUtilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
       image: homeimg,
     },
     {
       icon: <i class="fa-solid fa-repeat"></i>,
       title: "Repeat",
       description:
-        "With our best in class email automation, you can automate your entire emailing process.",
+        "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
       image: homeimg,
     },
   ];
@@ -233,7 +249,8 @@ const Home = () => {
  
 
   <div className="overlay"></div>   
-      <Navbar />         <HeroSectionLanding />
+      <Navbar />         
+      <HeroSectionLanding />
       </div>
       <div>
         <div className="AnimateCounterHomePhone">
@@ -270,10 +287,11 @@ const Home = () => {
         <div className="Container-Spacing">
           <div className="spacing-counter">
             <h1 className="information-container-header custom-header-title">
-              Unlock Your <span className="glow-text-test">Full Potential</span>
+            Top  <span className="glow-text-test">Influencers</span>
             </h1>
             <p className="custom-header-subtitle ">
-              Exactly what you can find inside Active Income
+            Top Influencers Using ClipperGoat Join the ranks of elite influencers who trust ClipperGoat to maximize their content:
+
             </p>
           </div>
           <div className="Container-Spacing">
@@ -286,13 +304,14 @@ const Home = () => {
           ref={targetRef}
         >
           <ScrollProgressBar targetRef={targetRef} />
-          <div className="">
+          <div className="" id="programs">
             <div className="information-container-header-div">
               <h1 className="information-container-header custom-header-title">
-                Unlock Your <span className="glow-text-test">Full Potential</span>
+              Revitalize Your Content with <span className="glow-text-test"> ClipperGoat:<br/> Rip, Rinse, Repost, Repeat!</span>
               </h1>
               <p className="custom-header-subtitle ">
-                Exactly what you can find inside Active Income
+              
+              Transform your viral content and dominate social media platforms effortlessly.
               </p>
             </div>
             {homeItems.map((item, index) => (
@@ -323,39 +342,37 @@ const Home = () => {
         </div>{" "}
         <LogoSlideshow />{" "}
         <div>
-
-          <h1 className="information-container-header custom-header-title">
+          <h1 className="information-container-header custom-header-title" id="about">
           Industries that  <span className="glow-text-test">NEED THIS!</span>
           </h1>
           <p className="custom-header-subtitle ">
           ClipperGoat is ideal for short form marketing, addressing the high demand for online attention and traffic in today's era of short attention spans and constant phone usage across social media, sales funnels, video games, influencers, online education, explicit sites, and subscription services.
           </p>
-        </div>        <div className="Container-Spacing"></div>
+        </div>        
+        <div className="Container-Spacing"></div>
 
         <Slider2 />
-        <div className="Container-Spacing"></div>
-        <PricingSection />
+        <div className="Container-Spacing" id="pricing">
+        <PricingSection /></div>
         <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title">
             Unlock Your <span className="glow-text-test">Full Potential</span>
           </h1>
           <p className="custom-header-subtitle ">
-            Exactly what you can find inside Active Income
+          Discover the Power of ClipperGoat Maximize your content's potential with cutting-edge AI tools. Whether you're an influencer, marketer, or creator, our platform helps you achieve unparalleled engagement. Featuring top influencers like Joe Rogan, Andrew Tate, Mr Beast, Kai Cenant, Adin Ross, HUAK THUA, and more!
           </p>
         </div>  
         <Slider items={items} />
       </div>
       <div>
-        <div className="Container-Spacing"> 
-
+        <div className="Container-Spacing" id="faq"> 
           <h1 className="information-container-header custom-header-title Container-Spacing">
           Frequently Asked <span className="glow-text-test">Questions</span>
           </h1> 
-
           <p className="custom-header-subtitle ">
           You have questions, we have answers
-          </p>        <FAQ />
-
+          </p>        
+          <FAQ />
         </div>
       </div>
       <Footer />

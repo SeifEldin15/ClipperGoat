@@ -22,113 +22,113 @@ import img18 from '../../assets/New folder/Industries/Traval Vlogs.webp';
 const slides = [
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Affiliate Marketing',
+    content: 'Enhance your campaigns with high-quality, repurposed videos. ClipperGoat helps you attract and convert more leads effectively.',
     image: img1
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Agency & Course Owners',
+    content: 'Elevate your educational content and promotional materials with ClipperGoats AI tools. Keep your training programs fresh and engaging by continuously updating your video content.',
     image: img2
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Automotive',
+    content: 'Create and edit videos without revealing your identity. Perfect for channels focusing on gaming, tutorials, and more, using ClipperGoats AI capabilities.',
     image: img3
   },
   {
     author: 'Marcus Perez',
-    title: 'High Ticket Awareness',
-    content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
+    title: 'Comedy',
+    content: 'Enhance your campaigns with high-quality, repurposed videos. ClipperGoat helps you attract and convert more leads effectively.',
     color: '#1f2937',
     image: img4
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Food Industries & Channels',
+    content: 'Create mouth-watering recipe videos and cooking tutorials. Engage your audience and attract more followers with delicious content using ClipperGoat.',
     image: img5
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Crypto',
+    content: 'Keep your audience motivated by repurposing workout routines and wellness tips. ClipperGoat helps you maintain fresh and inspiring content.',
     image: img6
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'DIY, Remodeling, Landscaping',
+    content: 'Provide valuable insights and investment tips through well-crafted videos. Keep your audience informed and engaged with ClipperGoat.',
     image: img7
   },
   {
     author: 'Marcus Perez',
-    title: 'High Ticket Awareness',
-    content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
+    title: 'E-commerce',
+    content: 'Drive traffic and boost sales with engaging product videos. Use ClipperGoat to create consistent, high-quality content for your online store.',
     color: '#1f2937',
     image: img8
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Finance & Investment',
+    content: 'Provide valuable insights and investment tips through well-crafted videos. Keep your audience informed and engaged with ClipperGoat.',
     image: img9
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Fitness & Wellness',
+    content: 'Keep your audience motivated by repurposing workout routines and wellness tips. ClipperGoat helps you maintain fresh and inspiring content.',
     image: img10
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
+    title: 'Gambling',
     content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
     image: img11
   },
   {
     author: 'Marcus Perez',
-    title: 'High Ticket Awareness',
-    content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
+    title: 'Influencers',
+    content: 'Maximize your online presence by repurposing your viral content. Stay relevant and engage your audience across all platforms with ClipperGoat.',
     color: '#1f2937',
     image: img12
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'No Face Channels',
+    content: 'Create and edit videos without revealing your identity. Perfect for channels focusing on gaming, tutorials, and more, using ClipperGoats AI capabilities.',
     image: img13
   },
   {
     title: 'OnlyFans Management',
-    content: 'Reposting snippets of exclusive content boosts subscriptions by showcasing premium offerings.',
+    content: 'Safely repurpose content to avoid restrictions and keep your audience engaged. ClipperGoat provides effective solutions for shadow-banned industries.',
     image: img14
   },
   {
     author: 'Sneako',
-    title: 'Active Income Mindset',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    title: 'Podcast',
+    content: 'Transform your audio content into engaging video snippets. Expand your reach and keep your audience entertained with ClipperGoat.',
     image: img15
   },
   {
     author: 'Marcus Perez',
-    title: 'High Ticket Awareness',
-    content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
+    title: 'Real Estate',
+    content: 'Create stunning property tours and market updates. Attract more buyers and sellers with high-quality video content using ClipperGoat.',
     color: '#1f2937',
     image: img16
   },
   {
     author: 'Marcus Perez',
-    title: 'High Ticket Awareness',
-    content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
+    title: 'Tech Review',
+    content: 'Repurpose tech review videos and tutorials. Keep your content relevant and engaging for your tech-savvy audience with ClipperGoat',
     color: '#1f2937',
     image: img17
   },
   {
     author: 'Marcus Perez',
-    title: 'High Ticket Awareness',
+    title: 'Traval Vlogs',
     content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
     color: '#1f2937',
     image: img18

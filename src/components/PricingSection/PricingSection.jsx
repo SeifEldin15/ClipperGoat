@@ -1,14 +1,22 @@
 import React from 'react';
 import './PricingSection.css';
-const PricingCard = ({ title, price, features, popular }) => (
-  <div className={`pricing-card ${popular ? 'popular' : ''} ${title === 'WEALTH' || title === 'MINDSET' ? 'custom-pricing-height' : 'custom-pricing-height2'}`}>
-    {popular && <div className="popular-tag"><i class='bx bx-info-circle' ></i> Most Popular</div>}
+
+const PricingCard = ({ title, price, description, features, soonToCome, popular }) => (
+  <div className={`pricing-card ${popular ? 'popular' : ''} ${title === 'Enterprise' || title === 'Enterprise' ? 'custom-pricing-height2' : 'custom-pricing-height'}`}>
+    {popular && <div className="popular-tag"><i className='bx bx-info-circle' ></i> Most Popular</div>}
     <p className='pricing-card-header'>{title}</p>
     <div className="price">${price}</div>
-    <p className='BilledMonthly'><i class="fa-solid fa-credit-card"></i> Billed Monthly</p>
-    <button className=''>Get started</button>
-    <ul>
+    <p className='BilledMonthly'><i className="fa-solid fa-credit-card"></i> Billed Monthly</p>
+    <p className='description'>{description}</p>
+    <button className='get-started-btn'>Get started</button>
+    <ul className='features-list'>
       {features.map((feature, index) => (
+        <li key={index}>{feature}</li>
+      ))}
+    </ul>
+    <ul className='soon-to-come-list'>
+      <div><strong>Soon to Come:</strong></div>
+      {soonToCome.map((feature, index) => (
         <li key={index}>{feature}</li>
       ))}
     </ul>
@@ -18,62 +26,76 @@ const PricingCard = ({ title, price, features, popular }) => (
 function PricingSection() {
   const plans = [
     {
-      title: "MINDSET",
-      price: "19.97",
+      title: "Clippreneur",
+      price: "120",
+      description: "Ideal for solo short-form editors managing 1-6 accounts.",
       features: [
-        "Start your Mindset Journey",
-        "Active Income Mindset",
-        "Fitness & Nutrition",
-        "High Ticket Awareness",
-        "Masterful Editing",
-        "Finance 101",
-        "Personal Coach"
+        "300 Credits",
+        "300 Video Cleans or 300 Downloads",
+        "Meta Magic: (Metadata Removal + AI Video Editor)",
+        "AI Advanced Photoshop Video Editor",
+        "Updated to Bypass July 7th IG Patch on Content Detection",
+        "15% Affiliate Commission",
+      ],
+      soonToCome: [
+        "Video Game Splitter",
+        "Auto-Poster",
+        "Auto-DM’er",
+        "Account Warmer",
       ]
     },
     {
-      title: "MONEY",
-      price: "49.97",
+      title: "Enterprise",
+      price: "997",
+      description: "Tailored for creators or agencies requiring a dedicated team to deliver customized solutions. This package ensures your content aligns with the latest trends and algorithms, facilitating significant business growth.",
       features: [
-        "Everything in Mindset",
-        "Crypto Literacy",
-        "Shopify Dropshipping",
-        "Intro to AI",
-        "High Level Networking",
-        "Personal Brand Mastery",
-        "Amazon FBA",
-        "YouTube Blueprint",
-        "Real Estate Basics",
-        "Stock & Option Day Trading",
-        "Intro To DeFi (Decentralized Finance)"
+        "4000 Credits",
+        "4000 Video Downloads",
+        "Includes all Features in Clippreneur & Agency",
+        "Custom Integrations and Automations",
+        "Personalized Enhancements and Optimizations",
+        "Dedicated Support and Maintenance",
+      ],
+      soonToCome: [
+        "Account Management",
+        "Advanced Analytics",
+        "Full Suite of Automation Tools",
       ],
       popular: true
     },
     {
-      title: "WEALTH",
-      price: "99.97",
+      title: "Agency",
+      price: "300",
+      description: "Designed for agency owners or creators operating 10+ accounts and posting multiple times a day.",
       features: [
-        "Everything in Mindset and Money",
-        "Stock & Option Day Trading Advanced",
-        "Advanced AI",
-        "Crypto Mastery",
-        "Real Estate Advanced",
-        "Airbnb Arbitrage",
-        "Advanced DeFi"
-      ]
-    }
+        "1000 Credits",
+        "Includes 1000 Short Video Downloads",
+        "Includes all of the Features in Clippreneur",
+        "Priority Support",
+        "25% Affiliate Commission",
+      ],
+      soonToCome: [
+        "Customer Relationship Managers",
+        "Auto-Emailer",
+        "Auto-Texter",
+        "GUI Web Builder",
+        "Custom Sites",
+      ],
+    },
+   
   ];
 
   return (
-    <div className="PricingSection ">
-      <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text-test">Income Path</span></h1>
-      <p className="custom-header-subtitle">Exactly what you can find inside Active Income</p>
-     <div className="pricing-container">
+    <div className="PricingSection">
+      <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text-test">Perfect Plan</span></h1>
+      <p className="custom-header-subtitle">Flexible pricing to suit your needs, whether you're a solo creator or a large agency.</p>
+      <div className="pricing-container">
         {plans.map((plan, index) => (
-             <div className="pricing-card-container">
-          <PricingCard key={index} {...plan} />
+          <div className="pricing-card-container" key={index}>
+            <PricingCard {...plan} />
           </div>
         ))}
-     </div>
+      </div>
     </div>
   );
 }

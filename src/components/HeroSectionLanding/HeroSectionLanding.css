@@ -45,7 +45,9 @@
   }
   
   .clippergoat-highlight {
-    color: rgb(101, 160, 255);
+    /* color: rgb(101, 160, 255); */
+    color: rgb(255, 255, 255) !important;
+
   }
   
   .clippergoat-hero-subtitle {

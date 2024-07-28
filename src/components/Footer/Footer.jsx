@@ -1,28 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Footer.css';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.webp'
+
 const Footer = () => {
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
-  useEffect(() => {
-    const checkScroll = () => {
-      if (!showBackToTop && window.pageYOffset > 400) {
-        setShowBackToTop(true);
-      } else if (showBackToTop && window.pageYOffset <= 400) {
-        setShowBackToTop(false);
-      }
-    };
-
-    window.addEventListener('scroll', checkScroll);
-    return () => window.removeEventListener('scroll', checkScroll);
-  }, [showBackToTop]);
-
-  const handleBackToTop21 = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  const handleBackToTop = () => {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      navbar.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Fallback if navbar is not found
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -31,7 +23,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-info">
             <div className="footer-logo">
-              <img src={Logo} />
+              <img src={Logo} alt="Logo" />
             </div>
             <p className="footer-description">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
@@ -44,20 +36,20 @@ const Footer = () => {
               <i className="fa-brands fa-tiktok"></i>
             </div>
           </div>
-            <button onClick={handleBackToTop21} className="back-to-top">
-              <span className="sr-only">Back to top</span>
-              <i className="fa-solid fa-chevron-up"></i>
-            </button>
+          <button onClick={handleBackToTop} className="back-to-top">
+            <span className="sr-only">Back to top</span>
+            <i className="fa-solid fa-chevron-up"></i>
+          </button>
         </div>
 
         <ul className="footer-links hover-effect-links">
-        <NavLink exact to="/leaderboard" activeClassName="active" className="nav-item">Leaderboard</NavLink>
-          <NavLink exact to="/terms" activeClassName="active" className="nav-item">Terms of Conditions</NavLink>
-          <NavLink exact to="/privacy" activeClassName="active" className="nav-item">Privacy Policy</NavLink>
-          <NavLink exact to="/pricing" activeClassName="active" className="nav-item"><li><a href="#">Pricing</a></li></NavLink>
-          <NavLink exact to="/refund" activeClassName="active" className="nav-item"><li><a href="#">Refunds</a></li></NavLink>
-          <NavLink exact to="/contactus" activeClassName="active" className="nav-item"><li><a href="#">Contact Us</a></li></NavLink>
-          </ul>
+          <li><NavLink to="/leaderboard">Leaderboard</NavLink></li>
+          <li><NavLink to="/terms">Terms of Conditions</NavLink></li>
+          <li><NavLink to="/privacy">Privacy Policy</NavLink></li>
+          <li><NavLink to="/pricing">Pricing</NavLink></li>
+          <li><NavLink to="/refund">Refunds</NavLink></li>
+          <li><NavLink to="/contactus">Contact Us</NavLink></li>
+        </ul>
         <p className="footer-copyright">
           Copyright &copy; 2022. All rights reserved.
         </p>

@@ -36,36 +36,52 @@ const FAQItem = ({ question, answer }) => {
 const FAQ = () => {
   const faqData = [
     {
-      question: "Isn't this just the same information I can find on Google or YouTube?",
-      answer: "Answer here..."
+      question: "What types of videos can I process with ClipperGoat?",
+      answer: "ClipperGoat supports a wide range of video formats from all major social media platforms, including TikTok, Instagram, YouTube, Facebook, and more. Whether it's short-form clips or longer videos, our platform can handle it all."
     },
     {
-      question: "What makes Active Income different from other programs?",
-      answer: "Answer here..."
+      question: "Will this make me go viral?",
+      answer: "While we can't guarantee virality, ClipperGoat significantly enhances your chances by repurposing your most successful content. Our AI tools help optimize and refresh your videos, making them more likely to be picked up by algorithms and reach a broader audience."
     },
     {
-      question: "Can I do this even if I live outside the US?",
-      answer: "Answer here..."
+      question: "Does this repost for you?",
+      answer: "Yes, ClipperGoat's auto-poster feature allows you to schedule and automate the reposting of your videos across multiple platforms, saving you time and ensuring consistent engagement."
     },
     {
-      question: "Do I need startup capital to make money inside Active Income?",
-      answer: "Answer here..."
+      question: "Can I do more than 1000 videos a month?",
+      answer: "Absolutely! Our Enterprise plan allows for up to 4000 video cleans and downloads per month. For custom needs, contact our support team for tailored solutions."
+    },
+    {
+      question: "Does it work on TikTok?",
+      answer: "Yes, ClipperGoat is optimized for TikTok, ensuring your videos are formatted and enhanced to perform well on the platform."
+    },
+    {
+      question: "Does this get you shadowbanned?",
+      answer: "No, ClipperGoat is designed to comply with all platform guidelines, including TikTok's. Our metadata cleaning ensures your content remains within the rules, reducing the risk of shadowbanning."
+    },
+    {
+      question: "Can I use ClipperGoat if I live outside the US?",
+      answer: "Yes, ClipperGoat is available globally. No matter where you are, you can take advantage of our powerful video editing and reposting tools."
+    },
+    {
+      question: "Do I need startup capital to make money with ClipperGoat?",
+      answer: "While having some startup capital can help you scale faster, it is not required. Our platform is designed to maximize your existing content, allowing you to grow organically and reinvest your earnings."
     },
     {
       question: "What if I'm interested in passive income?",
-      answer: "Answer here..."
+      answer: "ClipperGoat can help you generate passive income by automating the reposting of your viral content, keeping your social media channels active and engaging without constant effort."
     },
     {
-      question: "What is the price of Active Income?",
-      answer: "Answer here..."
+      question: "What is the price of ClipperGoat?,",
+      answer: "ClipperGoat offers three pricing plans: Clippreneur: $120/month for 300 credits Agency: $300/month for 1000 credits Enterprise: $997/month for 4000 credits"
     },
     {
       question: "I don't have any money, can I get access for free?",
-      answer: "Answer here..."
+      answer: "Yes, we offer a free plan that includes 30 credits weekly for affiliates who stream live on TikTok, Instagram, Twitch, Kik, and YouTube. This allows you to start using ClipperGoat's features at no cost and upgrade as you grow."
     },
     {
-      question: "But is Active Income really guaranteed to work?",
-      answer: "Answer here..."
+      question: "Is ClipperGoat really guaranteed to work?",
+      answer: "ClipperGoat is designed to maximize the effectiveness of your content. While we can't guarantee specific results, our tools are built to enhance your content strategy and improve your chances of success."
     }
   ];
 
