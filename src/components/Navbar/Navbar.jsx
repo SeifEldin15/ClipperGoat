@@ -28,10 +28,10 @@ const Navbar = () => {
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
-        slowScrollTo(pixelY, 1000); // 1.5 seconds duration for scrolling
+        slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
       }, 1000);
     } else {
-      slowScrollTo(pixelY, 1000); // 1.5 seconds duration for scrolling
+      slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
     }
 
     if (isSmallScreen) {
@@ -64,10 +64,10 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: 'About', scrollTo: 500 },
-    { name: 'Programs', scrollTo: 1000 },
-    { name: 'Pricing', scrollTo: 1500 },
-    { name: 'FAQ', scrollTo: 2000 },
+    { name: 'About', scrollTo: 5400 },
+    { name: 'Programs', scrollTo: 1900 },
+    { name: 'Pricing', scrollTo: 6100 },
+    { name: 'FAQ', scrollTo: 8400 },
     { name: 'Affiliates', link: '/leaderboard' },
     { name: 'Contact Us', link: '/contactus' },
   ];
