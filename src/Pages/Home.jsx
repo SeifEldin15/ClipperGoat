@@ -39,8 +39,12 @@ import "./Home.css";
 import imageSmall from './radiengoat-small.webp';
 import imageMedium from './radiengoat-medium.webp';
 import imageLarge from './radiengoat-large.webp';
-import radiengoat from "../assets/raiden goat.webp"
-import homeimg from "../assets/first.webp";
+import radiengoat from "../assets/videos/Updated final.mp4"
+import cleanvid from "../assets/videos/clean.mov";
+import ripvid from "../assets/videos/rip finished edit.mov";
+import repost from "../assets/videos/post CG lp.mov";
+import repeatvid from "../assets/videos/Repeat fin CG.mov";
+
 const Home = () => {
   const INFLUENCERS = [
     {
@@ -184,53 +188,68 @@ const Home = () => {
     },
 ];
 
-  const targetRef = useRef(null);
-  const items = [
-    { name: "Chloe", description: "Crypto Investing", content: "asgdasgs" },
-    { name: "William", description: "Amazon FBA", content: "asgdasgs" },
-    { name: "Arthur", description: "Amazon FBA", content: "asgdasgs" },
-    { name: "Eric", description: "Amazon FBA", content: "asgdasgs" },
-  ];
-  const homeItems = [
-    {
-      icon: <i class="fa-regular fa-video-arrow-down-left text-xl"></i>,
-      title: "Rip",
-      description:
-        "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
-      image: homeimg,
-    },
-    {
-      icon: <i class="fa-regular fa-hand-sparkles text-xl"></i>,
-      title: "Rinse",
-      description:
-        "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
-      image: homeimg,
-    },
-    {
-      icon: <i class="fa-regular fa-paper-plane"></i>,
-      title: "Repost",
-      description:
-        "WiUtilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
-      image: homeimg,
-    },
-    {
-      icon: <i class="fa-solid fa-repeat"></i>,
-      title: "Repeat",
-      description:
-        "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
-      image: homeimg,
-    },
-  ];
+const targetRef = useRef(null);
+const items = [
+  { name: "Chloe", description: "Crypto Investing", content: "asgdasgs" },
+  { name: "William", description: "Amazon FBA", content: "asgdasgs" },
+  { name: "Arthur", description: "Amazon FBA", content: "asgdasgs" },
+  { name: "Eric", description: "Amazon FBA", content: "asgdasgs" },
+];
+const homeItems = [
+  {
+    icon: <i className="fa-regular fa-video-arrow-down-left text-xl"></i>,
+    title: "Rip",
+    description:
+      "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
+    videoSrc: ripvid, 
+    className: "text-rip-color", 
+  },
+  {
+    icon: <i className="fa-regular fa-video-plus text-xl"></i>,
+    title: "Clean",
+    description:
+      "Forget about the clutter! Our 'Clean' feature helps you automatically edit your videos, remove unnecessary parts, and keep only the best moments. Turn your lengthy streams or recordings into concise, engaging content effortlessly.",
+    videoSrc: cleanvid,
+    className: "text-clean-color", 
+  },
+  {
+    icon: <i className="fa-regular fa-repeat text-xl"></i>,
+    title: "Repeat",
+    description:
+      "Why create new content when you can re-purpose the old ones? 'Repeat' allows you to repost your past videos with a fresh twist. Add new edits, annotations, or even merge with new clips, keeping your audience engaged with minimal effort.",
+    videoSrc: repeatvid, // Video source for "Repeat"
+    className: "text-repeat-color", // Class for text color
+  },
+  {
+    icon: <i className="fa-regular fa-message-code text-xl"></i>,
+    title: "Repost",
+    description:
+      "Our 'Repost' feature ensures your content reaches more audiences by allowing you to share it across multiple social media platforms simultaneously. Boost your content's visibility and engagement without the hassle of manual posting.",
+    videoSrc: repost, // Video source for "Repost"
+    className: "text-repost-color", // Class for text color
+  },
+];
+
   return (
     <>
   <div className="homeheroimg">
-  <img
+  {/* <img
       alt="A captivating image of a radiant goat"
-      className="imghero"
       src={imageMedium} // Default image
       srcset={`${imageSmall} 320w, ${imageMedium} 640w, ${radiengoat} 1024w`}
-    />
- 
+    /> */}
+   <video        className="imghero"
+
+                    loading="lazy" src={radiengoat}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <track kind="captions"  srclang="en" label="English captions" />
+                    Your browser does not support the video tag.
+                </video>
+                
 
   <div className="overlay"></div>   
       <Navbar />         
@@ -291,10 +310,9 @@ const Home = () => {
           <div className="">
             <div className="information-container-header-div">
               <h1 className="information-container-header custom-header-title">
-              Revitalize Your Content with <span className="glow-text-test"> ClipperGoat:<br/> Rip, Rinse, Repost, Repeat!</span>
+              Revitalize Your Content with ClipperGoat:<span className="glow-text-test"> <br/> Rip, Rinse, Repost, Repeat!</span>
               </h1>
               <p className="custom-header-subtitle ">
-              
               Transform your viral content and dominate social media platforms effortlessly.
               </p>
             </div>
@@ -314,7 +332,17 @@ const Home = () => {
                 </div>
                 <div className="image-box-container">
                   <div className="image-box">
-                    <img loading="lazy" src={item.image} alt="" />
+                  <video  
+                    loading="lazy" src={item.videoSrc}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <track kind="captions"  srclang="en" label="English captions" />
+                    Your browser does not support the video tag.
+                </video>
+                
                   </div>
                 </div>
                 <div className="getoffersmall">
@@ -327,7 +355,7 @@ const Home = () => {
         <LogoSlideshow />{" "}
         <div>
           <h1 className="information-container-header custom-header-title">
-          Industries that  <span className="glow-text-test">NEED THIS!</span>
+          Industries that NEED THIS!
           </h1>
           <p className="custom-header-subtitle ">
           ClipperGoat is ideal for short form marketing, addressing the high demand for online attention and traffic in today's era of short attention spans and constant phone usage across social media, sales funnels, video games, influencers, online education, explicit sites, and subscription services.

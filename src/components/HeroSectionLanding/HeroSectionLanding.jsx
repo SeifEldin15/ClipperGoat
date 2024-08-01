@@ -23,13 +23,16 @@ function HeroSectionLandingHero() {
 <>
 <section className="clippergoat-hero">
       <h1 className="clippergoat-hero-title">
-        <span className="clippergoat-highlight glow-text-test">ReUse<br />
-        Your Most Viral Clip<br />
-        1000x a month with<br /></span>
-        <span className="clippergoat-highlight glow-text-test">ClipperGoat!</span>
+        <span className="clippergoat-highlight glow-text-test">Unlock 
+Endless Virality
+with <br />ClipperGoat!
+
+       <br /></span>
+        {/* <span className="clippergoat-highlight glow-text-test">ClipperGoat!</span> */}
       </h1>
-      <p className="clippergoat-hero-subtitle ">Great for any INDUSTRY!!! Use the AI powered Short Form Editor. Edit 100s of videos in minutes with ClipperGoat AI</p>
-<GetOfferBtn />
+      <p className="clippergoat-hero-subtitle ">Repurpose your most viral clips 1000 times a month using our AI-powered Short Form Editor. Perfect for any industry, ClipperGoat AI transforms your content into fresh, engaging videos in minutes.</p>
+      <button className="clippergoat-cta">Get Started!</button>
+
 <div>
   <div className="landing-counter-container">
 

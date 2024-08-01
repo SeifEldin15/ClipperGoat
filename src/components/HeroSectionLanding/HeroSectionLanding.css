@@ -96,7 +96,7 @@
   
   .clippergoat-feature-item::before {
     content: '✓';
-    color: #00ffff;
+    color: #ffe343    ;
     margin-right: 10px;
   }
 .challenge-container-phone{
@@ -109,6 +109,28 @@
 .landing-counter-container-header h1{
   font-size: 30px !important;
 }
+.clippergoat-cta {
+  background-color: var(--main-color-lighter);
+  color: white;
+   border-radius: 9px; width: 100%;
+  margin-bottom: 40px;  border: 1px solid rgb(144, 187, 255);
+  opacity:0.9;
+  margin-top:10px;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.6s;  box-shadow: 
+  rgb(41, 123, 255) 0px 0px 17.3px 11px inset, 
+  0 0 15px rgb(44, 125, 255);
+
+}
+  
+.clippergoat-cta:hover {
+ 
+  box-shadow: 
+  rgb(49, 128, 255) 0px 0px 17.3px 11px inset, 
+  0 0 35px rgb(35, 119, 255);
+ }
 
 @media screen and (max-width: 768px) {
   .clippergoat-hero-title {

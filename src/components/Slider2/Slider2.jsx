@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Slider2.css';
 import img1 from '../../assets/New folder/Industries/Affiliate Marketing.webp';
-import img2 from '../../assets/New folder/Industries/Agency & Course Owners.webp';
+import img2 from '../../assets/New folder/Industries/spencer__3_.webp';
 import img3 from '../../assets/New folder/Industries/Automotive .webp';
 import img4 from '../../assets/New folder/Industries/Comedy.webp';
 import img5 from '../../assets/New folder/Industries/Cooking & Food Review.webp';
@@ -10,57 +10,60 @@ import img7 from '../../assets/New folder/Industries/DIY, Remodeling, Landscapin
 import img8 from '../../assets/New folder/Industries/E-commerce.webp';
 import img9 from '../../assets/New folder/Industries/Finance & Investment.webp';
 import img10 from '../../assets/New folder/Industries/Fitness & Wellness,.webp';
-import img11 from '../../assets/New folder/Industries/Gambling.webp';
-import img12 from '../../assets/New folder/Industries/Influencers.webp';
+import img11 from '../../assets/New folder/Industries/gaming.webp';
+import img12 from '../../assets/New folder/Industries/unnamed.webp';
 import img13 from '../../assets/New folder/Industries/No Face Channels.webp';
-import img14 from '../../assets/New folder/Industries/OnlyFans Management.webp';
+import img14 from '../../assets/New folder/Industries/spencer__1_.webp';
 import img15 from '../../assets/New folder/Industries/Podcast.webp';
 import img16 from '../../assets/New folder/Industries/Real Estate.webp';
 import img17 from '../../assets/New folder/Industries/Tech Review .webp';
-import img18 from '../../assets/New folder/Industries/Traval Vlogs.webp';
+// import img18 from '../../assets/New folder/Industries/Traval Vlogs.webp';
+import img19 from '../../assets/New folder/Industries/248281584_669313307384591_6746345535741826702_n.webp';
+import img20 from '../../assets/New folder/Industries/spencer__2_.webp';
 
 const slides = [
   {
-    author: 'Sneako',
+    author: '',
     title: 'Affiliate Marketing',
     content: 'Enhance your campaigns with high-quality, repurposed videos. ClipperGoat helps you attract and convert more leads effectively.',
     image: img1
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'Agency & Course Owners',
     content: 'Elevate your educational content and promotional materials with ClipperGoats AI tools. Keep your training programs fresh and engaging by continuously updating your video content.',
     image: img2
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'Automotive',
-    content: 'Create and edit videos without revealing your identity. Perfect for channels focusing on gaming, tutorials, and more, using ClipperGoats AI capabilities.',
+    content: 'Showcase car reviews, maintenance tips, and automotive news. Keep your audience engaged with high-quality, informative videos using ClipperGoat.',
     image: img3
   },
   {
     author: 'Marcus Perez',
     title: 'Comedy',
-    content: 'Enhance your campaigns with high-quality, repurposed videos. ClipperGoat helps you attract and convert more leads effectively.',
+    content: 'Grows audience by sharing funniest stand-up bits, skits, and humorous moments, keeping followers entertained and engaged.',
     color: '#1f2937',
     image: img4
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'Food Industries & Channels',
     content: 'Create mouth-watering recipe videos and cooking tutorials. Engage your audience and attract more followers with delicious content using ClipperGoat.',
     image: img5
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'Crypto',
-    content: 'Keep your audience motivated by repurposing workout routines and wellness tips. ClipperGoat helps you maintain fresh and inspiring content.',
+    content: 'Attracts followers by highlighting market insights, investment tips, and significant trades, keeping the audience informed and engaged with timely and actionable financial content.',
     image: img6
   },
+
   {
-    author: 'Sneako',
+    author: '',
     title: 'DIY, Remodeling, Landscaping',
-    content: 'Provide valuable insights and investment tips through well-crafted videos. Keep your audience informed and engaged with ClipperGoat.',
+    content: 'Attracts new clients by showcasing how-to guides, before-and-after transformations, and client testimonials, demonstrating value and expertise in the service offered.',
     image: img7
   },
   {
@@ -71,43 +74,49 @@ const slides = [
     image: img8
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'Finance & Investment',
     content: 'Provide valuable insights and investment tips through well-crafted videos. Keep your audience informed and engaged with ClipperGoat.',
     image: img9
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'Fitness & Wellness',
     content: 'Keep your audience motivated by repurposing workout routines and wellness tips. ClipperGoat helps you maintain fresh and inspiring content.',
     image: img10
   },
   {
-    author: 'Sneako',
-    title: 'Gambling',
-    content: 'Sneako reveals the Active Income Mindset that took him from a broke UberEats delivery driver to multimillionaire despite getting banned on YouTube and Twitch',
+    author: '',
+    title: 'Gaming',
+    content: 'Repurpose gameplay highlights and tutorials to keep your content fresh. Engage your gaming community with ClipperGoats AI tools.',
     image: img11
   },
   {
-    author: 'Marcus Perez',
+    author: '',
+    title: 'Gambling',
+    content: 'Engages audience by sharing big wins, betting strategies, and entertaining gameplay, creating excitement and drawing in viewers who are interested in the thrill of gambling.',
+    image: img19
+  },
+  {
+    author: '',
     title: 'Influencers',
     content: 'Maximize your online presence by repurposing your viral content. Stay relevant and engage your audience across all platforms with ClipperGoat.',
     color: '#1f2937',
     image: img12
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'No Face Channels',
     content: 'Create and edit videos without revealing your identity. Perfect for channels focusing on gaming, tutorials, and more, using ClipperGoats AI capabilities.',
     image: img13
   },
   {
-    title: 'OnlyFans Management',
-    content: 'Safely repurpose content to avoid restrictions and keep your audience engaged. ClipperGoat provides effective solutions for shadow-banned industries.',
+    title: 'Prohibited Industries',
+    content: 'safely repurpose content to avoid restrictions and keep your audience engaged. ClipperGoat provides effective solutions for shadow-banned industries.',
     image: img14
   },
   {
-    author: 'Sneako',
+    author: '',
     title: 'Podcast',
     content: 'Transform your audio content into engaging video snippets. Expand your reach and keep your audience entertained with ClipperGoat.',
     image: img15
@@ -126,12 +135,18 @@ const slides = [
     color: '#1f2937',
     image: img17
   },
+  // {
+  //   author: 'Marcus Perez',
+  //   title: 'Traval Vlogs',
+  //   content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
+  //   color: '#1f2937',
+  //   image: img18
+  // },
   {
-    author: 'Marcus Perez',
-    title: 'Traval Vlogs',
-    content: 'Get the starting kit for making money online with nothing but a phone and an online memory card with pre-written content',
-    color: '#1f2937',
-    image: img18
+    author: '',
+    title: 'Travel',
+    content: 'Repurpose travel footage and vlogs to keep your audience coming back for more adventures. Share your experiences through captivating videos.',
+    image: img20
   },
 
 ];

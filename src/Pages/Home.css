@@ -63,15 +63,17 @@
   display: flex;
   flex-direction: column;
   align-items: center; 
-  margin-top:100px !important;
+  margin-top:100px !important;  height:400px;
+
 }
 
-.HomeImgContainer img {
+.HomeImgContainer video {
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
   width: 100%; 
-  opacity: 0.2;
-
+  height:380px !important; object-fit: cover;
+  opacity: 1;
+z-index: 214;
 }
 
 .image-box-container {

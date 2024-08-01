@@ -56,7 +56,7 @@ const LogoSlideshow = () => {
   return (
     <div className="LogoSlideshow-container11 Container-Spacing-Lg element">
       <div className="LogoSlideshow-container">
-        <h2>Trusted by <span className="glow-text-test">big industries</span></h2>
+        <h2>Trusted by big industries</h2>
         <div 
           className="LogoSlideshowslideshow" 
           ref={trackRef}

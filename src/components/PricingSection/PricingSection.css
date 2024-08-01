@@ -130,7 +130,7 @@
 .soon-to-come-list li::before {
   content: "✓";
   margin-right: 10px;
-  color: var(--main-color-lightest);
+  color: #ffe343    ;
 }
 .custom-pricing-height button {
   background-color: transparent;
