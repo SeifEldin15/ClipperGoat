@@ -179,6 +179,7 @@ z-index: 214;
   .HomeImgContainer video {
 
     height:300px !important; 
+    width:100% !important; 
 
   }
 

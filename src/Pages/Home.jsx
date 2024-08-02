@@ -206,9 +206,9 @@ const homeItems = [
   },
   {
     icon: <i className="fa-regular fa-video-plus text-xl"></i>,
-    title: "Clean",
+    title: "Rinse",
     description:
-      "Forget about the clutter! Our 'Clean' feature helps you automatically edit your videos, remove unnecessary parts, and keep only the best moments. Turn your lengthy streams or recordings into concise, engaging content effortlessly.",
+      "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
     videoSrc: cleanvid,
     className: "text-clean-color", 
   },
@@ -216,7 +216,7 @@ const homeItems = [
     icon: <i className="fa-regular fa-repeat text-xl"></i>,
     title: "Repeat",
     description:
-      "Why create new content when you can re-purpose the old ones? 'Repeat' allows you to repost your past videos with a fresh twist. Add new edits, annotations, or even merge with new clips, keeping your audience engaged with minimal effort.",
+      "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
     videoSrc: repeatvid, // Video source for "Repeat"
     className: "text-repeat-color", // Class for text color
   },
@@ -224,7 +224,7 @@ const homeItems = [
     icon: <i className="fa-regular fa-message-code text-xl"></i>,
     title: "Repost",
     description:
-      "Our 'Repost' feature ensures your content reaches more audiences by allowing you to share it across multiple social media platforms simultaneously. Boost your content's visibility and engagement without the hassle of manual posting.",
+      "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
     videoSrc: repost, // Video source for "Repost"
     className: "text-repost-color", // Class for text color
   },
