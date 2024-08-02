@@ -176,10 +176,11 @@ z-index: 214;
   .AnimateCounterHomePhone section{
      margin-left:0px;
   } 
-  /* .homeheroimg {
-   
-    height:590px !important;
- } */
+  .HomeImgContainer video {
+
+    height:300px !important; 
+
+  }
 
 }
 
@@ -188,13 +189,8 @@ z-index: 214;
   .information-container-header-div{
     margin-left:-0px;
   }
-  .getoffersmall{
-    display: block;
-    width:90%;
-  }
-  .getofferlarge{
-    display: none;
-  }
+
+
   .AnimateCounterHomePhone{
     display: flex;
   }
@@ -220,10 +216,17 @@ z-index: 214;
 
 }
 @media (max-width: 1300px) {
-
+ 
+  .getoffersmall{
+    display: block;
+    width:90%;
+  }
+  .getofferlarge{
+    display: none;
+  }
   .HomeImgContainer {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column;  height: 900px;
+
     align-items: center; 
     justify-content: center;
     margin-top:10px !important;

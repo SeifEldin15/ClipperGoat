@@ -169,7 +169,7 @@ h1, h2 {
 .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.25);
   position: absolute;
   z-index: 2;
 }

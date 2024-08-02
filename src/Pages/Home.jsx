@@ -36,9 +36,9 @@ import SliderTop from "../components/SliderTop/SliderTop";
 import Footer from "../components/Footer/Footer";
 import ScrollProgressBar from "./ScrollProgress";
 import "./Home.css";
-import imageSmall from './radiengoat-small.webp';
-import imageMedium from './radiengoat-medium.webp';
-import imageLarge from './radiengoat-large.webp';
+// import imageSmall from './radiengoat-small.webp';
+// import imageMedium from './radiengoat-medium.webp';
+// import imageLarge from './radiengoat-large.webp';
 import radiengoat from "../assets/videos/Updated final.mp4"
 import cleanvid from "../assets/videos/clean.mov";
 import ripvid from "../assets/videos/rip finished edit.mov";
@@ -329,6 +329,7 @@ const homeItems = [
                   <div className="getofferlarge">
                     <GetOfferBtn />
                   </div>
+                  
                 </div>
                 <div className="image-box-container">
                   <div className="image-box">

@@ -53,3 +53,16 @@ with <br />ClipperGoat!
 </>
   );
 }
+
+// get rid of challenge box 
+// make the section for join clipper goat the same as mobile
+// move the left side of hero to the center
+// add email and phone number to footer under paragraph
+// fixed navbar
+// align text in pricing to not be under checks 
+//navbar sidebar 
+// footer links send to stars video
+// 120 under clippergoat in hero section 
+//Enterprise in gold
+//clean to rinse 
+// remove /ps 
