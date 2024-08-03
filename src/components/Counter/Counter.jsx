@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { useSpring, animated } from '@react-spring/web';
-// import goatcounter from '../../assets/goatcounter.png';
 import './Counter.css';
 
 const shake = keyframes`
@@ -11,12 +10,13 @@ const shake = keyframes`
   75% { transform: translateX(-5px); }
   100% { transform: translateX(0); }
 `;
+
 const neonPulse = keyframes`
   0%, 100% {
-    text-shadow: 0 0 2px #3a78ff, 0 0 4px #3a78ff, 0 0 6px #3a78ff;
+    text-shadow: 0 0 4px #3a78ff, 0 0 8px #3a78ff, 0 0 12px #3a78ff;
   }
   50% {
-    text-shadow: 0 0 3px #3a78ff, 0 0 6px #3a78ff, 0 0 9px #3a78ff;
+    text-shadow: 0 0 6px #3a78ff, 0 0 12px #3a78ff, 0 0 18px #3a78ff;
   }
 `;
 
@@ -29,34 +29,63 @@ const CounterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
-  background-color: rgba(17, 24, 39, 0.729);
-  padding: 15px;
-  border-radius: 10px;
+  box-shadow: 0 0 35px rgba(20, 110, 255, 0.6), inset 0 0 85px rgba(20, 110, 255, 0.6);
+  background-color: rgba(17, 24, 39, 0.8);
+  padding: 20px;
+  border-radius: 15px;
   z-index: 1000;
-  border: 1px solid rgba(52, 130, 255, 1);
+  border: 2px solid rgba(52, 130, 255, 1);
   ${props => props.shake && css`
     animation: ${shake} 0.5s ease-in-out;
   `}
+
   @media screen and (max-width: 768px) {
-    position: static;
+    padding: 15px;
     margin-top: 20px;
   }
 `;
 
 const DigitBox = styled.div`
-  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
-  font-size: 27px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+  font-size: 32px;
   font-weight: bold;
-  padding: 8px;
-  margin: 0 5px;
-  border-radius: 5px;
-  min-width: 60px;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  min-width: 70px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(52, 130, 255, 1);
-  -webkit-text-stroke: 1px #3a78ff;
+  border: 2px solid rgba(52, 130, 255, 1);
+  -webkit-text-stroke: 1.5px #3a78ff;
   animation: ${neonPulse} 1.5s infinite;
+
+  @media screen and (max-width: 768px) {
+    font-size: 27px;
+    padding: 10px;
+    min-width: 70px;
+    margin: 0 5px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
+    padding: 8px;
+    min-width: 50px;
+    margin: 0 3px;
+  }
+`;
+
+const TimeLabel = styled.p`
+  font-size: 18px;
+  margin-top: 5px;
+  margin: 10px 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 const AnimatedCounter = ({ targetDate }) => {
@@ -85,7 +114,7 @@ const AnimatedCounter = ({ targetDate }) => {
     const shakeTimer = setInterval(() => {
       setShakeCounter(true);
       setTimeout(() => setShakeCounter(false), 500);
-    }, 3000); // Shake every 3 seconds
+    }, 3000);
 
     return () => {
       clearInterval(timer);
@@ -103,7 +132,6 @@ const AnimatedCounter = ({ targetDate }) => {
           <h1 className='glow-text-test'>ClipperGoat Challenge!</h1>
         </div>
         <div className="counter-content-header">
-          {/* <img src={goatcounter} alt="" /> */}
           <CounterWrapper shake={shakeCounter}>
             <DigitBoxContainer>
               <DigitBox>{formatNumber(timeLeft.days || 0)}</DigitBox>
@@ -111,12 +139,12 @@ const AnimatedCounter = ({ targetDate }) => {
               <DigitBox>{formatNumber(timeLeft.minutes || 0)}</DigitBox>
               <DigitBox>{formatNumber(timeLeft.seconds || 0)}</DigitBox>
             </DigitBoxContainer>
-            <div className="time-container">
-              <p className="time">days</p>
-              <p className="time">hours</p>
-              <p className="time">minutes</p>
-              <p className="time">seconds</p>
-            </div>
+            <DigitBoxContainer>
+              <TimeLabel>days</TimeLabel>
+              <TimeLabel>hours</TimeLabel>
+              <TimeLabel>minutes</TimeLabel>
+              <TimeLabel>seconds</TimeLabel>
+            </DigitBoxContainer>
           </CounterWrapper>
         </div>
       </div>

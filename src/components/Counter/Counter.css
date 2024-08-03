@@ -27,6 +27,8 @@
 .landing-counter-container-header{
   text-align: center;
   /* margin-right:-100px; */
+  margin-bottom: 30px;;
+  font-size: 25px;;
 }
 .counter-content-header{
   display: flex;

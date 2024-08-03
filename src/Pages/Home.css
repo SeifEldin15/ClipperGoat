@@ -103,13 +103,15 @@ z-index: 214;
 }
 .challenge-card{
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 10px;
   color:white;
   padding: 40px;
   box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
-  width: 90%;
+  height:500px;
   max-width: 390px;
-  height: auto;
   position: relative;
   background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
   background-color: rgba(20, 110, 255, 0.01);
@@ -162,6 +164,28 @@ z-index: 214;
 
     height:300px !important; 
     width:100% !important; 
+  }
+  .landing-counter-container-header{
+    font-size:18px;
+  }
+  .challenge-card{
+    padding: 20px;
+    height:390px;
+  }
+  .clippergoat-price{
+    font-size:18px;
+  }
+  .clippergoat-price-description{
+    font-size:12px;
+    margin-bottom: 20px;
+  }
+  .clippergoat-cta{
+    font-size:14px;
+  }
+  .clippergoat-feature-item{
+    font-size:12px;
+    margin-bottom: 5px;
+
   }
 }
 @media (max-width: 1000px) {

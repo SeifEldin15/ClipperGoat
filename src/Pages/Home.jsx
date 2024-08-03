@@ -207,7 +207,7 @@ const Home = () => {
       className: "text-rip-color",
     },
     {
-      icon: <i className="fa-regular fa-video-plus text-xl"></i>,
+      icon: <i class="fa-regular fa-hand-sparkles "></i>,
       title: "Rinse",
       description:
         "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
@@ -223,7 +223,7 @@ const Home = () => {
       className: "text-repeat-color", 
     },
     {
-      icon: <i className="fa-regular fa-message-code text-xl"></i>,
+      icon: <i class="fa-regular fa-paper-plane"></i>,
       title: "Repost",
       description:
         "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
