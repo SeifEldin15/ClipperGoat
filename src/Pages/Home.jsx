@@ -35,15 +35,12 @@ import imgs12 from "../assets/New folder/Influncers Top row/Yodit Yemane .webp";
 import SliderTop from "../components/SliderTop/SliderTop";
 import Footer from "../components/Footer/Footer";
 import ScrollProgressBar from "./ScrollProgress";
-import "./Home.css";
-// import imageSmall from './radiengoat-small.webp';
-// import imageMedium from './radiengoat-medium.webp';
-// import imageLarge from './radiengoat-large.webp';
-import radiengoat from "../assets/videos/Updated final.mp4"
+import radiengoat from "../assets/videos/Updated final.mp4";
 import cleanvid from "../assets/videos/clean.mov";
 import ripvid from "../assets/videos/rip finished edit.mov";
 import repost from "../assets/videos/post CG lp.mov";
 import repeatvid from "../assets/videos/Repeat fin CG.mov";
+import "./Home.css";
 
 const Home = () => {
   const INFLUENCERS = [
@@ -52,43 +49,41 @@ const Home = () => {
       title: "@MrBeast",
       description:
         "Gained popularity through high-budget, philanthropic, and viral YouTube videos.",
-    }, 
-
+    },
     {
-      src: Brunson,  
+      src: Brunson,
 
       title: "@Russell Brunson",
       description:
         "Used social media to share marketing strategies, building a large online community.",
     },
     {
-      src: Ishowspeed,  
+      src: Ishowspeed,
 
       title: "@IShowSpeed",
       description:
         "Built influence through energetic and humorous gaming content on YouTube and Twitch.",
     },
     {
-      src: Fresh,  
+      src: Fresh,
       title: "@FreshPrinceCeo",
       description:
         "Built influence sharing dating and self-improvement content on social media.",
     },
     {
-      src: bradly,  
+      src: bradly,
 
       title: "@Bradley Martin",
       description:
         " Shared workout routines and fitness tips on social media, promoting his gym business.",
     },
     {
-      src: drake, 
+      src: drake,
       title: "@Drake",
       description:
         "Used Instagram, Twitter, and Kick to promote music, connect with fans, and gambling.",
     },
-    {  
-
+    {
       src: Adin,
       title: "@Adin Ross",
       description:
@@ -97,10 +92,10 @@ const Home = () => {
     {
       src: Miami,
       title: "@Miami Swim Week",
-      description:  
+      description:
         "Promoted shows and designers on Instagram and YouTube, creating global buzz.",
     },
-    {  
+    {
       src: Neon,
       title: "@Neon",
       description:
@@ -112,7 +107,7 @@ const Home = () => {
       description:
         "Grew influence with engaging Twitch and YouTube streams, often collaborating.",
     },
-    {  
+    {
       src: HUAK,
       title: "@Hauk Thua Girl",
       description:
@@ -127,133 +122,133 @@ const Home = () => {
   ];
   const IMAGES = [
     {
-        src: imgs8,
-        title: "@Sophie Rain",
-        description: "Grew presence by sharing lifestyle, beauty, and travel content on Instagram and TikTok.",
+      src: imgs8,
+      title: "@Sophie Rain",
+      description:
+        "Grew presence by sharing lifestyle, beauty, and travel content on Instagram and TikTok.",
     },
     {
-        src: imgs1,
-        title: "@Alex Hormozi",
-        description: "Business growth strategist and entrepreneur.",
+      src: imgs1,
+      title: "@Alex Hormozi",
+      description: "Business growth strategist and entrepreneur.",
     },
     {
-        src: imgs2,
-        title: "@Donald Trump",
-        description: "45th President of the United States.",
+      src: imgs2,
+      title: "@Donald Trump",
+      description: "45th President of the United States.",
     },
     {
-        src: imgs3,
-        title: "@Joe Rogan",
-        description: "Comedian, podcast host, and UFC commentator.",
+      src: imgs3,
+      title: "@Joe Rogan",
+      description: "Comedian, podcast host, and UFC commentator.",
     },
     {
-        src: imgs3224,
-        title: "@Jack Doherty",
-        description: "Built influence with daring challenge videos, pranks, and vlogs on YouTube.",
+      src: imgs3224,
+      title: "@Jack Doherty",
+      description:
+        "Built influence with daring challenge videos, pranks, and vlogs on YouTube.",
     },
     {
-        src: imgs5,
-        title: "@Elon Musk",
-        description: "CEO of SpaceX and Tesla.",
+      src: imgs5,
+      title: "@Elon Musk",
+      description: "CEO of SpaceX and Tesla.",
     },
     {
-        src: imgs6,
-        title: "@Myron Gaines",
-        description: "Grew following with dating advice and lifestyle content on social media.",
+      src: imgs6,
+      title: "@Myron Gaines",
+      description:
+        "Grew following with dating advice and lifestyle content on social media.",
     },
     {
-        src: imgs7,
-        title: "@Ninja",
-        description: "Gained massive fame through Fortnite streams on Twitch and YouTube.",
+      src: imgs7,
+      title: "@Ninja",
+      description:
+        "Gained massive fame through Fortnite streams on Twitch and YouTube.",
     },
     {
-        src: imgs9,
-        title: "@SteveWillDoIt",
-        description: "Gained popularity through outrageous challenges and stunts on YouTube and Instagram.",
+      src: imgs9,
+      title: "@SteveWillDoIt",
+      description:
+        "Gained popularity through outrageous challenges and stunts on YouTube and Instagram.",
     },
     {
-        src: imgs10,
-        title: "@Sean O'Malley",
-        description: "Used social media to share training routines and fight highlights, connecting with fans.",
+      src: imgs10,
+      title: "@Sean O'Malley",
+      description:
+        "Used social media to share training routines and fight highlights, connecting with fans.",
     },
     {
-        src: imgs12,
-        title: "@Yodit Yemane",
-        description: "Model and Instagram influencer.",
+      src: imgs12,
+      title: "@Yodit Yemane",
+      description: "Model and Instagram influencer.",
     },
     {
-        src: imgs11,
-        title: "@XQC",
-        description: "Became one of the most-watched streamers by engaging Twitch audiences with various games.",
+      src: imgs11,
+      title: "@XQC",
+      description:
+        "Became one of the most-watched streamers by engaging Twitch audiences with various games.",
     },
-];
+  ];
 
-const targetRef = useRef(null);
-const items = [
-  { name: "Chloe", description: "Crypto Investing", content: "asgdasgs" },
-  { name: "William", description: "Amazon FBA", content: "asgdasgs" },
-  { name: "Arthur", description: "Amazon FBA", content: "asgdasgs" },
-  { name: "Eric", description: "Amazon FBA", content: "asgdasgs" },
-];
-const homeItems = [
-  {
-    icon: <i className="fa-regular fa-video-arrow-down-left text-xl"></i>,
-    title: "Rip",
-    description:
-      "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
-    videoSrc: ripvid, 
-    className: "text-rip-color", 
-  },
-  {
-    icon: <i className="fa-regular fa-video-plus text-xl"></i>,
-    title: "Rinse",
-    description:
-      "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
-    videoSrc: cleanvid,
-    className: "text-clean-color", 
-  },
-  {
-    icon: <i className="fa-regular fa-repeat text-xl"></i>,
-    title: "Repeat",
-    description:
-      "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
-    videoSrc: repeatvid, // Video source for "Repeat"
-    className: "text-repeat-color", // Class for text color
-  },
-  {
-    icon: <i className="fa-regular fa-message-code text-xl"></i>,
-    title: "Repost",
-    description:
-      "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
-    videoSrc: repost, // Video source for "Repost"
-    className: "text-repost-color", // Class for text color
-  },
-];
-
+  const targetRef = useRef(null);
+  const items = [
+    { name: "Chloe", description: "Crypto Investing", content: "asgdasgs" },
+    { name: "William", description: "Amazon FBA", content: "asgdasgs" },
+    { name: "Arthur", description: "Amazon FBA", content: "asgdasgs" },
+    { name: "Eric", description: "Amazon FBA", content: "asgdasgs" },
+  ];
+  const homeItems = [
+    {
+      icon: <i className="fa-regular fa-video-arrow-down-left text-xl"></i>,
+      title: "Rip",
+      description:
+        "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
+      videoSrc: ripvid,
+      className: "text-rip-color",
+    },
+    {
+      icon: <i className="fa-regular fa-video-plus text-xl"></i>,
+      title: "Rinse",
+      description:
+        "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
+      videoSrc: cleanvid,
+      className: "text-clean-color",
+    },
+    {
+      icon: <i className="fa-regular fa-repeat text-xl"></i>,
+      title: "Repeat",
+      description:
+        "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
+      videoSrc: repeatvid, 
+      className: "text-repeat-color", 
+    },
+    {
+      icon: <i className="fa-regular fa-message-code text-xl"></i>,
+      title: "Repost",
+      description:
+        "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
+      videoSrc: repost, 
+      className: "text-repost-color", 
+    },
+  ];
   return (
     <>
-  <div className="homeheroimg">
-  {/* <img
-      alt="A captivating image of a radiant goat"
-      src={imageMedium} // Default image
-      srcset={`${imageSmall} 320w, ${imageMedium} 640w, ${radiengoat} 1024w`}
-    /> */}
-   <video        className="imghero"
-
-                    loading="lazy" src={radiengoat}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <track kind="captions"  srclang="en" label="English captions" />
-                    Your browser does not support the video tag.
-                </video>
-                
-
-  <div className="overlay"></div>   
-      <Navbar />         
-      <HeroSectionLanding />
+      <div className="homeheroimg">
+        <video
+          className="imghero"
+          loading="lazy"
+          src={radiengoat}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <track kind="captions" srclang="en" label="English captions" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="overlay"></div>
+        <Navbar />
+        <HeroSectionLanding />
       </div>
       <div>
         <div className="AnimateCounterHomePhone">
@@ -290,16 +285,16 @@ const homeItems = [
         <div className="Container-Spacing">
           <div className="spacing-counter">
             <h1 className="information-container-header custom-header-title">
-            Top  <span className="glow-text-test">Influencers</span>
+              Top <span className="glow-text-test">Influencers</span>
             </h1>
             <p className="custom-header-subtitle ">
-            Top Influencers Using ClipperGoat Join the ranks of elite influencers who trust ClipperGoat to maximize their content:
-
+              Top Influencers Using ClipperGoat Join the ranks of elite
+              influencers who trust ClipperGoat to maximize their content:
             </p>
           </div>
           <div className="Container-Spacing">
-          <SliderTop images={IMAGES} direction="left" />
-          <SliderTop images={INFLUENCERS} direction="right" />
+            <SliderTop images={IMAGES} direction="left" />
+            <SliderTop images={INFLUENCERS} direction="right" />
           </div>
         </div>
         <div
@@ -310,10 +305,15 @@ const homeItems = [
           <div className="">
             <div className="information-container-header-div">
               <h1 className="information-container-header custom-header-title">
-              Revitalize Your Content with ClipperGoat:<span className="glow-text-test"> <br/> Rip, Rinse, Repost, Repeat!</span>
+                Revitalize Your Content
+                <span className="glow-text-test">
+                  {" "}
+                  <br /> Rip, Rinse, Repost, Repeat!
+                </span>
               </h1>
               <p className="custom-header-subtitle ">
-              Transform your viral content and dominate social media platforms effortlessly.
+                Transform your viral content and dominate social media platforms
+                effortlessly.
               </p>
             </div>
             {homeItems.map((item, index) => (
@@ -329,21 +329,24 @@ const homeItems = [
                   <div className="getofferlarge">
                     <GetOfferBtn />
                   </div>
-                  
                 </div>
                 <div className="image-box-container">
                   <div className="image-box">
-                  <video  
-                    loading="lazy" src={item.videoSrc}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <track kind="captions"  srclang="en" label="English captions" />
-                    Your browser does not support the video tag.
-                </video>
-                
+                    <video
+                      loading="lazy"
+                      src={item.videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <track
+                        kind="captions"
+                        srclang="en"
+                        label="English captions"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
                 <div className="getoffersmall">
@@ -356,35 +359,43 @@ const homeItems = [
         <LogoSlideshow />{" "}
         <div>
           <h1 className="information-container-header custom-header-title">
-          Industries that NEED THIS!
+            Industries that <span className="glow-text-test">NEED THIS!</span>
           </h1>
           <p className="custom-header-subtitle ">
-          ClipperGoat is ideal for short form marketing, addressing the high demand for online attention and traffic in today's era of short attention spans and constant phone usage across social media, sales funnels, video games, influencers, online education, explicit sites, and subscription services.
+            ClipperGoat is ideal for short form marketing, addressing the high
+            demand for online attention and traffic in today's era of short
+            attention spans and constant phone usage across social media, sales
+            funnels, video games, influencers, online education, explicit sites,
+            and subscription services.
           </p>
-        </div>        
+        </div>
         <div className="Container-Spacing"></div>
-
         <Slider2 />
-        <div className="Container-Spacing" >
-        <PricingSection /></div>
+        <div className="Container-Spacing">
+          <PricingSection />
+        </div>
         <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title">
             Unlock Your <span className="glow-text-test">Full Potential</span>
           </h1>
           <p className="custom-header-subtitle ">
-          Discover the Power of ClipperGoat Maximize your content's potential with cutting-edge AI tools. Whether you're an influencer, marketer, or creator, our platform helps you achieve unparalleled engagement. Featuring top influencers like Joe Rogan, Andrew Tate, Mr Beast, Kai Cenant, Adin Ross, HUAK THUA, and more!
+            Discover the Power of ClipperGoat Maximize your content's potential
+            with cutting-edge AI tools. Whether you're an influencer, marketer,
+            or creator, our platform helps you achieve unparalleled engagement.
+            Featuring top influencers like Joe Rogan, Andrew Tate, Mr Beast, Kai
+            Cenant, Adin Ross, HUAK THUA, and more!
           </p>
-        </div>  
+        </div>
         <Slider items={items} />
       </div>
       <div>
-        <div className="Container-Spacing"> 
+        <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title Container-Spacing">
-          Frequently Asked <span className="glow-text-test">Questions</span>
-          </h1> 
+            Frequently Asked <span className="glow-text-test">Questions</span>
+          </h1>
           <p className="custom-header-subtitle ">
-          You have questions, we have answers
-          </p>        
+            You have questions, we have answers
+          </p>
           <FAQ />
         </div>
       </div>

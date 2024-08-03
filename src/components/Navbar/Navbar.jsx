@@ -6,6 +6,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -14,14 +15,26 @@ const Navbar = () => {
       setIsSmallScreen(window.innerWidth <= 768);
     };
 
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
     handleResize();
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
   };
 
   const scrollToSection = (pixelY) => {
@@ -73,7 +86,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar Container-Width Container ${isSmallScreen ? 'small-screen' : ''}`}>
+    <nav className={`navbar Container ${isSmallScreen ? 'small-screen' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className='navbar-header'>
         <Logo />
         {isSmallScreen && (
@@ -83,6 +96,9 @@ const Navbar = () => {
         )}
       </div>
       <div className={`nav-content ${isSidebarOpen ? 'open' : ''}`}>
+        {isSmallScreen && isSidebarOpen && (
+          <div className="close-btn" onClick={closeSidebar}>✕</div>
+        )}
         <ul className="nav-links hover-effect-links">
           {navItems.map((item, index) => (
             <li key={index}>

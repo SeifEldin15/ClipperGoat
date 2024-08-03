@@ -1,18 +1,18 @@
-import React from 'react';
-import './Footer.css';
-import { NavLink } from 'react-router-dom';
-import Logo from '../../assets/logo.webp'
+// components/Footer.js
+import React from "react";
+import "./Footer.css";
+import Logo from "../../assets/logo.webp";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 const Footer = () => {
   const handleBackToTop = () => {
-    const navbar = document.getElementById('navbar');
+    const navbar = document.getElementById("navbar");
     if (navbar) {
-      navbar.scrollIntoView({ behavior: 'smooth' });
+      navbar.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Fallback if navbar is not found
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -26,9 +26,13 @@ const Footer = () => {
               <img src={Logo} alt="Logo" />
             </div>
             <p className="footer-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
-              cum itaque neque.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+              consequuntur amet culpa cum itaque neque.
             </p>
+            <br />
+            <p className="contact-info-footer">Email: contact@proactiv.ai </p>
+            <br />
+            <p className="contact-info-footer">Phone: +1 (800) 123 XX21</p>
             <div className="social-icons">
               <i className="fa-brands fa-whatsapp"></i>
               <i className="fa-brands fa-instagram"></i>
@@ -43,12 +47,24 @@ const Footer = () => {
         </div>
 
         <ul className="footer-links hover-effect-links">
-          <li><NavLink to="/leaderboard">Leaderboard</NavLink></li>
-          <li><NavLink to="/terms">Terms of Conditions</NavLink></li>
-          <li><NavLink to="/privacy">Privacy Policy</NavLink></li>
-          <li><NavLink to="/pricing">Pricing</NavLink></li>
-          <li><NavLink to="/refund">Refunds</NavLink></li>
-          <li><NavLink to="/contactus">Contact Us</NavLink></li>
+          <li>
+            <ScrollToTop to="/leaderboard">Leaderboard</ScrollToTop>
+          </li>
+          <li>
+            <ScrollToTop to="/terms">Terms of Conditions</ScrollToTop>
+          </li>
+          <li>
+            <ScrollToTop to="/privacy">Privacy Policy</ScrollToTop>
+          </li>
+          <li>
+            <ScrollToTop to="/pricing">Pricing</ScrollToTop>
+          </li>
+          <li>
+            <ScrollToTop to="/refund">Refunds</ScrollToTop>
+          </li>
+          <li>
+            <ScrollToTop to="/contactus">Contact Us</ScrollToTop>
+          </li>
         </ul>
         <p className="footer-copyright">
           Copyright &copy; 2022. All rights reserved.

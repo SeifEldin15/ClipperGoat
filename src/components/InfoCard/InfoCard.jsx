@@ -12,24 +12,24 @@ const InfoCard = () => {
           <span className="check-circle">✓</span> Free Affiliates: 10% (Sheep) / $12 - $99.70 Per Sale
         </p>
         <p>
-          <span className="check-circle">✓</span> Paid Affiliates: 25% (Lambs) / $30 - $249.25 /ps
+          <span className="check-circle">✓</span> Paid Affiliates: 25% (Lambs) / $30 - $249.25 
         </p>
         <p>
-          <span className="check-circle">✓</span> 25-50k Followers: 30% (Billy Goat) / $36 - $299.10 /ps
+          <span className="check-circle">✓</span> 25-50k Followers: 30% (Billy Goat) / $36 - $299.10 
         </p>
 
         <p>
-          <span className="check-circle">✓</span>   50-100k Followers: 35% (Bronze Goat) / $42 - $348.95 /ps
+          <span className="check-circle">✓</span>   50-100k Followers: 35% (Bronze Goat) / $42 - $348.95 
 
         </p>
         <p>
-          <span className="check-circle">✓</span> 100-500k Followers: 40% (Silver Goat) / $48 - $398.80 /ps
+          <span className="check-circle">✓</span> 100-500k Followers: 40% (Silver Goat) / $48 - $398.80 
         </p>
         <p>
-          <span className="check-circle">✓</span> 500k-1M Followers: 45% (Gold Goat) / $54 - $448.65 /ps
+          <span className="check-circle">✓</span> 500k-1M Followers: 45% (Gold Goat) / $54 - $448.65 
         </p>
         <p>
-          <span className="check-circle">✓</span> 1M+ Followers: 50% (Diamond TRUE GOAT) / $60 - $498.50 /ps
+          <span className="check-circle">✓</span> 1M+ Followers: 50% (Diamond TRUE GOAT) / $60 - $498.50 
         </p>
         <button className="get-started">Get started</button>
       </div>
@@ -47,7 +47,7 @@ const InfoCard = () => {
 
         <h1 className=' custom-header-title'>Agencies, Marketers, and Sales Affiliate tiers: <span className="glow-text">10 Million Dollar Challenge!</span></h1>
         <p>
-          <span className="check-circle">✓</span> 25% (Lambs): 1-100 sales/month / $30 - $3,000 MINIMUM at $120/ps
+          <span className="check-circle">✓</span> 25% (Lambs): 1-100 sales/month / $30 - $3,000 MINIMUM at $120
         </p>
         <p>
           <span className="check-circle">✓</span> 30% (Billy Goats): 101-500 sales/month /  $3,636 - $18,000

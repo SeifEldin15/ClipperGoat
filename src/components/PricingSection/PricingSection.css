@@ -130,7 +130,12 @@
 .soon-to-come-list li::before {
   content: "✓";
   margin-right: 10px;
-  color: #ffe343    ;
+  color: rgb(20, 110, 255)
+
+}
+.custom-pricing-title{
+  color: #daa400  ;
+
 }
 .custom-pricing-height button {
   background-color: transparent;
