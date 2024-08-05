@@ -20,7 +20,6 @@
   font-size: 48px;
   line-height: 1.2;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .clippergoat-highlight {
@@ -30,7 +29,6 @@
 .clippergoat-hero-subtitle {
   font-size: 18px;
   margin-bottom: 30px;
-  text-align: center; 
 }
 
 .clippergoat-cta {
@@ -67,7 +65,7 @@
 }
 @media screen and (max-width: 768px) {
   .clippergoat-hero-title {
-    font-size: 38px;
+    font-size: 38px !important;
     margin-top:90px;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -77,5 +75,14 @@
   .clippergoat-hero {
     text-align: center;
     height: auto !important; 
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .clipper-hero-right{
+    display: none;
+  } 
+  .clippergoat-hero {
+    display: flex;
   }
 }

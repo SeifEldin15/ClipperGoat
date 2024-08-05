@@ -78,3 +78,5 @@ const Footer = () => {
 };
 
 export default Footer;
+//get rid of 120 box add challenge 
+// when refreshing videos don't play 
