@@ -36,14 +36,15 @@
   max-width: 28rem;
   line-height: 1.5;
 }
-
+.footer ul {
+  margin-top:-13rem !important;
+}
 .footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 4rem !important;
-  margin-top:-11rem !important;
+  margin-bottom: 2rem !important;
   padding: 0;
   list-style-type: none;
 }

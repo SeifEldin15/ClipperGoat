@@ -39,6 +39,11 @@ const CounterWrapper = styled.div`
     animation: ${shake} 0.5s ease-in-out;
   `}
 
+  @media screen and (min-width: 769px) {
+    padding: 15px;
+    transform: scale(0.9);
+  }
+
   @media screen and (max-width: 768px) {
     padding: 15px;
     margin-top: 20px;
@@ -47,12 +52,12 @@ const CounterWrapper = styled.div`
 
 const DigitBox = styled.div`
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
-  padding: 10px;
-  margin: 0 10px;
+  padding: 8px;
+  margin: 0 8px;
   border-radius: 10px;
-  min-width: 70px;
+  min-width: 60px;
   text-align: center;
   transition: all 0.3s ease;
   border: 2px solid rgba(52, 130, 255, 1);
@@ -75,9 +80,9 @@ const DigitBox = styled.div`
 `;
 
 const TimeLabel = styled.p`
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 5px;
-  margin: 10px 10px;
+  margin: 8px 8px;
 
   @media screen and (max-width: 768px) {
     font-size: 14px;

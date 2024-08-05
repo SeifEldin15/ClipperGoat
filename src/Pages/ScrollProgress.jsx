@@ -110,7 +110,7 @@ const ScrollProgressBar = ({ targetRef }) => {
         position: 'sticky',
         top: '0px',
         width: `${1 + screenSize * 0.25}px`,
-        left: `${10 + screenSize * 30}px`,
+        // left: `${0 + screenSize * 30}px`,
         height: '100%',
         backgroundColor: 'rgba(20, 110, 255, 0.2)',
       }}>

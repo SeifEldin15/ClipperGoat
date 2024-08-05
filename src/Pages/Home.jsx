@@ -302,7 +302,7 @@ const Home = () => {
           ref={targetRef}
         >
           <ScrollProgressBar targetRef={targetRef} />
-          <div className="">
+          <div className="idihgdsio0hgnoew">
             <div className="information-container-header-div">
               <h1 className="information-container-header custom-header-title">
                 Revitalize Your Content
@@ -379,11 +379,7 @@ const Home = () => {
             Unlock Your <span className="glow-text-test">Full Potential</span>
           </h1>
           <p className="custom-header-subtitle ">
-            Discover the Power of ClipperGoat Maximize your content's potential
-            with cutting-edge AI tools. Whether you're an influencer, marketer,
-            or creator, our platform helps you achieve unparalleled engagement.
-            Featuring top influencers like Joe Rogan, Andrew Tate, Mr Beast, Kai
-            Cenant, Adin Ross, HUAK THUA, and more!
+          ClipperGoat revolutionizes social media management, driving traffic and engagement across all social media platforms. Users praise its powerful tools for optimizing content and maximizes reach.
           </p>
         </div>
         <Slider items={items} />

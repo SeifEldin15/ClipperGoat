@@ -26,13 +26,9 @@ const Footer = () => {
               <img src={Logo} alt="Logo" />
             </div>
             <p className="footer-description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-              consequuntur amet culpa cum itaque neque.
+            Clippergoat is an AI-powered software company specializing in editing social media content to enable seamless reposting without detection, helping creators maintain originality and engagement while efficiently managing content reuse
             </p>
-            <br />
-            <p className="contact-info-footer">Email: contact@proactiv.ai </p>
-            <br />
-            <p className="contact-info-footer">Phone: +1 (800) 123 XX21</p>
+        
             <div className="social-icons">
               <i className="fa-brands fa-whatsapp"></i>
               <i className="fa-brands fa-instagram"></i>
@@ -48,7 +44,10 @@ const Footer = () => {
 
         <ul className="footer-links hover-effect-links">
           <li>
-            <ScrollToTop to="/leaderboard">Leaderboard</ScrollToTop>
+            <ScrollToTop to="/leaderboard">Affiliates</ScrollToTop>
+          </li>
+          <li>
+            <ScrollToTop to="/pricing">Investors  </ScrollToTop>
           </li>
           <li>
             <ScrollToTop to="/terms">Terms of Conditions</ScrollToTop>
@@ -57,15 +56,19 @@ const Footer = () => {
             <ScrollToTop to="/privacy">Privacy Policy</ScrollToTop>
           </li>
           <li>
-            <ScrollToTop to="/pricing">Pricing</ScrollToTop>
-          </li>
-          <li>
             <ScrollToTop to="/refund">Refunds</ScrollToTop>
           </li>
-          <li>
+          {/* <li>
             <ScrollToTop to="/contactus">Contact Us</ScrollToTop>
           </li>
+           */}
         </ul>
+        <div className="footer-links">
+        <br />
+            <p className="contact-info-footer">Email: contact@proactiv.ai </p>
+            <br />
+            <p className="contact-info-footer">Phone: +1 (800) 123 XX21</p>
+        </div>
         <p className="footer-copyright">
           Copyright &copy; 2022. All rights reserved.
         </p>

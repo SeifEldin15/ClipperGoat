@@ -4,7 +4,7 @@ import './PricingSection.css';
 const PricingCard = ({ title, price, description, features, soonToCome, popular }) => (
   <div className={`pricing-card ${popular ? 'popular' : ''} ${title === 'Enterprise'? 'custom-pricing-height2' : 'custom-pricing-height'}`}>
     {popular && <div className="popular-tag"><i className='bx bx-info-circle' ></i> Most Popular</div>}
-    <p className={`pricing-card-header ${title === 'Enterprise'? 'custom-pricing-title' : ''}`}>{title}</p>
+    <p className={`pricing-card-header`}>{title}</p>
     <div className="price">${price}</div>
     <p className='BilledMonthly'><i className="fa-solid fa-credit-card"></i> Billed Monthly</p>
     <p className='description'>{description}</p>

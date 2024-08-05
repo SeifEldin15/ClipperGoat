@@ -3,11 +3,8 @@
   margin-bottom: 10px;
 }
 .landing-leader-counter-container-header{
-  margin-bottom: 30px;
 }
-.landing-leader-counter-container-header h1{
- font-size: 60px;
-}.landing-leader-counter-container-header h2{
+.landing-leader-counter-container-header h2{
   font-size: 50px;
   /* text-shadow: 
     -1px -1px 0 white,
@@ -26,9 +23,9 @@
 }
 .landing-counter-container-header{
   text-align: center;
-  /* margin-right:-100px; */
-  margin-bottom: 30px;;
-  font-size: 25px;;
+  margin-bottom: 20px;;
+  font-size: 18px ;
+  margin-top: 20px;
 }
 .counter-content-header{
   display: flex;

@@ -20,13 +20,27 @@ import img17 from '../../assets/New folder/Industries/Tech Review .webp';
 // import img18 from '../../assets/New folder/Industries/Traval Vlogs.webp';
 import img19 from '../../assets/New folder/Industries/248281584_669313307384591_6746345535741826702_n.webp';
 import img20 from '../../assets/New folder/Industries/spencer__2_.webp';
+import img124132 from '../../assets/New folder/Industries/STREAMING .png';
 
+import img2121 from '../../assets/New folder/Industries/TIKTOK SHOP.png';
 const slides = [
   {
     author: '',
     title: 'Affiliate Marketing',
     content: 'Enhance your campaigns with high-quality, repurposed videos. ClipperGoat helps you attract and convert more leads effectively.',
     image: img1
+  },
+  {
+    author: '',
+    title: 'TikTok Shop',
+    content: 'Sharing product clips increases visibility and drives more sales.',
+    image: img2121
+  },
+  {
+    author: '',
+    title: 'Streaming',
+    content: 'Reposting highlights and clips boosts engagement and attracts more viewers.',
+    image: img124132
   },
   {
     author: '',

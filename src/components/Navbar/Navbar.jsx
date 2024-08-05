@@ -77,8 +77,8 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: 'About', scrollTo: 5400 },
-    { name: 'Programs', scrollTo: 1900 },
+    // { name: 'About', scrollTo: 5400 },
+    { name: 'Features   ', scrollTo: 2500 },
     { name: 'Pricing', scrollTo: 6100 },
     { name: 'FAQ', scrollTo: 8400 },
     { name: 'Affiliates', link: '/leaderboard' },

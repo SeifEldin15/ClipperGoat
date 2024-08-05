@@ -1,8 +1,9 @@
 .clippergoat-hero {
-  display: flex;
+  display: grid;
+  width:100%;
+  grid-template-columns: repeat(2, 1fr);
   height: 750px;
   padding: 50px;
-  max-width: 1100px;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
@@ -57,6 +58,12 @@
 }
 .clippergoat-price{
   margin: 20px 0px;
+}
+.clipper-hero-right{
+  display: flex;
+  flex-direction: column;  width:100%;
+
+  align-items: flex-end;
 }
 @media screen and (max-width: 768px) {
   .clippergoat-hero-title {

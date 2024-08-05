@@ -69,7 +69,8 @@
 .pricing-card-header {
   font-size: 2.5em;
   margin-bottom: 10px;
-  color: rgb(255, 255, 255);
+  
+  color: #ffc65c ;
 }
 
 .price {
