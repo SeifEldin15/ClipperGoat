@@ -41,7 +41,12 @@ const Footer = () => {
             <i className="fa-solid fa-chevron-up"></i>
           </button>
         </div>
-
+        <div className="footer-links footer-contact-phone">
+        <br />
+            <p className="contact-info-footer">Email: support@clippergoat.com </p>
+            <br />
+            <p className="contact-info-footer">Phone:  +1 (480) 236-4263</p>
+        </div>
         <ul className="footer-links hover-effect-links">
           <li>
             <ScrollToTop to="/leaderboard">Affiliates</ScrollToTop>
@@ -56,18 +61,18 @@ const Footer = () => {
             <ScrollToTop to="/privacy">Privacy Policy</ScrollToTop>
           </li>
           <li>
-            <ScrollToTop to="/refund">Refunds</ScrollToTop>
+            <ScrollToTop to="/refund">Refund Policy</ScrollToTop>
           </li>
-          {/* <li>
+          <li>
             <ScrollToTop to="/contactus">Contact Us</ScrollToTop>
           </li>
-           */}
+          
         </ul>
-        <div className="footer-links">
+        <div className="footer-links footer-contact-normal">
         <br />
-            <p className="contact-info-footer">Email: contact@proactiv.ai </p>
+            <p className="contact-info-footer">Email: support@clippergoat.com </p>
             <br />
-            <p className="contact-info-footer">Phone: +1 (800) 123 XX21</p>
+            <p className="contact-info-footer">Phone:  +1 (480) 236-4263</p>
         </div>
         <p className="footer-copyright">
           Copyright &copy; 2022. All rights reserved.
@@ -78,5 +83,4 @@ const Footer = () => {
 };
 
 export default Footer;
-//get rid of 120 box add challenge 
 // when refreshing videos don't play 

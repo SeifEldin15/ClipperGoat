@@ -63,6 +63,9 @@
 
   align-items: flex-end;
 }
+.cta-hero{
+  margin-top:80px !important;
+}
 @media screen and (max-width: 768px) {
   .clippergoat-hero-title {
     font-size: 38px !important;

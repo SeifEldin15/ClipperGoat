@@ -87,7 +87,7 @@ function PricingSection() {
 
   return (
     <div className="PricingSection">
-      <h1 className="custom-header-title">Choose Your <span className="information-container-header-span glow-text-test">Perfect Plan</span></h1>
+      <h1 className="custom-header-title">Choose Your <div className="break-div"><br/></div><span className="information-container-header-span glow-text-test">Perfect Plan</span></h1>
       <p className="custom-header-subtitle">Flexible pricing to suit your needs, whether you're a solo creator or a large agency.</p>
       <div className="pricing-container">
         {plans.map((plan, index) => (

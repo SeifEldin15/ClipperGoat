@@ -21,8 +21,8 @@
 
 .information-container {
   padding-right:70px;
-  display: grid;
-  grid-template-columns: 1% 99%;
+  display: grid;  
+    grid-template-columns: 3% 97%;
 }
 .information-container h1{
   margin-bottom: 30px;;
@@ -120,6 +120,7 @@ z-index: 214;
 }
 
 .AnimateCounterHomePhone{
+  display: none;
   top:550px;
   flex-direction: column;
   width:100%;
@@ -150,19 +151,26 @@ z-index: 214;
   height: 100%;
 }
 .challenge-container-phone{
-  display: flex; 
+  display: none; 
   width:100%;
   justify-content: center;
   margin-top:40px;
   padding:40px;
 } 
+.serivces-section{
+  line-height: 50px !important;
+}
+.break-div {display: none;}
 @media (max-width: 700px) {
   .AnimateCounterHomePhone section{
      margin-left:0px;
+     display: block;
   } 
+.break-div {display: block;}
+
   .HomeImgContainer video {
 
-    height:300px !important; 
+    height:250px !important; 
     width:100% !important; 
   }
   .landing-counter-container-header{
@@ -173,7 +181,7 @@ z-index: 214;
     height:390px;
   }
   .clippergoat-price{
-    font-size:18px;
+    font-size:28px;
   }
   .clippergoat-price-description{
     font-size:12px;
@@ -196,9 +204,12 @@ z-index: 214;
     padding-right:0px !important;
 
   }
-
+.challenge-container-phone{
+  display: flex; 
+}
 }
 @media (max-width: 1300px) {
+
   .getoffersmall{
     display: block;
     width:90%;
@@ -207,7 +218,7 @@ z-index: 214;
     display: none;
   }
   .HomeImgContainer {
-    flex-direction: column;  height: 850px;
+    flex-direction: column;  height: 750px;
 
     align-items: center; 
     justify-content: center;
@@ -216,7 +227,7 @@ z-index: 214;
   .information-container {
     display: grid;
     padding:0px;
-    grid-template-columns: 5% 95%;
+    grid-template-columns: 10% 90%;
   }
   .home-header{
     margin-top:450px;
@@ -248,9 +259,7 @@ z-index: 214;
     font-size: 3.5rem;
   }
 
-  .information-container {
-    grid-template-columns: 10% 90%;
-   }
+
 
 
   .image-box-container {

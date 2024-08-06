@@ -187,7 +187,7 @@
 
 @media screen and (max-width: 576px) {
   .PricingSection h1 {
-    font-size: 2em !important;
+    font-size: 2.5em !important;
   }
 
   .pricing-card-container {
@@ -199,7 +199,7 @@
   }
 
   .pricing-card-header {
-    font-size: 1.1em;
+    font-size: 2em;
   }
 
   .price {
@@ -208,7 +208,7 @@
 
   .features-list,
   .soon-to-come-list {
-    font-size: 12px;
+    font-size: 14px;
   }
   
   .get-started-btn {
@@ -220,7 +220,7 @@
     cursor: pointer;
     margin: 20px 0;
     width: 80%;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .popular-tag i {

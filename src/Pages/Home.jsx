@@ -35,11 +35,16 @@ import imgs12 from "../assets/New folder/Influncers Top row/Yodit Yemane .webp";
 import SliderTop from "../components/SliderTop/SliderTop";
 import Footer from "../components/Footer/Footer";
 import ScrollProgressBar from "./ScrollProgress";
-import radiengoat from "../assets/videos/Updated final.mp4";
+import radiengoat from "../assets/videos/9;16 hero.mp4";
 import cleanvid from "../assets/videos/clean.mov";
 import ripvid from "../assets/videos/rip finished edit.mov";
 import repost from "../assets/videos/post CG lp.mov";
 import repeatvid from "../assets/videos/Repeat fin CG.mov";
+import rinsephone from "../assets/videos/rinse 640 x 480.mov";
+
+import ripvidphone from "../assets/videos/rip  640 x 480.mov";
+import repostphone from "../assets/videos/post CG lp.mov";
+import repeatvidphone from "../assets/videos/repeat  640 x 480.mov";
 import "./Home.css";
 
 const Home = () => {
@@ -203,7 +208,7 @@ const Home = () => {
       title: "Rip",
       description:
         "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
-      videoSrc: ripvid,
+      videoSrc: ripvidphone,
       className: "text-rip-color",
     },
     {
@@ -211,7 +216,7 @@ const Home = () => {
       title: "Rinse",
       description:
         "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
-      videoSrc: cleanvid,
+      videoSrc: rinsephone,
       className: "text-clean-color",
     },
     {
@@ -219,7 +224,7 @@ const Home = () => {
       title: "Repeat",
       description:
         "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
-      videoSrc: repeatvid, 
+      videoSrc: repeatvidphone, 
       className: "text-repeat-color", 
     },
     {
@@ -302,13 +307,15 @@ const Home = () => {
           ref={targetRef}
         >
           <ScrollProgressBar targetRef={targetRef} />
-          <div className="idihgdsio0hgnoew">
+          <div className="">
             <div className="information-container-header-div">
-              <h1 className="information-container-header custom-header-title">
+              <h1 className="information-container-header custom-header-title ">
+                <span className="serivces-section">
                 Revitalize Your Content
-                <span className="glow-text-test">
+                </span>
+                <span className="glow-text-test serivces-section">
                   {" "}
-                  <br /> Rip, Rinse, Repost, Repeat!
+                     Rip, Rinse,  Repost, Repeat!
                 </span>
               </h1>
               <p className="custom-header-subtitle ">
@@ -358,8 +365,8 @@ const Home = () => {
         </div>{" "}
         <LogoSlideshow />{" "}
         <div>
-          <h1 className="information-container-header custom-header-title">
-            Industries that <span className="glow-text-test">NEED THIS!</span>
+          <h1 className="information-container-header custom-header-title ">
+            Industries that <div className="break-div"><br/></div><span className="glow-text-test">NEED THIS!</span>
           </h1>
           <p className="custom-header-subtitle ">
             ClipperGoat is ideal for short form marketing, addressing the high
@@ -376,7 +383,7 @@ const Home = () => {
         </div>
         <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title">
-            Unlock Your <span className="glow-text-test">Full Potential</span>
+            Unlock Your <div className="break-div"><br/></div><span className="glow-text-test">Full Potential</span>
           </h1>
           <p className="custom-header-subtitle ">
           ClipperGoat revolutionizes social media management, driving traffic and engagement across all social media platforms. Users praise its powerful tools for optimizing content and maximizes reach.
@@ -387,7 +394,7 @@ const Home = () => {
       <div>
         <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title Container-Spacing">
-            Frequently Asked <span className="glow-text-test">Questions</span>
+            Frequently Asked <div className="break-div"><br/></div> <span className="glow-text-test">Questions</span>
           </h1>
           <p className="custom-header-subtitle ">
             You have questions, we have answers

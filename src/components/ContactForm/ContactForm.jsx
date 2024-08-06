@@ -44,17 +44,17 @@ const ContactForm = () => {
           We are always looking for ways to improve our products and services. Contact us and let us know how we can help you.
         </p>
         <div className="contact-info">
-          <div className="contact-info__item">
+          {/* <div className="contact-info__item">
             <h3 className='glow-text-test'>Email</h3>
-            <p>contact@proactiv.ai</p>
-          </div>
+            <p>support@clippergoat.com</p>
+          </div> */}
           <div className="contact-info__item">
             <h3 className='glow-text-test'>Phone</h3>
-            <p>+1 (800) 123 XX21</p>
+            <p> +1 (480) 236-4263</p>
           </div>
           <div className="contact-info__item">
             <h3 className='glow-text-test'>Support</h3>
-            <p>support@proactiv.ai</p>
+            <p>support@clippergoat.com</p>
           </div>
         </div>
       </div>
