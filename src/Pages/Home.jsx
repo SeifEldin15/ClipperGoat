@@ -221,20 +221,20 @@ const Home = () => {
       className: "text-clean-color",
     },
     {
-      icon: <i className="fa-regular fa-repeat text-xl"></i>,
-      title: "Repeat",
-      description:
-        "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
-      videoSrc: repeatvidphone, 
-      className: "text-repeat-color", 
-    },
-    {
       icon: <i class="fa-regular fa-paper-plane"></i>,
       title: "Repost",
       description:
         "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
       videoSrc: repost, 
       className: "text-repost-color", 
+    },
+    {
+      icon: <i className="fa-regular fa-repeat text-xl"></i>,
+      title: "Repeat",
+      description:
+        "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
+      videoSrc: repeatvidphone, 
+      className: "text-repeat-color", 
     },
   ];
   return (
@@ -292,7 +292,7 @@ const Home = () => {
         <div className="Container-Spacing">
           <div className="spacing-counter">
             <h1 className="information-container-header custom-header-title">
-              Top <span className="glow-text-test">Influencers</span>
+              Top <span className="glow-text">Influencers</span>
             </h1>
             <p className="custom-header-subtitle ">
               Top Influencers Using ClipperGoat Join the ranks of elite
@@ -315,8 +315,8 @@ const Home = () => {
                 <span className="serivces-section">
                 Revitalize Your Content
                 </span>
-                <span className="glow-text-test serivces-section">
-                  {" "}
+                <span className="glow-text serivces-section">
+                  {" "}<br/>
                      Rip, Rinse,  Repost, Repeat!
                 </span>
               </h1>
@@ -368,7 +368,7 @@ const Home = () => {
         <LogoSlideshow />{" "}
         <div>
           <h1 className="information-container-header custom-header-title ">
-            Industries that <div className="break-div"><br/></div><span className="glow-text-test">NEED THIS!</span>
+            Industries that <div className="break-div"><br/></div><span className="glow-text">NEED THIS!</span>
           </h1>
           <p className="custom-header-subtitle ">
             ClipperGoat is ideal for short form marketing, addressing the high
@@ -385,7 +385,7 @@ const Home = () => {
         </div>
         <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title">
-            Unlock Your <div className="break-div"><br/></div><span className="glow-text-test">Full Potential</span>
+            Unlock Your <div className="break-div"><br/></div><span className="glow-text">Full Potential</span>
           </h1>
           <p className="custom-header-subtitle ">
           ClipperGoat revolutionizes social media management, driving traffic and engagement across all social media platforms. Users praise its powerful tools for optimizing content and maximizes reach.
@@ -396,7 +396,7 @@ const Home = () => {
       <div>
         <div className="Container-Spacing">
           <h1 className="information-container-header custom-header-title Container-Spacing">
-            Frequently Asked <div className="break-div"><br/></div> <span className="glow-text-test">Questions</span>
+            Frequently Asked <div className="break-div"><br/></div> <span className="glow-text">Questions</span>
           </h1>
           <p className="custom-header-subtitle ">
             You have questions, we have answers

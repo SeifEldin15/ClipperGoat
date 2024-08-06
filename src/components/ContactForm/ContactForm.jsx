@@ -37,7 +37,7 @@ const ContactForm = () => {
   return (
     <div className="contact-section">
       <div className="contact-section__intro">
-        <h2 className="contact-section__title glow-text-test">
+        <h2 className="contact-section__title glow-text">
           Contact us
         </h2>
         <p className="contact-section__description">
@@ -45,15 +45,15 @@ const ContactForm = () => {
         </p>
         <div className="contact-info">
           {/* <div className="contact-info__item">
-            <h3 className='glow-text-test'>Email</h3>
+            <h3 className='glow-text'>Email</h3>
             <p>support@clippergoat.com</p>
           </div> */}
           <div className="contact-info__item">
-            <h3 className='glow-text-test'>Phone</h3>
+            <h3 className='glow-text'>Phone</h3>
             <p> +1 (480) 236-4263</p>
           </div>
           <div className="contact-info__item">
-            <h3 className='glow-text-test'>Support</h3>
+            <h3 className='glow-text'>Support</h3>
             <p>support@clippergoat.com</p>
           </div>
         </div>

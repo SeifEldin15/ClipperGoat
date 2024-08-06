@@ -50,7 +50,7 @@ const ScrollProgressBar = ({ targetRef }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [targetRef]);
 
-  const progressBarHeights = [2400, 3300, 3800, 4500, 3000, 3500, 3600, 3700];
+  const progressBarHeights = [2400, 1110, 1110, 1110, 2360, 0, 0, 0];
 
   const getCirclePositions = (height) => {
     return Array.from({ length: 6 }, (_, i) => Math.round(height * (i * 0.2)));
@@ -101,7 +101,7 @@ const ScrollProgressBar = ({ targetRef }) => {
   return (
     <div style={{
       position: 'relative',
-      width: '100%',
+      width: '250%',
       height: `${progressBarHeights[screenSize]}px`,
       display: 'flex',
       justifyContent: 'center',

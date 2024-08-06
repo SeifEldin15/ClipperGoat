@@ -39,15 +39,15 @@ const CounterWrapper = styled.div`
     animation: ${shake} 0.5s ease-in-out;
   `}
 
-  @media screen and (min-width: 769px) {
-    padding: 15px;
-    transform: scale(0.9);
-  }
+  // @media screen and (min-width: 769px) {
+  //   padding: 15px;
+  //   transform: scale(0.9);
+  // }
 
-  @media screen and (max-width: 768px) {
-    padding: 15px;
-    margin-top: 20px;
-  }
+  // @media screen and (max-width: 768px) {
+  //   padding: 15px;
+  //   margin-top: 20px;
+  // }
 `;
 
 const DigitBox = styled.div`
@@ -64,19 +64,19 @@ const DigitBox = styled.div`
   -webkit-text-stroke: 1.5px #3a78ff;
   animation: ${neonPulse} 1.5s infinite;
 
-  @media screen and (max-width: 768px) {
-    font-size: 27px;
-    padding: 10px;
-    min-width: 70px;
-    margin: 0 5px;
-  }
+  // @media screen and (max-width: 768px) {
+  //   font-size: 27px;
+  //   padding: 10px;
+  //   min-width: 70px;
+  //   margin: 0 5px;
+  // }
 
-  @media screen and (max-width: 480px) {
-    font-size: 24px;
-    padding: 8px;
-    min-width: 50px;
-    margin: 0 3px;
-  }
+  // @media screen and (max-width: 480px) {
+  //   font-size: 24px;
+  //   padding: 8px;
+  //   min-width: 50px;
+  //   margin: 0 3px;
+  // }
 `;
 
 const TimeLabel = styled.p`
@@ -84,13 +84,7 @@ const TimeLabel = styled.p`
   margin-top: 5px;
   margin: 8px 8px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 12px;
-  }
+ 
 `;
 
 const AnimatedCounter = ({ targetDate }) => {

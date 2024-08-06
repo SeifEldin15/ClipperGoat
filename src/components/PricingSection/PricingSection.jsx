@@ -4,20 +4,27 @@ import './PricingSection.css';
 const PricingCard = ({ title, price, description, features, soonToCome, popular }) => (
   <div className={`pricing-card ${popular ? 'popular' : ''} ${title === 'Enterprise'? 'custom-pricing-height2' : 'custom-pricing-height'}`}>
     {popular && <div className="popular-tag"><i className='bx bx-info-circle' ></i> Most Popular</div>}
-    <p className={`pricing-card-header`}>{title}</p>
+    <p className={` pricing-card-header ${title === 'Enterprise'? 'custom-pricing-card-header' : ''}`}>{title}</p>
     <div className="price">${price}</div>
     <p className='BilledMonthly'><i className="fa-solid fa-credit-card"></i> Billed Monthly</p>
     <p className='description'>{description}</p>
     <button className='get-started-btn'>Get started</button>
     <ul className='features-list'>
       {features.map((feature, index) => (
+                <div className='soon-to-come-container'>
+        <i class="fa-solid fa-check soon-to-come-check"></i>
         <li key={index}>{feature}</li>
+        </div>
+
       ))}
     </ul>
     <ul className='soon-to-come-list'>
       <div><strong>Soon to Come:</strong></div>
       {soonToCome.map((feature, index) => (
+        <div className='soon-to-come-container'>
+        <i class="fa-solid fa-check soon-to-come-check"></i>
         <li key={index}>{feature}</li>
+        </div>
       ))}
     </ul>
   </div>
@@ -87,7 +94,7 @@ function PricingSection() {
 
   return (
     <div className="PricingSection">
-      <h1 className="custom-header-title">Choose Your <div className="break-div"><br/></div><span className="information-container-header-span glow-text-test">Perfect Plan</span></h1>
+      <h1 className="custom-header-title">Choose Your <div className="break-div"><br/></div><span className="information-container-header-span glow-text">Perfect Plan</span></h1>
       <p className="custom-header-subtitle">Flexible pricing to suit your needs, whether you're a solo creator or a large agency.</p>
       <div className="pricing-container">
         {plans.map((plan, index) => (

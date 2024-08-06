@@ -55,7 +55,7 @@ const Footer = () => {
             <ScrollToTop to="/pricing">Investors  </ScrollToTop>
           </li>
           <li>
-            <ScrollToTop to="/terms">Terms of Conditions</ScrollToTop>
+            <ScrollToTop to="/terms">Terms & Conditions</ScrollToTop>
           </li>
           <li>
             <ScrollToTop to="/privacy">Privacy Policy</ScrollToTop>

@@ -55,9 +55,9 @@
   background-color: rgba(29, 123, 255, 0.4);
   box-shadow: 0 0 10px rgb(29, 123, 255), 0 0 11px rgb(29, 123, 255);
   color: white;
-  padding: 5px 12px;
-  width: 160px;
-  font-size: 15px;
+  padding: 8px 16px;
+  width: 200px;
+  font-size: 18px;
   border-radius: 20px;
   position: absolute;
   top: 30px;
@@ -67,7 +67,6 @@
 }
 
 .pricing-card-header {
-  font-size: 2.5em;
   margin-bottom: 10px;
   
   color: #ffc65c ;
@@ -126,13 +125,18 @@
 .soon-to-come-list li, .soon-to-come-list div {
   margin-bottom: 10px;
 }
-
+.soon-to-come-container{
+  display: flex;
+  align-items: center;
+}
+.soon-to-come-container i{
+  font-size:16px;
+}
 .features-list li::before,
-.soon-to-come-list li::before {
-  content: "✓";
+.soon-to-come-check {
+  /* content: "✓"; */
   margin-right: 10px;
   color: rgb(20, 110, 255)
-
 }
 .custom-pricing-title{
   color: #daa400  ;
@@ -145,14 +149,21 @@
 .custom-pricing-height2 {
   box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
 }
+.custom-pricing-card-header{
+  font-size: 3.5em !important;
+
+}
 
 .custom-pricing-height2 button {
   background-color: var(--main-color-lighter);
   box-shadow: 0 0 15px rgba(20, 110, 255, 0.5);
 }
 
-.custom-pricing-height2 .pricing-card-header {
+.pricing-card-header {
   margin-top: 60px;
+  font-size: 2.5em;
+
+
 }
 
 /* Media Queries for Responsiveness */

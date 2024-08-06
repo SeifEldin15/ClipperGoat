@@ -8,7 +8,7 @@ const Terms = () => {
     <>
       <Navbar />
       <div className='Pirvacy-Container'>
-        <h1 className="information-container-header custom-header-title">terms and <span className="glow-text">conditions</span></h1>
+        <h1 className="information-container-header custom-header-title">Terms & <span className="glow-text">Conditions</span></h1>
         
         <div>
           <p className='custom-header-subtitle-no-centner glow-text'>Clippergoat Terms of Service (TOS)</p>
