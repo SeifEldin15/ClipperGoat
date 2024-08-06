@@ -92,7 +92,7 @@
 .social-icons {
   display: flex;
   justify-content: center;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
 }
 
 .social-icons i {
@@ -101,7 +101,9 @@
   cursor: pointer;
   padding:15px;
 }
-
+.social-icons-phone{
+  display: none;
+}
 .social-icons i:hover {
   transform: scale(1.4);
   margin: 0 20px !important;
@@ -121,8 +123,16 @@
     padding: 0rem 1rem;
   }
 .footer-copyright {
-  margin-top:0rem;
-
+  margin-top:2rem 
+}
+.back-to-top-normal{
+  display: none;
+}
+.social-icons-phone{
+  display: flex;
+}
+.social-icons-normal{
+  display: none;
 }
 .footer-contact-normal{
   display: none !important;
@@ -131,14 +141,14 @@
   display: flex !important;
 }
 .footer ul {
-  margin-top:2rem !important; 
+  margin-top:1rem !important; 
 }
   .footer-links {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 1;
     justify-content: center;
-    margin-top:3rem !important;
+    margin-top:2rem !important;
     padding: 0;
     list-style-type: none;
   }

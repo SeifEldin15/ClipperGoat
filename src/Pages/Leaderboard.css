@@ -1,7 +1,6 @@
-@media (max-width: 768px) {
-  /* .LeaderContainer{
-      margin-top:100px;
-  } */
+.custom-header-title-leaderboard {
+  font-size: 2.5rem  ;
+  color: white !important;
 }
 .LeaderContainer {
 text-align: center;
@@ -85,12 +84,13 @@ color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 768px) {
-.LeaderContainer {
+/* .LeaderContainer {
   margin-top: 80px;
-}
+} */
 
-.custom-header-title {
-  font-size: 1.8em;
+.custom-header-title-leaderboard {
+  font-size: 2rem  ;
+  margin: 0;
 }
 
 .LeaderBoardCard {
@@ -118,13 +118,13 @@ color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 480px) {
-.LeaderContainer {
+/* .LeaderContainer {
   margin-top: 60px;
-}
+} */
 
-.custom-header-title {
+/* .custom-header-title-leaderboard {
   font-size: 1.5em;
-}
+} */
 
 .LeaderBoardCard {
   padding: 10px;

@@ -152,7 +152,6 @@
 }
 .custom-pricing-card-header{
   font-size: 3.5em !important;
-
 }
 
 .custom-pricing-height2 button {
@@ -187,7 +186,8 @@
     margin-top:10px;
   }
   .custom-pricing-card-header{
-    font-size: 3rem !important;
+  margin-top:70px;
+  font-size: 3rem !important; 
   }
 .pricing-card {
   padding: 0px 20px;

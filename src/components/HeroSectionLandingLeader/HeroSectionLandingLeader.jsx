@@ -25,7 +25,8 @@ function HeroSectionLandingHero() {
 
 <AnimateCounterLeader targetDate="2024-08-31T23:59:59" />  
 
-<div className="leader-getoffer-btn"><GetOfferBtn />
+<div className="leader-getoffer-btn">
+  <button className='clippergoat-cta'>Become an Affiliate</button>
 </div>
 <div>
      </div>   </section>

@@ -6,11 +6,21 @@
 
 }
 .Pirvacy-P{
+
     color: white;
     margin:30px;
     margin-left: 10px;
-    margin-top: 5px;line-height: 2.2rem;
+    margin-top: 15px;
+    line-height: 2.2rem;
 }
 .Pirvacy-Container h1{
-    margin-bottom: 100px;
+    margin-bottom:50px;
+}
+@media (max-width: 700px) {
+/* .Pirvacy-Container{
+    text-align: center;
+ } */
+ .Pirvacy-Container .custom-header-subtitle-no-centner{
+    margin: 20px 0px;
+}
 }

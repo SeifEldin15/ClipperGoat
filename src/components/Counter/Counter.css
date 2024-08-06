@@ -4,8 +4,10 @@
 }
 .landing-leader-counter-container-header{
 }
-.landing-leader-counter-container-header h2{
-  font-size: 50px;
+.landing-leader-counter-container-header{
+  margin-top:120px;
+  font-size: 40px;
+  margin-bottom: 20px;
   /* text-shadow: 
     -1px -1px 0 white,
     1px -1px 0 white,
@@ -65,13 +67,13 @@
   .landing-counter-container h1 {
     font-size: 24px;
   }
-  .landing-leader-counter-container-header h1 {
-    font-size: 27px !important;
-  }
-  .landing-leader-counter-container-header h2 {
-    font-size: 22px !important;
+  .landing-leader-counter-container-header h1:first-of-type {
+    margin-top:50px;
   }
   
+  .landing-leader-counter-container-header h1{
+    font-size: 30px !important;
+  }
   .counter-container h2 {
     font-size: 18px;
   }

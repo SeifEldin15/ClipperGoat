@@ -4,6 +4,8 @@ import HeroSectionLanding from "../components/HeroSectionLanding/HeroSectionLand
 import PricingSection from "../components/PricingSection/PricingSection";
 import LogoSlideshow from "../components/LogoSlideshow/LogoSlideshow";
 import GetOfferBtn from "../components/GetOfferBtn/GetOfferBtn";
+import BackToTopPhone from "../components/BackToTopPhone/BackToTopPhone";
+
 import FAQ from "../components/FAQ/FAQ";
 import Slider2 from "../components/Slider2/Slider2";
 import AnimateCounter from "../components/Counter/Counter";
@@ -239,6 +241,7 @@ const Home = () => {
   ];
   return (
     <>
+    <BackToTopPhone />
       <div className="homeheroimg">
       <video
     className="imghero"

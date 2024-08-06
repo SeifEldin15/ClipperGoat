@@ -75,8 +75,8 @@ const Leaderboard = () => {
       </div>
       <div>
         <div className='LeaderContainer'>
-          <div className="LeaderBoardSection Container-Spacing">
-            <h1 className="custom-header-title">Clipper Goat 10 Million Dollar <span className="information-container-header-span glow-text">Affiliate Program</span></h1>
+        <div className="LeaderBoardSection Container-Spacing">
+        <h1 className="custom-header-title-leaderboard">Clipper Goat <br/> 10  Million Dollar <span className="information-container-header-span glow-text"> Affiliate Program</span></h1>
             <p className="custom-header-subtitle ">Exactly what you can find inside Active Income</p>
 
             <div className="leaderboard-rank-info-container">

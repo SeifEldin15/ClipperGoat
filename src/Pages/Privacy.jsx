@@ -8,7 +8,7 @@ const Privacy = () => {
     <>
     <Navbar />
     <div className='Pirvacy-Container '>
-    <h1 className="information-container-header custom-header-title">Privacy <span className="glow-text">Policy</span></h1>
+    <h1 className="information-container-header custom-header-title">Privacy <div className="break-div"><br /></div><span className="glow-text">Policy</span></h1>
       
       <div>
         <p className='custom-header-subtitle-no-centner glow-text'>Clippergoat Privacy Policy</p>
