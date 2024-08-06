@@ -77,14 +77,10 @@ const Slider = () => {
 
   return (
     <div className="slideshow-container212 ">
-     {/* Container-Spacing */}
-
      
       <div className="slideshow-track-container">
-     {/* Container-Spacing */}
-
         <div
-          className="slideshow-track212 " 
+          className="slideshow-track212 Container-Spacing"
           ref={trackRef}
           style={{ transform: `translateX(${position}px)` }}
         >
