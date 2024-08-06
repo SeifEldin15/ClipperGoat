@@ -63,7 +63,7 @@ h1, h2 {
 }
 
 .custom-header-title {
-  font-size: 2.5rem;
+  font-size: 3rem !important;
   color: white !important;
   margin: 0;
 }
@@ -159,9 +159,11 @@ h1, h2 {
     margin-bottom: 5px;
   }
   .custom-header-subtitle {
+  max-width: 95%;
   margin-top:40px !important;
   }
 }
+
 
 .box-custom-shadow {
   box-shadow: 0 0 55px rgba(59, 130, 246, 0.5);
