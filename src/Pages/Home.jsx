@@ -394,8 +394,8 @@ const Home = () => {
         <Slider items={items} />
       </div>
       <div>
-        <div className="Container-Spacing">
-          <h1 className="information-container-header custom-header-title Container-Spacing">
+        <div className="Container-Spacing-Lg">
+          <h1 className="information-container-header custom-header-title ">
             Frequently <div className="break-div"><br/></div> Asked <div className="break-div"><br/></div> <span className="glow-text">Questions</span>
           </h1>
           <p className="custom-header-subtitle ">
