@@ -101,7 +101,8 @@ const ScrollProgressBar = ({ targetRef }) => {
   return (
     <div style={{
       position: 'relative',
-      width: '250%',
+      width: '100%',
+      // width: '250%',
       height: `${progressBarHeights[screenSize]}px`,
       display: 'flex',
       justifyContent: 'center',

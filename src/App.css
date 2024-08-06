@@ -147,7 +147,7 @@ h1, h2 {
 
 @media (max-width: 750px) {
   .Container-Spacing {
-    margin-top: 80px;
+    margin-top: 40px;
   }
   .Container-Spacing-Lg {
     margin-top: 90px;

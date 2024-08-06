@@ -68,7 +68,7 @@
 
 .pricing-card-header {
   margin-bottom: 10px;
-  
+    
   color: #ffc65c ;
 }
 
@@ -83,6 +83,7 @@
   font-size: 14px;
   color: rgb(188, 188, 188);
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .description {
@@ -182,6 +183,15 @@
 }
 
 @media screen and (max-width: 992px) {
+  .custom-pricing-card-header-2{
+    margin-top:10px;
+  }
+  .custom-pricing-card-header{
+    font-size: 3rem !important;
+  }
+.pricing-card {
+  padding: 0px 20px;
+}
   .pricing-container {
     flex-direction: column;
     align-items: center;
@@ -242,7 +252,7 @@
 
   .popular-tag {
     padding: 5px 12px;
-    width: 140px;
+    width: 170px;
     font-size: 12px;
   }
 }

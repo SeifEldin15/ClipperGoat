@@ -59,7 +59,7 @@ const Slider = () => {
 
     const animate = () => {
       setPosition((prevPosition) => {
-        const newPosition = prevPosition - 0.7; // Adjust speed here
+        const newPosition = prevPosition - 0.7; 
         if (newPosition <= -totalWidth) {
           return 0;
         }
@@ -76,11 +76,15 @@ const Slider = () => {
   }, [images.length]);
 
   return (
-    <div className="slideshow-container212 Container-Spacing">
+    <div className="slideshow-container212 ">
+     {/* Container-Spacing */}
+
      
       <div className="slideshow-track-container">
+     {/* Container-Spacing */}
+
         <div
-          className="slideshow-track212 Container-Spacing"
+          className="slideshow-track212 " 
           ref={trackRef}
           style={{ transform: `translateX(${position}px)` }}
         >
