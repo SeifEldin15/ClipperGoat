@@ -41,6 +41,7 @@ import ripvid from "../assets/videos/rip finished edit.mov";
 import repost from "../assets/videos/post CG lp.mov";
 import repeatvid from "../assets/videos/Repeat fin CG.mov";
 import rinsephone from "../assets/videos/rinse 640 x 480.mov";
+import updatedFinal from "../assets/videos/Updated final.mp4";
 
 import ripvidphone from "../assets/videos/rip  640 x 480.mov";
 import repostphone from "../assets/videos/post CG lp.mov";
@@ -239,18 +240,19 @@ const Home = () => {
   return (
     <>
       <div className="homeheroimg">
-        <video
-          className="imghero"
-          loading="lazy"
-          src={radiengoat}
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <track kind="captions" srclang="en" label="English captions" />
-          Your browser does not support the video tag.
-        </video>
+      <video
+    className="imghero"
+    loading="lazy"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source src={radiengoat} media="(max-width: 600px)" type="video/mp4" />
+    <source src={updatedFinal} media="(min-width: 601px)" type="video/mp4" />
+    <track kind="captions" srclang="en" label="English captions" />
+    Your browser does not support the video tag.
+  </video>
         <div className="overlay"></div>
         <Navbar />
         <HeroSectionLanding />
