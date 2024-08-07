@@ -307,6 +307,8 @@ const Home = () => {
             <SliderTop images={INFLUENCERS} direction="right" />
           </div>
         </div>
+
+
         <div
           className="information-container Container-Spacing"
           ref={targetRef}
@@ -367,6 +369,9 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+
+          
         </div>{" "}
         <LogoSlideshow />{" "}
         <div>

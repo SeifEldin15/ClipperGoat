@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import "./ScrollProgress.css"
 const ScrollProgressBar = ({ targetRef }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const progressBarRef = useRef(null);
@@ -99,14 +99,15 @@ const ScrollProgressBar = ({ targetRef }) => {
   };
 
   return (
-    <div style={{
+    <div
+    className="responsive-width"
+    style={{
       position: 'relative',
-      width: '100%',
-      // width: '250%',
       height: `${progressBarHeights[screenSize]}px`,
       display: 'flex',
       justifyContent: 'center',
-    }}>
+    }}
+  >
       <div ref={progressBarRef} style={{
         position: 'sticky',
         top: '0px',

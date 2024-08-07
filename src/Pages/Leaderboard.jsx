@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSectionLandingLeader from '../components/HeroSectionLandingLeader/HeroSectionLandingLeader';
+import HeroSectionLeader from '../components/HeroSectionLeader/HeroSectionLeader';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import InfoCard from '../components/InfoCard/InfoCard';
@@ -71,7 +71,7 @@ const Leaderboard = () => {
         />
         <div className="overlay"></div>   
         <Navbar />               
-        <HeroSectionLandingLeader />
+        <HeroSectionLeader />
       </div>
       <div>
         <div className='LeaderContainer'>

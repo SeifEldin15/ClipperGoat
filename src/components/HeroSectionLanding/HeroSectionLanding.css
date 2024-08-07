@@ -29,6 +29,7 @@
 .clippergoat-hero-subtitle {
   font-size: 18px;
   margin-bottom: 30px;
+  width:60%;
 }
 
 .clippergoat-cta {
@@ -55,6 +56,7 @@
 }
 .clippergoat-price{
   margin: 20px 0px;
+  display: none;
 }
 .clipper-hero-right{
   display: flex;
@@ -86,6 +88,12 @@
   width: 350px !important;
 }
 @media screen and (max-width: 768px) {
+  .clippergoat-hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    width:100%;
+  }
+  
   .clippergoat-hero-title {
     font-size: 38px !important;
     margin-top:90px;
@@ -97,6 +105,10 @@
   .clippergoat-hero {
     text-align: center;
     height: auto !important; 
+  }
+
+  .clippergoat-price{
+    display: none;
   }
 }
 

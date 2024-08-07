@@ -3,22 +3,21 @@ import React from 'react';
 import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
 import AnimateCounterLeader from '../Counter/AnimateCounterLeader';
 
-import './HeroSectionLandingLeader.css';
+import './HeroSectionLeader.css';
 
-function HeroSectionLanding() {
+function HeroSectionLeader () {
   return (
     <div className="clippergoat-app-header">
-      <HeroSectionLandingHero />
+      <HeroLeader />
     </div>
   );
 }
 
-export default HeroSectionLanding;
+export default HeroSectionLeader;
 
 
 
-// Hero.js
-function HeroSectionLandingHero() {
+function HeroLeader () {
   return (
 <>
 <section className="clippergoat-hero-leader">

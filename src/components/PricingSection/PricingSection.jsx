@@ -42,7 +42,7 @@ function PricingSection() {
         "Meta Magic: (Metadata Removal + AI Video Editor)",
         "AI Advanced Photoshop Video Editor",
         "Updated to Bypass July 7th IG Patch on Content Detection",
-        "15% Affiliate Commission",
+        "25% Affiliate Commission",
       ],
       soonToCome: [
         "Video Game Splitter",
@@ -50,6 +50,27 @@ function PricingSection() {
         "Auto-DM’er",
         "Account Warmer",
       ]
+    },
+
+    {
+      title: "Agency",
+      price: "300",
+      description: "Designed for agency owners or creators operating 10+ accounts and posting multiple times a day.",
+      features: [
+        "1000 Credits",
+        "Includes 1000 Short Video Downloads",
+        "Includes all of the Features in Clippreneur",
+        "Priority Support",
+        "30% Affiliate Commission",
+      ],
+      soonToCome: [
+        "Customer Relationship Managers",
+        "Auto-Emailer",
+        "Auto-Texter",
+        "GUI Web Builder",
+        "Custom Sites",
+      ],
+      popular: true
     },
     {
       title: "Enterprise",
@@ -61,35 +82,14 @@ function PricingSection() {
         "Includes all Features in Clippreneur & Agency",
         "Custom Integrations and Automations",
         "Personalized Enhancements and Optimizations",
-        "Dedicated Support and Maintenance",
+        // "Dedicated Support and Maintenance",
       ],
       soonToCome: [
         "Account Management",
         "Advanced Analytics",
         "Full Suite of Automation Tools",
       ],
-      popular: true
     },
-    {
-      title: "Agency",
-      price: "300",
-      description: "Designed for agency owners or creators operating 10+ accounts and posting multiple times a day.",
-      features: [
-        "1000 Credits",
-        "Includes 1000 Short Video Downloads",
-        "Includes all of the Features in Clippreneur",
-        "Priority Support",
-        "25% Affiliate Commission",
-      ],
-      soonToCome: [
-        "Customer Relationship Managers",
-        "Auto-Emailer",
-        "Auto-Texter",
-        "GUI Web Builder",
-        "Custom Sites",
-      ],
-    },
-   
   ];
 
   return (

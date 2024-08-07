@@ -1,0 +1,12 @@
+/* styles.css */
+.responsive-width {      width: 250% !important;
+
+  }
+  
+  @media (max-width: 1000px) {
+    .responsive-width {
+    width: 100% !important;
+
+    }
+  }
+  

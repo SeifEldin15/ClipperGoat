@@ -1,3 +1,4 @@
+/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,7 +20,9 @@
 .navbar * {
   z-index: 1000;
 }
-
+.nav-buttons-small{
+  display: none;
+}
 .navbar-header {
   display: flex;
   align-items: center;
@@ -73,84 +76,61 @@
   font-size: 25px;
 }
 
-.close-sidebar {
-  display: none;
-}
-
 @media screen and (max-width: 768px) {
-  .nav-links {
-    gap: 20px;
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
   }
-  
-  .navbar.small-screen {
-    flex-wrap: wrap;
+  .nav-buttons-small{
+    display: block;
   }
-
-  .navbar.small-screen .navbar-header {
-    width: 100%;
+  .navbar-header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
   }
 
-  .navbar.small-screen .hamburger {
+  .hamburger {
     display: block;
   }
 
-  .navbar.small-screen .nav-content {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100vh;
-    background-color: #111827c8;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 70px; 
-    transition: right 0.3s ease-in-out;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar.small-screen .nav-content.open {
-    right: 0;
-  }
-
-  .navbar.small-screen .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .navbar.small-screen .nav-links li {
-    margin: 1rem 0;
-    width: 100%;
-  }
-
-  .navbar.small-screen .nav-links li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    width: 100%;
-  }
-
-  .navbar.small-screen .nav-buttons {
-    display: none;
-  }
-
-  .sidebar-overlay {
-    position: fixed;
-    top: 0;
+  .nav-content {
+    position: absolute;
+    top: 100px; /* Adjust this value to match your navbar height */
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    background-color: #111827ce;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
   }
 
-  .nav-content .close-btn {
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
+  .nav-content.open {
+    max-height: calc(100vh - 100px); /* Adjust 100px to match your navbar height */
+    overflow-y: hidden;
   }
-  
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    overflow-y: hidden;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .nav-buttons {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
 }

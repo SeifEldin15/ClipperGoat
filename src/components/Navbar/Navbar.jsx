@@ -1,10 +1,11 @@
+// Navbar.js
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import Logo from '../Logo/Logo';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -14,27 +15,24 @@ const Navbar = () => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768);
     };
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-
     handleResize();
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   const scrollToSection = (pixelY) => {
@@ -46,9 +44,8 @@ const Navbar = () => {
     } else {
       slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
     }
-
     if (isSmallScreen) {
-      setIsSidebarOpen(false);
+      closeMenu();
     }
   };
 
@@ -56,7 +53,6 @@ const Navbar = () => {
     const startY = window.scrollY;
     const diffY = targetY - startY;
     let startTime;
-
     const step = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
@@ -66,7 +62,6 @@ const Navbar = () => {
         requestAnimationFrame(step);
       }
     };
-
     requestAnimationFrame(step);
   };
 
@@ -77,8 +72,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    // { name: 'About', scrollTo: 5400 },
-    { name: 'Features   ', scrollTo: 2500 },
+    { name: 'Features', scrollTo: 2500 },
     { name: 'Pricing', scrollTo: 6100 },
     { name: 'FAQ', scrollTo: 8400 },
     { name: 'Affiliates', link: '/leaderboard' },
@@ -86,38 +80,37 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar Container ${isSmallScreen ? 'small-screen' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar Container ${isSmallScreen ? 'small-screen scrolled' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className='navbar-header'>
         <Logo />
         {isSmallScreen && (
-          <div className={`hamburger ${isSidebarOpen ? 'active' : ''}`} onClick={toggleSidebar}>
+          <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
             ☰
           </div>
         )}
       </div>
-      <div className={`nav-content ${isSidebarOpen ? 'open' : ''}`}>
-        {isSmallScreen && isSidebarOpen && (
-          <div className="close-btn" onClick={closeSidebar}>✕</div>
-        )}
+      <div className={`nav-content ${isMenuOpen ? 'open' : ''}`}>
         <ul className="nav-links hover-effect-links">
           {navItems.map((item, index) => (
             <li key={index}>
               {item.link ? (
-                <NavLink exact to={item.link}>{item.name}</NavLink>
+                <NavLink exact to={item.link} onClick={closeMenu}>{item.name}</NavLink>
               ) : (
-                <a onClick={() => scrollToSection(item.scrollTo)}>{item.name}</a>
+                <a onClick={() => { scrollToSection(item.scrollTo); closeMenu(); }}>{item.name}</a>
               )}
             </li>
           ))}
+    
+            <li className='nav-buttons-small glow-text-test nav-buttons-small'>
+              Login 
+            </li>
         </ul>
+    
       </div>
       {!isSmallScreen && (
         <div className="nav-buttons">
           <button className="register-btn glow-text-test">Login</button>
         </div>
-      )}
-      {isSmallScreen && isSidebarOpen && (
-        <div className="sidebar-overlay" onClick={toggleSidebar}></div>
       )}
     </nav>
   );

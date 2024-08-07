@@ -109,7 +109,7 @@ color: rgb(255, 255, 255);
 }
 
 .username-info {
-  font-size: 18px;
+  font-size: 12px !important;
 }
 
 .user-tag {
@@ -193,7 +193,6 @@ right:10px;
 color: white;
 }
 .user-rank p{
-  margin-top: 10px;
 }
 .user-rank .fa-caret-up{
 color:#00D95F;
@@ -205,7 +204,7 @@ margin-right:-8px;
 .user-rank .fa-caret-down{
 color:red;
 font-size:  16px;
-margin-top:25px;
+margin-top:21px;
 margin-right:-8px;
 }
 
