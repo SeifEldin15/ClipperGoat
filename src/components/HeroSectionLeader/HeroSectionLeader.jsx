@@ -1,7 +1,7 @@
 // App.js
 import React from 'react';
-import GetOfferBtn from '../GetOfferBtn/GetOfferBtn';
 import AnimateCounterLeader from '../Counter/AnimateCounterLeader';
+import StartClippingBtn from '../StartClippingBtn/StartClippingBtn';
 
 import './HeroSectionLeader.css';
 
@@ -25,7 +25,11 @@ function HeroLeader () {
 <AnimateCounterLeader targetDate="2024-08-31T23:59:59" />  
 
 <div className="leader-getoffer-btn">
-  <button className='clippergoat-cta'>Become an Affiliate</button>
+<StartClippingBtn 
+  style={{ marginTop: '30px' }} 
+  text="Become an Affiliate" 
+  to="/reviving-clips" 
+/>
 </div>
 <div>
      </div>   </section>

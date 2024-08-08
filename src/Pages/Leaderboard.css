@@ -20,7 +20,7 @@ flex-wrap: wrap;
 border-radius: 10px;
 padding: 20px;
 box-shadow: 0 0 125px rgba(20, 110, 255, 0.5);
-margin-top:50px;
+margin-top:100px;
 width: 100%;
 max-width: 1200px;
  position: relative;
@@ -44,105 +44,6 @@ margin-bottom: 10px;
 color: rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 1200px) {
-  .goat-number{
-    position: absolute;
-    top: 130px !important;
-    left: 47% !important; z-index: 2;
-    transform: translateX(-50%);
-    font-weight: 700;
-    font-size:17px;
-    background-color: rgb(255, 221, 2); width:22px;
-    height:22px; display: flex; align-items: center; justify-content: center;
-    transform: rotate(45deg);
-    border-radius: 4px;
-  } 
-  .leaderboard-rank-info-container .crown {
-  position: absolute;
-  top: 20px !important;
-  left: 50%;
-  z-index: 2;
-  transform: translateX(-50%);
-  font-size: 43px;
-  }
-.leaderboard-rank-info-container {
-  padding: 15px;
-}
-
-.leaderboard-rank-info-container .leaderboard-container {
-  flex-direction: column;
-}
- 
-.leaderboard-rank-info-container .leader-card {
-    height:400px !important;
-    width:70%;
-    padding:50px;
-  margin-bottom:50px !important;
-  margin-left:auto;
-  margin-right:auto;
-}
-}
-
-@media screen and (max-width: 768px) {
-/* .LeaderContainer {
-  margin-top: 80px;
-} */
-
-.custom-header-title-leaderboard {
-  font-size: 2rem  ;
-  margin: 0;
-}
-
-.LeaderBoardCard {
-  padding: 15px;
-}
-
-.profile-container {
-  flex-direction: column;
-  padding-left:0px !important;
-  align-items: flex-start;
-}
-
-.user-rank {
-  position: static;
-  margin-top: 10px;
-}
-
-.username-info {
-  font-size: 12px !important;
-}
-
-.user-tag {
-  margin-left: 0;
-}
-}
-
-@media screen and (max-width: 480px) {
-/* .LeaderContainer {
-  margin-top: 60px;
-} */
-
-/* .custom-header-title-leaderboard {
-  font-size: 1.5em;
-} */
-
-.LeaderBoardCard {
-  padding: 10px;
-}
-
-.user-content img {
-  width: 35px;
-  height: 35px;
-}
-
-.username-info {
-  font-size: 16px;
-}
-
-.user-tag {
-  font-size: 10px;
-}
-}
 
 .profile-container {
 display: flex;
@@ -158,6 +59,7 @@ padding-left: 40px;
 .user-content{
 display: flex;
 align-items: center;
+margin-left:5px;
 }
 
 .user-content img{
@@ -181,7 +83,6 @@ font-size: 20px;
   .user-earnings{
     font-size: 14px;
     }
-    
     .user-tag{
 color: rgb(186, 186, 186);
 font-size:11px;
@@ -192,7 +93,12 @@ position: absolute;
 right:10px;
 color: white;
 }
-.user-rank p{
+.imghero{
+  position: absolute;
+  height:100%;
+  width: 100%;
+  opacity: 0.5;
+  object-fit: cover; z-index: -1;
 }
 .user-rank .fa-caret-up{
 color:#00D95F;
@@ -208,7 +114,6 @@ margin-top:21px;
 margin-right:-8px;
 }
 
-/* Container styles */
 .leaderboard-rank-info-container {
 max-width: 950px;
 border-radius: 10px;
@@ -217,13 +122,11 @@ margin: 50px auto;
 color: white;
 }
 
-/* TabContainer styles */
 .leaderboard-rank-info-container .tab-container {
 display: flex;
 margin-bottom: 20px;
 }
 
-/* Tab styles */
 .leaderboard-rank-info-container .tab {
 padding: 10px 20px;
 background-color: transparent;
@@ -235,7 +138,6 @@ cursor: pointer;
 background-color: #3a3f4b;
 }
 
-/* LeaderboardContainer styles */
 .leaderboard-rank-info-container .leaderboard-container {
 display: flex;
 }
@@ -260,7 +162,6 @@ margin:15px;
 border-radius: 12px;   
 }
 
-/* Avatar styles */
 .leaderboard-rank-info-container .avatar {
 width: 60px;
 height: 60px;
@@ -275,32 +176,13 @@ transform: scale(1.5);
 margin-bottom:30px !important;
 }
 
-.goat-number{
-  position: absolute;
-  top: 190px;
-  left: 45%; z-index: 2;
-  transform: translateX(-50%);
-  font-weight: 700;
-  font-size:17px;
-  background-color: rgb(255, 221, 2); width:22px;
-  height:22px; display: flex; align-items: center; justify-content: center;
-  transform: rotate(45deg);
-  border-radius: 4px;
-}
-.goat-number p {
-  transform: rotate(-45deg);
-  margin-top:-1px;
-  margin-left:-1px;
-}
 
-/* AvatarImage styles */
 .leaderboard-rank-info-container .avatar img {
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
 
-/* Crown styles */
 .leaderboard-rank-info-container .crown {
 position: absolute;
 top: 70px;
@@ -310,69 +192,172 @@ transform: translateX(-50%);
 font-size: 43px;
 }
 
-/* Name styles */
 .leaderboard-rank-info-container .name {
 font-weight: bold;
 margin-bottom: 5px;
 }
 
-/* Score styles */
 .leaderboard-rank-info-container .score {
 font-size: 24px;
 font-weight: bold;
 }
 
-/* Username styles */
 .leaderboard-rank-info-container .username {
 color: #6c727f;
 font-size: 12px;
 }
 
-/* Responsive styles for leader cards */
-@media screen and (max-width: 768px) {
+
+.goat-number,
+.goat2-number,
+.rank-number {
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%) rotate(45deg);
+  font-weight: 700;
+  font-size: 12px;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;  
+
+}
+
+.goat-number {top: 195px;
+  background-color: rgb(255, 221, 2);
+  font-size: 17px; 
+}
+
+.goat2-number {top: 135px;
+  background-color: rgb(33, 98, 172);
+}
+
+.rank-number 
+{top: 135px;
+  background-color: rgb(46, 204, 113);
+}
+
+.goat-number p,
+.goat2-number p,
+.rank-number p {
+  transform: rotate(-45deg);
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .goat-number {top: 135px !important;
+
+  }
+  .leaderboard-rank-info-container .crown {
+  position: absolute;
+  top: 20px !important;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  font-size: 43px;
+  }
+.leaderboard-rank-info-container {
+  padding: 15px;
+}
+
 .leaderboard-rank-info-container .leaderboard-container {
   flex-direction: column;
 }
-
-.leaderboard-rank-info-container .leader-card {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.goat {
-  height: auto !important;
-  margin-top: 0 !important;
-}
-}
-
-/* Rank number styles */
-.rank-number {
-  position: absolute;
-  top: 135px;
-  left:47%; z-index: 2;
-  transform: translateX(-50%);
-  font-weight: 700;
-  font-size:12px;
-  background-color: rgb(33, 98, 172); width:18px;
-  height:18px; display: flex; align-items: center; justify-content: center;
-  transform: rotate(45deg);
-  border-radius: 4px;
-}
  
+.leaderboard-rank-info-container .leader-card {
+    height:400px !important;
+    width:70%;
+    padding:50px;
+  margin-top:30px !important;
+  margin-left:auto;
+  margin-right:auto;
+}
+.goat-number {
+  left: 50% !important;
+}
 
-.rank-number p {
-  transform: rotate(-45deg);
-  margin-top:1px;
-  margin-left:1px;}
+.goat2-number,
+.rank-number {
+  top: 125px;
+  left: 50%;
+}
+}
 
-/* Responsive styles for profile container */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+  .goat-number {
+    left: 50% !important;
+  }
+
+  .goat2-number,
+  .rank-number {
+    top: 125px;
+    left: 50%;
+  }
+    .leaderboard-rank-info-container .leaderboard-container {
+      flex-direction: column;
+    }
+    
+    .leaderboard-rank-info-container .leader-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .goat {
+      height: auto !important;
+      margin: 0px !important;
+    }
+.custom-header-title-leaderboard {
+  font-size: 2rem  ;
+  margin: 0;
+}
+
+.LeaderBoardCard {
+  padding: 15px;
+}
+
 .profile-container {
-  flex-direction: column;
+  padding-left:5px !important;
+  padding-right:10px ;
+
   align-items: flex-start;
 }
 
 .user-rank {
-  padding-right:20px !important;
+  position: static;
+  margin-top: 10px;
+}
+
+.username-info {
+  font-size: 12px !important;
+}
+
+.user-tag {
+  margin-left: 0;
+}
+}
+
+@media screen and (max-width: 480px) {
+
+.LeaderBoardCard {
+  padding: 10px;
+}
+
+.user-content img {
+  width: 35px;
+  height: 35px;
+}
+
+.username-info {
+  font-size: 16px;
+}
+
+.user-tag {
+  font-size: 10px;
 }
 }

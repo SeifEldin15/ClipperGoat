@@ -1,4 +1,3 @@
-// Navbar.js
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import Logo from '../Logo/Logo';
@@ -6,14 +5,23 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [screenSize, setScreenSize] = useState('large');
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 768);
+      const width = window.innerWidth;
+      if (width <= 777) {
+        setScreenSize('small');
+      } else if (width <= 1000) {
+        setScreenSize('medium');
+      } else if (width <= 1324) {
+        setScreenSize('avg');
+      } else {
+        setScreenSize('large');
+      }
     };
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -35,16 +43,27 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const scrollToSection = (pixelY) => {
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
-      }, 1000);
-    } else {
-      slowScrollTo(pixelY, 1500); // 1.5 seconds duration for scrolling
-    }
-    if (isSmallScreen) {
+  const scrollToSection = (largeScreenY, avgScreenY, mediumScreenY, smallScreenY) => {
+    const targetY =
+      screenSize === 'small' ? smallScreenY :
+      screenSize === 'medium' ? mediumScreenY :
+      screenSize === 'avg' ? avgScreenY :
+      largeScreenY;
+
+    // Scroll to top first, then navigate and scroll to section
+    window.scrollTo(0, 0); // Scroll to top immediately
+    setTimeout(() => {
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          slowScrollTo(targetY, 1500); // 1.5 seconds duration for scrolling
+        }, 1000);
+      } else {
+        slowScrollTo(targetY, 1500); // 1.5 seconds duration for scrolling
+      }
+    }, 100);
+    
+    if (screenSize === 'small') {
       closeMenu();
     }
   };
@@ -72,18 +91,18 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { name: 'Features', scrollTo: 2500 },
-    { name: 'Pricing', scrollTo: 6100 },
-    { name: 'FAQ', scrollTo: 8400 },
+    { name: 'Features', largeScreenScrollTo: 1500, avgScreenScrollTo: 1500, mediumScreenScrollTo: 2400, smallScreenScrollTo: 2100 },
+    { name: 'Pricing', largeScreenScrollTo: 5000, avgScreenScrollTo: 6000, mediumScreenScrollTo: 6700, smallScreenScrollTo: 5800 },
+    { name: 'FAQ', largeScreenScrollTo: 7200, avgScreenScrollTo: 9000, mediumScreenScrollTo: 9800, smallScreenScrollTo: 9700 },
     { name: 'Affiliates', link: '/leaderboard' },
     { name: 'Contact Us', link: '/contactus' },
   ];
 
   return (
-    <nav className={`navbar Container ${isSmallScreen ? 'small-screen scrolled' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar Container ${screenSize === 'small' ? 'small-screen scrolled' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className='navbar-header'>
         <Logo />
-        {isSmallScreen && (
+        {screenSize === 'small' && (
           <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
             ☰
           </div>
@@ -96,18 +115,16 @@ const Navbar = () => {
               {item.link ? (
                 <NavLink exact to={item.link} onClick={closeMenu}>{item.name}</NavLink>
               ) : (
-                <a onClick={() => { scrollToSection(item.scrollTo); closeMenu(); }}>{item.name}</a>
+                <a onClick={() => { scrollToSection(item.largeScreenScrollTo, item.avgScreenScrollTo, item.mediumScreenScrollTo, item.smallScreenScrollTo); closeMenu(); }}>{item.name}</a>
               )}
             </li>
           ))}
-    
-            <li className='nav-buttons-small glow-text-test nav-buttons-small'>
-              Login 
-            </li>
+          <li className='nav-buttons-small glow-text-test nav-buttons-small'>
+            Login 
+          </li>
         </ul>
-    
       </div>
-      {!isSmallScreen && (
+      {screenSize !== 'small' && (
         <div className="nav-buttons">
           <button className="register-btn glow-text-test">Login</button>
         </div>

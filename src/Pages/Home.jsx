@@ -1,15 +1,15 @@
 import React, { useRef } from "react";
 import Navbar from "../components/Navbar/Navbar";
+import StartClippingBtn from '../components/StartClippingBtn/StartClippingBtn';
 import HeroSectionLanding from "../components/HeroSectionLanding/HeroSectionLanding";
 import PricingSection from "../components/PricingSection/PricingSection";
 import LogoSlideshow from "../components/LogoSlideshow/LogoSlideshow";
-import GetOfferBtn from "../components/GetOfferBtn/GetOfferBtn";
 import BackToTopPhone from "../components/BackToTopPhone/BackToTopPhone";
-
+import ServiceContainer from "../components/ServiceContainer/ServiceContainer";
 import FAQ from "../components/FAQ/FAQ";
-import Slider2 from "../components/Slider2/Slider2";
-import AnimateCounter from "../components/Counter/Counter";
 import Slider from "../components/Slider/Slider";
+import AnimateCounter from "../components/Counter/Counter";
+import Slideshow from "../components/Slideshow/Slideshow";
 import Adin from "../assets/New folder/influncers bottom rown/Adin Ross.webp";
 import Andrew from "../assets/New folder/influncers bottom rown/Andrew Tate.webp";
 import drake from "../assets/New folder/influncers bottom rown/drake .mp4";
@@ -34,20 +34,13 @@ import imgs9 from "../assets/New folder/Influncers Top row/Stevewilldoit.mp4";
 import imgs10 from "../assets/New folder/Influncers Top row/Suga Sean Omalley.webp";
 import imgs11 from "../assets/New folder/Influncers Top row/XQC.mp4";
 import imgs12 from "../assets/New folder/Influncers Top row/Yodit Yemane .webp";
-import SliderTop from "../components/SliderTop/SliderTop";
+import SlideshowTop from "../components/SlideshowTop/SlideshowTop";
 import Footer from "../components/Footer/Footer";
-import ScrollProgressBar from "./ScrollProgress";
-import radiengoat from "../assets/videos/9;16 hero.mp4";
-import cleanvid from "../assets/videos/clean.mov";
-import ripvid from "../assets/videos/rip finished edit.mov";
-import repost from "../assets/videos/post CG lp.mov";
-import repeatvid from "../assets/videos/Repeat fin CG.mov";
-import rinsephone from "../assets/videos/rinse 640 x 480.mov";
-import updatedFinal from "../assets/videos/Updated final.mp4";
 
-import ripvidphone from "../assets/videos/rip  640 x 480.mov";
-import repostphone from "../assets/videos/post CG lp.mov";
-import repeatvidphone from "../assets/videos/repeat  640 x 480.mov";
+import herovideo from "../assets/videos/Updated final.mp4";
+
+import herovideophone from "../assets/videos/9;16 hero.mp4";
+
 import "./Home.css";
 
 const Home = () => {
@@ -198,61 +191,28 @@ const Home = () => {
     },
   ];
 
-  const targetRef = useRef(null);
+  const containerRef = useRef(null);
   const items = [
     { name: "Chloe", description: "Crypto Investing", content: "asgdasgs" },
     { name: "William", description: "Amazon FBA", content: "asgdasgs" },
     { name: "Arthur", description: "Amazon FBA", content: "asgdasgs" },
     { name: "Eric", description: "Amazon FBA", content: "asgdasgs" },
   ];
-  const homeItems = [
-    {
-      icon: <i className="fa-regular fa-video-arrow-down-left text-xl"></i>,
-      title: "Rip",
-      description:
-        "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
-      videoSrc: ripvidphone,
-      className: "text-rip-color",
-    },
-    {
-      icon: <i class="fa-regular fa-hand-sparkles "></i>,
-      title: "Rinse",
-      description:
-        "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
-      videoSrc: rinsephone,
-      className: "text-clean-color",
-    },
-    {
-      icon: <i class="fa-regular fa-paper-plane"></i>,
-      title: "Repost",
-      description:
-        "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
-      videoSrc: repost, 
-      className: "text-repost-color", 
-    },
-    {
-      icon: <i className="fa-regular fa-repeat text-xl"></i>,
-      title: "Repeat",
-      description:
-        "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",
-      videoSrc: repeatvidphone, 
-      className: "text-repeat-color", 
-    },
-  ];
+
   return (
     <>
     <BackToTopPhone />
-      <div className="homeheroimg">
+      <div className="home-hero-video">
       <video
-    className="imghero"
+    className="video-hero"
     loading="lazy"
     autoPlay
     loop
     muted
     playsInline
   >
-    <source src={radiengoat} media="(max-width: 600px)" type="video/mp4" />
-    <source src={updatedFinal} media="(min-width: 601px)" type="video/mp4" />
+    <source src={herovideophone} media="(max-width: 600px)" type="video/mp4" />
+    <source src={herovideo} media="(min-width: 601px)" type="video/mp4" />
     <track kind="captions" srclang="en" label="English captions" />
     Your browser does not support the video tag.
   </video>
@@ -261,36 +221,20 @@ const Home = () => {
         <HeroSectionLanding />
       </div>
       <div>
-        <div className="AnimateCounterHomePhone">
-          <section>
-            <AnimateCounter targetDate="2024-08-31T23:59:59" />
-          </section>
-        </div>
+     
         <div className="challenge-container-phone">
-          <div className="challenge-card ">
-            <h2 className="clippergoat-price">
-              $120<span className="clippergoat-challenge-period">/month</span>
-            </h2>
-            <p className="clippergoat-price-description">
-              With ClipperGoat you can repurpose your most viral content 1000
-              times a month! Now that's a lot of content!
-            </p>
-            <button className="clippergoat-cta">Challenge</button>
-            <ul className="clippergoat-features">
-              <li className="clippergoat-feature-item">
-                Great for ANY INDUSTRY
-              </li>
-              <li className="clippergoat-feature-item">
-                IDEAL for short form marketing
-              </li>
-              <li className="clippergoat-feature-item">
-                Use for Reels, Shorts, and Toks
-              </li>
-              <li className="clippergoat-feature-item">
-                Use on EVERY PLATFORM
-              </li>
-            </ul>
-          </div>
+
+<AnimateCounter targetDate="2024-08-31T23:59:59" />  
+<div className='clippergoat-cta-hero-div'>
+
+             <div className="challenge-btn-phone">
+             <StartClippingBtn
+      text="Challenge Accepted" 
+      to="/reviving-clips" 
+    />
+             </div>
+        </div>
+         
         </div>
         <div className="Container-Spacing">
           <div className="spacing-counter">
@@ -303,76 +247,13 @@ const Home = () => {
             </p>
           </div>
           <div className="Container-Spacing">
-            <SliderTop images={IMAGES} direction="left" />
-            <SliderTop images={INFLUENCERS} direction="right" />
+            <SlideshowTop images={IMAGES} direction="left" />
+            <SlideshowTop images={INFLUENCERS} direction="right" />
           </div>
         </div>
 
+    <ServiceContainer />
 
-        <div
-          className="information-container Container-Spacing"
-          ref={targetRef}
-        >
-          <ScrollProgressBar targetRef={targetRef} />
-          <div className="">
-            <div className="information-container-header-div">
-              <h1 className="information-container-header custom-header-title ">
-                <span className="serivces-section">
-                Revitalize Your Content
-                </span>
-                <span className="glow-text serivces-section">
-                  {" "}<br/>
-                     Rip, Rinse,  Repost, Repeat!
-                </span>
-              </h1>
-              <p className="custom-header-subtitle ">
-                Transform your viral content and dominate social media platforms
-                effortlessly.
-              </p>
-            </div>
-            {homeItems.map((item, index) => (
-              <div className="HomeImgContainer" key={index}>
-                <div className="HomeImgContainerHeader">
-                  <div className="HomeImgContainerHeaderContent">
-                    <span className="glow-text">{item.icon}</span>
-                    <p className="HomeImgContainerHeaderFirst">{item.title}</p>
-                    <p className="HomeImgContainerHeaderSecond">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="getofferlarge">
-                    <GetOfferBtn />
-                  </div>
-                </div>
-                <div className="image-box-container">
-                  <div className="image-box">
-                    <video
-                      loading="lazy"
-                      src={item.videoSrc}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
-                      <track
-                        kind="captions"
-                        srclang="en"
-                        label="English captions"
-                      />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-                <div className="getoffersmall">
-                  <GetOfferBtn />
-                </div>
-              </div>
-            ))}
-          </div>
-
-
-          
-        </div>{" "}
         <LogoSlideshow />{" "}
         <div>
           <h1 className="information-container-header custom-header-title ">
@@ -387,7 +268,7 @@ const Home = () => {
           </p>
         </div>
         <div className="Container-Spacing"></div>
-        <Slider2 />
+        <Slider />
         <div className="Container-Spacing">
           <PricingSection />
         </div>
@@ -399,10 +280,10 @@ const Home = () => {
           ClipperGoat revolutionizes social media management, driving traffic and engagement across all social media platforms. Users praise its powerful tools for optimizing content and maximizes reach.
           </p>
         </div>
-        <Slider items={items} />
+        <Slideshow items={items} />
       </div>
       <div>
-        <div className="Container-Spacing-Lg">
+        <div className="Container-Spacing-Lg" id="faq-section">
           <h1 className="information-container-header custom-header-title ">
             Frequently <div className="break-div"><br/></div> Asked <div className="break-div"><br/></div> <span className="glow-text">Questions</span>
           </h1>

@@ -4,6 +4,7 @@
   padding: 20px;
   text-align: center;
 }
+
 .home-header .subtitle {
   font-size: 1rem;
   font-weight: bold;
@@ -19,97 +20,16 @@
   color: white !important;
 }
 
-.information-container {
-  padding-right:70px;
-  display: grid;  
-    grid-template-columns: 2% 98%;
-}
-.information-container h1{
-  margin-bottom: 30px;;
-}
-.information-container .custom-header-subtitle {
-  margin-bottom: 50px;;
-
-}
-.information-container-header,
-.custom-header-subtitle {
-  text-align: center;
-}
-
-.HomeImgContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  margin-top:100px !important;  
-  height:450px;
-
-}
-
-.HomeImgContainer video {
-  border-top-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  width: 100%; 
-  height:430px !important;
-   object-fit: cover;
-  opacity: 1;
-z-index: 214;
-}
-.image-box-container {
-  width: 90%;
-  border: 1px solid rgba(52, 130, 255, 0.3);
-  border-radius: 11px;
-
-  padding: 10px;
-}
-
-.image-box {
-  border-radius: 9px;
-  padding: 20px;
-  box-shadow: 0 0 115px rgba(20, 110, 255, 0.5), inset    0 0 55px rgba(20, 110, 255, 0.5);
-  background-color: var(--main-color-2);
-  
-}
-
-.HomeImgContainerHeaderFirst {
-  font-size: 24px;
-  color: white;
-  font-weight: 700;
-}
-.information-container-header-div{
-}
-
-.HomeImgContainerHeaderSecond {
-  color: rgb(115, 115, 115);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.HomeImgContainerHeader {
-  max-width: 90%;
-  margin: 0px auto;
-}
-
-.HomeImgContainerHeader svg {
-  color: var(--main-color-lightest);
-  font-size: 30px;
-}
-.HomeImgContainer i{
-  font-size: 30px;
-  color: #65a0ff ;
-}
-.HomeImgContainerHeaderContent *{
-  margin-bottom: 20px;
-}
-.challenge-card{
+.challenge-card {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
-  color:white;
+  color: white;
   padding: 20px;
   box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
-  height:380px;
+  height: 380px !important;
   max-width: 340px;
   margin: 20px auto;
   position: relative;
@@ -118,176 +38,156 @@ z-index: 214;
   border: 1px solid rgba(52, 130, 255, 0.1);
 }
 
-.AnimateCounterHomePhone{
+.AnimateCounterHomePhone {
   display: none;
   flex-direction: column;
-  width:100%;
+  width: 100%;
   align-items: center; 
-  margin-top:30px;
-  color:white !important;
+  margin-top: 30px;
+  color: white !important;
 }
- .HomeImgContainer {
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 0px;
-  
-}
-.getoffersmall{
+
+.getoffersmall {
   display: none;
-  margin-top:40px;
+  margin-top: 40px;
 }
-.imghero{
+
+.video-hero {
   position: absolute;
-  height:100%;
+  height: 100%;
   width: 100%;
   opacity: 0.5;
-  object-fit: cover; z-index: -1;
+  object-fit: cover; 
+  z-index: -1;
 }
-.homeheroimg {
+
+.home-hero-video {
   color: white;
   position: relative;
   height: 100%;
 }
-.challenge-container-phone{
-  display: none; 
-  width:100%;
-  justify-content: center;
-  margin-top:-20px;
-  padding-left: 20px;
-  padding-right:20px;
-padding-top: 40px;
-} 
-.serivces-section{
+
+
+.serivces-section {
   line-height: 50px !important;
 }
-.break-div {display: none;}
 
-@media (max-width: 700px) {
-  .HomeImgContainer {
-height: 700px !important;
-
-  }  
-  .AnimateCounterHomePhone {
-     margin-left:0px;
-     display: block !important;
-  } 
-.break-div {display: block;}
-.homeheroimg{
-  height:580px !important; 
-
+.break-div {
+  display: none;
 }
-  .HomeImgContainer video {
 
-    height:250px !important; 
-    width:100% !important; 
-  }
-  .landing-counter-container-header{
-    font-size:21px;
-  }
-  .challenge-card{
-    padding: 20px;
-    height:390px;
-  }
-  .clippergoat-price{
-    font-size:32px;
-  }
-  .clippergoat-price-description{
-    font-size:14px;
-    margin-bottom: 20px;
-  }
-  .clippergoat-cta{
-    font-size:14px;
-  }
-  .clippergoat-feature-item{
-    font-size:14px;
-    margin-bottom: 5px;
-
-  }
-}
-@media (max-width: 1000px) {
-  .information-container-header-div{
-    margin-left:-0px;
-  }
-  .information-container{
-    padding-right:0px !important;
-
-  }
 .challenge-container-phone{
-  display: flex; 
+  display: none; 
+  color:white;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;  
+  margin:50px auto;
+  width:100%;
+  height:450px;
+  position: relative;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
+  max-width: 390px;
+  background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
+  background-color: rgba(20, 110, 255, 0.01);
+  border: 1px solid rgba(52, 130, 255, 0.1);
 }
+.challenge-btn-phone{
+  margin-top:20px;
+  display: flex;
+  justify-content: center;
+  width:100%;
 }
 @media (max-width: 1300px) {
-
-  .getoffersmall{
-    display: block;
-    width:80%;
+ 
+  .home-header {
+    margin-top: 450px;
   }
 
-  .getofferlarge{
-    display: none;
-  }
-  .HomeImgContainer {
-    flex-direction: column;  height: 800px;
-
-    align-items: center; 
-    justify-content: center;
-    margin-top:10px !important;
-  }  
-  .information-container {
-    display: grid;
-    padding:0px;
-    grid-template-columns: 5% 95%;
-  }
-  .home-header{
-    margin-top:450px;
 }
-.image-box-container {
-    width: 90%;
-    border: 1px solid rgba(52, 130, 255, 0.3);
-    border-radius: 11px;
-    padding:  5px;
-    margin-top: 20px;
+@media (max-width: 1000px) {
+  .AnimateCounterHomePhone {
+    margin-left: 0;
+    display: block !important;
   }
-  .image-box {
-    border-radius: 9px;
-    padding: 10px;
-    box-shadow: 0 0 115px rgba(20, 110, 255, 0.5), inset    0 0 55px rgba(20, 110, 255, 0.5);
-    background-color: var(--main-color-2);
+  
+  .challenge-container-phone {
+    display: flex; 
+  }
+}
+@media (max-width: 700px) {
+  .challenge-container-phone{
+    display: flex;
+    width:90%;
+    height:440px;
+  }
+  
+  .home-hero-video {
+    height: 580px !important;
+  }
+  
+  .Home-Services-Container video {
+    height: 250px !important; 
+    width: 100% !important; 
+  }
+  
+
+  
+  .challenge-card {
+    padding: 20px;
+    height: 390px;
+  }
+  
+  .clippergoat-price {
+    font-size: 32px;
+  }
+  
+  .clippergoat-price-description {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .clippergoat-cta {
+    font-size: 14px;
+  }
+  
+  .clippergoat-feature-item {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .challenge-card {
+    padding: 20px;
+    height: 310px;
+    max-width: 280px;
   }
 }
 @media (min-width: 1300px) {
-  .feature-bar {
-    flex-wrap: nowrap;
-  }
-
-  .feature-bar span {
-    font-size: 1.1rem;
-  }
 
   .home-header .title {
     font-size: 3.5rem;
   }
 
-
-
-
-  .image-box-container {
+  .video-box-container {
     width: 55%;
     margin-top: 0;
   }
 
-  .HomeImgContainerHeader {
+  .Home-Services-Container-Header {
     max-width: 400px;
     margin-left: 8%;
     text-align: left;
   }
 
-  .HomeImgContainerHeaderFirst {
+  .Home-Services-Container-Header-First {
     font-size: 36px;
   }
 
-  .HomeImgContainerHeaderSecond {
+  .Home-Services-Container-Header-Second {
     font-size: 21px;
   }
 }
- 

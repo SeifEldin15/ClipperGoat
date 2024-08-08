@@ -1,41 +1,41 @@
-.LogoSlideshow-container {
+.logo-slideshow-container {
   position: relative;
   overflow: hidden;
   width: 100%;
   color: #fff;
 }
 
-.LogoSlideshow-container img {
+.logo-slideshow-container img {
   object-fit: contain;
-  margin-left: 45px !important;  
+  margin-left: 45px !important;
 }
 
-.logo.netflix {
-  width: 100px;  
+.logo-netflix {
+  width: 100px;
 }
 
-.logo.google {
-  width: 100px;  
+.logo-google {
+  width: 100px;
 }
 
-.logo.meta {
+.logo-meta {
   max-width: 200px;
   height: 30px !important;
 }
 
-.logo.onlyfans {
-  width: 100px;  
+.logo-onlyfans {
+  width: 100px;
 }
 
-.LogoSlideshow-container11 {
-  height: 250px !important;
+.logo-slideshow-container11 {
+  height: 150px !important;
   display: flex;
   align-items: center;
   margin-bottom: 80px;
 }
 
-.LogoSlideshow-container::before,
-.LogoSlideshow-container::after {
+.logo-slideshow-container::before,
+.logo-slideshow-container::after {
   content: "";
   position: absolute;
   top: 0;
@@ -44,7 +44,7 @@
   z-index: 2;
 }
 
-.LogoSlideshowslideshow {
+.logo-slideshow {
   display: flex;
   transition: none;
   align-items: center;
@@ -53,23 +53,17 @@
 }
 
 .element {
-  /* background: linear-gradient(
-    to left bottom,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0) 50%
-  ); */
   width: 100%;
-  height: 300px;  
+  height: 300px;
 }
 
-.LogoSlideshow-container h2 {
+.logo-slideshow-container h2 {
   text-align: center;
   margin-bottom: 40px;
   color: white !important;
 }
 
-
-.LogoSlideshow-container .logo {
+.logo-slideshow-container .logo {
   height: 40px;
   margin: 0 45px;
   filter: grayscale(100%) brightness(70%);
@@ -77,38 +71,37 @@
 }
 
 @media screen and (max-width: 768px) {
-  .LogoSlideshow-container::before,
-  .LogoSlideshow-container::after {
+  .logo-slideshow-container::before,
+  .logo-slideshow-container::after {
     width: 15%;
   }
 
-  .LogoSlideshow-container {
-    padding-top: 80px;
+  .logo-slideshow-container {
     padding-bottom: 10px;
   }
 
-  .LogoSlideshow-container img {
-    margin-left: 45px !important;  
+  .logo-slideshow-container img {
+    margin-left: 45px !important;
   }
 
-  .logo.netflix {
-    width: 80px;  
+  .logo-netflix {
+    width: 80px;
   }
 
-  .logo.google {
-    width: 80px;  
+  .logo-google {
+    width: 80px;
   }
 
-  .logo.meta {
+  .logo-meta {
     max-width: 170px;
     height: 30px !important;
   }
 
-  .logo.onlyfans {
-    width: 80px;  
+  .logo-onlyfans {
+    width: 80px;
   }
 
-  .LogoSlideshow-container h2 {
+  .logo-slideshow-container h2 {
     font-size: 18px !important;
   }
 }

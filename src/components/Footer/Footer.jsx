@@ -1,8 +1,9 @@
 // components/Footer.js
 import React from "react";
 import "./Footer.css";
-import Logo from "../../assets/logo.webp";
+// import Logo from "../../assets/NEW-GOAT222.png";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import Logo from "../Logo/Logo";
 
 const Footer = () => {
   // const handleBackToTop = () => {
@@ -23,17 +24,18 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-info">
             <div className="footer-logo">
-              <img src={Logo} alt="Logo" />
+              <Logo />
             </div>
             <p className="footer-description">
             Clippergoat is an AI-powered software company specializing in editing social media content to enable seamless reposting without detection, helping creators maintain originality and engagement while efficiently managing content reuse
             </p>
         
             <div className="social-icons social-icons-normal">
-              <i className="fa-brands fa-whatsapp"></i>
               <i className="fa-brands fa-instagram"></i>
               <i className="fa-brands fa-facebook-f"></i>
               <i className="fa-brands fa-tiktok"></i>
+              {/* <i class="fa-brands fa-x-twitter"></i> */}
+            <i class="fa-brands fa-twitter"></i>
             </div>
           </div>
           {/* <button onClick={handleBackToTop} className="back-to-top back-to-top-normal">
@@ -70,13 +72,13 @@ const Footer = () => {
             <p className="contact-info-footer">Phone:  +1 (480) 236-4263</p>
         </div>
         <div className="social-icons social-icons-phone">
-              <i className="fa-brands fa-whatsapp"></i>
-              <i className="fa-brands fa-instagram"></i>
-              <i className="fa-brands fa-facebook-f"></i>
-              <i className="fa-brands fa-tiktok"></i>
+           <i className="fa-brands fa-instagram"></i>
+           <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-tiktok"></i>
+            <i class="fa-brands fa-twitter"></i>
             </div>
         <p className="footer-copyright">
-          Copyright &copy; 2022. All rights reserved.
+          Copyright &copy; 2024. All rights reserved.
         </p>
       </div>
     </footer>

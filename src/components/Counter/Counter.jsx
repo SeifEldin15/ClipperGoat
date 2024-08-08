@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes, css } from 'styled-components';
-import { useSpring, animated } from '@react-spring/web';
-import './Counter.css';
 
 const shake = keyframes`
   0% { transform: translateX(0); }
@@ -39,15 +37,10 @@ const CounterWrapper = styled.div`
     animation: ${shake} 0.5s ease-in-out;
   `}
 
-  // @media screen and (min-width: 769px) {
-  //   padding: 15px;
-  //   transform: scale(0.9);
-  // }
-
-  // @media screen and (max-width: 768px) {
-  //   padding: 15px;
-  //   margin-top: 20px;
-  // }
+  @media screen and (max-width: 410px) {
+    padding: 15px;
+    margin-top: 15px;
+  }
 `;
 
 const DigitBox = styled.div`
@@ -64,19 +57,12 @@ const DigitBox = styled.div`
   -webkit-text-stroke: 1.5px #3a78ff;
   animation: ${neonPulse} 1.5s infinite;
 
-  // @media screen and (max-width: 768px) {
-  //   font-size: 27px;
-  //   padding: 10px;
-  //   min-width: 70px;
-  //   margin: 0 5px;
-  // }
-
-  // @media screen and (max-width: 480px) {
-  //   font-size: 24px;
-  //   padding: 8px;
-  //   min-width: 50px;
-  //   margin: 0 3px;
-  // }
+  @media screen and (max-width: 410px) {
+    font-size: 22px;
+    padding: 8px;
+    min-width: 50px;
+    margin: 0 6px;
+  }
 `;
 
 const TimeLabel = styled.p`
@@ -84,7 +70,10 @@ const TimeLabel = styled.p`
   margin-top: 5px;
   margin: 8px 8px;
 
- 
+  @media screen and (max-width: 410px) {
+    font-size: 13px;
+    margin: 6px 6px;
+  }
 `;
 
 const AnimatedCounter = ({ targetDate }) => {
@@ -124,7 +113,7 @@ const AnimatedCounter = ({ targetDate }) => {
   const formatNumber = (num) => num.toString().padStart(2, '0');
 
   return (
-    <animated.div className='counter-container'>
+    <div className='counter-container'>
       <div className='counter-content'>
         <div className="landing-counter-container-header">
           <h1 className='glow-text-test'>Join the $10 Million</h1>
@@ -147,7 +136,7 @@ const AnimatedCounter = ({ targetDate }) => {
           </CounterWrapper>
         </div>
       </div>
-    </animated.div>
+    </div>
   );
 };
 

@@ -18,7 +18,6 @@
   @media screen and (max-width: 768px) {
     .faq-item:hover {
          margin: 20px auto;
-  
     }
     .faq-item {
       margin-bottom: 15px;
@@ -26,6 +25,11 @@
       font-size: 14px;
     }
       
+  }
+  @media screen and (max-width: 400px) {
+    .faq-item {
+      font-size: 10px;
+    }
   }
   .faq-question {
     background-color: #16213e;

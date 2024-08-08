@@ -13,10 +13,10 @@ const shake = keyframes`
 
 const neonPulse = keyframes`
   0%, 100% {
-    text-shadow: 0 0 3px #3a78ff, 0 0 6px #3a78ff, 0 0 9px #3a78ff;
+    text-shadow: 0 0 4px #3a78ff, 0 0 8px #3a78ff, 0 0 12px #3a78ff;
   }
   50% {
-    text-shadow: 0 0 4px #3a78ff, 0 0 8px #3a78ff, 0 0 12px #3a78ff;
+    text-shadow: 0 0 6px #3a78ff, 0 0 12px #3a78ff, 0 0 18px #3a78ff;
   }
 `;
 
@@ -29,51 +29,52 @@ const CounterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 30px rgba(20, 110, 255, 0.55), inset 0 0 75px rgba(20, 110, 255, 0.55);
-  background-color: rgba(17, 24, 39, 0.75);
+  box-shadow: 0 0 35px rgba(20, 110, 255, 0.6), inset 0 0 85px rgba(20, 110, 255, 0.6);
+  background-color: rgba(17, 24, 39, 0.8);
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 15px;
   z-index: 1000;
-  border: 1.5px solid rgba(52, 130, 255, 1);
+  border: 2px solid rgba(52, 130, 255, 1);
   ${props => props.shake && css`
     animation: ${shake} 0.5s ease-in-out;
   `}
-  @media screen and (max-width: 750px) {
+
+  @media screen and (max-width: 410px) {
     padding: 15px;
-    border-radius: 8px;
+    margin-top: 15px;
   }
 `;
 
 const DigitBox = styled.div`
-  box-shadow: 0 0 7px rgba(59, 130, 246, 0.6);
-  color: white;
-  font-size: 36px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+  font-size: 24px;
   font-weight: bold;
-  padding: 12px;
-  margin: 0 7px;
-  border-radius: 7px;
-  min-width: 80px;
+  padding: 8px;
+  margin: 0 8px;
+  border-radius: 10px;
+  min-width: 60px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1.5px solid rgba(52, 130, 255, 1);
-  -webkit-text-stroke: 1.25px #3a78ff;
+  border: 2px solid rgba(52, 130, 255, 1);
+  -webkit-text-stroke: 1.5px #3a78ff;
   animation: ${neonPulse} 1.5s infinite;
 
-  @media screen and (max-width: 750px) {
-    font-size: 24px;
+  @media screen and (max-width: 410px) {
+    font-size: 22px;
     padding: 8px;
-    margin: 0 5px;
-    min-width: 60px;
-    border-radius: 5px;
+    min-width: 50px;
+    margin: 0 6px;
   }
 `;
 
 const TimeLabel = styled.p`
-  font-size: 18px;
-  margin: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin: 8px 8px;
 
-  @media screen and (max-width: 750px) {
-    font-size: 12px;
+  @media screen and (max-width: 410px) {
+    font-size: 13px;
+    margin: 6px 6px;
   }
 `;
 
@@ -116,7 +117,7 @@ const AnimatedCounter = ({ targetDate }) => {
   return (
     <animated.div className='counter-container'>
       <div className='counter-content'>
-        <div className="landing-leader-counter-container-header ">
+        <div className="landing-leaader-header ">
           <h1 className='glow-text-test'>CLIPPERGOAT</h1>
           <h1 className='glow-text-test'>$10 million challenge</h1>
         </div>

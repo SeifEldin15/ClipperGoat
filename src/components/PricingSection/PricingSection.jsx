@@ -1,29 +1,42 @@
 import React from 'react';
 import './PricingSection.css';
+import StartClippingBtn from '../StartClippingBtn/StartClippingBtn';
 
 const PricingCard = ({ title, price, description, features, soonToCome, popular }) => (
-  <div className={`pricing-card ${popular ? 'popular' : ''} ${title === 'Agency'? 'custom-pricing-height2' : 'custom-pricing-height'}`}>
-    {popular && <div className="popular-tag"><i className='bx bx-info-circle' ></i> Most Popular</div>}
-    <p className={` pricing-card-header ${title === 'Agency'? 'custom-pricing-card-header' : 'custom-pricing-card-header-2'}`}>{title}</p>
-    <div className="price">${price}</div>
-    <p className='BilledMonthly'><i className="fa-solid fa-credit-card"></i> Billed Monthly</p>
-    <p className='description'>{description}</p>
-    <button className='get-started-btn'>Get started</button>
-    <ul className='features-list'>
+  <div className={`pricing-card ${popular ? 'pricing-card--popular' : ''} ${title === 'Agency' ? 'pricing-card--custom-highlight' : 'pricing-card--custom-normal'}`}>
+    {popular && (
+      <div className="popular-tag">
+        <i className="popular-tag__icon fa-solid fa-info-circle"></i> Most Popular
+      </div>
+    )}
+    <p className={`pricing-card__header ${title === 'Agency' ? 'pricing-card__header--custom' : ''}`}>{title}</p>
+    <div className="pricing-card__price">${price}</div>
+    <p className="pricing-card__billed-monthly">
+      <i className="fa-solid fa-credit-card"></i> Billed Monthly
+    </p>
+    <p className="pricing-card__description">{description}</p>
+   <div className="pricing-section-btn">
+   <StartClippingBtn
+      text="Get Started!" 
+      to="/reviving-clips" 
+    />
+   </div>
+    <ul className="pricing-card__features-list">
       {features.map((feature, index) => (
-                <div className='soon-to-come-container'>
-        <i class="fa-solid fa-check soon-to-come-check"></i>
-        <li key={index}>{feature}</li>
+        <div className="pricing-card__soon-to-come-container">
+          <i className="fa-solid fa-check pricing-card__soon-to-come-check"></i>
+          <li key={index}>{feature}</li>
         </div>
-
       ))}
     </ul>
-    <ul className='soon-to-come-list'>
-      <div><strong>Soon to Come:</strong></div>
+    <ul className="pricing-card__soon-to-come-list">
+      <div>
+        <strong>Soon to Come:</strong>
+      </div>
       {soonToCome.map((feature, index) => (
-        <div className='soon-to-come-container'>
-        <i class="fa-solid fa-check soon-to-come-check"></i>
-        <li key={index}>{feature}</li>
+        <div className="pricing-card__soon-to-come-container">
+          <i className="fa-solid fa-check pricing-card__soon-to-come-check"></i>
+          <li key={index}>{feature}</li>
         </div>
       ))}
     </ul>
@@ -47,11 +60,10 @@ function PricingSection() {
       soonToCome: [
         "Video Game Splitter",
         "Auto-Poster",
-        "Auto-DM’er",
+        "Auto-DM'er",
         "Account Warmer",
       ]
     },
-
     {
       title: "Agency",
       price: "300",
@@ -82,7 +94,6 @@ function PricingSection() {
         "Includes all Features in Clippreneur & Agency",
         "Custom Integrations and Automations",
         "Personalized Enhancements and Optimizations",
-        // "Dedicated Support and Maintenance",
       ],
       soonToCome: [
         "Account Management",
@@ -93,8 +104,11 @@ function PricingSection() {
   ];
 
   return (
-    <div className="PricingSection">
-      <h1 className="custom-header-title">Choose Your <div className="break-div"><br/></div><span className="information-container-header-span glow-text">Perfect Plan</span></h1>
+    <div className="pricing-section" id="pricing-section">
+      <h1 className="pricing-section__title custom-header-title">
+        Choose Your <div className="break-div"><br /></div>
+        <span className="information-container-header-span glow-text">Perfect Plan</span>
+      </h1>
       <p className="custom-header-subtitle">Flexible pricing to suit your needs, whether you're a solo creator or a large agency.</p>
       <div className="pricing-container">
         {plans.map((plan, index) => (

@@ -5,9 +5,9 @@ import Footer from '../components/Footer/Footer';
 import InfoCard from '../components/InfoCard/InfoCard';
 import './Leaderboard.css';
 import pfpimg from '../assets/500x500.jpg';
-import imageSmall from './radiengoat-small.webp';
-import imageMedium from './radiengoat-medium.webp';
-import imageLarge from './radiengoat-large.webp';
+import imageSmall from '../assets/radiengoat-small.webp';
+import imageMedium from '../assets/radiengoat-medium.webp';
+import imageLarge from '../assets/radiengoat-large.webp';
 
 const LeaderboardItem = ({ username, userTag, rank, isUp, earnings }) => (
   <div className="profile-container">
@@ -26,15 +26,17 @@ const LeaderboardItem = ({ username, userTag, rank, isUp, earnings }) => (
   </div>
 );
 
-const LeaderboardCard = ({ rank, name, score, username, isGoat }) => (
-  <div className={`leader-card ${isGoat ? 'goat' : ''}`}>
+const LeaderboardCard = ({ rank, name, score, username, isGoat, isGoat2 }) => (
+  <div className={`leader-card ${isGoat ? 'goat' : ''} ${isGoat2 ? 'goat2' : ''}`}>
     {isGoat && <div className="crown">👑</div>}
     {isGoat ? (
       <div className='goat-number'><p>{rank}</p></div>
+    ) : isGoat2 ? (
+      <div className='goat2-number'><p>{rank}</p></div>
     ) : (
       <div className="rank-number"><p>{rank}</p></div>
     )}
-    <div className={`avatar ${isGoat ? 'goat-avatar' : ''}`}>
+    <div className={`avatar ${isGoat ? 'goat-avatar' : isGoat2 ? 'goat2-avatar' : ''}`}>
       <img src={pfpimg} alt={name} />
     </div>
     <div className="name">{name}</div>
@@ -43,9 +45,10 @@ const LeaderboardCard = ({ rank, name, score, username, isGoat }) => (
   </div>
 );
 
+
 const Leaderboard = () => {
   const topLeaders = [
-    { rank: 2, name: "Gold Goats", score: "$539,946", username: "@jackson" },
+    { rank: 2, name: "Gold Goats", score: "$539,946", username: "@jackson", isGoat2: true  },
     { rank: 1, name: "Diamond TRUE GOAT", score: "$5,999,940", username: "@eiden", isGoat: true },
     { rank: 3, name: "Silver Goats", score: "$240,000", username: "@emmaaria" }
   ];

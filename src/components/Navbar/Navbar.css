@@ -81,6 +81,8 @@
     flex-direction: column;
     align-items: stretch;
     height: auto;
+    padding: 0rem;
+
   }
   .nav-buttons-small{
     display: block;
@@ -98,10 +100,10 @@
 
   .nav-content {
     position: absolute;
-    top: 100px; /* Adjust this value to match your navbar height */
+    top: 80px; /* Adjust this value to match your navbar height */
     left: 0;
     width: 100%;
-    background-color: #111827ce;
+    background-color: #111827f8;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
@@ -116,14 +118,18 @@
     flex-direction: column;
     align-items: stretch;
     padding: 1rem;
+    font-size:19px ;
     overflow-y: hidden;
+    text-align: center;
   }
 
   .nav-links li {
     margin: 0.5rem 0;
+    
   }
 
   .nav-links li a {
+    font-size:19px ;
     display: block;
     padding: 0.5rem 0;
   }

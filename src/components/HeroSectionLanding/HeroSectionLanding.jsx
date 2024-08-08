@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './HeroSectionLanding.css';
+import StartClippingBtn from '../StartClippingBtn/StartClippingBtn';
 
 import AnimateCounter from '../Counter/Counter';
 
@@ -21,16 +22,22 @@ function HeroSectionLandingHero() {
         <p className="clippergoat-hero-subtitle">
           Repurpose your most viral clips 1000 times a month using our AI-powered Short Form Editor. Perfect for any industry, ClipperGoat AI transforms your content into fresh, engaging videos in minutes.
         </p>
-        <button className="clippergoat-cta cta-hero-1">Get Started!</button>
+        <StartClippingBtn
+      text="Get Started!" 
+      to="/reviving-clips" 
+    />
        </div>
        <div className="clipper-hero-right ">
 
        <div className="landing-counter-container">
 
 <AnimateCounter targetDate="2024-08-31T23:59:59" />  
-<div className='clippergoat-cta-div'>
+<div className='clippergoat-cta-hero-div'>
 
-            <button className="clippergoat-cta cta-hero-2">Challenge Accepted</button>
+             <StartClippingBtn
+      text="Challenge Accepted" 
+      to="/reviving-clips" 
+    />
         </div>
          
           </div>
