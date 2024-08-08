@@ -34,10 +34,12 @@ function HeroSectionLandingHero() {
 <AnimateCounter targetDate="2024-08-31T23:59:59" />  
 <div className='clippergoat-cta-hero-div'>
 
+           <div className="challenge-btn-phone">
              <StartClippingBtn
       text="Challenge Accepted" 
       to="/reviving-clips" 
     />
+             </div>
         </div>
          
           </div>
