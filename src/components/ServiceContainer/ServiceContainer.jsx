@@ -52,7 +52,7 @@ const ServiceContainer = () => {
 
     const homeItems = [
         {
-            icon: <i className="fa-regular fa-video-arrow-down-left text-xl"></i>,
+            icon: <i className="fa-regular fa-video-arrow-down-left service-i"></i>,
             title: "Rip",
             description:
                 "Easily download your old content from any social media platform. Whether it's Instagram, TikTok, YouTube, or Facebook, our system allows you to retrieve your previous viral hits with just a few clicks.",
@@ -60,7 +60,7 @@ const ServiceContainer = () => {
             className: "text-rip-color",
         },
         {
-            icon: <i className="fa-regular fa-hand-sparkles "></i>,
+            icon: <i className="fa-regular fa-hand-sparkles service-i"></i>,
             title: "Rinse",
             description:
                 "Clear all metadata and refresh your videos using our Meta Magic cleaner and video editor AI. This step ensures your content is treated as new by social media algorithms, increasing its chances of going viral again.",
@@ -68,7 +68,7 @@ const ServiceContainer = () => {
             className: "text-clean-color",
         },
         {
-            icon: <i className="fa-regular fa-paper-plane"></i>,
+            icon: <i className="fa-regular fa-paper-plane service-i"></i>,
             title: "Repost",
             description:
                 "Repeat the process to keep your content evergreen. Continue to rip, rinse, and repost to maintain a constant presence and engagement on social media.",
@@ -76,7 +76,7 @@ const ServiceContainer = () => {
             className: "text-repost-color",
         },
         {
-            icon: <i className="fa-regular fa-repeat text-xl"></i>,
+            icon: <i className="fa-regular fa-repeat service-i"></i>,
             title: "Repeat",
             description:
                 "Utilize the TTYM method to repost your content across top platforms: TikTok, Twitter, YouTube Shorts, and Meta. This multi-platform approach boosts your reach and engagement.",

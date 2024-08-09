@@ -1,13 +1,12 @@
 import React from 'react';
 import './InfoCard.css';
 
-
 const InfoCard = () => {
   return (
   <>
     <div className="financial-freedom">
       <div className="content">
-        <h1 className=' custom-header-title'>Influencer Affiliate Tiers and Commissions <span className="glow-text">($120-$997 [300-4000] Credits) </span></h1>
+        <h1 className=' custom-header-title'>Influencer Affiliate Tiers and Commissions <br /> <span className="glow-text">($120-$997 [300-4000] Credits) </span></h1>
         <p>
           <span className="check-circle">✓</span> Free Affiliates: 10% (Sheep) / $12 - $99.70 Per Sale
         </p>
@@ -45,7 +44,7 @@ const InfoCard = () => {
     <div className="financial-freedom">
       <div className="content"> 
 
-        <h1 className=' custom-header-title'>Agencies, Marketers, and Sales Affiliate tiers: <span className="glow-text">10 Million Dollar Challenge!</span></h1>
+        <h1 className=' custom-header-title'>Agencies, Marketers, and Sales Affiliate tiers: <br/> <span className="glow-text">10 Million Dollar Challenge!</span></h1>
         <p>
           <span className="check-circle">✓</span> 25% (Lambs): 1-100 sales/month / $30 - $3,000 MINIMUM at $120
         </p>
@@ -74,7 +73,7 @@ const InfoCard = () => {
 
     <div className="financial-freedom">
       <div className="content">
-        <h1 className=' custom-header-title'>  Key Features for <span className="glow-text">ClipperGOAT.com Affiliates</span> </h1>
+        <h1 className=' custom-header-title'>  Key Features for <br/> <span className="glow-text">ClipperGOAT.com Affiliates</span> </h1>
         <p>
           <span className="check-circle">✓</span> Live Streaming on Multiple Platforms: Stream on YouTube, Facebook Live, Twitch, TikTok, Instagram Live, and more.
         </p>

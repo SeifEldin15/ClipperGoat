@@ -1,13 +1,13 @@
 import React from 'react';
-import HeroSectionLeader from '../components/HeroSectionLeader/HeroSectionLeader';
-import Navbar from '../components/Navbar/Navbar';
-import Footer from '../components/Footer/Footer';
-import InfoCard from '../components/InfoCard/InfoCard';
+import HeroSectionLeader from '../../components/HeroSectionLeader/HeroSectionLeader';
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
+import InfoCard from '../../components/InfoCard/InfoCard';
 import './Leaderboard.css';
-import pfpimg from '../assets/500x500.jpg';
-import imageSmall from '../assets/radiengoat-small.webp';
-import imageMedium from '../assets/radiengoat-medium.webp';
-import imageLarge from '../assets/radiengoat-large.webp';
+import pfpimg from '../../assets/500x500.jpg';
+import imageSmall from '../../assets/radiengoat-small.webp';
+import imageMedium from '../../assets/radiengoat-medium.webp';
+import imageLarge from '../../assets/radiengoat-large.webp';
 
 const LeaderboardItem = ({ username, userTag, rank, isUp, earnings }) => (
   <div className="profile-container">

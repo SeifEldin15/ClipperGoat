@@ -20,23 +20,7 @@
   color: white !important;
 }
 
-.challenge-card {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-  color: white;
-  padding: 20px;
-  box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
-  height: 380px !important;
-  max-width: 340px;
-  margin: 20px auto;
-  position: relative;
-  background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
-  background-color: rgba(20, 110, 255, 0.01);
-  border: 1px solid rgba(52, 130, 255, 0.1);
-}
+/* 
 
 .AnimateCounterHomePhone {
   display: none;
@@ -45,7 +29,7 @@
   align-items: center; 
   margin-top: 30px;
   color: white !important;
-}
+} */
 
 .getoffersmall {
   display: none;
@@ -58,9 +42,17 @@
   width: 100%;
   opacity: 0.5;
   object-fit: cover; 
-  z-index: -1;
+  z-index: -1;  
+  transition: filter 0.5s ease;
+}
+.blurred {
+  filter: blur(20px);
+  background-color: rgba(20, 110, 255, 0.5);
 }
 
+.loaded {
+  filter: blur(0);
+}
 .home-hero-video {
   color: white;
   position: relative;
@@ -72,28 +64,12 @@
   line-height: 50px !important;
 }
 
-.break-div {
+.challenge-card-phone
+{
+  width:100%;
   display: none;
 }
 
-.challenge-container-phone{
-  display: none; 
-  color:white;
-  justify-content: center;
-  padding: 20px;
-  flex-direction: column;  
-  margin:50px auto;
-  width:100%;
-  height:450px;
-  position: relative;
-  margin-bottom: 50px;
-  border-radius: 10px;
-  box-shadow: 0 0 25px rgba(20, 110, 255, 0.5), inset 0 0 65px rgba(20, 110, 255, 0.5);
-  max-width: 390px;
-  background-image: linear-gradient(to top, rgba(20, 110, 255, 0.1), rgba(0, 98, 255, 0.01));
-  background-color: rgba(20, 110, 255, 0.01);
-  border: 1px solid rgba(52, 130, 255, 0.1);
-}
 .challenge-btn-phone{
   margin-top:20px;
   display: flex;
@@ -108,22 +84,14 @@
 
 }
 @media (max-width: 1000px) {
-  .AnimateCounterHomePhone {
-    margin-left: 0;
-    display: block !important;
-  }
-  
-  .challenge-container-phone {
-    display: flex; 
+
+  .challenge-card-phone {
+    display: flex ;
+    justify-content: center;
   }
 }
 @media (max-width: 700px) {
-  .challenge-container-phone{
-    display: flex;
-    width:90%;
-    height:440px;
-  }
-  
+
   .home-hero-video {
     height: 580px !important;
   }
@@ -132,13 +100,7 @@
     height: 250px !important; 
     width: 100% !important; 
   }
-  
 
-  
-  .challenge-card {
-    padding: 20px;
-    height: 390px;
-  }
   
   .clippergoat-price {
     font-size: 32px;
@@ -165,6 +127,9 @@
     height: 310px;
     max-width: 280px;
   }
+  /* .challenge-card-phone{
+    height: 340px;
+  } */
 }
 @media (min-width: 1300px) {
 

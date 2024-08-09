@@ -94,7 +94,7 @@
   margin-bottom: 20px;
 }
 
-.pricing-card__get-started-btn {
+/* .pricing-card__get-started-btn {
   color: white;
   border: none;
   padding: 15px 20px;
@@ -110,7 +110,7 @@
 
 .pricing-card__get-started-btn:hover {
   box-shadow: 0 0 35px rgba(20, 110, 255, 0.5);
-}
+} */
 
 .pricing-card__features-list,
 .pricing-card__soon-to-come-list {
@@ -160,7 +160,9 @@
   background-color: var(--main-color-lighter);
   box-shadow: 0 0 15px rgba(20, 110, 255, 0.5);
 }
-
+.pricing-card--custom-normal .StartClipping {
+  background-color: transparent;
+}
 @media screen and (max-width: 1200px) {
   .pricing-container {
     gap: 20px;

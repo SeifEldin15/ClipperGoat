@@ -5,7 +5,7 @@ import './StartClipping.css';
 const StartClippingBtn = ({ text, to }) => {
   return (
     <Link to={to} className="StartClipping">
-      {text}
+      {text} <i class="fa-regular fa-arrow-right"></i>
     </Link>
   );
 }

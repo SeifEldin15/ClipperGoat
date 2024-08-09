@@ -1,49 +1,54 @@
-import React, { useRef } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import StartClippingBtn from '../components/StartClippingBtn/StartClippingBtn';
-import HeroSectionLanding from "../components/HeroSectionLanding/HeroSectionLanding";
-import PricingSection from "../components/PricingSection/PricingSection";
-import LogoSlideshow from "../components/LogoSlideshow/LogoSlideshow";
-import BackToTopPhone from "../components/BackToTopPhone/BackToTopPhone";
-import ServiceContainer from "../components/ServiceContainer/ServiceContainer";
-import FAQ from "../components/FAQ/FAQ";
-import Slider from "../components/Slider/Slider";
-import AnimateCounter from "../components/Counter/Counter";
-import Slideshow from "../components/Slideshow/Slideshow";
-import Adin from "../assets/New folder/influncers bottom rown/Adin Ross.webp";
-import Andrew from "../assets/New folder/influncers bottom rown/Andrew Tate.webp";
-import drake from "../assets/New folder/influncers bottom rown/drake .mp4";
-import bradly from "../assets/New folder/influncers bottom rown/bradly Martin .webp";
-import Fresh from "../assets/New folder/influncers bottom rown/Fresh.webp";
-import HUAK from "../assets/New folder/influncers bottom rown/HUAK THUA.mp4";
-import Ishowspeed from "../assets/New folder/influncers bottom rown/Ishowspeed.mp4";
-import KaiCent from "../assets/New folder/influncers bottom rown/KaiCent.webp";
-import Miami from "../assets/New folder/influncers bottom rown/Miami Swim week.mp4";
-import Neon from "../assets/New folder/influncers bottom rown/Neon.mp4";
-import Beast from "../assets/New folder/influncers bottom rown/Mr Beast.webp";
-import Brunson from "../assets/New folder/influncers bottom rown/Russel Brunson.webp";
-import imgs1 from "../assets/New folder/Influncers Top row/Alex Hormozi.webp";
-import imgs2 from "../assets/New folder/Influncers Top row/Donald Trump .webp";
-import imgs3 from "../assets/New folder/Influncers Top row/joe Rogan.mp4";
-import imgs3224 from "../assets/New folder/Influncers Top row/Jack Doherty .webp";
-import imgs5 from "../assets/New folder/Influncers Top row/Elon Musk.webp";
-import imgs6 from "../assets/New folder/Influncers Top row/myron Gains.mp4";
-import imgs7 from "../assets/New folder/Influncers Top row/Nija.webp";
-import imgs8 from "../assets/New folder/Influncers Top row/Sophie Rain.mp4";
-import imgs9 from "../assets/New folder/Influncers Top row/Stevewilldoit.mp4";
-import imgs10 from "../assets/New folder/Influncers Top row/Suga Sean Omalley.webp";
-import imgs11 from "../assets/New folder/Influncers Top row/XQC.mp4";
-import imgs12 from "../assets/New folder/Influncers Top row/Yodit Yemane .webp";
-import SlideshowTop from "../components/SlideshowTop/SlideshowTop";
-import Footer from "../components/Footer/Footer";
+import React, { useRef, useState } from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import StartClippingBtn from '../../components/StartClippingBtn/StartClippingBtn';
+import HeroSectionLanding from "../../components/HeroSectionLanding/HeroSectionLanding";
+import PricingSection from "../../components/PricingSection/PricingSection";
+import LogoSlideshow from "../../components/LogoSlideshow/LogoSlideshow";
+import BackToTopPhone from "../../components/BackToTopPhone/BackToTopPhone";
+import ServiceContainer from "../../components/ServiceContainer/ServiceContainer";
+import FAQ from "../../components/FAQ/FAQ";
+import Slider from "../../components/Slider/Slider";
+import ChallengeCard from "../../components/ChallengeCard/ChallengeCard";
+import Slideshow from "../../components/Slideshow/Slideshow";
+import Adin from "../../assets/New folder/influncers bottom rown/Adin Ross.webp";
+import Andrew from "../../assets/New folder/influncers bottom rown/Andrew Tate.webp";
+import drake from "../../assets/New folder/influncers bottom rown/drake .mp4";
+import bradly from "../../assets/New folder/influncers bottom rown/bradly Martin .webp";
+import Fresh from "../../assets/New folder/influncers bottom rown/Fresh.webp";
+import HUAK from "../../assets/New folder/influncers bottom rown/HUAK THUA.mp4";
+import Ishowspeed from "../../assets/New folder/influncers bottom rown/Ishowspeed.mp4";
+import KaiCent from "../../assets/New folder/influncers bottom rown/KaiCent.webp";
+import Miami from "../../assets/New folder/influncers bottom rown/Miami Swim week.mp4";
+import Neon from "../../assets/New folder/influncers bottom rown/Neon.mp4";
+import Beast from "../../assets/New folder/influncers bottom rown/Mr Beast.webp";
+import Brunson from "../../assets/New folder/influncers bottom rown/Russel Brunson.webp";
+import imgs1 from "../../assets/New folder/Influncers Top row/Alex Hormozi.webp";
+import imgs2 from "../../assets/New folder/Influncers Top row/Donald Trump .webp";
+import imgs3 from "../../assets/New folder/Influncers Top row/joe Rogan.mp4";
+import imgs3224 from "../../assets/New folder/Influncers Top row/Jack Doherty .webp";
+import imgs5 from "../../assets/New folder/Influncers Top row/Elon Musk.webp";
+import imgs6 from "../../assets/New folder/Influncers Top row/myron Gains.mp4";
+import imgs7 from "../../assets/New folder/Influncers Top row/Nija.webp";
+import imgs8 from "../../assets/New folder/Influncers Top row/Sophie Rain.mp4";
+import imgs9 from "../../assets/New folder/Influncers Top row/Stevewilldoit.mp4";
+import imgs10 from "../../assets/New folder/Influncers Top row/Suga Sean Omalley.webp";
+import imgs11 from "../../assets/New folder/Influncers Top row/XQC.mp4";
+import imgs12 from "../../assets/New folder/Influncers Top row/Yodit Yemane .webp";
+import SlideshowTop from "../../components/SlideshowTop/SlideshowTop";
+import Footer from "../../components/Footer/Footer";
 
-import herovideo from "../assets/videos/Updated final.mp4";
+import herovideo from "../../assets/videos/Updated final.mp4";
 
-import herovideophone from "../assets/videos/9;16 hero.mp4";
+import herovideophone from "../../assets/videos/9;16 hero.mp4";
 
 import "./Home.css";
 
+
+
 const Home = () => {
+
+
+
   const INFLUENCERS = [
     {
       src: Beast,
@@ -198,44 +203,40 @@ const Home = () => {
     { name: "Arthur", description: "Amazon FBA", content: "asgdasgs" },
     { name: "Eric", description: "Amazon FBA", content: "asgdasgs" },
   ];
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleVideoLoad = () => {
+    setIsLoaded(true);
+  };
 
   return (
     <>
     <BackToTopPhone />
       <div className="home-hero-video">
       <video
-    className="video-hero"
-    loading="lazy"
-    autoPlay
-    loop
-    muted
-    playsInline
-  >
-    <source src={herovideophone} media="(max-width: 600px)" type="video/mp4" />
-    <source src={herovideo} media="(min-width: 601px)" type="video/mp4" />
-    <track kind="captions" srclang="en" label="English captions" />
-    Your browser does not support the video tag.
-  </video>
+          poster=""
+          className={`video-hero ${isLoaded ? "loaded" : "blurred"}`}
+          autoPlay
+          onLoadedData={handleVideoLoad}
+          loop
+          muted
+          playsInline
+        >
+          <source src={herovideophone} media="(max-width: 600px)" type="video/mp4" />
+          <source src={herovideo} media="(min-width: 601px)" type="video/mp4" />
+          <track kind="captions" srclang="en" label="English captions" />
+          Your browser does not support the video tag.
+        </video>
         <div className="overlay"></div>
         <Navbar />
         <HeroSectionLanding />
       </div>
       <div>
-     
-        <div className="challenge-container-phone">
+        
+     <div className="challenge-card-phone">
+     <ChallengeCard />
+     </div>
 
-<AnimateCounter targetDate="2024-08-31T23:59:59" />  
-<div className='clippergoat-cta-hero-div'>
-
-             <div className="challenge-btn-phone">
-             <StartClippingBtn
-      text="Challenge Accepted" 
-      to="/reviving-clips" 
-    />
-             </div>
-        </div>
-         
-        </div>
         <div className="Container-Spacing">
           <div className="spacing-counter">
             <h1 className="information-container-header custom-header-title">

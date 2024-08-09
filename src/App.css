@@ -120,12 +120,12 @@ video::-webkit-media-controls {
   margin-right: auto;
   margin-top: 20px;
 }
-
+/* 
 .custom-header-subtitle-no-centner {
   font-size: 1.2rem;
   color: #65a0ff;
   font-weight: bold;
-}
+} */
 
 .Container-Width {
   max-width: 1400px;
@@ -146,7 +146,9 @@ video::-webkit-media-controls {
 .box-custom-shadow-smaller {
   box-shadow: 0 0 12px rgba(20, 110, 255, 0.5);
 }
-
+.break-div {
+  display: none;
+}
 @media (max-width: 750px) {
  
     .break-div {
@@ -162,7 +164,7 @@ video::-webkit-media-controls {
   .custom-header-title {
     color: white !important;
     margin: 0;
-    line-height: 29px;
+    line-height:45px;
     font-size: 2.2rem !important;
     margin-bottom: 5px;
   }

@@ -1,5 +1,5 @@
 
-.counter-container h1 {
+.counter-container p {
   margin-bottom: 10px;
 }
 .landing-leaader-header{
@@ -11,15 +11,22 @@
  .landing-counter-container-header {
   width:100%;
   margin-top:30px;
-  margin-bottom: 10px;
   text-align: center;
+
+}
+.landing-counter-container-header p{
+  font-size:30px;
+  font-weight: 800;
+
 }
 .counter-content{
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
+.leader-getoffer-btn{
+  margin-top:10px;
+}
 .counter-content-header{
   display: flex;
 }
@@ -60,18 +67,15 @@
     padding: 10px;
   }
   
-  .landing-counter-container h1 {
+  .landing-counter-container-header p {
     font-size: 24px;
   }
-  .landing-leader-counter-container-header h1:first-of-type {
+  .landing-leader-counter-container-header p:first-of-type {
     margin-top:50px;
   }
   
-  .landing-leader-counter-container-header h1{
+  .landing-leader-counter-container-header p{
     font-size: 30px !important;
-  }
-  .counter-container h2 {
-    font-size: 18px;
   }
   
   .time-container {
@@ -80,9 +84,8 @@
 }
 @media screen and (max-width: 400px) {
 
-  .landing-counter-container-header {
-    font-size:10px !important;
-    margin-bottom:20px;
+  .landing-counter-container-header p{
+    font-size:18px ;
   }
 
 }

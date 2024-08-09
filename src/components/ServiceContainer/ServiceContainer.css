@@ -28,8 +28,8 @@
 .Home-Services-Container {
   display: flex;
   justify-content: space-between;
-  margin-top: 0;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  padding-right:3%;
 }
 
 .Home-Services-Container video {
@@ -77,7 +77,7 @@
   font-size: 30px;
 }
 
-.Home-Services-Container i {
+.Home-Services-Container .service-i {
   font-size: 30px;
   color: #65a0ff;
 }
