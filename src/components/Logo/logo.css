@@ -1,6 +1,8 @@
 .websitelogo {
   font-weight: bold;
-  height:50px;
+  cursor: pointer;
+  object-fit: cover;
+  width:140px;
   margin: 0px !important;
   padding:0px !important;
 }

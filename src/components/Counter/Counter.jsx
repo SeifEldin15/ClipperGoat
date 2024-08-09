@@ -38,7 +38,7 @@ const CounterWrapper = styled.div`
   `}
 
   @media screen and (max-width: 410px) {
-    padding: 15px;
+    padding: 10px;
     margin-top: 15px;
   }
 `;
@@ -59,8 +59,8 @@ const DigitBox = styled.div`
 
   @media screen and (max-width: 410px) {
     font-size: 22px;
-    padding: 8px;
-    min-width: 50px;
+    padding: 5px;
+    min-width: 45px;
     margin: 0 6px;
   }
 `;

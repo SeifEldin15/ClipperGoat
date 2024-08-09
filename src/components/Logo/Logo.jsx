@@ -1,14 +1,20 @@
-import React from 'react'
-import './logo.css'
-import logoimg from '../../assets/NEW-GOAT222.webp'
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './logo.css';
+import logoimg from '../../assets/NEW-GOAT222 (1).webp';
 
 const Logo = () => {
-  return (
-             <>
-             <img className="websitelogo" src={logoimg} />
-             </>
- 
-  )
-}
+  const location = useLocation();
 
-export default Logo
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return (
+    <Link to="/" >
+      <img className="websitelogo" src={logoimg} alt="Website Logo" />
+    </Link>
+  );
+};
+
+export default Logo;

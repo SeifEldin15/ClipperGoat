@@ -285,7 +285,7 @@ const Home = () => {
       <div>
         <div className="Container-Spacing-Lg" id="faq-section">
           <h1 className="information-container-header custom-header-title ">
-            Frequently <div className="break-div"><br/></div> Asked <div className="break-div"><br/></div> <span className="glow-text">Questions</span>
+            Frequently  Asked <div className="break-div"><br/></div> <span className="glow-text">Questions</span>
           </h1>
           <p className="custom-header-subtitle ">
             You have questions, we have answers
