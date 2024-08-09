@@ -121,7 +121,10 @@ const ServiceContainer = () => {
                                 </p>
                             </div>
                             <div className="getofferlarge">
-                                <StartClippingBtn />
+                            <StartClippingBtn
+      text="Start Reviving Clips Now!" 
+      to="/reviving-clips" 
+    />
                             </div>
                         </div>
                         <div className="video-box-container ">
@@ -144,7 +147,10 @@ const ServiceContainer = () => {
                             </div>
                         </div>
                         <div className="getoffersmall">
-                            <StartClippingBtn />
+                        <StartClippingBtn
+      text="Start Reviving Clips Now!" 
+      to="/reviving-clips" 
+    />
                         </div>
                     </div>
                 ))}

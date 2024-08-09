@@ -90,6 +90,10 @@ const Footer = () => {
         </div>
 
         <p className="footer-copyright">
+        Gilbert, Arizona USA.
+          <br />
+          <br />
+          <br />
           Copyright &copy; 2024. All rights reserved.
         </p>
       </div>
